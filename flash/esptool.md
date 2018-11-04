@@ -24,7 +24,7 @@
 
 ![](https://ws1.sinaimg.cn/large/007fN5Xegy1fwvybqrqjbj30hr09u0tp.jpg)
 
-默认安装，**一定要记得勾选“Add python.exe to Path”**
+!> 一定要记得勾选“Add python.exe to Path"
 
 ![](https://ws1.sinaimg.cn/large/007fN5Xegy1fwvye584exj30gm0dvwgk.jpg)
 
@@ -81,7 +81,7 @@ sonoff basic 刷 MQTT 固件，文件名 666.bin，所在位置D盘 Download 目
 
 刷入成功后，进入 智能中枢 使用
 
-#### 渡鸦固件
+#### 渡鸦 Homekit 直连固件
 
 **基本流程是：刷机模式插入 - 擦除 - 刷机模式插入 - 刷入 - 普通模式插入 - 调试或配对**
 
