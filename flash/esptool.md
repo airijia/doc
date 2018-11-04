@@ -71,13 +71,19 @@
 
 #### MQTT 固件
 
+**基本流程是：刷机模式插入 - 刷入 - 普通模式插入 - 调试或配对**
+
 sonoff basic 刷 MQTT 固件，文件名 666.bin，所在位置D盘 Download 目录，COM6
 
 ```esptool.py --port COM6 write_flash --flash_size 1MB --flash_mode dout 0x00000 D:\Download\666.bin```
 
 ![](https://ws1.sinaimg.cn/large/007fN5Xegy1fwvzaublysj30w304gdg7.jpg)
 
+刷入成功后，进入 智能中枢 使用
+
 #### 渡鸦固件
+
+**基本流程是：刷机模式插入 - 擦除 - 刷机模式插入 - 刷入 - 普通模式插入 - 调试或配对**
 
 esp01 模块刷 渡鸦固件，文件名 777.bin，所在位置D盘 Download 目录，COM7
 
@@ -104,6 +110,10 @@ esp01 模块刷 渡鸦固件，文件名 777.bin，所在位置D盘 Download 目
 ``` esptool.py -p COM7 --baud 115200 write_flash -fs 1MB -fm dout -ff 40m 0x0 rboot.bin 0x1000 blank_config.bin 0x2000 777.bin```
 
 ![](https://ws1.sinaimg.cn/large/007fN5Xegy1fwvzkkcgulj316305raam.jpg)
+
+刷入成功后，[渡鸦固件配置 wifi 和 homekit 的方法](/flash/raven) 
+
+
 
 ### 调试
 
