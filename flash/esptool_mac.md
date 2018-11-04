@@ -2,15 +2,9 @@
 
 ## 安装
 
-?> TODO: 待完善
-
-### 安装 Python 2
+### 安装 Python 
 
 High Sierra 之后的 Mac OS X，已经自带 python2.7，无需安装
-
-
-
-
 
 CMD+空格 聚焦搜索 打开终端
 
@@ -18,27 +12,27 @@ CMD+空格 聚焦搜索 打开终端
 
 命令行输入
 
-``` python -V ```
+` python -V `
 
 ![](https://ws1.sinaimg.cn/large/007fN5Xegy1fwweudy58oj30ga0a0mxn.jpg)
 
-
+?> TODO: 没有 python 的解决方法
 
 MAC 默认是不带 pip 的，所以要先安装pip
 
-``` sudo easy_install pip `
+` sudo easy_install pip `
 
 ![](https://ws1.sinaimg.cn/large/007fN5Xegy1fwwey1vjgkj30q20huwj2.jpg)
 
 然后用 pip 安装 esptool
 
-```sudo pip install esptool```
+`sudo pip install esptool`
 
 ![](https://ws1.sinaimg.cn/large/007fN5Xegy1fwwf0mdiktj30u00uygw3.jpg)
 
 
 
-```esptool.py```
+`esptool.py`
 
 ![](https://ws1.sinaimg.cn/large/007fN5Xegy1fwwf1laus7j30ka0g8mz1.jpg)
 
