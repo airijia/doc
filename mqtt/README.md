@@ -104,13 +104,13 @@ MQTT 定制固件的功能有可以通过两种方式使用
 
 -  [灯核心](/mqtt/components/light/)
 -  [普通灯](/mqtt/components/light/)
--  [单色温](/mqtt/components/light/)
--  [双色温](/mqtt/components/light/)
+-  [可调光单色温](/mqtt/components/light/)
+-  [可调光双色温](/mqtt/components/light/)
 -  [RBG 三色](/mqtt/components/light/)
 -  [RBGW 四色](/mqtt/components/light/)
 -  [RBGWW 五色](/mqtt/components/light/)
--  [单信号线 LED 灯带](/mqtt/components/light/fastled_clockless)
--  [双信号线 LED 灯带](/mqtt/components/light/fastled_spi)
+-  [单信号线 LED 灯带](mqtt/components/light/fastled_clockless)
+-  [双信号线 LED 灯带](mqtt/components/light/fastled_spi)
 
 
 
@@ -137,8 +137,8 @@ MQTT 定制固件的功能有可以通过两种方式使用
 -  [I²C 总线液晶屏(PCF8574)](/mqtt/components/light/)
 -  [七段数码管(MAX7219)](/mqtt/components/light/)
 -  [触摸液晶屏(Nextion)](/mqtt/components/light/)
--  [OLED I²C 总线](/mqtt/components/light/)
--  [OLED SPI 总线](/mqtt/components/light/)
+-  [I²C 总线 OLED](/mqtt/components/light/)
+-  [SPI 总线 OLED](/mqtt/components/light/)
 -  [墨水屏](/mqtt/components/light/)
 
 
