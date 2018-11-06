@@ -112,7 +112,7 @@ esp01 模块刷 渡鸦固件，文件名 777.bin，所在位置 Downloads 目录
 
 
 
- 刷入成功后，[渡鸦固件配置 wifi 和 homekit 的方法](/flash/raven) 
+ 刷入成功后，[渡鸦固件配置 wifi 和 homekit 的方法](/diy/raven) 
 
  
 
@@ -156,3 +156,12 @@ esp01 模块刷 渡鸦固件，文件名 777.bin，所在位置 Downloads 目录
 
 `esptool.py --port /dev/ttyUSB0 write_flash --flash_size 1MB --flash_mode dout 0x00000 sonoff-backup.bin`
 
+## 相关链接
+
+
+- [刷固件资料集合](/diy/)
+    - [esptool.py 的安装与使用](/diy/esptool)
+    - [MQTT 固件](/mqtt/)
+    - [渡鸦固件](/diy/raven)
+
+- [MQTT 固件](/mqtt/)

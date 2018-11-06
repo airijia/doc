@@ -1,8 +1,9 @@
-# 单总线 LED 灯带控制器
+# 单信号线 LED 灯带控制器
 
 单数据信号的 LED 灯带控制器，总计三根线连接，分别是供电（VCC）、地线（GND）和信号线（DO/SIG/DIN），典型的型号如 WS2812B
-跟 SPI 类型的灯带控制器相比，少一根 clock，所以称之为 `fastled_clockless`
-实例连接中，由 供电 + 控制器 + 灯带 三部分组成
+跟双信号线(SPI总线)类型的灯带控制器相比，少一根 CLK ( clock，时钟序列)，所以称之为 `fastled_clockless`
+
+实例连接中，由 供电 + ESP芯片组 + 灯带 三部分组成
 
 
 [WS2812 开发灯环](//player.bilibili.com/player.html?aid=35359361&cid=61980878&page=1 ':include :type=iframe width="720" height="1280"')
@@ -96,3 +97,11 @@ RGB 序列：三种颜色的排序；R=红，G=绿，B=蓝，根据实际情况�
 - `UCS1903`
 - `UCS1904`
 - `UCS2903`
+
+
+## 相关链接
+
+- [灯组件](/mqtt/light/)
+- [双信号线灯带](/mqtt/components/light/fastled_spi)
+- [直流电源供电](/mqtt/components/power_supply)
+- [Arduino FastLED library](https://github.com/FastLED/FastLED)

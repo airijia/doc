@@ -1,4 +1,4 @@
-# MQTT 定制固件
+
 
 可云端编译用于 ESP8266/ESP32 系列芯片的智能家居固件，支持智能中枢自动发现（基于 MQTT 通信协议），支持 OTA（Over The Air）网刷
 
@@ -48,12 +48,22 @@ MQTT 定制固件的功能有可以通过两种方式使用
 
 ## 传感器
 
+-  [传感器组件](/mqtt/components/sensor/)
+
 
 ### 温度湿度
--  [dht](/mqtt/components/sensor/dht)
+
+-  [DHT 温湿度](/mqtt/components/sensor/dht)
+-  [Dallas 温度](/mqtt/components/sensor/dallas)
 
 
 
 ## 灯/灯带
--  [单信号](/mqtt/components/light/fastled_clockless)
+
+-  [灯组件](/mqtt/components/light/)
+-  [单信号线 LED 灯带](/mqtt/components/light/fastled_clockless)
+-  [双信号线 LED 灯带](/mqtt/components/light/fastled_spi)
+
+
+
 

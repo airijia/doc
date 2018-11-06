@@ -8,7 +8,7 @@
 
 ![](https://ws1.sinaimg.cn/large/007fN5Xegy1fww4qaz3kbj30hx06ot90.jpg)
 
-刷机方法见 [esptool.py 的安装与使用](/flash/esptool?id=mqtt-固件)
+刷机方法见 [esptool.py 的安装与使用](/diy/esptool?id=mqtt-固件)
 
 ## 刷入
 

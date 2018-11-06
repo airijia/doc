@@ -1,5 +1,3 @@
-# esptool.py 的安装与使用
-
 ## 安装
 
 先安装 python2，然后用 pip (python2 自带) 安装 esptool.py
@@ -111,7 +109,7 @@ esp01 模块刷 渡鸦固件，文件名 777.bin，所在位置D盘 Download 目
 
 ![](https://ws1.sinaimg.cn/large/007fN5Xegy1fwvzkkcgulj316305raam.jpg)
 
-刷入成功后，[渡鸦固件配置 wifi 和 homekit 的方法](/flash/raven) 
+刷入成功后，[渡鸦固件配置 wifi 和 homekit 的方法](/diy/raven) 
 
 
 
@@ -134,3 +132,18 @@ esp01 模块刷 渡鸦固件，文件名 777.bin，所在位置D盘 Download 目
 恢复
 
 `esptool.py --port COM3 write_flash --flash_size 1MB --flash_mode dout 0x00000 sonoff-backup.bin`
+
+
+
+
+
+
+
+## 相关链接
+
+
+- [刷固件资料集合](/diy/)
+    - [esptool.py(MAC)的安装与使用](/diy/esptool_mac)
+    - [渡鸦固件](/diy/raven)
+
+- [MQTT 定制固件](/mqtt/)

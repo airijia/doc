@@ -48,7 +48,7 @@ TTL刷机线（CH340G）
 
 2. 按住黑色按钮插入USB，为刷机模式
 
-刷机方法见 [esptool.py 使用方法](/flash/esptool) 
+刷机方法见 [esptool.py 使用方法](/diy/esptool) 
 
 
 
