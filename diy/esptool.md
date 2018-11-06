@@ -2,6 +2,10 @@
 
 先安装 python2，然后用 pip (python2 自带) 安装 esptool.py
 
+[esptool 刷机](//player.bilibili.com/player.html?aid=28695194&cid=49702131&page=1 ':include :type=iframe width="720" height="405"')
+
+!> 部分参考此视频
+
 ### 安装 Python 2
 
 打开官方网站 python.org
@@ -33,7 +37,7 @@
 
 命令行中输入
 
-```python --verison```
+```python --version```
 
 ![](https://ws1.sinaimg.cn/large/007fN5Xegy1fwvykeqblpj30hq06g0sq.jpg)
 

@@ -39,7 +39,7 @@ ESP刷机工具
 
 
 
-方法见 [esptool.py 使用方法](/diy/esptool) 
+方法见 [esptool.py 使用方法](/flash/esptool) 
 
 
 
@@ -53,7 +53,7 @@ ESP刷机工具
 
 
 
-配对方法见 [渡鸦固件加入 wifi 和 homekit 配对方法](/diy/raven) 
+配对方法见 [渡鸦固件加入 wifi 和 homekit 配对方法](/flash/raven) 
 
 
 
