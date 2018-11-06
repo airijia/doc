@@ -4,8 +4,7 @@
 
 
 
-## Pin
-
+## 引脚(Pin)
 即GPIO
 
-## Time
+## Time 
