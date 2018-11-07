@@ -4,14 +4,18 @@
 
 ## ID
 
+ - 必须字母开头，可以数字结尾
+ - 不能用空格
+ - 除下划线 _ 外，不能使用任何特殊字符
+ - 不能是 C++ 保留字（比如 if，void，class 等）
 
 
-## 引脚(Pin)
-即GPIO
+## 引脚
+Pin 即GPIO
 
 
-## 引脚架构 Pin Schema
+## 多参引脚
+Pin Schema
 
 
-
-## Time 
+## 时间(Time) 

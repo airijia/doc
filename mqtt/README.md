@@ -20,32 +20,49 @@
 
 
 
-## 使用说明
+## 基本使用
+
+**编译固件**
 
 MQTT 定制固件的功能有可以通过两种方式使用
 
 1. 在线使用，浏览器打开 [http://airijia.com/ctl/firmware/list](http://airijia.com/ctl/firmware/list) ，可使用除 OTA 之外的所有功能
 2. 智能中枢中使用，可使用包括 OTA 在内的全部功能
 
+**自动发现**
 
-### 基本用法
-- [网页创建固件](/mqtt/guides/form)
+ - 爱睿家智能中枢（airijia/ctl）
+ 
+    免配置，自动发现
 
 
-- [USB 刷入固件](/mqtt/guides/ttl)
-- [OTA 刷入固件](/mqtt/guides/ota)
+ - Hass (Home Assistant)
+
+   在配置文件（通常为 configuration.yaml）中增加如下内容
+
+```
+mqtt:
+  discovery: true
+  discovery_prefix: airi
+```
+
+- [网页创建固件](mqtt/guides/form)
+
+
+- [USB 刷入固件](mqtt/guides/ttl)
+- [OTA 刷入固件](mqtt/guides/ota)
 
 !> ⤵️ 以下️ ⤵️ 内容尚未完成
 
 
 
 
-- [从 Tasmota 迁移刷入](/mqtt/guides/tasmota)
-- [从 ESPurna 迁移刷入](/mqtt/guides/espurna)
-- [从 ESPEasy 迁移刷入](/mqtt/guides/espeasy)
+- [从 Tasmota 迁移刷入](mqtt/guides/tasmota)
+- [从 ESPurna 迁移刷入](mqtt/guides/espurna)
+- [从 ESPEasy 迁移刷入](mqtt/guides/espeasy)
 
 
-### 进阶用法
+## 进阶使用
 
 - [上传文件模板创建](mqtt/guides/yaml)
 - [配置类型](mqtt/guides/configuration-types)
@@ -64,7 +81,7 @@ MQTT 定制固件的功能有可以通过两种方式使用
 
 ## 核心组件
 
-- [核心]
+- [核心组件]
 - [WiFi]
 - [MQTT]
 - [I²C 总线I]
@@ -77,38 +94,38 @@ MQTT 定制固件的功能有可以通过两种方式使用
 
 ## 传感器
 
--  [传感器核心](/mqtt/components/sensor/)
+-  [传感器核心组件](mqtt/components/sensor/)
 
 
--  [DHT 温湿度](/mqtt/components/sensor/dht)
--  [Dallas 温度](/mqtt/components/sensor/dallas)
+-  [DHT 温湿度](mqtt/components/sensor/dht)
+-  [Dallas 温度](mqtt/components/sensor/dallas)
 
 
 ## 二进制传感器
 
--  [二进制传感器核心](/mqtt/components/sensor/)
--  [GPIO](/mqtt/components/sensor/)
--  [连接状态](/mqtt/components/sensor/)
+-  [二进制传感器核心](mqtt/components/sensor/)
+-  [GPIO](mqtt/components/sensor/)
+-  [连接状态](mqtt/components/sensor/)
 
 
 ## 输出(Output)
 
--  [输出核心](/mqtt/components/sensor/)
--  [GPIO 输出](/mqtt/components/sensor/)
--  [ESP8266 PWM(软调光)](/mqtt/components/sensor/)
--  [ESP32 LEDC(硬调光)](/mqtt/components/sensor/)
--  [连接状态](/mqtt/components/sensor/)
+-  [输出核心](mqtt/components/sensor/)
+-  [GPIO 输出](mqtt/components/sensor/)
+-  [ESP8266 PWM(软调光)](mqtt/components/sensor/)
+-  [ESP32 LEDC(硬调光)](mqtt/components/sensor/)
+-  [连接状态](mqtt/components/sensor/)
 
 
 ## 灯/灯带
 
--  [灯核心](/mqtt/components/light/)
--  [普通灯](/mqtt/components/light/)
--  [可调光单色温](/mqtt/components/light/)
--  [可调光双色温](/mqtt/components/light/)
--  [RBG 三色](/mqtt/components/light/)
--  [RBGW 四色](/mqtt/components/light/)
--  [RBGWW 五色](/mqtt/components/light/)
+-  [灯核心](mqtt/components/light/)
+-  [普通灯](mqtt/components/light/)
+-  [可调光单色温](mqtt/components/light/)
+-  [可调光双色温](mqtt/components/light/)
+-  [RBG 三色](mqtt/components/light/)
+-  [RBGW 四色](mqtt/components/light/)
+-  [RBGWW 五色](mqtt/components/light/)
 -  [单信号线 LED 灯带](mqtt/components/light/fastled_clockless)
 -  [双信号线 LED 灯带](mqtt/components/light/fastled_spi)
 
@@ -116,30 +133,30 @@ MQTT 定制固件的功能有可以通过两种方式使用
 
 ## 开关
 
--  [开关核心](/mqtt/components/light/)
--  [GPIO 开关](/mqtt/components/light/)
--  [红外发射器](/mqtt/components/light/)
--  [输出(Output)拟态开关](/mqtt/components/light/)
--  [软件逻辑开关](/mqtt/components/light/)
--  [UART 指令开关](/mqtt/components/light/)
+-  [开关核心](mqtt/components/light/)
+-  [GPIO 开关](mqtt/components/light/)
+-  [红外发射器](mqtt/components/light/)
+-  [输出(Output)拟态开关](mqtt/components/light/)
+-  [软件逻辑开关](mqtt/components/light/)
+-  [UART 指令开关](mqtt/components/light/)
 
 
 ## 风扇
 
--  [风扇核心](/mqtt/components/light/)
--  [普通风扇](/mqtt/components/light/)
--  [调速风扇](/mqtt/components/light/)
+-  [风扇核心](mqtt/components/light/)
+-  [普通风扇](mqtt/components/light/)
+-  [调速风扇](mqtt/components/light/)
 
 ## 显示屏
 
--  [显示屏核心](/mqtt/components/light/)
--  [串/并口液晶屏](/mqtt/components/light/)
--  [I²C 总线液晶屏(PCF8574)](/mqtt/components/light/)
--  [七段数码管(MAX7219)](/mqtt/components/light/)
--  [触摸液晶屏(Nextion)](/mqtt/components/light/)
--  [I²C 总线 OLED](/mqtt/components/light/)
--  [SPI 总线 OLED](/mqtt/components/light/)
--  [墨水屏](/mqtt/components/light/)
+-  [显示屏核心](mqtt/components/light/)
+-  [串/并口液晶屏](mqtt/components/light/)
+-  [I²C 总线液晶屏(PCF8574)](mqtt/components/light/)
+-  [七段数码管(MAX7219)](mqtt/components/light/)
+-  [触摸液晶屏(Nextion)](mqtt/components/light/)
+-  [I²C 总线 OLED](mqtt/components/light/)
+-  [SPI 总线 OLED](mqtt/components/light/)
+-  [墨水屏](mqtt/components/light/)
 
 
 
