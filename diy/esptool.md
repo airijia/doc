@@ -113,7 +113,7 @@ esp01 模块刷 渡鸦固件，文件名 777.bin，所在位置D盘 Download 目
 
 ![](https://ws1.sinaimg.cn/large/007fN5Xegy1fwvzkkcgulj316305raam.jpg)
 
-刷入成功后，[渡鸦固件配置 wifi 和 homekit 的方法](/diy/raven) 
+刷入成功后，[渡鸦固件配置 wifi 和 homekit 的方法](diy/raven) 
 
 
 
@@ -143,11 +143,21 @@ esp01 模块刷 渡鸦固件，文件名 777.bin，所在位置D盘 Download 目
 
 
 
-## 相关链接
+## 常见问题
 
 
-- [刷固件资料集合](/diy/)
-    - [esptool.py(MAC)的安装与使用](/diy/esptool_mac)
-    - [渡鸦固件](/diy/raven)
 
-- [MQTT 定制固件](/mqtt/)
+Q: 不知道我电脑上 COM 口的编号
+
+A: 命令行输入 `python -m serial.tools.list_ports`
+
+![](https://ws1.sinaimg.cn/large/007fN5Xegy1fwzkjfe5rvj30cu06zjre.jpg)
+
+COM6 正是 TTL 线插入的 COM 口
+
+
+Q: 提示 'esptool' , 'miniterm'不是内部或外部命令，也不是可运行的程序或批处理文件。
+
+A: 这两个命令运用的时候需要加上后缀py，即 esptool.py 和  miniterm.py
+
+![](https://ws1.sinaimg.cn/large/007fN5Xegy1fwzkpkkrovj30j60l4dho.jpg)
