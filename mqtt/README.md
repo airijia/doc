@@ -84,7 +84,7 @@ mqtt:
 - [核心组件]
 - [WiFi]
 - [MQTT]
-- [I²C 总线I]
+- [I²C 总线]
 - [SPI 总线]
 - [UART 总线]
 - [日志]
@@ -97,8 +97,61 @@ mqtt:
 -  [传感器核心组件](mqtt/components/sensor/)
 
 
--  [DHT 温湿度](mqtt/components/sensor/dht)
 -  [Dallas 温度](mqtt/components/sensor/dallas)
+-  [MAX6675 温度](mqtt/components/sensor/dallas)
+-  [DHT 温湿度](mqtt/components/sensor/dht)
+-  [DHT12 温湿度(I²C 总线)](mqtt/components/sensor/dht)
+-  [HDC1080 温湿度](mqtt/components/sensor/dallas)
+-  [HTU21D 温湿度](mqtt/components/sensor/dallas)
+-  [SHT3X-D 温湿度](mqtt/components/sensor/dallas)
+
+
+-  [MS5611 气压](mqtt/components/sensor/ms5611)
+-  [BMP085/BMP180 温度+气压](mqtt/components/sensor/ms5611)
+-  [BMP280 温度+气压](mqtt/components/sensor/ms5611)
+-  [BME280 温湿度+气压](mqtt/components/sensor/ms5611)
+-  [BME280 温湿度+气压+空气品质](mqtt/components/sensor/ms5611)
+
+
+-  [MH-Z19 二氧化碳](mqtt/components/sensor/mhz19)
+
+
+-  [BH1750 光强](mqtt/components/sensor/bh1750)
+-  [TSL2561 光强](mqtt/components/sensor/tsl2561)
+
+
+
+
+
+-  [HLW8012 功率](mqtt/components/sensor/ms5611)
+-  [INA219 功率](mqtt/components/sensor/ms5611)
+-  [INA3221 功率](mqtt/components/sensor/ms5611)
+
+
+-  [HX711 压力](mqtt/components/sensor/ms5611)
+-  [TCS34725 颜色识别](mqtt/components/sensor/ms5611)
+-  [HMC5883L 罗盘](mqtt/components/sensor/ms5611)
+-  [MPU6050  陀螺仪](mqtt/components/sensor/ms5611)
+-  [超声波测距](mqtt/components/sensor/ms5611)
+
+
+
+-  [ADC 模转数](mqtt/components/sensor/adc)
+-  [ads1115 模转数](mqtt/components/sensor/ads1115)
+-  [占空比](mqtt/components/sensor/adc)
+-  [霍尔效应(ESP32)](mqtt/components/sensor/adc)
+-  [脉冲计数](mqtt/components/sensor/ms5611)
+-  [旋转编码器](mqtt/components/sensor/ms5611)
+
+
+-  [软件逻辑传感器](mqtt/components/light/)
+-  [运行时间](mqtt/components/light/)
+-  [WiFi 信号强度](mqtt/components/light/)
+
+
+
+
+
 
 
 ## 二进制传感器
@@ -158,6 +211,15 @@ mqtt:
 -  [SPI 总线 OLED](mqtt/components/light/)
 -  [墨水屏](mqtt/components/light/)
 
+
+
+
+## 蓝牙
+
+
+
+
+## 红外
 
 
 ## 案例赏析
