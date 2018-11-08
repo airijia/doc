@@ -22,35 +22,23 @@
 
 ## 基本使用
 
-**编译固件**
-
 MQTT 定制固件的功能有可以通过两种方式使用
 
 1. 在线使用，浏览器打开 [http://airijia.com/ctl/firmware/list](http://airijia.com/ctl/firmware/list) ，可使用除 OTA 之外的所有功能
 2. 智能中枢中使用，可使用包括 OTA 在内的全部功能
 
-**自动发现**
 
- - 爱睿家智能中枢（airijia/ctl）
- 
-    免配置，自动发现
-
-
- - Hass (Home Assistant)
-
-   在配置文件（通常为 configuration.yaml）中增加如下内容
-
-```
-mqtt:
-  discovery: true
-  discovery_prefix: airi
-```
 
 - [网页创建固件](mqtt/guides/form)
 
 
 - [USB 刷入固件](mqtt/guides/ttl)
 - [OTA 刷入固件](mqtt/guides/ota)
+
+
+- [中枢自动发现](mqtt/components/mqtt#适配中枢)
+
+
 
 !> ⤵️ 以下️ ⤵️ 内容尚未完成
 

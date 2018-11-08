@@ -10,16 +10,12 @@
 
 **airi:8123 和 Hass 中的显示**
 
-## 支持产品
+## 相关产品
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fwxfzyopmcj30xa0k81fn.jpg)
+| ![](https://ws1.sinaimg.cn/large/007fN5Xegy1fwxfzyopmcj30xa0k81fn.jpg ':size=200')|  WS2812B<br> 灯带 |  购买 |
+|:-:|:-:|:-:|
+| ![](https://ws1.sinaimg.cn/large/007fN5Xegy1fwxbejdrw1j30b40b4tdc.jpg ':size=200')  | ESP01S模块用连接器<br> 配合EPS01S模块和灯带使用  |  [![买买买](https://docsify.js.org/_media/icon.svg ':size=30%')](https://item.taobao.com/item.htm?id=551951370518) |
 
-WS2812B 灯带
-
-
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fwxbejdrw1j30b40b4tdc.jpg)
-
-ESP01S模块用连接器，配合EPS01S模块和灯带使用 [购买](https://item.taobao.com/item.htm?id=551951370518)
 
 
 ## 网页创建固件
