@@ -21,11 +21,11 @@
 
    在配置文件（通常为 configuration.yaml）中增加如下内容
 
-```
+```yaml
 mqtt:
   discovery: true
   discovery_prefix: airi
-
+```
 
 
 
