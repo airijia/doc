@@ -10,10 +10,17 @@ HC-SR501 是一款比较常见的无源红外感应模块(Passive Infrared Senso
 ![](https://ws1.sinaimg.cn/large/007fN5Xegy1fx1t7shbkjj30po0hz4hb.jpg)
 
 
+
+
+## 成品效果
+
+
 ![](https://ws1.sinaimg.cn/large/007fN5Xegy1fx1uwwyz3fj30rw03ojrb.jpg)
+
 **airi:8123 和 Hass 中的显示**
 
 [WS2812 开发灯环](//player.bilibili.com/player.html?aid=35602736&cid=62434203&page=1 ':include :type=iframe width="720" height="1280"')
+
 **在 Homekit 中的显示**
 
 
@@ -22,7 +29,7 @@ HC-SR501 是一款比较常见的无源红外感应模块(Passive Infrared Senso
 | ![](https://ws1.sinaimg.cn/large/007fN5Xegy1fx1t63kzmnj30by0amjv6.jpg ':size=200')|  HC-SR501 |  [![买买买](http://cdn.airijia.com/b6eca8da724952cc0251.gif ':size=150')](https://item.taobao.com/item.htm?id=579062519836) |
 |:-:|:-:|:-:|
 | ![](https://ws1.sinaimg.cn/large/007fN5Xegy1fx1usp2qf7j30gg0ggafd.jpg ':size=200') | ESP01S |  [![买买买](http://cdn.airijia.com/b6eca8da724952cc0251.gif ':size=150')](https://item.taobao.com/item.htm?id=45607865463) |
-| ![](https://ws1.sinaimg.cn/large/007fN5Xegy1fx1uzgvgt5j30ku0f9wjc.jpg ':size=200') | CH340G <br> 3v3 5v 双供电 |  [![买买买](http://cdn.airijia.com/b6eca8da724952cc0251.gif ':size=150')](https://item.taobao.com/item.htm?id=45528507062) |
+| ![](https://ws1.sinaimg.cn/large/007fN5Xegy1fx1uzgvgt5j30ku0f9wjc.jpg ':size=200') | CH340G <br> 3v3 5v 双供电 | [![买买买](http://cdn.airijia.com/b6eca8da724952cc0251.gif ':size=150')](https://item.taobao.com/item.htm?id=45528507062) |
 
 
 ## 接线 
