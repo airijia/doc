@@ -37,7 +37,9 @@
 
 命令行中输入
 
-```python --version```
+```python
+python --version
+```
 
 ![](https://ws1.sinaimg.cn/large/007fN5Xegy1fwvykeqblpj30hq06g0sq.jpg)
 
@@ -49,11 +51,15 @@
 
 命令行输入
 
-``` pip install esptool ```
+```python
+pip install esptool
+```
 
 然后输入
 
-``` esptool.py ```
+```python
+esptool.py
+```
 
 
 
@@ -77,7 +83,9 @@
 
 sonoff basic 刷 MQTT 固件，文件名 666.bin，所在位置D盘 Download 目录，COM6
 
-```esptool.py --port COM6 write_flash --flash_size 1MB --flash_mode dout 0x00000 D:\Download\666.bin```
+```python
+esptool.py -p COM6 write_flash -fs 1MB -fm dout 0x00000 D:\Download\666.bin
+```
 
 ![](https://ws1.sinaimg.cn/large/007fN5Xegy1fwvzaublysj30w304gdg7.jpg)
 
@@ -93,23 +101,31 @@ esp01 模块刷 渡鸦固件，文件名 777.bin，所在位置D盘 Download 目
 
 进入D:盘
 
-``` D: ```
+```cmd
+D:
+```
 
 进入 Download 目录
 
-``` cd Download ```
+```cmd
+cd Download
+```
 
 ![](https://ws1.sinaimg.cn/large/007fN5Xegy1fwvzjwaq11j30a90afaa0.jpg)
 
 2. 擦除
 
-``` esptool.py -p COM7 erase_flash```
+```
+esptool.py -p COM7 erase_flash
+```
 
 ![](https://ws1.sinaimg.cn/large/007fN5Xegy1fwvzhjncgmj30fj0biq3o.jpg)
 
 3. 刷入 ( 这条命令是**整体，不换行**)
 
-``` esptool.py -p COM7 --baud 115200 write_flash -fs 1MB -fm dout -ff 40m 0x0 rboot.bin 0x1000 blank_config.bin 0x2000 777.bin```
+```python
+esptool.py -p COM7 -b 115200 write_flash -fs 1MB -fm dout -ff 40m 0x0 rboot.bin 0x1000 blank_config.bin 0x2000 777.bin
+```
 
 ![](https://ws1.sinaimg.cn/large/007fN5Xegy1fwvzkkcgulj316305raam.jpg)
 
@@ -121,7 +137,9 @@ esp01 模块刷 渡鸦固件，文件名 777.bin，所在位置D盘 Download 目
 
 输入 miniterm + 实机COM口 + 波特率 (通常为 115200 )
 
-``` miniterm.py COM3 115200 ```
+```python
+miniterm.py COM3 115200
+```
 
 ![](https://ws1.sinaimg.cn/large/007fN5Xegy1fwvzdxtl9kj30o2047aa6.jpg)
 
@@ -131,11 +149,15 @@ esp01 模块刷 渡鸦固件，文件名 777.bin，所在位置D盘 Download 目
 
 备份
 
-`esptool.py --port COM3 read_flash 0x00000 0x100000 sonoff-backup.bin`
+```python
+esptool.py --port COM3 read_flash 0x00000 0x100000 sonoff-backup.bin
+```
 
 恢复
 
-`esptool.py --port COM3 write_flash --flash_size 1MB --flash_mode dout 0x00000 sonoff-backup.bin`
+```python
+esptool.py --port COM3 write_flash --flash_size 1MB --flash_mode dout 0x00000 sonoff-backup.bin
+```
 
 
 
@@ -149,7 +171,11 @@ esp01 模块刷 渡鸦固件，文件名 777.bin，所在位置D盘 Download 目
 
 Q: 不知道我电脑上 COM 口的编号
 
-A: 命令行输入 `python -m serial.tools.list_ports`
+A: 命令行输入 
+
+```python
+python -m serial.tools.list_ports
+```
 
 ![](https://ws1.sinaimg.cn/large/007fN5Xegy1fwzkjfe5rvj30cu06zjre.jpg)
 

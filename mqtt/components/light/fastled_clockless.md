@@ -36,7 +36,7 @@ RGB 序列：三种颜色的排序；R=红，G=绿，B=蓝，根据实际情况�
 
 
 
-## YAML 模板创建
+## 文件模板创建
 
 
 ```yaml
@@ -53,7 +53,7 @@ RGB 序列：三种颜色的排序；R=红，G=绿，B=蓝，根据实际情况�
 ### 配置项
 
 - **name** (**必填**, 字符串): 名称，用于 MQTT 识别，不支持中文
-- **chipset** (**必填**, 字符串): 设置使用的芯片组，具体值查看[支持芯片组](#支持芯片组)
+- **chipset** (**必填**, 字符串): 指定使用的芯片组，具体值查看[支持芯片组](#支持芯片组)
 - **pin** (**必填**, [引脚](mqtt/guides/configuration-types#引脚)): 传输数据信号使用的端口
 - **num_leds** (**必填**, 整数): 连接的灯珠数量
 - **rgb_order** (*选填*, 字符串): 三种颜色的排序；R=红，G=绿，B=蓝。举例：如果设置排序为 RGB，当控制端指定显示红色（R）时，灯带却显示为蓝色（B），这是把排序改为 BGR，重新编译固件刷入，即可正确显示。可选值 `RGB`,`RBG`, `GRB`, `GBR`, `BRG` 和 `BGR`，默认值  `RGB`
@@ -62,8 +62,8 @@ RGB 序列：三种颜色的排序；R=红，G=绿，B=蓝，根据实际情况�
 - **default_transition_length** (*选填*, [时间](mqtt/guides/configuration-types#时间)) 默认过度时长，如果智能中枢没提供此参数时的默认值，默认值为 `1s`.
 - **power_supply** (*选填*, [ID](mqtt/guides/configuration-types#id)): 使用 [直流电源](mqtt/components/power_supply) 给灯带供电时，在控制灯带的同时也控制电源
 - **effects** (*选填*, 列表): 植入固件的[灯光特效](mqtt/components/light/#灯光特效)
-- **id** (*选填*, [ID](mqtt/guides/configuration-types#id)): 编码识别用 ID
-- 以及[MQTT组件](mqtt/components/mqtt#MQTT-组件基本配置项)的基本配置项
+- **id** (*选填*, [ID](mqtt/guides/configuration-types#id)): 用于逻辑识别的 ID
+- 以及[MQTT 组件](mqtt/components/mqtt#MQTT-组件基本配置项)的基本配置项
 
 
 
