@@ -34,6 +34,7 @@ MQTT 定制固件的功能有可以通过两种方式使用
 
 - [USB 刷入固件](mqtt/guides/ttl)
 - [OTA 刷入固件](mqtt/guides/ota)
+- [从其他固件迁移](mqtt/guides/migrate)
 
 
 - [中枢自动发现](mqtt/components/mqtt#适配中枢)
@@ -43,42 +44,35 @@ MQTT 定制固件的功能有可以通过两种方式使用
 !> ⤵️ 以下️ ⤵️ 内容尚未完成
 
 
-
-
-- [从 Tasmota 迁移刷入](mqtt/guides/tasmota)
-- [从 ESPurna 迁移刷入](mqtt/guides/espurna)
-- [从 ESPEasy 迁移刷入](mqtt/guides/espeasy)
-
-
 ## 进阶使用
 
 - [上传文件模板创建](mqtt/guides/yaml)
+- [核心组件](mqtt/components/airi)
+- [WiFi](mqtt/components/wifi)
+- [MQTT](mqtt/components/mqtt)
 - [配置类型](mqtt/guides/configuration-types)
 - [自动化](mqtt/guides/)
 
 
+- [I²C 总线](mqtt/components/i2c)
+- [SPI 总线](mqtt/components/spi)
+- [UART 总线](mqtt/components/uart)
+- [OTA](mqtt/components/ota)
+- [日志](mqtt/components/logger)
+- [直流电源](mqtt/components/power_supply)
+- [睡眠模式](mqtt/components/deep_sleep)
+
+
 ## 支持设备
 
-- [Sonoff 系列]
-- [ESP01/ESP01S]
-- [D1 系列]
-- [NodeMCU ESP8266]
-- [NodeMCU ESP32]
-- [ESP8266 系列通用](mqtt/guides/yaml)
-- [ESP32 系列通用](mqtt/guides/yaml)
+- [Sonoff 系列](mqtt/devices/sonoff)
+- [ESP01/ESP01S](mqtt/devices/esp01)
+- [D1 系列](mqtt/devices/d1)
+- [NodeMCU ESP8266](mqtt/devices/nodemcu_esp8266)
+- [NodeMCU ESP32](mqtt/devices/nodemcu_esp32)
+- [ESP8266 系列通用](mqtt/devices/esp8266)
+- [ESP32 系列通用](mqtt/devices/esp32)
 
-## 核心组件
-
-- [核心组件]
-- [WiFi]
-- [MQTT]
-- [I²C 总线]
-- [SPI 总线]
-- [UART 总线]
-- [日志]
-- [OTA]
-- [直流电源]
-- [睡眠模式]
 
 ## 传感器
 
@@ -108,9 +102,6 @@ MQTT 定制固件的功能有可以通过两种方式使用
 -  [TSL2561 光强](mqtt/components/sensor/tsl2561)
 
 
-
-
-
 -  [HLW8012 功率](mqtt/components/sensor/ms5611)
 -  [INA219 功率](mqtt/components/sensor/ms5611)
 -  [INA3221 功率](mqtt/components/sensor/ms5611)
@@ -121,7 +112,6 @@ MQTT 定制固件的功能有可以通过两种方式使用
 -  [HMC5883L 罗盘](mqtt/components/sensor/ms5611)
 -  [MPU6050  陀螺仪](mqtt/components/sensor/ms5611)
 -  [超声波测距](mqtt/components/sensor/ms5611)
-
 
 
 -  [ADC 模转数](mqtt/components/sensor/adc)
@@ -138,14 +128,10 @@ MQTT 定制固件的功能有可以通过两种方式使用
 
 
 
-
-
-
-
 ## 二进制传感器
 
 -  [二进制传感器核心](mqtt/components/sensor/)
--  [GPIO](mqtt/components/sensor/)
+-  [GPIO 状态](mqtt/components/sensor/)
 -  [连接状态](mqtt/components/sensor/)
 
 
@@ -187,6 +173,7 @@ MQTT 定制固件的功能有可以通过两种方式使用
 -  [风扇核心](mqtt/components/light/)
 -  [普通风扇](mqtt/components/light/)
 -  [调速风扇](mqtt/components/light/)
+
 
 ## 显示屏
 

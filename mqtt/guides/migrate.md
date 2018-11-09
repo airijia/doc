@@ -1,22 +1,17 @@
-# 模板文件创建 MQTT 固件
-
-
-
-## 下载
+# 从其他固件迁移
 
 下载文件到本地后解压缩，主机名.bin 文件就是供刷机的固件文件
 
 ![](https://ws1.sinaimg.cn/large/007fN5Xegy1fww4qaz3kbj30hx06ot90.jpg)
 
 
-## 刷入
-
-刷机方法见 [esptool.py 的安装与使用](/diy/esptool?id=mqtt-固件)
+## Sonoff Tasmota
 
 
 
-
+## ESPurna
 
 
 
 
+## ESPEasy
