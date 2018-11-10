@@ -6,7 +6,7 @@
 
 
 ```
-# Example configuration entry
+# 配置示例
 power_supply:
   - id: 'power_supply1'
     pin: 13

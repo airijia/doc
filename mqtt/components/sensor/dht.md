@@ -34,7 +34,7 @@ DHT 系列的传感器，同时支持温度和湿度的显示
 ?> TODO: 需整体完善
 
 ```yaml
-# Example configuration entry
+# 配置示例
 sensor:
   - platform: dht
     pin: D2

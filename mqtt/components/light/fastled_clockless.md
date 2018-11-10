@@ -40,7 +40,7 @@ RGB 序列：三种颜色的排序；R=红，G=绿，B=蓝，根据实际情况�
 
 
 ```yaml
-    # Example configuration entry
+    # 配置示例
     light:
       - platform: fastled_clockless
         chipset: WS2811
