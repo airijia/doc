@@ -22,7 +22,7 @@ wifi:
 
 - **ssid** (*选填*, 字符串): 要连入的 WiFi 网络名称
 - **password** (*选填*, 字符串): 要连入的 WiFi 密码
-- **manual_ip** (*选填*): 手动设置模块的 IP 地址
+- **manual_ip** (*选填*): 手动设置节点的 IP 地址
   - **static_ip** (**必填**, IPv4): 静态 IP 地址
   - **gateway** (**必填**, IPv4): 网关地址
   - **subnet** (**必填**, IPv4): 子网掩码
@@ -36,20 +36,20 @@ wifi:
   - **manual_ip** (*选填*): 手动设置 AP 的 IP 地址
 <!-- - **domain** (*选填*, 字符串): Set the domain of the node hostname used for uploading. For example, if it’s set to `.local`, all uploads will be sent to `<HOSTNAME>.local`. Defaults to `.local`. -->
 <!-- TODO: 对ota有什么影响么? -->
-- **reboot_timeout** (*选填*, [时长](mqtt/guides/configuration-types#时长)): 没有可用的的 WiFi 时，模块会在设置的时间后重启。默认 `60s`，设置成 `0s` 禁用此功能 
+- **reboot_timeout** (*选填*, [时长](mqtt/guides/configuration-types#时长)): 没有可用的的 WiFi 时，节点会在设置的时间后重启。默认 `60s`，设置成 `0s` 禁用此功能 
 - **power_save_mode** (*选填*, 字符串): [节能模式](#节能模式)
 - **id** (*选填*, [ID](mqtt/guides/configuration-types#id)): 用于逻辑识别的 ID
 
 
 ## AP 模式
 
-AP 可以跟 STA 模式共存，但没有可用的 WiFi 可连接是，模块会只开启 AP 模式
+AP 可以跟 STA 模式共存，但没有可用的 WiFi 可连接是，节点会只开启 AP 模式
 
 
 
 ## 手动设置 IP 地址
 
-默认是通过路由器的 DHCP 功能自动分配 IP，但网络不稳定时，可以手动设置成静态 IP 减轻路由器压力，提高模块的联网速度
+默认是通过路由器的 DHCP 功能自动分配 IP，但网络不稳定时，可以手动设置成静态 IP 减轻路由器压力，提高节点的联网速度
 
 
 ```yaml
@@ -68,7 +68,7 @@ wifi:
 
 ## 节能模式
 
-WiFi 的节能模式，开启节能模式会降低 WiFi 的连接品质，导致模块频繁的断开连接，除非有特殊需求，比如电池供电，否则不建议设置。默认 `NONE` 不开启。
+WiFi 的节能模式，开启节能模式会降低 WiFi 的连接品质，导致节点频繁的断开连接，除非有特殊需求，比如电池供电，否则不建议设置。默认 `NONE` 不开启。
 
 
 - `NONE` (默认, 不节能)

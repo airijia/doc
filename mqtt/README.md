@@ -1,6 +1,6 @@
 本文档是爱睿家智能在线定制 MQTT 固件的使用说明
 
-云端编译用于 ESP8266/ESP32 系列芯片的智能家居固件，基于 MQTT 通信协议，零配置即可被智能中枢（airijia/clt 和 Hass）自动发现，支持 OTA（Over The Air）网刷，
+云端编译用于 ESP8266/ESP32 系列芯片的智能家居固件，基于 MQTT 通信协议，零配置即可被智能中枢（airijia/clt 或 Hass）自动发现，支持 OTA（Over The Air）网刷，
 
 **无需任何编程基础** 既可以定制出强大的固件功能
 
@@ -51,7 +51,7 @@ MQTT 定制固件的功能有可以通过两种方式使用
 - [WiFi](mqtt/components/wifi)
 - [MQTT](mqtt/components/mqtt)
 - [配置类型](mqtt/guides/configuration-types)
-- [自动化](mqtt/guides/)
+- [自动化](mqtt/guides/automations)
 
 
 - [I²C 总线](mqtt/components/i2c)

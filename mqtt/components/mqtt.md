@@ -1,13 +1,12 @@
-# MQTT 客户端组件
+# MQTT 组件
 
-?> mqtt 简介
+MQTT 固件的核心组件之一，将节点作为客户端连接到 MQTT 转发器(broker)，进而通过智能中枢（airijia/clt 或 Hass）控制
 
-配置节点上的 MQTT 客户端组件，连接到智能中枢。例如 airijia/ctl 分配到的 IP 是 `192.168.1.233`
 
-```
-# 如此配置即可
+```yaml
+# 配置示例
 mqtt:
-  broker: 192.168.1.233
+  broker: 192.168.1.233 # 智能中枢的 IP
 ```
 
 ## 基本配置
@@ -17,7 +16,7 @@ mqtt:
 - **username** (*选填*, 字符串): MQTT 用户名
 - **password** (*选填*, 字符串): MQTT 密码
 
-## 适配中枢
+### 适配中枢
 
  - 爱睿家智能中枢（airijia/ctl）
 
@@ -29,6 +28,7 @@ mqtt:
 
 ```yaml
 mqtt:
+  broker: 127.0.0.1 # 自建 MQTT 地址
   discovery: true
   discovery_prefix: airi
 ```
@@ -36,70 +36,64 @@ mqtt:
 
 ## 进阶配置
 
-<!-- - **client_id** (*选填*, 字符串): The client id to use for opening connections. See [Defaults](https://esphomelib.com/esphomeyaml/components/mqtt.html#mqtt-defaults) for more information. -->
-<!-- - **discovery** (*选填*, 布尔值): 自动发现功能，开启可以被中枢自动发现并添加。默认值为开启 `True` -->
-<!-- - **discovery_retain** (*选填*, 布尔值): Whether to retain MQTT discovery messages so that entities are added automatically on Home Assistant restart。默认值为开启 `True` -->
-<!-- - **discovery_prefix** (*选填*, 字符串): The prefix to use for Home Assistant’s MQTT discovery. Should not contain trailing slash。默认值为 `airi` -->
-<!-- - **topic_prefix** (*选填*, 字符串): The prefix used for all MQTT messages. Should not contain trailing slash. Defaults to `<APP_NAME>`. -->
-<!-- - **log_topic** (*选填*, [MQTT消息](https://esphomelib.com/esphomeyaml/components/mqtt.html#mqtt-message)) The topic to send MQTT log messages to. -->
-<!-- - **birth_message** (*选填*, [MQTT消息](https://esphomelib.com/esphomeyaml/components/mqtt.html#mqtt-message)): The message to send when a connection to the broker is established. See [Last Will And Birth Messages](https://esphomelib.com/esphomeyaml/components/mqtt.html#mqtt-last-will-birth) for more information. -->
-<!-- - **will_message** (*选填*, [MQTT消息](https://esphomelib.com/esphomeyaml/components/mqtt.html#mqtt-message)): The message to send when the MQTT connection is dropped. See [Last Will And Birth Messages](https://esphomelib.com/esphomeyaml/components/mqtt.html#mqtt-last-will-birth) for more information. -->
-<!-- - **shutdown_message** (*选填*, [MQTT消息](https://esphomelib.com/esphomeyaml/components/mqtt.html#mqtt-message)): The message to send when the node shuts down and the connection is closed cleanly. See [Last Will And Birth Messages](https://esphomelib.com/esphomeyaml/components/mqtt.html#mqtt-last-will-birth) for more information. -->
-<!-- - **ssl_fingerprints** (*选填*, list): Only on ESP8266. A list of SHA1 hashes used for verifying SSL connections. See [SSL Fingerprints](https://esphomelib.com/esphomeyaml/components/mqtt.html#mqtt-ssl-fingerprints) for more information. -->
-<!-- - **reboot_timeout** (*选填*, [time](https://esphomelib.com/esphomeyaml/guides/configuration-types.html#config-time)): The amount of time to wait before rebooting when no MQTT connection exists. Can be disabled by setting this to `0s`. Defaults to `60s`. -->
-<!-- - **keepalive** (*选填*, [Time](https://esphomelib.com/esphomeyaml/guides/configuration-types.html#config-time)): The time to keep the MQTT socket alive, decreasing this can help with overall stability due to more WiFi traffic with more pings. Defaults to 15 seconds. -->
-<!-- - **on_message** (*选填*, [Automation](https://esphomelib.com/esphomeyaml/guides/automations.html#automation)): An action to be performed when a message on a specific MQTT topic is received. See [on_message](https://esphomelib.com/esphomeyaml/components/mqtt.html#mqtt-on-message). -->
+- **client_id** (*选填*, 字符串): 客户端 ID。默认值是节点名称 + MAC 地址
+- **discovery** (*选填*, 布尔值): 自动发现功能，开启可以被智能中枢发现并自动添加。默认值为开启 `True`
+- **discovery_retain** (*选填*, 布尔值): 将自动发现消息标记为保留消息，智能中枢重启时可以更快速的添加设备。默认值为开启 `True`
+- **discovery_prefix** (*选填*, 字符串): 自动发现的前缀。默认值为 `airi`
+- **topic_prefix** (*选填*, 字符串): 发布消息使用的主题前缀，不可以使用`/`。默认值是节点名称
+- **log_topic** (*选填*, [MQTT消息](#MQTT消息)) 发布日志消息使用的主题
+- **birth_message** (*选填*, [MQTT消息](#MQTT消息)): 与转发器建立连接时发布的消息。详情查看 [遗愿和重生消息](#遗愿和重生消息)
+- **will_message** (*选填*, [MQTT消息](#MQTT消息)): 与转发器失去连接时发布的消息。详情查看 [遗愿和重生消息](#遗愿和重生消息)
+- **shutdown_message** (*选填*, [MQTT消息](#MQTT消息)): 本节点执行关机，即将关闭与转发器连接是发布的消息。详情查看 [遗愿和重生消息](#遗愿和重生消息)
+- **reboot_timeout** (*选填*, [时长](mqtt/guides/configuration-types#时长)): 持续的无法连接转发器时，节点会在设置的时长后重启。默认 `60s`，设置成 `0s` 禁用此功能
+- **keepalive** (*选填*, [时长](mqtt/guides/configuration-types#时长)): 连接持续有效时间，增加这个值会加快节点的响应速度但同时也会增加路由器压力。默认 `15s`
+- **on_message** (*选填*, [自动化](mqtt/guides/automations)): 接到特定消息时触发的特定动作。详情查看 [on_message](#on_message)
 - **id** (*选填*, [ID](mqtt/guides/configuration-types#id)): 用于逻辑识别的 ID
-
 
 
 ## MQTT消息
 
-With the MQTT Message schema you can tell esphomeyaml how a specific MQTT message should be sent. It is used in several places like last will and birth messages or MQTT log options.
+通过设置不同的参数， 来确定 MQTT 消息发布时的内容
 
-```
+以 `will_message` 为例
+
+```yaml
 # 简单使用:
-some_option: topic/to/send/to
+will_message: topic/to/send/to
 
-# 禁用:
-some_option:
+# 禁用此消息:
+will_message:
 
 # 扩展使用:
-some_option:
+will_message:
   topic: topic/to/send/to
   payload: online
   qos: 0
   retain: True
 ```
 
-Configuration options:
+**配置项**
 
 - **topic** (*必填*, 字符串): 消息发布到的主题
-- **payload** (*必填*, 字符串): 消息的内容，实际发出时会被实际有效负载包裹，比如 `log_topic`
-- **qos** (*Optional*, int): QoS 等级，最多一次`0`（默认），至少一次`1`，确保仅一次`2`
-- **retain** (*Optional*, boolean): 此消息是否为保留消息，默认为是 `True`
-
-
-
-
+- **payload** (*必填*, 字符串): 消息的内容，发出时会被实际有效负载包裹，比如 `log_topic`
+- **qos** (*选填*, int): QoS 等级，最多一次`0`（默认），至少一次`1`，确保仅一次`2`
+- **retain** (*选填*, boolean): 此消息是否标记为保留消息，默认为是 `True`
 
 
 
 ## 遗愿和重生消息
 
-MQTT 本身就是为信号不稳定的网络设计的，所以难免一些客户端会无故断开与转发器的连接。
+MQTT 本身就是为信号不稳定的网络设计的，所以难免一些客户端会无故断开与转发器的连接，遗愿消息是节点尚与转发器保持连接时，预保留的特定消息 LWT（Last Will & Testament），当节点断线时，由转发器代为发布
 
 ![](https://ws1.sinaimg.cn/large/007fN5Xegy1fx3diou3x8j30k00ca3z1.jpg)
 
 **当模块断开连接时，在 airi:8123 和 hass 中的显示**
 
-默认配置的情况下，模块会发布
+默认配置的情况下，节点会发布内容为 `online` 的保留 MQTT 消息到主题 `<TOPIC_PREFIX>/status`，同时也告知转发器，当节点断线时，发布 `offline` 到 `<TOPIC_PREFIX>/status`
 
-By default, esphomelib will send a retained MQTT message to `<TOPIC_PREFIX>/status`with payload `online`, and will tell the broker to send a message `<TOPIC_PREFIX>/status`with payload `offline` if the connection drops.
+设置重生消息 `birth_message` 和遗愿消息 `will_message` 的具体参数以改变默认发送
 
-You can change these messages by overriding the 重生消息 `birth_message` and 遗愿消息 `will_message` with the following options.
-
-```
+```yaml
 mqtt:
   # ...
   will_message:
@@ -109,12 +103,11 @@ mqtt:
     topic: myavailability/topic
     payload: online
 ```
+**配置项**
+- **birth_message** (*选填*, [MQTT消息](#MQTT消息)) 与转发器建立连接时发布的消息。
+- **will_message** (*选填*, [MQTT消息](#MQTT消息)) 与转发器失去连接时发布的消息。
 
-- **birth_message** (*Optional*, [MQTT消息](https://esphomelib.com/esphomeyaml/components/mqtt.html?highlight=app_name#mqtt-message))
-- **will_message** (*Optional*, [MQTT消息](https://esphomelib.com/esphomeyaml/components/mqtt.html?highlight=app_name#mqtt-message))
-
-If the birth message and last will message have empty topics or topics that are different from each other, availability reporting will be disabled.
-
+如果遗愿和重生消息的主题`topic`留空或者不同，可用状态的功能会失效
 
 
 
@@ -125,23 +118,28 @@ If the birth message and last will message have empty topics or topics that are 
 
 **配置项**
 
-- **name** (**必填**, 字符串): The name to use for the MQTT Component.
-- **retain** (*Optional*, boolean): If all MQTT state messages should be retained. Defaults to `True`.
-- **discovery** (*Optional*, boolean): 子组件是否会被自动发现，默认集成父组件的值
-- **availability** (*Optional*): Manually set what should be sent to Home Assistant for showing entity availability. Default derived from [global birth/last will message](https://esphomelib.com/esphomeyaml/components/mqtt.html?highlight=app_name#mqtt-last-will-birth).
-- **state_topic** (*Optional*, 字符串): The topic to publish state updates to. Defaults to`<TOPIC_PREFIX>/<COMPONENT_TYPE>/<COMPONENT_NAME>/state`.
-- **command_topic** (*Optional*, 字符串): The topic to subscribe to for commands from the remote. Defaults to`<TOPIC_PREFIX>/<COMPONENT_TYPE>/<COMPONENT_NAME>/command`.
-- **internal** (*Optional*, boolean): Mark this component as internal. Internal components will not send any MQTT messages and can be used for [on-device automations](https://esphomelib.com/esphomeyaml/guides/automations.html#automation). Only specifying an `id` without a `name` will implicitly set this to true.
+- **name** (**必填**, 字符串): 组件名称
+- **retain** (*选填*, boolean): 发布的消息是否标记为保留消息。默认为是`True`
+- **discovery** (*选填*, boolean): 子组件是否会被自动发现，默认继承父组件的值
+- **availability** (*选填*): 组件发布的可用状态消息的格式。默认基于 [遗愿和重生消息](#遗愿和重生消息) 基础上扩展 
+- **state_topic** (*选填*, 字符串): 组件状态变化时，消息发布到的主题名称。默认值 `<TOPIC_PREFIX>/<COMPONENT_TYPE>/<COMPONENT_NAME>/state`
+- **command_topic** (*选填*, 字符串): 订阅远程控制的主题名称。默认值 `<TOPIC_PREFIX>/<COMPONENT_TYPE>/<COMPONENT_NAME>/command`
+- **internal** (*选填*, boolean): 将组件内部化。内部化组件不会发布任何 MQTT消息，也不会自动发现侦测到，但可以被模块自身的 [自动化](mqtt/guides/automations)。 只设置 `id` 不设置 `name` 等效于本参数设置为`True`
 
 
+!> 改变以上参数的设置后，需要重启 Hass 服务才能生效
 
 
+## 自动化
 
-## on_message
+[自动化](mqtt/guides/automations)相关
 
-With this configuration option you can write complex automations whenever an MQTT message on a specific topic is received. To use the message content, use a [lambda](https://esphomelib.com/esphomeyaml/guides/automations.html#config-lambda)template, the message payload is available under the name `x` inside that lambda.
 
-```
+### on_message
+
+当收到指定主题的消息时，触发对应的动作，即作为 [自动化](mqtt/guides/automations) 的触发器使用
+
+```yaml
 mqtt:
   # ...
   on_message:
@@ -152,21 +150,20 @@ mqtt:
           id: some_switch
 ```
 
-Configuration variables:
+**配置项**
 
-- **topic** (**必填**, 字符串): The MQTT topic to subscribe to and listen for MQTT messages on. Every time a message with **this exact topic** is received, the automation will trigger.
+- **topic** (**必填**, 字符串): 订阅的主题，每收到这个主题的消息时，便触发动作
 
-  Note
 
-  Currently the topic does not support MQTT wildcards like `+` or `#`.
+!> 精确主题，不支持通配符，比如 `+` `#`
 
-- **qos** (*Optional*, integer): The MQTT Quality of Service to subscribe to the topic with. Defaults to 0.
+- **qos** (*选填*, integer): QoS 等级，最多一次`0`（默认），至少一次`1`，确保仅一次`2`
 
-Note
 
-You can even specify multiple `on_message` triggers by using a YAML list:
 
-```
+可以用列表方式同时支持多个 `on_message` 触发器：
+
+```yaml
 mqtt:
   on_message:
      - topic: some/topic
@@ -179,9 +176,9 @@ mqtt:
 
 
 
-## mqtt.publish Action
+### mqtt.publish
 
-在自动化中使用，发布 MQTT 消息 `message` 到指定的主题 `topic` 中
+ [自动化](mqtt/guides/automations) 的动作，被触发后，发布 MQTT 消息
 
 ```
 on_...:
@@ -198,10 +195,9 @@ on_...:
         payload: !lambda >-
           return id(reed_switch).value ? "YES" : "NO";
 ```
+**配置项**
 
-Configuration options:
-
-- **topic** (*必填*, 字符串, [模型化](https://esphomelib.com/esphomeyaml/guides/automations.html#config-templatable)): The MQTT topic to publish the message.
-- **payload** (*必填*, 字符串, [模型化](https://esphomelib.com/esphomeyaml/guides/automations.html#config-templatable)): The message content.
-- **qos** (*Optional*, int, [模型化](https://esphomelib.com/esphomeyaml/guides/automations.html#config-templatable)): The [Quality of Service](https://www.hivemq.com/blog/mqtt-essentials-part-6-mqtt-quality-of-service-levels) level of the topic. Defaults to 0.
-- **retain** (*Optional*, boolean, [模型化](https://esphomelib.com/esphomeyaml/guides/automations.html#config-templatable)): If the published message should have a retain flag on or not. Defaults to `False`.
+- **topic** (*必填*, 字符串, [模板化](mqtt/guides/automations#模板化)): 消息发布到得主题
+- **payload** (*必填*, 字符串, [模板化](mqtt/guides/automations#模板化)): 消息内容
+- **qos** (*选填*, int, [模板化](mqtt/guides/automations#模板化)):QoS 等级，最多一次`0`（默认），至少一次`1`，确保仅一次`2`
+- **retain** (*选填*, boolean, [模板化](mqtt/guides/automations#模板化)): 是否标记为保留消息，默认为否 `False`

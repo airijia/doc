@@ -34,7 +34,7 @@ some_config_option:
 ```
 
 
-## 多参引脚
+## 参数引脚
 定义复杂的引脚的类型
 
 
@@ -43,7 +43,7 @@ some_config_option:
   # 引脚:
   pin: D0
 
-  # 多参引脚:
+  # 参数引脚:
   pin:
     number: D0
     inverted: True
