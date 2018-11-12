@@ -95,7 +95,7 @@ esptool.py -p COM6 write_flash -fs 1MB -fm dout 0x00000 D:\Download\666.bin
 
 **基本流程是：刷机模式插入 - 擦除 - 刷机模式插入 - 刷入 - 普通模式插入 - 调试或配对**
 
-esp01 模块刷 渡鸦固件，文件名 777.bin，所在位置D盘 Download 目录，COM7
+esp01 模块刷 渡鸦固件，文件名 666.bin，所在位置D盘 Download 目录，COM6
 
 1. 切换到D:\Download  下
 
@@ -116,18 +116,16 @@ cd Download
 2. 擦除
 
 ```
-esptool.py -p COM7 erase_flash
+esptool.py -p COM6 erase_flash
 ```
-
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fwvzhjncgmj30fj0biq3o.jpg)
+![](https://ws1.sinaimg.cn/large/007fN5Xegy1fx57bxd1trj30if0cjjs8.jpg)
 
 3. 刷入 ( 这条命令是**整体，不换行**)
 
 ```python
-esptool.py -p COM7 -b 115200 write_flash -fs 1MB -fm dout -ff 40m 0x0 rboot.bin 0x1000 blank_config.bin 0x2000 777.bin
+esptool.py -p COM6 -b 115200 write_flash -fs 1MB -fm dout -ff 40m 0x0 rboot.bin 0x1000 blank_config.bin 0x2000 666.bin
 ```
-
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fwvzkkcgulj316305raam.jpg)
+![](https://ws1.sinaimg.cn/large/007fN5Xegy1fx57abklv5j317d0l6wgh.jpg)
 
 刷入成功后，[渡鸦固件配置 wifi 和 homekit 的方法](diy/raven) 
 
@@ -166,6 +164,46 @@ esptool.py --port COM3 write_flash --flash_size 1MB --flash_mode dout 0x00000 so
 
 
 ## 常见问题
+
+
+Q pip 等各种莫名其妙错误
+A 网络原因引起
+
+打开`文件资源管理器`
+![](https://ws1.sinaimg.cn/large/007fN5Xegy1fx5432fmw0j30ph0d2ta5.jpg)
+
+
+填入 
+
+```
+%HOMEPATH%
+```
+后回车，进入到用户文件夹
+
+
+![](https://ws1.sinaimg.cn/large/007fN5Xegy1fx546xpwhkj30gk0efaaw.jpg)
+
+新建并进入到名为 `pip` 的文件夹
+
+
+![](https://ws1.sinaimg.cn/large/007fN5Xegy1fx54xfn849j30lz04ot8n.jpg)
+
+
+新建 `pip.ini` 文件, 填入内容
+
+```
+[global]
+index-url = https://mirrors.ustc.edu.cn/pypi/web/simple  
+format = columns
+```
+
+保存, 然后重新执行 pip 安装
+
+
+
+Q pip 安装 esptool 显示 UnicodeDecodeError 错误
+
+A 重装pip
 
 
 
