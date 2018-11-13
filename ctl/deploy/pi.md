@@ -93,7 +93,6 @@ sudo docker run -d \
 sudo reboot
 ```
 
-
-[ctl 初次使用](ctl/init)
+[ARM 平台基于 docker 安装 airjiia/ctl ](ctl/deploy/arm32v6)
 
 
