@@ -130,3 +130,8 @@ airijia/ctl 镜像下载完成后，点击启动
 
 
 ![](https://ws1.sinaimg.cn/large/007fN5Xegy1fx6gurv0soj30qe0feab1.jpg)
+
+
+[ctl 初次使用](ctl/init)
+
+

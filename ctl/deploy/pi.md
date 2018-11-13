@@ -36,8 +36,7 @@ yes
 ![](https://ws1.sinaimg.cn/large/007fN5Xegy1fx6a9r16baj30qw0a40vk.jpg)
 
 
-输入密码
-raspberry
+默认的密码 `raspberry`
 
 -- 换源
 ```shell
@@ -95,5 +94,6 @@ sudo reboot
 ```
 
 
-然后 [部署ctl](ctl/deploy/arm32v6)
+[ctl 初次使用](ctl/init)
+
 

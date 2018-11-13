@@ -108,8 +108,15 @@ volumes:
 用时大概 20 分钟， 因为要下载部署合计 3 个容器，可以先去泡杯咖啡
 
 
+![](https://ws1.sinaimg.cn/large/007fN5Xegy1fx6ikyrtvnj311h0pggnb.jpg)
 
-222222
+如图显示即安装完成
+
+
+浏览器打开 `192.168.1.127:8233`
+
+
+[ctl 初次使用](ctl/init)
 
 
 
