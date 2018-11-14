@@ -26,18 +26,39 @@
 
 ![](https://ws1.sinaimg.cn/large/007fN5Xegy1fwvybqrqjbj30hr09u0tp.jpg)
 
+![](https://ws1.sinaimg.cn/large/007fN5Xegy1fx7e5gzwuij30e00bzn0l.jpg)
+
+![](https://ws1.sinaimg.cn/large/007fN5Xegy1fx7e7qttrsj30do0bzad8.jpg)
+
+![](https://ws1.sinaimg.cn/large/007fN5Xegy1fx7e8b5xgej30dl0bwq88.jpg)
+
 !> 一定要记得勾选“Add python.exe to Path"
 
 ![](https://ws1.sinaimg.cn/large/007fN5Xegy1fwvye584exj30gm0dvwgk.jpg)
 
 点击左下角开始按钮，输入 cmd
-打开：WIN10 命令行提示符，WIN7 命令行
+打开：WIN 10 命令行提示符，WIN 7 命令行
+
+WIN 10
 
 ![](https://ws1.sinaimg.cn/large/007fN5Xegy1fwvyi5cmq0j30ec0njq39.jpg)
 
+WIN 7
+
+
+
+
+?> 鼠标在命令内容上悬停时，可以点击右侧的**点击复制**，复制内容，然后到 cmd 窗口中鼠标右键粘贴
+
+![](https://ws1.sinaimg.cn/large/007fN5Xegy1fx7ea3y5yij30h9047t8h.jpg)
+
+
+
+
+
 命令行中输入
 
-```python
+```shell
 python --version
 ```
 
@@ -45,19 +66,29 @@ python --version
 
 如图显示即正确安装 python 2
 
-?> TODO: path 不正确的解决方法
+
+
+![](https://ws1.sinaimg.cn/large/007fN5Xegy1fx7gsua4eyj30e003ydg8.jpg)
+
+如果提示命令不存在，需要设置环境变量
+
+```shell
+path=%path%;C:\Python
+```
+
+
 
 ### 安装 esptool.py
 
 命令行输入
 
-```python
+```shell
 pip install esptool
 ```
 
 然后输入
 
-```python
+```shell
 esptool.py
 ```
 
@@ -83,7 +114,7 @@ esptool.py
 
 sonoff basic 刷 MQTT 固件，文件名 666.bin，所在位置D盘 Download 目录，COM6
 
-```python
+```shell
 esptool.py -p COM6 write_flash -fs 1MB -fm dout 0x00000 D:\Download\666.bin
 ```
 
@@ -101,13 +132,13 @@ esp01 模块刷 渡鸦固件，文件名 666.bin，所在位置D盘 Download 目
 
 进入D:盘
 
-```cmd
+```shell
 D:
 ```
 
 进入 Download 目录
 
-```cmd
+```shell
 cd Download
 ```
 
@@ -122,7 +153,7 @@ esptool.py -p COM6 erase_flash
 
 3. 刷入 ( 这条命令是**整体，不换行**)
 
-```python
+```shell
 esptool.py -p COM6 -b 115200 write_flash -fs 1MB -fm dout -ff 40m 0x0 rboot.bin 0x1000 blank_config.bin 0x2000 666.bin
 ```
 ![](https://ws1.sinaimg.cn/large/007fN5Xegy1fx57abklv5j317d0l6wgh.jpg)
@@ -135,7 +166,7 @@ esptool.py -p COM6 -b 115200 write_flash -fs 1MB -fm dout -ff 40m 0x0 rboot.bin 
 
 输入 miniterm + 实机COM口 + 波特率 (通常为 115200 )
 
-```python
+```shell
 miniterm.py COM3 115200
 ```
 
@@ -147,13 +178,13 @@ miniterm.py COM3 115200
 
 备份
 
-```python
+```shell
 esptool.py --port COM3 read_flash 0x00000 0x100000 sonoff-backup.bin
 ```
 
 恢复
 
-```python
+```shell
 esptool.py --port COM3 write_flash --flash_size 1MB --flash_mode dout 0x00000 sonoff-backup.bin
 ```
 
@@ -225,3 +256,10 @@ Q: 提示 'esptool' , 'miniterm'不是内部或外部命令，也不是可运行
 A: 这两个命令运用的时候需要加上后缀py，即 esptool.py 和  miniterm.py
 
 ![](https://ws1.sinaimg.cn/large/007fN5Xegy1fwzkpkkrovj30j60l4dho.jpg)
+
+
+
+
+## 相关链接
+
+[cmd里面快速粘贴复制的设置方式](https://blog.csdn.net/u010684585/article/details/78655559)
