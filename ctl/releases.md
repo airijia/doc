@@ -7,7 +7,7 @@
 
 2018-11-15
 
- - 配置快照功能将同时备份和恢复 `custom_components` 文件夹 （自定义组件）
+ - 配置快照功能已包括 `custom_components` 文件夹 （自定义组件）
 
  ![](https://ws1.sinaimg.cn/large/007fN5Xely1fx8pw68818j30cg07y3yq.jpg)
 
