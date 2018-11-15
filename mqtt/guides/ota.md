@@ -87,10 +87,20 @@ A 两种可能
 
 
 
+
+
+
+
+Q Error Uploading
+
+
+A 
+
+
+![](https://ws1.sinaimg.cn/large/007fN5Xegy1fx8ubbp357j30cx032mx0.jpg)
+
+
+
 Q No handlers could be found for logger "__main__"
 
-
-
-
-
-
+A 主机上python 版本错误， 正常应该为python3

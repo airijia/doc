@@ -92,7 +92,7 @@ MQTT 定制固件的功能有可以通过两种方式使用
 -  [BMP085/BMP180 温度+气压](mqtt/components/sensor/ms5611)
 -  [BMP280 温度+气压](mqtt/components/sensor/ms5611)
 -  [BME280 温湿度+气压](mqtt/components/sensor/ms5611)
--  [BME280 温湿度+气压+空气品质](mqtt/components/sensor/ms5611)
+-  [BME680 温湿度+气压+空气品质](mqtt/components/sensor/ms5611)
 
 
 -  [MH-Z19 二氧化碳](mqtt/components/sensor/mhz19)
