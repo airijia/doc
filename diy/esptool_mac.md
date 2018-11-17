@@ -12,7 +12,9 @@ CMD+空格 聚焦搜索 打开终端
 
 命令行输入
 
-` python -V `
+```
+python -V
+```
 
 ![](https://ws1.sinaimg.cn/large/007fN5Xegy1fwweudy58oj30ga0a0mxn.jpg)
 
@@ -20,29 +22,52 @@ CMD+空格 聚焦搜索 打开终端
 
 MAC 默认是不带 pip 的，所以要先安装pip
 
-` sudo easy_install pip `
+```
+sudo easy_install pip
+```
 
 ![](https://ws1.sinaimg.cn/large/007fN5Xegy1fwwey1vjgkj30q20huwj2.jpg)
 
 然后用 pip 安装 esptool
 
-`sudo pip install esptool`
+```
+sudo pip install esptool
+```
 
 ![](https://ws1.sinaimg.cn/large/007fN5Xegy1fwwf0mdiktj30u00uygw3.jpg)
 
 
 
-`esptool.py`
+```
+esptool.py
+```
 
 ![](https://ws1.sinaimg.cn/large/007fN5Xegy1fwwf1laus7j30ka0g8mz1.jpg)
 
 如图显示即安装成功，不要在意错误提示，这里只是试一下命令是否正确安装了
 
 
+插入 TTL 刷机线，查询 USB串口设备
+
+```
+ls /dev/cu.usbserial-*
+```
+
+
+![](https://ws1.sinaimg.cn/large/007fN5Xegy1fxbghe7995j30gy08et9e.jpg)
+
+查询到的串口设备名为 `/dev/cu.usbserial-1410`
+
+![](https://ws1.sinaimg.cn/large/007fN5Xegy1fxbgj3xu1uj310g09275m.jpg)
+
+没有查询到设备，这种情况需要装驱动
+
+
 
 ## 使用
 
-以下演示，实际使用中要根据实机上的 USB 口编号设置，如 /dev/ttyUSB0 或 /dev/ttyUSB1
+以下演示，实际使用中要根据实机上的 USB 串口编号设置，如上面查到的 `/dev/cu.usbserial-1410`
+
 
 ###  刷入
 
@@ -58,35 +83,41 @@ sonoff basic 刷 MQTT 固件，文件名 666.bin，所在位置 Downloads 目录
 
 切换到Downloads 目录下
 
-``` cd ~/Downloads ```
+```
+cd ~/Downloads
+```
 
  ![](https://ws1.sinaimg.cn/large/007fN5Xegy1fwwf8eirlej30e80b0mxj.jpg)
 
+
+
+
 刷入固件
 
-``` esptool.py --port /dev/ttyUSB0 write_flash --flash_size 1MB --flash_mode dout 0x00000 666.bin ```
+```
+esptool.py -p /dev/cu.usbserial-1410 write_flash -fs 1MB -fm dout 0x0 666.bin
+```
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fwwfaq5x1jj31km074dij.jpg)
+![](https://ws1.sinaimg.cn/large/007fN5Xegy1fxbgt79ztzj31ay0i6aee.jpg)
 
- 
+
 
 刷入成功后，进入 智能中枢 使用
 
- 
 
 #### 渡鸦 Homekit 直连固件
 
- 
 
 **基本流程是：刷机模式插入 - 擦除 - 刷机模式插入 - 刷入 - 普通模式插入 - 调试或配对**
 
- 
 
-esp01 模块刷 渡鸦固件，文件名 777.bin，所在位置 Downloads 目录，/dev/ttyUSB0
+esp01 模块刷 渡鸦固件，文件名 `777.bin`，所在位置 `Downloads` 目录，串口名 `/dev/cu.usbserial-1410`
 
 1. 切换到Downloads 目录下
 
-   ``` cd ~/Downloads ```
+   ```
+   cd ~/Downloads
+   ```
 
     ![](https://ws1.sinaimg.cn/large/007fN5Xegy1fwwf8eirlej30e80b0mxj.jpg)
 
@@ -96,19 +127,21 @@ esp01 模块刷 渡鸦固件，文件名 777.bin，所在位置 Downloads 目录
 
  
 
-``` esptool.py -p /dev/ttyUSB0 erase_flash```
+```
+esptool.py -p /dev/cu.usbserial-1410 erase_flash
+```
 
- ![](https://ws1.sinaimg.cn/large/007fN5Xegy1fwwfew1eobj30sk062wfx.jpg)
+![](https://ws1.sinaimg.cn/large/007fN5Xegy1fxbh2mipqvj30xa0imgpp.jpg)
 
- 
+
 
 3. 刷入 ( 这条命令是**整体，不换行**)
 
- 
+```
+esptool.py -p /dev/cu.usbserial-1410 -b 115200 write_flash -fs 1MB -fm dout -ff 40m 0x0 rboot.bin 0x1000 blank_config.bin 0x2000 777.bin
+```
 
-``` esptool.py -p /dev/ttyUSB0 --baud 115200 write_flash -fs 1MB -fm dout -ff 40m 0x0 rboot.bin 0x1000 blank_config.bin 0x2000 777.bin```
-
- ![](https://ws1.sinaimg.cn/large/007fN5Xegy1fwwfhil9lnj31n205qtbd.jpg)
+![](https://ws1.sinaimg.cn/large/007fN5Xegy1fxbh5jwvhsj31f803idh6.jpg)
 
 
 
@@ -128,9 +161,12 @@ esp01 模块刷 渡鸦固件，文件名 777.bin，所在位置 Downloads 目录
 
  
 
-``` miniterm.py /dev/ttyUSB0 115200 ```
+```
+miniterm.py /dev/cu.usbserial-1410 115200
+```
 
- ![](https://ws1.sinaimg.cn/large/007fN5Xegy1fwwfmilr9dj30js04y74w.jpg)
+
+![](https://ws1.sinaimg.cn/large/007fN5Xegy1fxbh8h21q0j30z405ita6.jpg)
 
 
 
@@ -146,7 +182,9 @@ esp01 模块刷 渡鸦固件，文件名 777.bin，所在位置 Downloads 目录
 
  
 
-`esptool.py --port /dev/ttyUSB0 read_flash 0x00000 0x100000 sonoff-backup.bin`
+```
+esptool.py --port /dev/cu.usbserial-1410 read_flash 0x00000 0x100000 sonoff-backup.bin
+```
 
  
 
@@ -154,7 +192,9 @@ esp01 模块刷 渡鸦固件，文件名 777.bin，所在位置 Downloads 目录
 
  
 
-`esptool.py --port /dev/ttyUSB0 write_flash --flash_size 1MB --flash_mode dout 0x00000 sonoff-backup.bin`
+```
+esptool.py --port /dev/cu.usbserial-1410 write_flash --flash_size 1MB --flash_mode dout 0x00000 sonoff-backup.bin
+```
 
 ## 相关链接
 

@@ -115,7 +115,7 @@ esptool.py
 sonoff basic 刷 MQTT 固件，文件名 666.bin，所在位置D盘 Download 目录，COM6
 
 ```shell
-esptool.py -p COM6 write_flash -fs 1MB -fm dout 0x00000 D:\Download\666.bin
+esptool.py -p COM6 write_flash -fs 1MB -fm dout 0x0 D:\Download\666.bin
 ```
 
 ![](https://ws1.sinaimg.cn/large/007fN5Xegy1fwvzaublysj30w304gdg7.jpg)
