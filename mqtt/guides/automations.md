@@ -105,7 +105,7 @@ dht11 温度
 
 
 
-## Lambdas 表达式
+## Lambda 表达式
 Templates (Lambdas)
 
 使用模板化功能，几乎可以实现所有
@@ -164,18 +164,24 @@ Templates (Lambdas)
 - [deep_sleep.prevent] -->
 
 
+## 基本动作
 
-## delay
-
-
-## lambda
+### delay
 
 
-
-## if 
+### lambda
 
 
 
-##
+### if 
+
+
+### component.update
+
+
+### script.execute
+
+
+## 相关链接
 
  - [Lambda 表达式定义](https://baike.baidu.com/item/Lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F)

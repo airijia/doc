@@ -69,7 +69,7 @@ airi:
 
 
 ```yaml
-esphomeyaml:
+airi:
   # ...
   on_loop:
     then:

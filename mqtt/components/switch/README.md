@@ -15,10 +15,10 @@ switch:
 
 **配置项**
 
-- **name** (**Required**, string): The name of the switch.
-- **icon** (*Optional*, icon): Manually set the icon to use for the sensor in the frontend.
-- **inverted** (*Optional*, boolean): Whether to invert the binary state, i.e. report ON states as OFF and vice versa. Defaults to `False`.
-- All other options from [MQTT Component](https://esphomelib.com/esphomeyaml/components/mqtt.html#config-mqtt-component).
+- **name** (**必填**, 字符串): 开关的名称
+- **icon** (*选填*, 图标): 中枢显示的图标
+- **inverted** (*选填*, 布尔值): 反转状态。默认为否 `False`
+- 以及 [MQTT 组件](mqtt/components/mqtt#MQTT-组件基本配置项) 的基本配置项
 
 
 
