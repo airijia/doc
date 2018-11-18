@@ -56,6 +56,9 @@ binary_sensor:
 
 要实现点击开关切换继电器，这里要引入自动化的两个概念：触发器 `trigger` 和 动作 `action`
 
+
+
+
 ```yaml
 # ... 基本设置
 switch:
@@ -92,7 +95,7 @@ binary_sensor:
 8. 中枢发出关闭指令，`GPIO12` 开->关
 
 
-## 多个动作
+## 动作
 
 delay 点动
 
@@ -102,7 +105,7 @@ dht11 温度
 
 
 
-## 模板化
+## Lambdas 表达式
 Templates (Lambdas)
 
 使用模板化功能，几乎可以实现所有
@@ -140,23 +143,25 @@ Templates (Lambdas)
 - [lambda]
 - [if]
 - [mqtt.publish](mqtt/components/mqtt#mqttpublish)
-- [switch.toggle]
-- [switch.turn_off]
-- [switch.turn_on]
-- [light.toggle]
-- [light.turn_off]
-- [light.turn_on]
-- [cover.open]
+- [switch.toggle](mqtt/components/switch/#switchtoggle)
+- [switch.turn_off](mqtt/components/switch/#switchturn_off)
+- [switch.turn_on](mqtt/components/switch/#switchturn_on)
+- [light.toggle](mqtt/components/light/#lighttoggle)
+- [light.turn_on](mqtt/components/light/#lightturn_on)
+- [light.turn_off](mqtt/components/light/#lightturn_off)
+
+<!-- - [cover.open]
 - [cover.close]
 - [cover.stop]
 - [fan.toggle]
 - [fan.turn_off]
-- [fan.turn_on]
+- [fan.turn_on] -->
 - [output.turn_off]
 - [output.turn_on]
 - [output.set_level]
-- [deep_sleep.enter]
-- [deep_sleep.prevent]
+
+<!-- - [deep_sleep.enter]
+- [deep_sleep.prevent] -->
 
 
 
@@ -168,3 +173,9 @@ Templates (Lambdas)
 
 
 ## if 
+
+
+
+##
+
+ - [Lambda 表达式定义](https://baike.baidu.com/item/Lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F)

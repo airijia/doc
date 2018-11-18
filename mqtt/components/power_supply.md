@@ -1,7 +1,7 @@
-# 直流电源组件
+# 直流开关电源
 
 
-直流电源组件 `power_supply` 可以通过 芯片的output控制电源开关， 比如PC用的 ATX 电源
+直流开关电源组件 `power_supply` 可以通过 芯片的output控制电源开关， 比如PC用的 ATX 电源
 结合 
 
 
@@ -15,5 +15,5 @@ power_supply:
 
 
 
-- [Output 组件](/mqtt/components/output/)
+- [Output 组件](mqtt/components/output/)
 

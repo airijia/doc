@@ -28,34 +28,21 @@ config_B:
   pin: GPIO2
 
 # NodeMCU ESP8266:
-
 some_config_option:
   pin: D1
+
+# 配置多个参数
+pin:
+  number: D0
+  inverted: True
+  mode: INPUT_PULLUP
 ```
-
-
-## 参数引脚
-定义复杂的引脚的类型
-
-
-```
-some_config_option:
-  # 引脚:
-  pin: D0
-
-  # 参数引脚:
-  pin:
-    number: D0
-    inverted: True
-    mode: INPUT_PULLUP
-```
-
 
 ### 配置参数
 
-- **number** (**Required**, pin): 引脚编号
-- **inverted** (*Optional*, boolean): 翻转读值，可选 `True`，`False`，默认值 `False`
-- **mode** (*Optional*, string): 引脚模式，参考 Arduino 的`pinMode`
+- **number** (**必填**, 引脚): 引脚编号
+- **inverted** (*选填*, 布尔值): 翻转读值，可选 `True`，`False`，默认值 `False`
+- **mode** (*选填*, 字符串): 引脚模式，参考 Arduino 的 `pinMode`
 
 
 #### 常用引脚模式

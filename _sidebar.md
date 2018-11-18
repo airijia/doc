@@ -7,7 +7,7 @@
 * [智能家居硬件 DIY](diy/)
 
 
-* [MQTT 定制固件](mqtt/)
+* [MQTT 固件](mqtt/)
 
 
 * [购买产品](//shop107898810.taobao.com/)

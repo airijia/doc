@@ -59,7 +59,7 @@ MQTT 定制固件的功能有可以通过两种方式使用
 - [UART 总线](mqtt/components/uart)
 - [OTA](mqtt/components/ota)
 - [日志](mqtt/components/logger)
-- [直流电源](mqtt/components/power_supply)
+- [直流开关电源](mqtt/components/power_supply)
 - [睡眠模式](mqtt/components/deep_sleep)
 
 
@@ -80,41 +80,41 @@ MQTT 定制固件的功能有可以通过两种方式使用
 
 
 -  [Dallas 温度](mqtt/components/sensor/dallas)
--  [MAX6675 温度](mqtt/components/sensor/dallas)
+<!-- -  [MAX6675 温度](mqtt/components/sensor/dallas) -->
 -  [DHT 温湿度](mqtt/components/sensor/dht)
--  [DHT12 温湿度(I²C 总线)](mqtt/components/sensor/dht)
--  [HDC1080 温湿度](mqtt/components/sensor/dallas)
--  [HTU21D 温湿度](mqtt/components/sensor/dallas)
--  [SHT3X-D 温湿度](mqtt/components/sensor/dallas)
+<!-- -  [DHT12 温湿度(I²C 总线)](mqtt/components/sensor/dht) -->
+<!-- -  [HDC1080 温湿度](mqtt/components/sensor/dallas) -->
+-  [HTU21D 温湿度](mqtt/components/sensor/htu21d)
+-  [SHT3X-D 温湿度](mqtt/components/sensor/sht3xd)
 
 
--  [MS5611 气压](mqtt/components/sensor/ms5611)
--  [BMP085/BMP180 温度+气压](mqtt/components/sensor/ms5611)
--  [BMP280 温度+气压](mqtt/components/sensor/ms5611)
--  [BME280 温湿度+气压](mqtt/components/sensor/ms5611)
--  [BME680 温湿度+气压+空气品质](mqtt/components/sensor/ms5611)
+<!-- -  [MS5611 气压](mqtt/components/sensor/ms5611) -->
+<!-- -  [BMP085/BMP180 温度+气压](mqtt/components/sensor/ms5611) -->
+<!-- -  [BMP280 温度+气压](mqtt/components/sensor/ms5611) -->
+<!-- -  [BME280 温湿度+气压](mqtt/components/sensor/ms5611) -->
+<!-- -  [BME680 温湿度+气压+空气品质](mqtt/components/sensor/ms5611) -->
 
 
--  [MH-Z19 二氧化碳](mqtt/components/sensor/mhz19)
+<!-- -  [MH-Z19 二氧化碳](mqtt/components/sensor/mhz19) -->
 
 
 -  [BH1750 光强](mqtt/components/sensor/bh1750)
--  [TSL2561 光强](mqtt/components/sensor/tsl2561)
+<!-- -  [TSL2561 光强](mqtt/components/sensor/tsl2561) -->
 
 
--  [HLW8012 功率](mqtt/components/sensor/ms5611)
--  [INA219 功率](mqtt/components/sensor/ms5611)
--  [INA3221 功率](mqtt/components/sensor/ms5611)
+<!-- -  [HLW8012 功率](mqtt/components/sensor/ms5611) -->
+<!-- -  [INA219 功率](mqtt/components/sensor/ms5611) -->
+<!-- -  [INA3221 功率](mqtt/components/sensor/ms5611) -->
 
 
--  [HX711 压力](mqtt/components/sensor/ms5611)
--  [TCS34725 颜色识别](mqtt/components/sensor/ms5611)
--  [HMC5883L 罗盘](mqtt/components/sensor/ms5611)
--  [MPU6050  陀螺仪](mqtt/components/sensor/ms5611)
--  [超声波测距](mqtt/components/sensor/ms5611)
+<!-- -  [HX711 压力](mqtt/components/sensor/ms5611) -->
+<!-- -  [TCS34725 颜色识别](mqtt/components/sensor/ms5611) -->
+<!-- -  [HMC5883L 罗盘](mqtt/components/sensor/ms5611) -->
+<!-- -  [MPU6050  陀螺仪](mqtt/components/sensor/ms5611) -->
+<!-- -  [超声波测距](mqtt/components/sensor/ms5611) -->
 
 
--  [ADC 模转数](mqtt/components/sensor/adc)
+<!-- -  [ADC 模转数](mqtt/components/sensor/adc)
 -  [ads1115 模转数](mqtt/components/sensor/ads1115)
 -  [占空比](mqtt/components/sensor/adc)
 -  [霍尔效应(ESP32)](mqtt/components/sensor/adc)
@@ -124,77 +124,79 @@ MQTT 定制固件的功能有可以通过两种方式使用
 
 -  [软件逻辑传感器](mqtt/components/light/)
 -  [运行时间](mqtt/components/light/)
--  [WiFi 信号强度](mqtt/components/light/)
-
+-  [WiFi 信号强度](mqtt/components/light/) -->
 
 
 ## 二进制传感器
 
--  [二进制传感器核心](mqtt/components/sensor/)
+-  [二进制传感器核心组件](mqtt/components/sensor/)
 -  [GPIO 状态](mqtt/components/sensor/)
 -  [连接状态](mqtt/components/sensor/)
+
+## 开关
+
+-  [开关核心组件](mqtt/components/switch/)
+-  [GPIO 开关](mqtt/components/switch/gpio)
+<!-- -  [红外发射器](mqtt/components/switch/) -->
+<!-- -  [输出(Output)拟态开关](mqtt/components/switch/) -->
+-  [模板化开关](mqtt/components/switch/template)
+<!-- -  [UART 指令开关](mqtt/components/switch/) -->
+
+
+
 
 
 ## 输出(Output)
 
--  [输出核心](mqtt/components/sensor/)
--  [GPIO 输出](mqtt/components/sensor/)
--  [ESP8266 PWM(软调光)](mqtt/components/sensor/)
--  [ESP32 LEDC(硬调光)](mqtt/components/sensor/)
--  [连接状态](mqtt/components/sensor/)
+-  [输出核心组件](mqtt/components/output/)
+-  [GPIO 输出](mqtt/components/output/gpio)
+-  [ESP8266 PWM(软调光)](mqtt/components/output/esp8266_pwm)
+-  [ESP32 LEDC(硬调光)](mqtt/components/output/ledc)
+-  [MY9231/MY9291 LED](mqtt/components/output/my9231)
 
 
 ## 灯/灯带
 
--  [灯核心](mqtt/components/light/)
--  [普通灯](mqtt/components/light/)
--  [可调光单色温](mqtt/components/light/)
--  [可调光双色温](mqtt/components/light/)
--  [RBG 三色](mqtt/components/light/)
--  [RBGW 四色](mqtt/components/light/)
--  [RBGWW 五色](mqtt/components/light/)
+-  [灯类核心组件](mqtt/components/light/)
+-  [普通灯](mqtt/components/light/binary)
+-  [可调亮度的灯](mqtt/components/light/monochromatic)
+-  [可调色温调亮度的灯](mqtt/components/light/cwww)
+-  [可调三色(红绿蓝)](mqtt/components/light/rgb)
+-  [可调四色(红绿蓝白)](mqtt/components/light/rgbw)
+-  [可调五色(红绿蓝冷白暖白)](mqtt/components/light/rgbww)
 -  [单信号线 LED 灯带](mqtt/components/light/fastled_clockless)
 -  [双信号线 LED 灯带](mqtt/components/light/fastled_spi)
 
 
 
-## 开关
 
--  [开关核心](mqtt/components/light/)
--  [GPIO 开关](mqtt/components/light/)
--  [红外发射器](mqtt/components/light/)
--  [输出(Output)拟态开关](mqtt/components/light/)
--  [软件逻辑开关](mqtt/components/light/)
--  [UART 指令开关](mqtt/components/light/)
+<!-- ## 风扇
 
-
-## 风扇
-
--  [风扇核心](mqtt/components/light/)
+-  [风扇核心组件](mqtt/components/light/)
 -  [普通风扇](mqtt/components/light/)
--  [调速风扇](mqtt/components/light/)
+-  [调速风扇](mqtt/components/light/) -->
 
 
-## 显示屏
+<!-- ## 显示屏
 
--  [显示屏核心](mqtt/components/light/)
+-  [显示屏核心组件](mqtt/components/light/)
 -  [串/并口液晶屏](mqtt/components/light/)
 -  [I²C 总线液晶屏(PCF8574)](mqtt/components/light/)
 -  [七段数码管(MAX7219)](mqtt/components/light/)
 -  [触摸液晶屏(Nextion)](mqtt/components/light/)
 -  [I²C 总线 OLED](mqtt/components/light/)
 -  [SPI 总线 OLED](mqtt/components/light/)
--  [墨水屏](mqtt/components/light/)
+-  [墨水屏](mqtt/components/light/) -->
 
 
 
 
-## 蓝牙
+<!-- ## 蓝牙 -->
 
 
 
 
-## 红外
+<!-- ## 红外 -->
 
 
 ## 案例赏析

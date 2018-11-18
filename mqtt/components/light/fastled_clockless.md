@@ -41,13 +41,13 @@ RGB 序列：三种颜色的排序；R=红，G=绿，B=蓝，根据实际情况�
 
 ```yaml
     # 配置示例
-    light:
-      - platform: fastled_clockless
-        chipset: WS2811
-        pin: D1
-        num_leds: 16
-        rgb_order: BRG
-        name: "FastLED WS2811 Light"
+light:
+  - platform: fastled_clockless
+    chipset: WS2811
+    pin: D1
+    num_leds: 16
+    rgb_order: BRG
+    name: "FastLED WS2811 Light"
 ```
 
 ### 配置项
@@ -58,11 +58,11 @@ RGB 序列：三种颜色的排序；R=红，G=绿，B=蓝，根据实际情况�
 - **num_leds** (**必填**, 整数): 连接的灯珠数量
 - **rgb_order** (*选填*, 字符串): 三种颜色的排序；R=红，G=绿，B=蓝。举例：如果设置排序为 RGB，当控制端指定显示红色（R）时，灯带却显示为蓝色（B），这是把排序改为 BGR，重新编译固件刷入，即可正确显示。可选值 `RGB`,`RBG`, `GRB`, `GBR`, `BRG` 和 `BGR`，默认值  `RGB`
 - **max_refresh_rate** (选填, [时长](mqtt/guides/configuration-types#时长)): 最大刷新率。举例：设置为16ms，会限制刷新率在 60Hz。默认值由驱动 IC 的默认值决定。
-- **gamma_correct** (*选填*, 浮点数): 伽马校正The [gamma correction factor](https://en.wikipedia.org/wiki/Gamma_correction) 灯类的默认值是 `2.8`.
-- **default_transition_length** (*选填*, [时长](mqtt/guides/configuration-types#时长)) 默认过度时长，如果智能中枢没提供此参数时的默认值，默认值为 `1s`.
+- **gamma_correct** (*选填*, 浮点数): 伽马校正。默认值 `2.8`
+- **default_transition_length** (*选填*, [时长](mqtt/guides/configuration-types#时长)) 过度时长，如果智能中枢没提供此参数时的采用的值。默认值为 `1s`
 - **power_supply** (*选填*, [ID](mqtt/guides/configuration-types#id)): 使用 [直流电源](mqtt/components/power_supply) 给灯带供电时，在控制灯带的同时也控制电源
 - **effects** (*选填*, 列表): 植入固件的[灯光特效](mqtt/components/light/#灯光特效)
-- **id** (*选填*, [ID](mqtt/guides/configuration-types#id)): 用于逻辑识别的 ID
+- **id** (*选填*, [ID](mqtt/guides/configuration-types#id)): 当前组件的 ID
 - 以及[MQTT 组件](mqtt/components/mqtt#MQTT-组件基本配置项)的基本配置项
 
 
@@ -97,7 +97,15 @@ RGB 序列：三种颜色的排序；R=红，G=绿，B=蓝，根据实际情况�
 
 ## 相关链接
 
-- [灯组件](mqtt/components/light/)
-- [双信号线灯带](mqtt/components/light/fastled_spi)
-- [直流电源供电](mqtt/components/power_supply)
+-  [灯核心组件](mqtt/components/light/)
+  -  [普通灯](mqtt/components/light/binary)
+  -  [可调亮度的灯](mqtt/components/light/monochromatic)
+  -  [可调色温调亮度的灯](mqtt/components/light/cwww)
+  -  [可调三色(红绿蓝)](mqtt/components/light/rgb)
+  -  [可调四色(红绿蓝白)](mqtt/components/light/rgbw)
+  -  [可调五色(红绿蓝冷白暖白)](mqtt/components/light/rgbww)
+  -  [双信号线 LED 灯带](mqtt/components/light/fastled_spi)
+
+
+- [伽马校正](https://baike.baidu.com/item/%E4%BC%BD%E7%8E%9B%E6%A0%A1%E6%AD%A3/7257507)
 - [Arduino FastLED library](https://github.com/FastLED/FastLED)
