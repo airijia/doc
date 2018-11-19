@@ -34,7 +34,7 @@ power_supply:
 ![](https://ws1.sinaimg.cn/large/007fN5Xegy1fxdccefrzqj30qt0q7ti5.jpg)
 
 
-ATX 电源通常拉低时为开启，需要反转引脚
+ATX 电源通常拉低时为开启，需要翻转引脚
 
 ```
 power_supply:

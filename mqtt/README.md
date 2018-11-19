@@ -144,8 +144,8 @@ MQTT 定制固件的功能有可以通过两种方式使用
 ## 二进制传感器
 
 -  [二进制传感器核心组件](mqtt/components/binary_sensor/)
--  [GPIO 状态](mqtt/components/binary_sensor/)
--  [连接状态](mqtt/components/binary_sensor/)
+-  [GPIO/物理开关](mqtt/components/binary_sensor/gpio)
+-  [连接状态](mqtt/components/binary_sensor/status)
 
 ## 开关
 
@@ -160,12 +160,12 @@ MQTT 定制固件的功能有可以通过两种方式使用
 
 
 
-## 输出(Output)
+## 输出
 
 -  [输出核心组件](mqtt/components/output/)
 -  [GPIO 输出](mqtt/components/output/gpio)
 -  [ESP8266 PWM(软调光)](mqtt/components/output/esp8266_pwm)
--  [ESP32 LEDC(硬调光)](mqtt/components/output/ledc)
+<!-- -  [ESP32 LEDC(硬调光)](mqtt/components/output/ledc) -->
 <!-- -  [MY9231/MY9291 LED](mqtt/components/output/my9231) -->
 
 

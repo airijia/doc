@@ -10,7 +10,7 @@
 
 比如连接芯片 A 和传感器 B，那么 A.TX 要跟 B.RX 相连，A.RX 要跟 B.TX 相连，才可以正确收发数据
 
-也有部分设备 TX RX 是反转的，即 A.TX - B.TX，A.RX - B.RX
+也有部分设备 TX RX 是翻转的，即 A.TX - B.TX，A.RX - B.RX
 
 !> 总之没数据就反过来接试试
 

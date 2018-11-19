@@ -35,7 +35,7 @@ light:
 - **output** (**必填**,  [ID](mqtt/guides/configuration-types#id)): 使用的 [浮点数输出](mqtt/components/output#浮点数输出) 通道
 - **gamma_correct** (*选填*, 浮点数): 伽马校正。默认值 `2.8`
 - **default_transition_length** (*选填*, [时长](mqtt/guides/configuration-types#时长)): 过度时长，智能中枢没提供此参数时将采用此值。默认值为 `1s`
-- **effects** (*Optional*, list):植入固件的[灯光特效](mqtt/components/light/#灯光特效)
+- **effects** (*选填*, 列表):植入固件的[灯光特效](mqtt/components/light/#灯光特效)
 - **id** (*选填*, [ID](mqtt/guides/configuration-types#id)): 当前组件的 ID
 - 以及[MQTT 组件](mqtt/components/mqtt#MQTT-组件基本配置项)的基本配置项
 

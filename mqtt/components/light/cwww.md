@@ -58,7 +58,7 @@ light:
 - **warm_white_color_temperature** (**必填**, 浮点数): 暖白色温，单位 `mireds`(迈尔德)
 - **gamma_correct** (*选填*, 浮点数): 伽马校正。默认值 `2.8`
 - **default_transition_length** (*选填*, [时长](mqtt/guides/configuration-types#时长)): 过度时长，智能中枢没提供此参数时将采用此值。默认值为 `1s`
-- **effects** (*选填*, list): 植入固件的[灯光特效](mqtt/components/light/#灯光特效)
+- **effects** (*选填*, 列表): 植入固件的[灯光特效](mqtt/components/light/#灯光特效)
 - **id** (*选填*, [ID](mqtt/guides/configuration-types#id)): 当前组件的 ID
 - 以及[MQTT 组件](mqtt/components/mqtt#MQTT-组件基本配置项)的基本配置项
 

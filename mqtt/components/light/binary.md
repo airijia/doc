@@ -34,7 +34,7 @@ light:
 - **name** (**必填**, 字符串): 灯的名称
 - **output** (**必填**,  [ID](mqtt/guides/configuration-types#id)): 使用的 [二进制输出](mqtt/components/output#二进制输出) 通道
 - **id** (*选填*, [ID](mqtt/guides/configuration-types#id)): 当前组件的 ID
-- **effects** (*Optional*, list):植入固件的[灯光特效](mqtt/components/light/#灯光特效)
+- **effects** (*选填*, 列表):植入固件的[灯光特效](mqtt/components/light/#灯光特效)
 - 以及[MQTT 组件](mqtt/components/mqtt#MQTT-组件基本配置项)的基本配置项
 
 

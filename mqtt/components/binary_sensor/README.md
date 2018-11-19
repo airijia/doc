@@ -10,7 +10,7 @@
 
 ## 基本配置
 
-默认情况下，二进制传感器会匹配最接近的 `device_class`，如果自动匹配的不合意，可以用自定义的代替
+默认情况下，二进制传感器会匹配最接近的 `device_class`，如果自动匹配的不合意，则可以用自定义的覆盖掉
 
 ```
 binary_sensor:
@@ -20,16 +20,16 @@ binary_sensor:
 
 **配置项**
 
-- **device_class** (*Optional*, string): The device class for the sensor. See <https://www.home-assistant.io/components/binary_sensor/> for a list of available options.
-- **filters** (*Optional*, list): A list of filters to apply on the binary sensor values such as inverting signals. See [Binary Sensor Filters](https://esphomelib.com/esphomeyaml/components/binary_sensor/index.html#binary-sensor-filters).
+- **device_class** (*选填*, 字符串): 详情查看 [binary_sensor](ctl/components/binary_sensor)
+- **filters** (*选填*, 列表):  详情查看 [二进制传感器过滤器](#过滤器)
 
 **自动化**
 
-- **on_press** (*Optional*, [自动化](mqtt/guides/automations)): 按下按钮时触发，[on_press](mqtt/components/binary_sensor/#on_press)
-- **on_release** (*Optional*, [自动化](mqtt/guides/automations)): 松开按钮时触发，[on_release](mqtt/components/binary_sensor/#on_release)
-- **on_click** (*Optional*, [自动化](mqtt/guides/automations)): 单击按钮时触发，[on_click](mqtt/components/binary_sensor/#on_click)
-- **on_double_click** (*Optional*, [自动化](mqtt/guides/automations)): 双击按钮时触发，[on_double_click](mqtt/components/binary_sensor/#on_double_click)
-<!-- - **on_multi_click** (*Optional*, [自动化](mqtt/guides/automations)): -->
+- **on_press** (*选填*, [自动化](mqtt/guides/automations)): 按下按钮时触发，[on_press](mqtt/components/binary_sensor/#on_press)
+- **on_release** (*选填*, [自动化](mqtt/guides/automations)): 松开按钮时触发，[on_release](mqtt/components/binary_sensor/#on_release)
+- **on_click** (*选填*, [自动化](mqtt/guides/automations)): 单击按钮时触发，[on_click](mqtt/components/binary_sensor/#on_click)
+- **on_double_click** (*选填*, [自动化](mqtt/guides/automations)): 双击按钮时触发，[on_double_click](mqtt/components/binary_sensor/#on_double_click)
+<!-- - **on_multi_click** (*选填*, [自动化](mqtt/guides/automations)): -->
 - 以及 [MQTT 组件](mqtt/components/mqtt#MQTT-组件基本配置项) 的基本配置项
 
 
@@ -57,7 +57,7 @@ binary_sensor:
 
 **配置参数**
 
-- **invert**: 反转
+- **invert**: 翻转
 - **delayed_on**: 收到 `ON` 信号时，开始计时，计时结束后，如果 `ON` 信号仍在，则正式发布状态为 `ON`，如果在等待过程中收到 `OFF` 信号，则立即取消发布。简单说，按下按钮足够长的时间才触发。**在触摸按钮防抖动上很好用**
 - **delayed_off**: 类似 `delayed_on`，用于判断 `OFF`
 - **lambda**: 将 [lambda 表达式](mqtt/guides/automations#lambda-表达式) 用作过滤器，可以引入其他判断条件来决定返回值的方式， `x`为传感器的实际值， `true` 为 ON, `false` 为 OFF, `{}` 为结束当前过滤器链
@@ -112,8 +112,8 @@ binary_sensor:
 
 **配置参数**
 
-- **min_length** (*Optional*, [时长](mqtt/guides/configuration-types#时长)): 判断为单次点击最短时长，默认为 `50ms`
-- **max_length** (*Optional*, [时长](mqtt/guides/configuration-types#时长)): 判断为单次点击最大时长，默认为 `350ms`
+- **min_length** (*选填*, [时长](mqtt/guides/configuration-types#时长)): 判断为单次点击最短时长，默认为 `50ms`
+- **max_length** (*选填*, [时长](mqtt/guides/configuration-types#时长)): 判断为单次点击最大时长，默认为 `350ms`
 
 
 ### on_double_click
@@ -133,8 +133,8 @@ binary_sensor:
 
 **配置参数**
 
-- **min_length** (*Optional*, [时长](mqtt/guides/configuration-types#时长)): 判断为单次点击最短时长，默认为 `50ms`
-- **max_length** (*Optional*, [时长](mqtt/guides/configuration-types#时长)): 判断为单次点击最大时长，默认为 `350ms`
+- **min_length** (*选填*, [时长](mqtt/guides/configuration-types#时长)): 判断为单次点击最短时长，默认为 `50ms`
+- **max_length** (*选填*, [时长](mqtt/guides/configuration-types#时长)): 判断为单次点击最大时长，默认为 `350ms`
 
 
 <!-- ### `on_multi_click` -->

@@ -15,6 +15,6 @@ output:
 
 ### 配置参数
 
-- **pin** (**Required**,  [引脚](mqtt/guides/configuration-types#引脚)): 使用的引脚
-- **id** (**Required**, [ID](mqtt/guides/configuration-types#id)): 此组件的 ID
+- **pin** (**必填**,  [引脚](mqtt/guides/configuration-types#引脚)): 使用的引脚
+- **id** (**必填**, [ID](mqtt/guides/configuration-types#id)): 此组件的 ID
 - 以及 [输出核心组件](mqtt/components/output/) 的配置项
