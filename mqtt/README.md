@@ -18,7 +18,22 @@
 - **批量部署终端**：功能已全固化至固件，批量部署再也无需重复 N 次冗长的配置过程
 - **酷炫隔空网刷**：启动层构建的 OTA（Over The Air）网刷功能，无需连电脑即可刷入固件
 
+## 适配中枢
 
+ - 爱睿家智能中枢（airijia/ctl）
+
+    免配置，自动发现
+
+ - Hass (Home Assistant)
+
+   在配置文件（通常为 configuration.yaml）MQTT 的尾部增加如下内容
+
+```yaml
+mqtt:
+  # ... 其他 MQTT 配置
+  discovery: true
+  discovery_prefix: airi
+```
 
 ## 基本使用
 
@@ -37,41 +52,39 @@ MQTT 定制固件的功能有可以通过两种方式使用
 - [从其他固件迁移](mqtt/guides/migrate)
 
 
-- [中枢自动发现](mqtt/components/mqtt#适配中枢)
-
-
-
-!> ⤵️ 以下️ ⤵️ 内容尚未完成
 
 
 ## 进阶使用
 
 - [上传文件模板创建](mqtt/guides/yaml)
 - [核心组件](mqtt/components/airi)
-- [WiFi](mqtt/components/wifi)
-- [MQTT](mqtt/components/mqtt)
+- [WiFi 组件](mqtt/components/wifi)
+- [MQTT 组件](mqtt/components/mqtt)
+- [OTA 组件](mqtt/components/ota)
+- [日志组件](mqtt/components/logger)
 - [配置类型](mqtt/guides/configuration-types)
+
+
 - [自动化](mqtt/guides/automations)
-
-
 - [I²C 总线](mqtt/components/i2c)
 - [SPI 总线](mqtt/components/spi)
 - [UART 总线](mqtt/components/uart)
-- [OTA](mqtt/components/ota)
-- [日志](mqtt/components/logger)
 - [直流开关电源](mqtt/components/power_supply)
-- [睡眠模式](mqtt/components/deep_sleep)
+<!-- - [睡眠模式](mqtt/components/deep_sleep) -->
 
 
 ## 支持设备
 
 - [Sonoff 系列](mqtt/devices/sonoff)
-- [ESP01/ESP01S](mqtt/devices/esp01)
+ 
+
+
+<!-- - [ESP01/ESP01S](mqtt/devices/esp01)
 - [D1 系列](mqtt/devices/d1)
 - [NodeMCU ESP8266](mqtt/devices/nodemcu_esp8266)
 - [NodeMCU ESP32](mqtt/devices/nodemcu_esp32)
 - [ESP8266 系列通用](mqtt/devices/esp8266)
-- [ESP32 系列通用](mqtt/devices/esp32)
+- [ESP32 系列通用](mqtt/devices/esp32) -->
 
 
 ## 传感器
@@ -102,7 +115,8 @@ MQTT 定制固件的功能有可以通过两种方式使用
 <!-- -  [TSL2561 光强](mqtt/components/sensor/tsl2561) -->
 
 
-<!-- -  [HLW8012 功率](mqtt/components/sensor/ms5611) -->
+-  [HLW8012 功率](mqtt/components/sensor/hlw8012)
+-  [CSE7766 功率](mqtt/components/sensor/cse7766)
 <!-- -  [INA219 功率](mqtt/components/sensor/ms5611) -->
 <!-- -  [INA3221 功率](mqtt/components/sensor/ms5611) -->
 
@@ -129,9 +143,9 @@ MQTT 定制固件的功能有可以通过两种方式使用
 
 ## 二进制传感器
 
--  [二进制传感器核心组件](mqtt/components/sensor/)
--  [GPIO 状态](mqtt/components/sensor/)
--  [连接状态](mqtt/components/sensor/)
+-  [二进制传感器核心组件](mqtt/components/binary_sensor/)
+-  [GPIO 状态](mqtt/components/binary_sensor/)
+-  [连接状态](mqtt/components/binary_sensor/)
 
 ## 开关
 
@@ -152,7 +166,7 @@ MQTT 定制固件的功能有可以通过两种方式使用
 -  [GPIO 输出](mqtt/components/output/gpio)
 -  [ESP8266 PWM(软调光)](mqtt/components/output/esp8266_pwm)
 -  [ESP32 LEDC(硬调光)](mqtt/components/output/ledc)
--  [MY9231/MY9291 LED](mqtt/components/output/my9231)
+<!-- -  [MY9231/MY9291 LED](mqtt/components/output/my9231) -->
 
 
 ## 灯/灯带

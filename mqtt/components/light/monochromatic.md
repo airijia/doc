@@ -29,7 +29,7 @@ light:
     output: output1
 ```
 
-### 配置项
+### 配置参数
 
 - **name** (**必填**, 字符串): 灯的名称
 - **output** (**必填**,  [ID](mqtt/guides/configuration-types#id)): 使用的 [浮点数输出](mqtt/components/output#浮点数输出) 通道

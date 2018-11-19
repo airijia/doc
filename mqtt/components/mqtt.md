@@ -16,22 +16,6 @@ mqtt:
 - **username** (*选填*, 字符串): MQTT 用户名
 - **password** (*选填*, 字符串): MQTT 密码
 
-### 适配中枢
-
- - 爱睿家智能中枢（airijia/ctl）
-
-    免配置，自动发现
-
- - Hass (Home Assistant)
-
-   在配置文件（通常为 configuration.yaml）中增加如下内容
-
-```yaml
-mqtt:
-  broker: 127.0.0.1 # 自建 MQTT 地址
-  discovery: true
-  discovery_prefix: airi
-```
 
 
 ## 进阶配置
@@ -48,7 +32,7 @@ mqtt:
 - **reboot_timeout** (*选填*, [时长](mqtt/guides/configuration-types#时长)): 持续的无法连接转发器时，节点会在设置的时长后重启。默认 `60s`，设置成 `0s` 禁用此功能
 - **keepalive** (*选填*, [时长](mqtt/guides/configuration-types#时长)): 连接持续有效时间，增加这个值会加快节点的响应速度但同时也会增加路由器压力。默认 `15s`
 - **on_message** (*选填*, [自动化](mqtt/guides/automations)): 接到特定消息时触发的特定动作。详情查看 [on_message](#on_message)
-- **id** (*选填*, [ID](mqtt/guides/configuration-types#id)): 用于逻辑识别的 ID
+- **id** (*选填*, [ID](mqtt/guides/configuration-types#id)): 本组件的 ID
 
 
 ## MQTT消息
@@ -72,7 +56,7 @@ will_message:
   retain: True
 ```
 
-**配置项**
+**配置参数**
 
 - **topic** (*必填*, 字符串): 消息发布到的主题
 - **payload** (*必填*, 字符串): 消息的内容，发出时会被实际有效负载包裹，比如 `log_topic`
@@ -103,7 +87,7 @@ mqtt:
     topic: myavailability/topic
     payload: online
 ```
-**配置项**
+**配置参数**
 - **birth_message** (*选填*, [MQTT消息](#MQTT消息)) 与转发器建立连接时发布的消息。
 - **will_message** (*选填*, [MQTT消息](#MQTT消息)) 与转发器失去连接时发布的消息。
 
@@ -116,7 +100,7 @@ mqtt:
 
 其他组件(比如传感器、开关等)可以将自身扩展为 MQTT 组件的子组件，借助 MQTT 组件来实现通信等功能，同时可以向上覆盖一部分设置
 
-**配置项**
+**配置参数**
 
 - **name** (**必填**, 字符串): 组件名称
 - **retain** (*选填*, boolean): 发布的消息是否标记为保留消息。默认为是`True`
@@ -130,7 +114,7 @@ mqtt:
 !> 改变以上参数的设置后，需要重启 Hass 服务才能生效
 
 
-## 自动化
+## 触发器
 
 [自动化](mqtt/guides/automations)相关
 
@@ -150,7 +134,7 @@ mqtt:
           id: some_switch
 ```
 
-**配置项**
+**配置参数**
 
 - **topic** (**必填**, 字符串): 订阅的主题，每收到这个主题的消息时，便触发动作
 
@@ -174,7 +158,14 @@ mqtt:
          - # ...
 ```
 
+## on_json_message
 
+?> 新特性 待完善
+
+
+
+
+## 动作
 
 ### mqtt.publish
 
@@ -195,9 +186,16 @@ on_...:
         payload: !lambda >-
           return id(reed_switch).value ? "YES" : "NO";
 ```
-**配置项**
+**配置参数**
 
-- **topic** (*必填*, 字符串, [模板化](mqtt/guides/automations#模板化)): 消息发布到得主题
-- **payload** (*必填*, 字符串, [模板化](mqtt/guides/automations#模板化)): 消息内容
-- **qos** (*选填*, int, [模板化](mqtt/guides/automations#模板化)):QoS 等级，最多一次`0`（默认），至少一次`1`，确保仅一次`2`
-- **retain** (*选填*, boolean, [模板化](mqtt/guides/automations#模板化)): 是否标记为保留消息，默认为否 `False`
+- **topic** (**必填**, 字符串, [模板化](mqtt/guides/automations#模板化)): 消息发布到得主题
+- **payload** (**必填**, 字符串, [模板化](mqtt/guides/automations#模板化)): 消息内容
+- **qos** (*选填*, 整数, [模板化](mqtt/guides/automations#模板化)):QoS 等级，最多一次`0`（默认），至少一次`1`，确保仅一次`2`
+- **retain** (*选填*, 布尔值, [模板化](mqtt/guides/automations#模板化)): 是否标记为保留消息，默认为否 `False`
+
+
+
+### mqtt.publish_json
+
+
+?> 新特性 待完善

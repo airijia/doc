@@ -24,7 +24,7 @@ switch:
     name: "Living Room Dehumidifier"
 ```
 
-## 配置项
+## 配置参数
 
 - **pin** (**必填**, [引脚](mqtt/guides/configuration-types#引脚)): 连接开关(比如继电器)的引脚
 - **name** (**必填**, string): 开关的名称

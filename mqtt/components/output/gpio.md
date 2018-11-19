@@ -13,7 +13,7 @@ output:
     id: gpio_d1
 ```
 
-### 配置项
+### 配置参数
 
 - **pin** (**Required**,  [引脚](mqtt/guides/configuration-types#引脚)): 使用的引脚
 - **id** (**Required**, [ID](mqtt/guides/configuration-types#id)): 此组件的 ID

@@ -29,7 +29,7 @@ lambda 表达式可用的返回值:
 > - `return false;` 如果开关状态应该变为关
 > - `return {};` 如果开关状态应该保持旧状态
 
-## 配置项
+## 配置参数
 
 - **name** (**必填**, string): 开关的名称
 - **lambda** (*选填*, [lambda](mqtt/guides/automations#lambda-表达式)): 定义开关状态的 lambda 表达式，只有 **有变化** 的状态才会发布相关消息到 MQTT，此参数跟 `optimistic` 参数二选一即可

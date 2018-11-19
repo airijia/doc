@@ -13,7 +13,7 @@ i2c:
   scan: False
 ```
 
-## 配置项
+## 配置参数
 
 - **sda** (*选填*, [引脚](mqtt/guides/configuration-types#引脚)): 串行数据线。ESP8266 通常为 GPIO4，ESP32通常为GPIO21
 - **scl** (*选填*, [引脚](mqtt/guides/configuration-types#引脚)): 串行时钟线。ESP8266 通常为 GPIO5，ESP32通常为GPIO22
@@ -25,6 +25,6 @@ i2c:
 
 ## 相关链接
 
-[简单优雅的总线协议——I2C](https://zhuanlan.zhihu.com/p/31086959)
+ - [简单优雅的总线协议——I2C](https://zhuanlan.zhihu.com/p/31086959)
 
 

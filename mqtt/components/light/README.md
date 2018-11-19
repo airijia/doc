@@ -20,7 +20,7 @@ on_...:
     - light.toggle: light_1
 ```
 
-**配置项**
+**配置参数**
 
 - **id** (**必填**, [ID](mqtt/guides/configuration-types#id)): 灯的 ID
 - **transition_length** (*选填*, [时长](mqtt/guides/configuration-types#时长), [模板化](mqtt/guides/automations#模板化)): 过度时长
@@ -64,7 +64,7 @@ on_...:
     - light.turn_on: light_1
 ```
 
-**配置项**
+**配置参数**
 
 - **id** (**必填**, [ID](mqtt/guides/configuration-types#id)): 当前组件的 ID
 - **transition_length** (*选填*, [时长](mqtt/guides/configuration-types#时长), [模板化](mqtt/guides/automations#模板化)): 过度时长

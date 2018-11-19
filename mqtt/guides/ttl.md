@@ -11,9 +11,16 @@
 
 ## 刷入
 
-刷机方法见 [esptool.py 的安装与使用](/diy/esptool?id=mqtt-固件)
+[MQTT 固件工具](diy/flasher)
+
+图形界面，使用简便，但不支持调试等功能
 
 
+
+
+[esptool.py](diy/esptool#mqtt-固件)
+
+命令行界面，功能强大
 
 
 

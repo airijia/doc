@@ -45,7 +45,7 @@ sensor:
     update_interval: 15s
 ```
 
-### 配置项
+### 配置参数
 
 - **pin** (**必填**, [引脚](mqtt/guides/configuration-types#引脚)): DHT 信号连接的引脚
 - **temperature** (**必填**): 温度信息

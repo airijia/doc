@@ -50,7 +50,7 @@ light:
     name: "FastLED WS2811 Light"
 ```
 
-### 配置项
+### 配置参数
 
 - **name** (**必填**, 字符串): 名称，用于 MQTT 识别，不支持中文
 - **chipset** (**必填**, 字符串): 指定使用的芯片组，具体值查看[支持芯片组](#支持芯片组)
@@ -59,7 +59,7 @@ light:
 - **rgb_order** (*选填*, 字符串): 三种颜色的排序；R=红，G=绿，B=蓝。举例：如果设置排序为 RGB，当控制端指定显示红色（R）时，灯带却显示为蓝色（B），这是把排序改为 BGR，重新编译固件刷入，即可正确显示。可选值 `RGB`,`RBG`, `GRB`, `GBR`, `BRG` 和 `BGR`，默认值  `RGB`
 - **max_refresh_rate** (选填, [时长](mqtt/guides/configuration-types#时长)): 最大刷新率。举例：设置为16ms，会限制刷新率在 60Hz。默认值由驱动 IC 的默认值决定。
 - **gamma_correct** (*选填*, 浮点数): 伽马校正。默认值 `2.8`
-- **default_transition_length** (*选填*, [时长](mqtt/guides/configuration-types#时长)) 过度时长，如果智能中枢没提供此参数时的采用的值。默认值为 `1s`
+- **default_transition_length** (*选填*, [时长](mqtt/guides/configuration-types#时长)): 过度时长，如果智能中枢没提供此参数时的采用的值。默认值为 `1s`
 - **power_supply** (*选填*, [ID](mqtt/guides/configuration-types#id)): 使用 [直流电源](mqtt/components/power_supply) 给灯带供电时，在控制灯带的同时也控制电源
 - **effects** (*选填*, 列表): 植入固件的[灯光特效](mqtt/components/light/#灯光特效)
 - **id** (*选填*, [ID](mqtt/guides/configuration-types#id)): 当前组件的 ID

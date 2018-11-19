@@ -140,8 +140,8 @@ Templates (Lambdas)
 ## 所有动作
 
 - [delay](#delay)
-- [lambda]
-- [if]
+- [lambda](#lambda)
+- [if](#if)
 - [mqtt.publish](mqtt/components/mqtt#mqttpublish)
 - [switch.toggle](mqtt/components/switch/#switchtoggle)
 - [switch.turn_off](mqtt/components/switch/#switchturn_off)
@@ -156,9 +156,9 @@ Templates (Lambdas)
 - [fan.toggle]
 - [fan.turn_off]
 - [fan.turn_on] -->
-- [output.turn_off]
-- [output.turn_on]
-- [output.set_level]
+- [output.turn_off](mqtt/components/output/#outputturn_off)
+- [output.turn_on](mqtt/components/output/#outputturn_on)
+- [output.set_level](mqtt/components/output/#outputset_level)
 
 <!-- - [deep_sleep.enter]
 - [deep_sleep.prevent] -->
@@ -168,18 +168,102 @@ Templates (Lambdas)
 
 ### delay
 
+定义一个延时，下一个动作将在延时到期后再执行
+
+```
+on_...:
+  then:
+     # 打开 relay_1 后 2 秒关闭 relay_1
+     - switch.turn_on: relay_1
+     - delay: 2s
+     - switch.turn_off: relay_1
+     # 舌簧开关闭合超过 1 秒 (1000ms) 才返回闭合
+     - delay: !lambda "if (id(reed_switch).state) return 1000; else return 0;"
+```
+
+?>异步非阻塞，延时不会影响其他代码运作
 
 ### lambda
 
+嵌入一段 `C++` 代码并执行，详细查看 [Lambda 表达式](#lambdas-表达式)
 
 
-### if 
+```
+on_...:
+  then:
+    - lambda: >-
+        id(some_binary_sensor).publish_state(false);
+```
+
+### if
+
+依据条件判断的结果的不同来执行不同的动作
+
+```
+# 当传感器 A 的值小于 30 时，点动开灯 5 秒，当传感器 A 的值大于等于 30 时，立即关灯
+on_...:
+  then:
+    - if:
+        condition:
+          lambda: 'return id(some_sensor).state < 30;'
+        then:
+          - lambda: 'ESP_LOGD("main", "The sensor value is below 30!");
+          - light.turn_on: my_light
+          - delay: 5s
+        else:
+          - lambda: 'ESP_LOGD("main", "The sensor value is above 30!");
+    - light.turn_off: my_light
+```
+
+**配置参数**
+
+- **if** (**必填**): 判断的条件
+- **then** (*选填*, [动作](mqtt/guides/automations#动作)): 判断为 `True` 时执行的动作，不填则无动作
+- **else** (*选填*, [动作](mqtt/guides/automations#动作)): 判断为 `False` 时执行的动作，不填则无动作
+
 
 
 ### component.update
 
+手新发出 `update()` 指令，获取组件状态
+
+
+```
+on_...:
+  then:
+    - component.update: my_component
+
+    # The same as:
+    - lambda: 'id(my_component).update();'
+```
+
+
 
 ### script.execute
+
+定义一段脚本，方便代码复用，比如有多个不同的触发器执行相同的动作，此时不需要每次都定义动作，复用这段脚本即可
+
+
+```
+# 动作
+script:
+  - id: my_script
+    then:
+      - switch.turn_on: my_switch
+      - delay: 1s
+      - switch.turn_off: my_switch
+
+# 触发器 A
+on_...:
+  then:
+    - script.execute: my_script
+# 触发器 B
+on_...:
+  then:
+    - script.execute: my_script
+```
+
+
 
 
 ## 相关链接
