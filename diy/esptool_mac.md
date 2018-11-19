@@ -53,6 +53,12 @@ esptool.py
 ls /dev/cu.usbserial-*
 ```
 
+芯片不同的话，也可能这个前缀
+
+```
+ls /dev/cu.wchusb*
+```
+
 
 ![](https://ws1.sinaimg.cn/large/007fN5Xegy1fxbghe7995j30gy08et9e.jpg)
 
@@ -195,6 +201,22 @@ esptool.py --port /dev/cu.usbserial-1410 read_flash 0x00000 0x100000 sonoff-back
 ```
 esptool.py --port /dev/cu.usbserial-1410 write_flash --flash_size 1MB --flash_mode dout 0x00000 sonoff-backup.bin
 ```
+
+## 常见问题
+
+
+Q： "Errno 16 resource busy
+显示端口已经占用，不能擦出和刷机
+
+
+A: 直接执行
+
+```
+esptool.py erase_flash
+```
+
+工具会搜索可执行的 COM 口，并自动执行擦除，一般情况下可以找到正确的串口名称
+
 
 ## 相关链接
 
