@@ -205,7 +205,7 @@ esptool.py --port /dev/cu.usbserial-1410 write_flash --flash_size 1MB --flash_mo
 ## 常见问题
 
 
-Q： "Errno 16 resource busy
+Q： Errno 16 resource busy
 显示端口已经占用，不能擦出和刷机
 
 
