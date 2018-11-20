@@ -16,6 +16,10 @@
  - #### [DHT11 温湿度](diy/esp01/dht11)
  - #### [红外人体传感器](diy/esp01/pir)
 
+### NodeMcu 系列
+
+
+ - #### [多合一传感器](diy/nodemcu/bruh)
 
 
 ## 刷机与调试

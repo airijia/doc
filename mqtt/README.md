@@ -128,8 +128,8 @@ MQTT 定制固件的功能有可以通过两种方式使用
 <!-- -  [超声波测距](mqtt/components/sensor/ms5611) -->
 
 
-<!-- -  [ADC 模转数](mqtt/components/sensor/adc)
--  [ads1115 模转数](mqtt/components/sensor/ads1115)
+- [ADC 模转数](mqtt/components/sensor/adc)
+<!-- -  -  [ads1115 模转数](mqtt/components/sensor/ads1115)
 -  [占空比](mqtt/components/sensor/adc)
 -  [霍尔效应(ESP32)](mqtt/components/sensor/adc)
 -  [脉冲计数](mqtt/components/sensor/ms5611)
