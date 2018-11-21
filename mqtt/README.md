@@ -92,7 +92,7 @@ MQTT 定制固件的功能有可以通过两种方式使用
 -  [传感器核心组件](mqtt/components/sensor/)
 
 
--  [Dallas 温度](mqtt/components/sensor/dallas)
+-  [D18B20 温度](mqtt/components/sensor/dallas)
 <!-- -  [MAX6675 温度](mqtt/components/sensor/dallas) -->
 -  [DHT 温湿度](mqtt/components/sensor/dht)
 <!-- -  [DHT12 温湿度(I²C 总线)](mqtt/components/sensor/dht) -->
@@ -129,7 +129,8 @@ MQTT 定制固件的功能有可以通过两种方式使用
 
 
 - [ADC 模转数](mqtt/components/sensor/adc)
-<!-- -  -  [ads1115 模转数](mqtt/components/sensor/ads1115)
+
+<!--   [ads1115 模转数](mqtt/components/sensor/ads1115)
 -  [占空比](mqtt/components/sensor/adc)
 -  [霍尔效应(ESP32)](mqtt/components/sensor/adc)
 -  [脉冲计数](mqtt/components/sensor/ms5611)

@@ -11,9 +11,9 @@ logger:
 
 ## 基本配置
 
-- **baud_rate** (*选填*, int): 通过 UART 传输的波特率，默认为 `115200`，设置成 `0` 将禁用本功能
-- **tx_buffer_size** (*选填*, string): TX 缓冲区大小，默认为 `512`，降低这个值可以减少内存占用
-- **level** (*选填*, string): 输出日志级别，所有低于这个级别的日志将不显示，默认为 `DEBUG`
+- **baud_rate** (*选填*, 整数): 通过 UART 传输的波特率，默认为 `115200`，设置成 `0` 将禁用本功能
+- **tx_buffer_size** (*选填*, 字符串): TX 缓冲区大小，默认为 `512`，降低这个值可以减少内存占用
+- **level** (*选填*, 字符串): 输出日志级别，所有低于这个级别的日志将不显示，默认为 `DEBUG`
 <!-- - **logs** (*选填*, mapping): Manually set the log level for a specific component or tag. See -->
 - **id** (*选填*, [ID](mqtt/guides/configuration-types#id)): 本组件的 ID
 

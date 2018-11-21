@@ -32,7 +32,7 @@ wifi:
 - **ap** (*选填*): AP 模式
   - **ssid** (**必填**, 字符串): AP 的网络名称
   - **password** (*选填*, 字符串): AP 的密码
-  - **channel** (*选填*, int): AP 使用的信道，1 到 14，默认为1
+  - **channel** (*选填*, 整数): AP 使用的信道，1 到 14，默认为1
   - **manual_ip** (*选填*): 手动设置 AP 的 IP 地址
 <!-- - **domain** (*选填*, 字符串): Set the domain of the node hostname used for uploading. For example, if it’s set to `.local`, all uploads will be sent to `<HOSTNAME>.local`. Defaults to `.local`. -->
 <!-- TODO: 对ota有什么影响么? -->

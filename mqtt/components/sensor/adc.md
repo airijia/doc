@@ -16,7 +16,7 @@ sensor:
     update_interval: 15s
 ```
 
-## Configuration variables:
+## 配置参数
 
 - **pin** (**必填**, : 读值的引脚
 - **name** (**必填**, 字符串): 传感器的名称

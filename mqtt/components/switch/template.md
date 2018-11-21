@@ -31,7 +31,7 @@ lambda 表达式可用的返回值:
 
 ## 配置参数
 
-- **name** (**必填**, string): 开关的名称
+- **name** (**必填**, 字符串): 开关的名称
 - **lambda** (*选填*, [lambda](mqtt/guides/automations#lambda-表达式)): 定义开关状态的 lambda 表达式，只有 **有变化** 的状态才会发布相关消息到 MQTT，此参数跟 `optimistic` 参数二选一即可
 - **optimistic** (*选填*, 布尔值): 动作乐观化，开启这个模式后，每次动作无需核查便更新状态。默认为不开启 `false`，如果开启本参数，则无需配置 lambda 参数
 - **turn_on_action** (*选填*, [动作](mqtt/guides/automations#动作)): 远端（比如智能中枢）发送打开开关的指令时执行的动作

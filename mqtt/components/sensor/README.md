@@ -45,7 +45,7 @@ filters:
 借助传感器过滤器，可以就很方便的对传感器的读值进行简单的二次处理，复杂的处理还是在智能中枢的  [Filter Sensor](ctl/components/filter_sensor) 中完成
 
 ```
-# Example filters:
+# 过滤器示例
 filters:
   - offset: 2.0
   - multiply: 1.2
@@ -70,24 +70,24 @@ filters:
 
 Above example configuration entry is probably a bit useless, but shows every filter there is currently:
 
-- **offset**: Add an offset to every sensor value.
-- **multiply**: Multiply each sensor value by this number.
-- **filter_out**: Remove every sensor value that equals this number.
-- **filter_nan**: Remove every value that is considered `NAN` (not a number) in C.
-- sliding_window_moving_average  : Asimple moving average over the last few values.
-  - **window_size**: The number of values over which to perform an average when pushing out a value.
-  - **send_every**: How often a sensor value should be pushed out. For example, in above configuration the weighted average is only pushed out on every 15th received sensor value.
-  - **send_first_at**: By default, the very first raw value on boot is immediately published. With this parameter you can specify when the very first value is to be sent. Defaults to `1`.
-- exponential_moving_average  : A simple  exponential moving average  over the last few values.
-  - **alpha**: The forget factor/alpha value of the filter.
-  - **send_every**: How often a sensor value should be pushed out.
-- **throttle**: Throttle the incoming values. When this filter gets an incoming value, it checks if the last incoming value is at least `specified time period` old. If it is not older than the configured value, the value is not passed forward.
-- **heartbeat**: Send the last value that this sensor in the specified time interval. So a value of `10s` will cause the filter to output values every 10s regardless of the input values.
-- **debounce**: Only send values if the last incoming value is at least `specified timeperiod` old. For example if two values come in at almost the same time, this filter will only output the last value and only after the specified time period has passed without any new incoming values.
-- **delta**: This filter stores the last value passed through this filter and only passes incoming values through if the absolute difference is greater than the configured value. For example if a value of 1.0 first comes in, it’s passed on. If the delta filter is configured with a value of 5, it will now not pass on an incoming value of 2.0, only values that are at least 6.0 big or -4.0.
-- **unique**: This filter has no parameter and does one very simple thing: It only passes forward values if they are different from the last one that got through the pipeline.
-- **or**: Pass forward a value with the first child filter that returns. Above example will only pass forward values that are *either* at least 1s old or are if the absolute difference is at least 5.0.
-- **lambda**: Perform a simple mathematical operation over the sensor values. The input value is `x` and the result of the lambda is used as output. Each floating point operation should have `.0` attached as in above configuration. This will be copied over to the C++ code as a raw 字符串.
+- **offset**: 偏移量
+- **multiply**: 每次读值都与这个值相乘
+- **filter_out**: 移除与这个数值相等的读值
+- **filter_nan**: 移除所有非数字`NAN`读值
+- **sliding_window_moving_average** : 简单移动平均
+  - **window_size**: 计算窗口包含的元素数量
+  - **send_every**: 推送频率，上面的实例中，每 `15` 次读值才计算并推送一次值
+  - **send_first_at**: 设置在第几次读值发出消息。默认为 `1`，读取到的第一个原始值会未经过任何计算便发布出去
+- **exponential_moving_average**  : 指数移动平均
+  - **alpha**: 平滑因子
+  - **send_every**: 推送频率
+- **throttle**: 限制传入的值。当此过滤器获取传入值时，它会检查最后一个传入值是否早于`指定的时间段`。如果它不早于配置的值，则不传递该值
+- **heartbeat**: 在指定的时间间隔内发送此传感器的最后一个值。例如设置为 `10s`，那么无论输入值如何，只有 10 秒中的最后一个值会被发送
+- **debounce**: 如果最后一个传入值至少`是指定的时间段`，则仅发送值。例如，如果两个值几乎同时进入，则此过滤器将仅输出最后一个值，并且仅在指定的时间段过去之后没有任何新的传入值。
+- **delta**: 此过滤器存储通过此过滤器传递的最后一个值，并且只有在绝对差值大于配置值时才传递传入值。例如，如果第一个值为1.0，则传递给它。如果delta过滤器配置为值5，则它现在不会传递传入值2.0，只传递至少6.0大或-4.0的值。
+- **unique**: 这个过滤器没有参数，只做一件非常简单的事情：它只传递前向值，如果它们与通过管道的最后一个值不同
+- **or**: 使用返回的第一个子过滤器传递值。以上示例仅传递至少1秒的前向值，或者如果绝对差值至少为5.0，则传递前向值。
+- **lambda**: 对传感器值执行简单的数学运算。输入值为x，lambda的结果用作输出。每个浮点运算应该具有.0连接，如上面的配置。这将作为原始字符串复制到C ++代码中。
 
 
 ## 读数间隔

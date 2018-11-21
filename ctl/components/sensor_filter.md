@@ -45,17 +45,17 @@ Filters can be chained and are applied according to the order present in the con
 
 - entity_id
 
-  (string)(Required)The entity ID of the sensor to be filtered.
+  (字符串)(Required)The entity ID of the sensor to be filtered.
 
 - name
 
-  (string)(Optional)Name to use in the frontend.
+  (字符串)(Optional)Name to use in the frontend.
 
 - filters
 
   (list)(Required)Filters to be used.
 
-  filter(string)(Required)Algorithm to be used to filter data. Available filters are `lowpass`, `outlier`, `range`, `throttle` and `time_simple_moving_average`.window_size(int | time)(Optional)Size of the window of previous states. Time based filters such as `time_simple_moving_average` will require a time period (size in time), while other filters such as `outlier` will require an integer (size in number of states)Default value: 1precision(integer)(Optional)See [*lowpass*](https://www.home-assistant.io/components/sensor.filter/#low-pass) filter. Defines the precision of the filtered state, through the argument of round().Default value: Nonetime_constant(integer)(Optional)See [*lowpass*](https://www.home-assistant.io/components/sensor.filter/#low-pass) filter. Loosely relates to the amount of time it takes for a state to influence the output.Default value: 10radius(float)(Optional)See [*outlier*](https://www.home-assistant.io/components/sensor.filter/#outlier) filter. Band radius from median of previous states.Default value: 2.0type(string)(Optional)See [*time_simple_moving_average*](https://www.home-assistant.io/components/sensor.filter/#time-simple-moving-average) filter. Defines the type of Simple Moving Average.Default value: lastlower_bound(float)(Optional)See [*range*](https://www.home-assistant.io/components/sensor.filter/#range) filter. Lower bound for filter range.Default value: negative infinityupper_bound(float)(Optional)See [*range*](https://www.home-assistant.io/components/sensor.filter/#range) filter. Upper bound for filter range.Default value: positive infinity
+  filter(字符串)(Required)Algorithm to be used to filter data. Available filters are `lowpass`, `outlier`, `range`, `throttle` and `time_simple_moving_average`.window_size(int | time)(Optional)Size of the window of previous states. Time based filters such as `time_simple_moving_average` will require a time period (size in time), while other filters such as `outlier` will require an integer (size in number of states)Default value: 1precision(integer)(Optional)See [*lowpass*](https://www.home-assistant.io/components/sensor.filter/#low-pass) filter. Defines the precision of the filtered state, through the argument of round().Default value: Nonetime_constant(integer)(Optional)See [*lowpass*](https://www.home-assistant.io/components/sensor.filter/#low-pass) filter. Loosely relates to the amount of time it takes for a state to influence the output.Default value: 10radius(float)(Optional)See [*outlier*](https://www.home-assistant.io/components/sensor.filter/#outlier) filter. Band radius from median of previous states.Default value: 2.0type(字符串)(Optional)See [*time_simple_moving_average*](https://www.home-assistant.io/components/sensor.filter/#time-simple-moving-average) filter. Defines the type of Simple Moving Average.Default value: lastlower_bound(float)(Optional)See [*range*](https://www.home-assistant.io/components/sensor.filter/#range) filter. Lower bound for filter range.Default value: negative infinityupper_bound(float)(Optional)See [*range*](https://www.home-assistant.io/components/sensor.filter/#range) filter. Upper bound for filter range.Default value: positive infinity
 
 ## Filters
 

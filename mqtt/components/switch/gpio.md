@@ -27,7 +27,7 @@ switch:
 ## 配置参数
 
 - **pin** (**必填**, [引脚](mqtt/guides/configuration-types#引脚)): 连接开关(比如继电器)的引脚
-- **name** (**必填**, string): 开关的名称
+- **name** (**必填**, 字符串): 开关的名称
 - **id** (*选填*, [ID](mqtt/guides/configuration-types#id)): 开关的 ID
 - 以及 [开关核心组件](mqtt/components/switch/) 和 [MQTT 组件](mqtt/components/mqtt#MQTT-组件基本配置项) 的基本配置项
 
