@@ -1,8 +1,8 @@
 {
-  "name": "airijia.com/doc",
+  "name": "airi-doc",
   "version": "1.0.0",
   "private": true,
-  "description": "airijia.com/doc",
+  "description": "airi-doc",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
