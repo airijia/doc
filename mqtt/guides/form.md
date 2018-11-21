@@ -43,7 +43,7 @@
 ## 刷入固件
 
 
-下载文件后刷入，工具使用 esptool ([WIN](diy/esptool)，[MAC](diy/esptool_mac)) ，或者 [MQTT 固件工具](diy/esptool/flasher)
+下载文件后刷入，工具使用 esptool ([WIN](diy/esptool)，[MAC](diy/esptool_mac)) ，或者 [MQTT 固件工具](diy/flasher)
 
 
 
