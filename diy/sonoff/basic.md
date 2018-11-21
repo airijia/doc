@@ -54,6 +54,36 @@ TTL刷机线（CH340G）
 
 
 
+## 进阶使用
+
+### GPIO 14 连接传统墙壁开关
+
+
+?> 需要配合 [MQTT 固件](mqtt/) 使用
+
+通过 GPIO 14 连接墙开的方法， 可以实现 `WiFi` 和 `传统墙壁开关` 同时控制。
+
+
+如图所示，需要用到这两个接口 `GPIO14` 和 `GND`
+
+![](https://ws1.sinaimg.cn/large/007fN5Xegy1fxftesc3voj30rc0f21gx.jpg)
+
+
+接墙壁开关的输入连 Basic 的GPIO14 ，输出连 GND
+
+!> 注意！墙壁开关不要再跟任何交流电源有连接，不要接市电，不要接，不要接！！
+
+![](https://ws1.sinaimg.cn/large/007fN5Xegy1fxfqzw9lnej308c08qjtc.jpg)
+
+
+
+整体电路接法
+
+![](https://ws1.sinaimg.cn/large/007fN5Xegy1fxftbsc2usj30m80ddtda.jpg)
+
+
+![](https://ws1.sinaimg.cn/large/007fN5Xegy1fxftd0tm01j30m80ddtdc.jpg)
+
 
 
 加 QQ 群：303748038，获取相关软件
