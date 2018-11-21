@@ -2,6 +2,8 @@
 
 ## 创建
 
+打开爱睿家智能中枢的 `固件` 选项卡 或者 [在线版](http://airijia.com/ctl/firmware/list)，点击`新建固件`
+
 ![](https://ws1.sinaimg.cn/large/007fN5Xegy1fww2lrfcnaj30qm0f8q3f.jpg)
 
 ![](https://ws1.sinaimg.cn/large/007fN5Xegy1fww2nttyuyj30mo0e4mxs.jpg)
@@ -35,4 +37,21 @@
 显示**已完成**，表示已经编译成功
 
 ![](https://ws1.sinaimg.cn/large/007fN5Xegy1fww4eac4ntj30w90dk3z4.jpg)
+
+
+
+## 刷入固件
+
+
+下载文件后刷入，工具使用 esptool ([WIN](diy/esptool)，[MAC](diy/esptool_mac)) ，或者 [MQTT 固件工具](diy/esptool/flasher)
+
+
+
+如果使用的是 airi 智能中枢，还可以 [OTA 刷入](mqtt/guides/ota)
+
+
+
+
+## 相关连接
+
 

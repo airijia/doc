@@ -53,7 +53,7 @@ MQTT 定制固件的功能有可以通过两种方式使用
 
 ## 进阶使用
 
-- [上传文件模板创建](mqtt/guides/yaml)
+- [上传模板文件创建](mqtt/guides/yaml)
 - [核心组件](mqtt/components/airi)
 - [WiFi 组件](mqtt/components/wifi)
 - [MQTT 组件](mqtt/components/mqtt)
