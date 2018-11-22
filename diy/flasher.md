@@ -77,7 +77,7 @@
 
 只是界面略有不同，功能一样
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fxbhwxno82j312w104wlv.jpg)
+![](http://pic.airijia.com/doc/20181122212616.png)
 
 
 
