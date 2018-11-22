@@ -86,6 +86,12 @@ TTL刷机线（CH340G）
 
 
 
+连双控墙壁开关接法
+
+
+![](https://ws1.sinaimg.cn/large/007fN5Xegy1fxgl42j1r5j30xc0k24b6.jpg)
+
+
 加 QQ 群：303748038，获取相关软件
 
 关注 微信订阅号 获取更多教程
