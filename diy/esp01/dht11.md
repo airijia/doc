@@ -1,6 +1,6 @@
-# 创客套件 - HomeKit 直连温湿度计 
+# 创客温湿度套件 - HomeKit 温湿度计 
 
-这是一款可以直连 HomeKit 的温湿度计，可以直接用 siri 查询温度和湿度
+这是一款可以连 HomeKit 的温湿度计，可以用 siri 查询温度和湿度
 
 ## 硬件准备
 
@@ -14,13 +14,20 @@ TTL 刷机线
 
 杜邦线 > 10根
 
-**↑ 以上为创客套件内容**
+↑ 以上为**创客温湿度套件**内容
 
-## 软件
+## 相关产品
 
-ESP刷机工具
+| ![](http://pic.airijia.com/doc/20181122164201.png ':size=200')| 创客温湿度套件 |  [![买买买](http://cdn.airijia.com/b6eca8da724952cc0251.gif ':size=150')](https://item.taobao.com/item.htm?id=577014079869) |
+|:-:|:-:|:-:|
+| ![](http://pic.airijia.com/doc/20181122164130.png ':size=200')| ESP01 |  [![买买买](http://cdn.airijia.com/b6eca8da724952cc0251.gif ':size=150')](https://item.taobao.com/item.htm?id=551900769285) |
+| ![](https://ws1.sinaimg.cn/large/007fN5Xegy1fwx3cp2h9kj30m80m8jyr.jpg ':size=200')| DHT11<br> 适配 ESP01 |  [![买买买](http://cdn.airijia.com/b6eca8da724952cc0251.gif ':size=150')](https://item.taobao.com/item.htm?id=551900769285) |
+| ![](http://pic.airijia.com/doc/20181122161759.png ':size=200')| CH340G 刷机线 |  [![买买买](http://cdn.airijia.com/b6eca8da724952cc0251.gif ':size=150')](https://item.taobao.com/item.htm?id=45528507062) |
+| ![](http://pic.airijia.com/doc/20181122164315.png ':size=200')| 杜邦串联底座 |  [![买买买](http://cdn.airijia.com/b6eca8da724952cc0251.gif ':size=150')](https://item.taobao.com/item.htm?id=45607601999) |
+| ![](http://pic.airijia.com/doc/20181122162418.png ':size=200')| 杜邦线 |  [![买买买](http://cdn.airijia.com/b6eca8da724952cc0251.gif ':size=150')](https://item.taobao.com/item.htm?id=45608073136) |
 
-渡鸦（esp01s-dht11）或  [MQTT](/mqtt/) 固件
+
+
 
 
 ## 接线
@@ -35,15 +42,54 @@ ESP刷机工具
 
 ![](https://ws1.sinaimg.cn/large/007fN5Xegy1fv5bw1bjoxj30m80m8guh.jpg)
 
-## 刷固件
 
 
 
-方法见 [esptool.py 使用方法](diy/esptool) 
+## MQTT 固件使用
+
+**MQTT 固件可以用**
+
+
+- [MQTT 固件工具](diy/flasher)
+
+
+- [esptool.py 的安装与使用](diy/esptool)
+- [esptool.py(MAC)的安装与使用](diy/esptool_mac)
 
 
 
-## 接入 WiFi
+刷完固件后无需配置，适配中枢，插电即用
+
+
+ - 爱睿家智能中枢（airijia/ctl）
+
+    免配置，自动发现
+
+ - Hass (Home Assistant)
+
+   在配置文件（通常为 configuration.yaml）MQTT 的尾部增加如下内容
+
+```yaml
+mqtt:
+  # ... 其他 MQTT 配置
+  discovery: true
+  discovery_prefix: airi
+```
+
+
+## 渡鸦(Homekit 直连)固件使用
+
+
+**渡鸦(Homekit 直连)固件可以用**
+
+- [esptool.py 的安装与使用](diy/esptool)
+- [esptool.py(MAC)的安装与使用](diy/esptool_mac)
+
+
+刷完固件后需要配置 WiFi 和接入 Homekit
+
+
+### 接入 WiFi
 
 **注意！模块体质不一样，如果 3V3 供电不正常，换用5V **
 
@@ -63,7 +109,7 @@ ESP刷机工具
 
 ![](https://ws1.sinaimg.cn/large/007fN5Xegy1fv5bnmlz6ij30m80m81ag.jpg)
 
-## 校准值设置
+### 校准值设置
 
 因为模块自身有发热，而且距离温湿度传感器很近，会造成一定的误差。
 

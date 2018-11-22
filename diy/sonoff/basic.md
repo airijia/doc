@@ -14,6 +14,16 @@ TTL刷机线（CH340G）
 
 带 usb 接口的电脑
 
+## 相关产品
+
+| ![](http://pic.airijia.com/doc/20181122162053.png ':size=200')| Sonoff Basic |  [![买买买](http://cdn.airijia.com/b6eca8da724952cc0251.gif ':size=150')](https://item.taobao.com/item.htm?id=551950726641) |
+|:-:|:-:|:-:|
+| ![](http://pic.airijia.com/doc/20181122161759.png ':size=200')| CH340G 刷机线 |  [![买买买](http://cdn.airijia.com/b6eca8da724952cc0251.gif ':size=150')](https://item.taobao.com/item.htm?id=45528507062) |
+| ![](http://pic.airijia.com/doc/20181122162258.png ':size=200')| 2.54mm 排针 |  [![买买买](http://cdn.airijia.com/b6eca8da724952cc0251.gif ':size=150')](https://item.taobao.com/item.htm?id=551916669247) |
+| ![](http://pic.airijia.com/doc/20181122162418.png ':size=200')| 杜邦线 |  [![买买买](http://cdn.airijia.com/b6eca8da724952cc0251.gif ':size=150')](https://item.taobao.com/item.htm?id=45608073136) |
+
+
+
 ## 焊接
 
 在如图位置焊接 4P 排针
@@ -92,13 +102,11 @@ TTL刷机线（CH340G）
 ![](https://ws1.sinaimg.cn/large/007fN5Xegy1fxgl42j1r5j30xc0k24b6.jpg)
 
 
-加 QQ 群：303748038，获取相关软件
+## 相关软件
+
+加 QQ 群：303748038，获取软件和固件
+
 
 关注 微信订阅号 获取更多教程
 
-
-
 ![](https://ws1.sinaimg.cn/large/007fN5Xegy1fv99qfit90j30by0byjsh.jpg)
-
-
-

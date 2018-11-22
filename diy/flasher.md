@@ -1,4 +1,4 @@
-# MQTT 固件刷机工具
+# MQTT 固件工具
 
 刷写和调试 MQTT 固件的专用工具，不需要配置繁杂的参数，只要选择目标 **串口** 和 **固件** 文件即可
 
@@ -15,7 +15,6 @@
 ![](https://ws1.sinaimg.cn/large/007fN5Xegy1fxgtwlzzh9j30o30bvjrp.jpg)
 
 ![](https://ws1.sinaimg.cn/large/007fN5Xegy1fxgtxnl1agj30o60a20t4.jpg)
-
 
 
 ## 刷写固件

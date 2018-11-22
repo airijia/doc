@@ -2,10 +2,6 @@
 
 # Itead 1CH Inching 刷机接线方法
 
-
-
-
-
 这几天在寻找一个智能家居模块，期待的功能有
 
 1. 单路继电器，最好带硬件开关
@@ -13,6 +9,18 @@
 3. 隔离模式，即低压模块供电 + 无输出电压的继电器纯开关模式
 
 然后就遇到了它...
+
+
+## 相关产品
+
+| ![](http://pic.airijia.com/doc/20181122162758.png ':size=200')| 单路点动模块 |  [![买买买](http://cdn.airijia.com/b6eca8da724952cc0251.gif ':size=150')](https://item.taobao.com/item.htm?id=45559650031) |
+|:-:|:-:|:-:|
+| ![](http://pic.airijia.com/doc/20181122161759.png ':size=200')| CH340G 刷机线 |  [![买买买](http://cdn.airijia.com/b6eca8da724952cc0251.gif ':size=150')](https://item.taobao.com/item.htm?id=45528507062) |
+| ![](http://pic.airijia.com/doc/20181122162258.png ':size=200')| 2.54mm 排针 |  [![买买买](http://cdn.airijia.com/b6eca8da724952cc0251.gif ':size=150')](https://item.taobao.com/item.htm?id=551916669247) |
+| ![](http://pic.airijia.com/doc/20181122162418.png ':size=200')| 杜邦线 |  [![买买买](http://cdn.airijia.com/b6eca8da724952cc0251.gif ':size=150')](https://item.taobao.com/item.htm?id=45608073136) |
+
+
+
 
 
 
@@ -125,8 +133,11 @@ Itead 1CH Inching
 
 ![](https://ws1.sinaimg.cn/large/007fN5Xegy1fv71ctn5h3j30py0fo7h4.jpg)
 
-#### 加 QQ 群：303748038，获取相关软件
+## 相关软件
 
-#### 关注 微信订阅号 获取更多教程
+加 QQ 群：303748038，获取软件和固件
+
+
+关注 微信订阅号 获取更多教程
 
 ![](https://ws1.sinaimg.cn/large/007fN5Xegy1fv99qfit90j30by0byjsh.jpg)

@@ -10,6 +10,21 @@
 
 
 
+
+<!-- ## 相关产品
+
+| ![](http://pic.airijia.com/doc/20181122164201.png ':size=200')| 整套购买 |  [![买买买](http://cdn.airijia.com/b6eca8da724952cc0251.gif ':size=150')](https://item.taobao.com/item.htm?id=582672122003) |
+|:-:|:-:|:-:|
+| ![](http://pic.airijia.com/doc/20181122164130.png ':size=200')| NODEMCU |  [![买买买](http://cdn.airijia.com/b6eca8da724952cc0251.gif ':size=150')](https://item.taobao.com/item.htm?id=45559178968) |
+| ![](http://pic.airijia.com/doc/20181122164130.png ':size=200')| DHT22 |  [![买买买](http://cdn.airijia.com/b6eca8da724952cc0251.gif ':size=150')](https://item.taobao.com/item.htm?id=551993243366) |
+| ![](http://pic.airijia.com/doc/20181122164130.png ':size=200')|  TMT光敏 |  [![买买买](http://cdn.airijia.com/b6eca8da724952cc0251.gif ':size=150')](https://item.taobao.com/item.htm?id=45528547048) |
+| ![](http://pic.airijia.com/doc/20181122164130.png ':size=200')|  PIR |  [![买买买](http://cdn.airijia.com/b6eca8da724952cc0251.gif ':size=150')](https://item.taobao.com/item.htm?id=551934438418) |
+| ![](http://pic.airijia.com/doc/20181122164130.png ':size=200')|  三色共阴 |  [![买买买](http://cdn.airijia.com/b6eca8da724952cc0251.gif ':size=150')](https://item.taobao.com/item.htm?id=551925481875) |
+ -->
+
+
+
+
 ![](https://ws1.sinaimg.cn/large/007fN5Xegy1fxem4fwk5mj30vm0pr45b.jpg)
 
 接线图参考，实际使用中如果最左下的 `VIN` 脚电压不够，换个任意 `3V3` 引脚即可
@@ -114,8 +129,6 @@ sensor:
 
 ?> 因为 ESP8266 的 模拟引脚的可探测的范围是  `0 ~ 1.0V` ， 所以最大值为 `200 lx`
 
-
-## 相关商品
 
 
 
