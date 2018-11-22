@@ -5,6 +5,12 @@
 首次运行 airijia/ctl 
 
 
+将设备用有线网络连接到路由器，到路由器的设备列表或者 DHCP 分配中查 `airi` 的 IP 地址
+
+
+![](https://ws1.sinaimg.cn/large/007fN5Xegy1fxgsa3zuimj30xs0c2aaf.jpg)
+
+
 假设 airi的地址是 192.168.1.201，打开浏览器（推荐使用chrome），输入`192.168.1.201:8233`，一下简称为`8233`
 
 !> 本操作需要在局域网内部完成，必须是局域网内网 IP,不可以用外网 IP 或者域名
@@ -42,7 +48,7 @@
 ![](https://ws1.sinaimg.cn/large/007fN5Xegy1fx5dedi43oj30gr0e5jrv.jpg)
 
 
-授权完成后，airijia/ctl即可像旧版一样正常使用
+以上是 airijia/ctl 0.2 版本的新特性，授权完成后，即可像旧版一样使用
 
 ![](https://ws1.sinaimg.cn/large/007fN5Xegy1fx5df1qru7j31b60qhmzg.jpg)
 
