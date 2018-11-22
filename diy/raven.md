@@ -1,6 +1,6 @@
 # 渡鸦固件配对方法
 
-[WS2812 开发灯环](//player.bilibili.com/player.html?aid=28191208&cid=48728996&page=1 ':include :type=iframe width="720" height="405"')
+[](//player.bilibili.com/player.html?aid=28191208&cid=48728996&page=1 ':include :type=iframe width="720" height="530"')
 
 ## 配置 Wi-Fi
 

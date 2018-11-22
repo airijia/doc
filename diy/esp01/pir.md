@@ -19,7 +19,7 @@ HC-SR501 是一款比较常见的无源红外感应模块(Passive Infrared Senso
 
 **airi:8123 和 Hass 中的显示**
 
-[WS2812 开发灯环](//player.bilibili.com/player.html?aid=35602736&cid=62434203&page=1 ':include :type=iframe width="720" height="1280"')
+[](//player.bilibili.com/player.html?aid=35602736&cid=62434203&page=1 ':include :type=iframe width="720" height="1280"')
 
 **在 Homekit 中的显示**
 

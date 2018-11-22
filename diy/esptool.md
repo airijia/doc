@@ -2,7 +2,7 @@
 
 先安装 python2，然后用 pip (python2 自带) 安装 esptool.py
 
-[esptool 刷机](//player.bilibili.com/player.html?aid=28695194&cid=49702131&page=1 ':include :type=iframe width="720" height="405"')
+[esptool 刷机](//player.bilibili.com/player.html?aid=28695194&cid=49702131&page=1 ':include :type=iframe width="720" height="530"')
 
 !> 部分参考此视频
 

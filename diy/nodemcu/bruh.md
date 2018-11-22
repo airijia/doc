@@ -3,7 +3,7 @@
 多合一传感器 温度+湿度+光强 +人体感知 + RGB LED状态灯
 
 
-[WS2812 开发灯环](//player.bilibili.com/player.html?aid=36376373&cid=63863725&page=1 ':include :type=iframe width="720" height="405"')
+[](//player.bilibili.com/player.html?aid=36376373&cid=63863725&page=1 ':include :type=iframe width="720" height="530"')
 
 
 8:30 ~ 14:00 的部分可以略过不看，参考本文档即可
