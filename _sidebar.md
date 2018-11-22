@@ -2,3 +2,4 @@
 * [智能家居硬件 DIY](diy/)
 * [MQTT 固件](mqtt/)
 * [购买产品](//shop107898810.taobao.com/)
+* [交流QQ群 303748038](//shang.qq.com/wpa/qunwpa?idkey=3bbdaf94d24cfee521803a3cf91cca04938b00848b72efdc9a3ec01cac802100)
