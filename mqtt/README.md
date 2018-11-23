@@ -94,7 +94,7 @@ MQTT 定制固件的功能有可以通过两种方式使用
 -  [DHT 温湿度](mqtt/components/sensor/dht)
 <!-- -  [DHT12 温湿度(I²C 总线)](mqtt/components/sensor/dht) -->
 <!-- -  [HDC1080 温湿度](mqtt/components/sensor/dallas) -->
--  [HTU21D 温湿度](mqtt/components/sensor/htu21d)
+-  [HTU21D/SI7021 温湿度](mqtt/components/sensor/htu21d)
 -  [SHT3X-D 温湿度](mqtt/components/sensor/sht3xd)
 
 

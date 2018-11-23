@@ -59,3 +59,10 @@ HomeKit
 ## 常见问题
 
 - [Homekit 使用常见问题](ctl/homekit/)
+
+
+
+<!-- ## 扩展功能
+
+- [REST API](ctl/develop/external_api_rest)
+- [WEBSOCKET API](ctl/develop/external_api_websocket) -->

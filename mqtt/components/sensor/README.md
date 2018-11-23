@@ -8,10 +8,10 @@
 默认情况下，二进制传感器会匹配最接近的 `icon`、`unit_of_measurement` 等值，如果自动匹配的不合意，则可以用自定义的覆盖掉
 
 ```yaml
-# Example sensor configuration
+# 配置示例
 name: Livingroom Temperature
 
-# 选填 variables:
+# 选填参数
 unit_of_measurement: "°C"
 icon: "mdi:water-percent"
 accuracy_decimals: 1
@@ -33,11 +33,10 @@ filters:
 
 **自动化**
 
-- **on_value** (*选填*, [自动化](mqtt/guides/automations)): An automation to perform when a new value is published. See [on_value](https://esphomelib.com/esphomeyaml/components/sensor/index.html#sensor-on-value).
-- **on_value_range** (*选填*, [自动化](mqtt/guides/automations)): An automation to perform when a published value transition from outside to a range to inside. See [on_value_range](https://esphomelib.com/esphomeyaml/components/sensor/index.html#sensor-on-value-range).
-- **on_raw_value** (*选填*, [自动化](mqtt/guides/automations)): An automation to perform when a raw value is received that hasn’t passed through any filters. See [on_raw_value](https://esphomelib.com/esphomeyaml/components/sensor/index.html#sensor-on-raw-value).
+- **on_value** (*选填*, [自动化](mqtt/guides/automations)): [在指定值触发](#on_value)
+- **on_value_range** (*选填*, [自动化](mqtt/guides/automations)): [在指定区间内触发](#on_value_range)
+- **on_raw_value** (*选填*, [自动化](mqtt/guides/automations)): [在指定区间内触发](#on_raw_value)
 - 以及 [MQTT 组件](mqtt/components/mqtt#MQTT-组件基本配置项) 的基本配置项
-
 
 
 ## 过滤器
@@ -105,7 +104,7 @@ sensor:
 
 ## 触发器
 
-?> TODO: 要复核
+
 ### on_value
 
 在指定值触发
@@ -124,7 +123,7 @@ sensor:
 
 ### on_value_range
 
-在指定值区间触发
+在指定区间内触发
 
 ```
 sensor:

@@ -73,9 +73,10 @@ python --version
 如果提示命令不存在，需要设置环境变量
 
 ```shell
-path=%path%;C:\Python
+path=%path%;C:\Python27
 ```
 
+然后再执行 `python --version`
 
 
 ### 安装 esptool.py
@@ -126,6 +127,8 @@ esptool.py -p COM6 write_flash -fs 1MB -fm dout 0x0 D:\Download\666.bin
 
 **基本流程是：刷机模式插入 - 擦除 - 刷机模式插入 - 刷入 - 普通模式插入 - 调试或配对**
 
+
+##### 手动输入命令
 esp01 模块刷 渡鸦固件，文件名 666.bin，所在位置D盘 Download 目录，COM6
 
 1. 切换到D:\Download  下
@@ -160,7 +163,24 @@ esptool.py -p COM6 -b 115200 write_flash -fs 1MB -fm dout -ff 40m 0x0 rboot.bin 
 
 刷入成功后，[渡鸦固件配置 wifi 和 homekit 的方法](diy/raven) 
 
+##### 视频中的 1.bat
 
+新建一个文件，命名为 `1.bat`，复制下面的内容填入，里面的 `COM口` 和 `文件名` 要换成实际值
+
+
+```bat
+@echo off
+
+echo 请插入模块...
+pause
+esptool.py -p COM3 erase_flash
+echo 请拔下模块，重新插入...
+pause
+esptool.py -p COM3 --baud 115200 write_flash -fs 8m -fm dout -ff 40m 0x0 rboot.bin 0x1000 blank_config.bin 0x2000 sonoff_basic_off.bin
+echo 刷固件完成
+pause
+
+```
 
 ### 调试
 

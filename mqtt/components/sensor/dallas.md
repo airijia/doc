@@ -50,8 +50,8 @@ sensor:
 - **address** (**必填**, 整数): 传感的精确地址，跟 `index` 参数二选一
 - **index** (**必填**, 整数): 传感器的索引值，效率低，建议使用 `address`
 - **resolution** (*选填*, 整数): 精确度，`8 ~ 12`，数字越大越精确，默认`12`
-- **dallas_id** (*选填*, [ID](mqtt/guides/configuration-types#id)): The ID of the [dallas hub](https://esphomelib.com/esphomeyaml/components/dallas.html). Use this if you have multiple dallas hubs.
-- **id** (*选填*, [ID](mqtt/guides/configuration-types#id)): Manually specify the ID used for code generation.
+- **dallas_id** (*选填*, [ID](mqtt/guides/configuration-types#id)): ID，使用多个探头时用以区分
+- **id** (*选填*, [ID](mqtt/guides/configuration-types#id)): 当前组件的 ID
 - 以及 [传感器核心组件](mqtt/components/sensor/#基本配置) 和 [MQTT 组件](mqtt/components/mqtt#MQTT-组件基本配置项) 的基本配置项
 
 

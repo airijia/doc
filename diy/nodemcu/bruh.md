@@ -33,7 +33,7 @@
 
 ![](https://ws1.sinaimg.cn/large/007fN5Xegy1fxelvku9fhj30sk0fc74w.jpg)
 
-[MQTT 固件编译](http://airijia.com/ctl/firmware/list)
+打开 [在线 MQTT 固件编译](http://airijia.com/ctl/firmware/list) 使用
 
 
 
@@ -55,7 +55,6 @@ mqtt:
   password: ''
   reboot_timeout : 0s
 ota:
-  password: ''  
 logger:
 
 sensor:
