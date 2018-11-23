@@ -5,7 +5,8 @@
 
 ### Sonoff
 
- -  [Sonoff Basic](diy/sonoff/basic)
+ -  [Sonoff Basic 改装件](diy/sonoff/basic)
+ -  [Sonoff B1 多彩灯泡](diy/sonoff/b1)
  -  [1ch-inching 单路点动](diy/sonoff/1ch-inching)
 
 
