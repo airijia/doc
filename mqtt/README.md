@@ -105,7 +105,9 @@ MQTT 定制固件的功能有可以通过两种方式使用
 <!-- -  [BME680 温湿度+气压+空气品质](mqtt/components/sensor/ms5611) -->
 
 
-<!-- -  [MH-Z19 二氧化碳](mqtt/components/sensor/mhz19) -->
+-  [MH-Z19 二氧化碳](mqtt/components/sensor/mhz19)
+-  [攀藤 颗粒物浓度](mqtt/components/sensor/mhz19)
+
 
 
 -  [BH1750 光强](mqtt/components/sensor/bh1750)
@@ -178,6 +180,7 @@ MQTT 定制固件的功能有可以通过两种方式使用
 -  [可调五色(红绿蓝冷白暖白)](mqtt/components/light/rgbww)
 -  [单信号线 LED 灯带](mqtt/components/light/fastled_clockless)
 -  [双信号线 LED 灯带](mqtt/components/light/fastled_spi)
+-  [MY9231/MY9291 LED 灯泡](mqtt/components/light/my9231)
 
 
 
