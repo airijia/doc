@@ -106,7 +106,7 @@ MQTT 定制固件的功能有可以通过两种方式使用
 
 
 -  [MH-Z19 二氧化碳](mqtt/components/sensor/mhz19)
--  [攀藤 颗粒物浓度](mqtt/components/sensor/mhz19)
+-  [PMSX003 颗粒物浓度](mqtt/components/sensor/pmsx003)
 
 
 
