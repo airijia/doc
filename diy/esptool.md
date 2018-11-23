@@ -1,5 +1,7 @@
 ## 安装
 
+?> 如果插入 TTL刷机线 没有提示音，需要先安装驱动
+
 先安装 python2，然后用 pip (python2 自带) 安装 esptool.py
 
 [esptool 刷机](//player.bilibili.com/player.html?aid=28695194&cid=49702131&page=1 ':include :type=iframe width="720" height="530"')
@@ -167,7 +169,9 @@ esptool.py -p COM6 -b 115200 write_flash -fs 1MB -fm dout -ff 40m 0x0 rboot.bin 
 
 ##### 视频中的 1.bat
 
-新建一个文件，命名为 `1.bat`，复制下面的内容填入，里面的 `COM口` 和 `文件名` 要换成实际值，
+新建一个文件，命名为 `1.bat`，复制下面的内容填入
+
+**假设** 文件名为 666.bin，所在位置 D 盘 Download 目录，串口编号 COM6，里面的 `COM口` 和 `文件名` 要换成实际值
 
 !> 1.bat 文件要放到固件文件的同级目录下
 
@@ -179,7 +183,7 @@ pause
 esptool.py -p COM3 erase_flash
 echo 请拔下模块，重新插入...
 pause
-esptool.py -p COM3 --baud 115200 write_flash -fs 8m -fm dout -ff 40m 0x0 rboot.bin 0x1000 blank_config.bin 0x2000 sonoff_basic_off.bin
+esptool.py -p COM3 --baud 115200 write_flash -fs 8m -fm dout -ff 40m 0x0 rboot.bin 0x1000 blank_config.bin 0x2000 666.bin
 echo 刷固件完成
 pause
 
