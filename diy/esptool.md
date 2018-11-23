@@ -97,11 +97,7 @@ pip install esptool
 esptool.py
 ```
 
-
-
-
-
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fwvynfayc6j308k0bg3yr.jpg)
+![](http://pic.airijia.com/doc/20181123172622.png)
 
 输入显示即安装完成
 
