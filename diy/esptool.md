@@ -113,7 +113,7 @@ esptool.py
 
 #### MQTT 固件
 
-**基本流程是：刷机模式插入 - 刷入 - 普通模式插入 - 调试或配对**
+**基本流程是：刷机模式插入 - 刷入 - 拔掉USB - 普通模式插入 - 调试或配对**
 
 sonoff basic 刷 MQTT 固件，文件名 666.bin，所在位置D盘 Download 目录，COM6
 
@@ -127,7 +127,7 @@ esptool.py -p COM6 write_flash -fs 1MB -fm dout 0x0 D:\Download\666.bin
 
 #### 渡鸦 Homekit 直连固件
 
-**基本流程是：刷机模式插入 - 擦除 - 刷机模式插入 - 刷入 - 普通模式插入 - 调试或配对**
+**基本流程是：刷机模式插入 - 擦除 - 拔掉USB - 刷机模式插入 - 刷入 - 拔掉USB - 普通模式插入 - 调试或配对**
 
 
 ##### 手动输入命令
@@ -178,10 +178,10 @@ esptool.py -p COM6 -b 115200 write_flash -fs 1MB -fm dout -ff 40m 0x0 rboot.bin 
 ```bat
 @echo off
 
-echo 请插入模块...
+echo 刷机模式(安装黑色按钮)把硬件设备和USB刷机线一起插入 USB ...
 pause
 esptool.py -p COM3 erase_flash
-echo 请拔下模块，重新插入...
+echo 拔掉整个 USB，用刷机模式重新插入...
 pause
 esptool.py -p COM3 --baud 115200 write_flash -fs 8m -fm dout -ff 40m 0x0 rboot.bin 0x1000 blank_config.bin 0x2000 666.bin
 echo 刷固件完成
