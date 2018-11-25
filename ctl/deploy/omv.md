@@ -1,6 +1,8 @@
+# 基于 OMV 安装 airjiia/ctl 
 
 
-!> 本教程是用于 OMV 4.x 版本
+
+OMV (OpenMediaVault)，是一个开源的基于Debian Linux的下一代网络附加存储(NAS)解决方案。
 
 假设 OMV 所在的 IP 为 `192.168.1.163`，使用浏览器打开这个地址，输入用户名和密码，默认用户名：`admin`，默认密码：`openmediavault`
 
@@ -139,6 +141,7 @@ Enable the plugin - 保存
 查看 [ctl 初次使用](ctl/init) 进行下一步配置
 
 
+?> 本教程基于 OMV 4.x 版本，其他版本需作适当调整
 
 
 ## 相关链接
