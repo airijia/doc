@@ -109,7 +109,7 @@ Enable the plugin - 保存
 
 
 
-网络模式选择 `Host`。映射一个可被共享的目录到，例如 `/home/airi/hass` 到 `/airi/hass`，作用是将中枢的配置文件夹引出。
+网络模式选择 `Host`。映射一个可被共享的目录——比如 `/home/airi/hass` 到 `/airi/hass`，作用是将智能中枢的配置文件夹引出。
 
 
 ![](http://pic.airijia.com/doc/20181125134908.png)
