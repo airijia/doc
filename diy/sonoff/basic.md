@@ -89,17 +89,20 @@ TTL刷机线（CH340G）
 
 整体电路接法
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fxftbsc2usj30m80ddtda.jpg)
+![](http://pic.airijia.com/doc/20181125154712.png)
 
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fxftd0tm01j30m80ddtdc.jpg)
+![](http://pic.airijia.com/doc/20181125154721.png)
 
 
-
-连双控墙壁开关接法
+连双控墙壁开关接法，两个双控间要连**三**根线，可以破跟网线解决
 
 ![](http://pic.airijia.com/doc/20181125150723.png)
 
+
+连两个单控开关，不用RF
+
+![](http://pic.airijia.com/doc/20181125160337.png)
 
 ## 相关软件
 
