@@ -10,6 +10,14 @@
 
 ## 安装 Photon OS
 
+下载介质分多种版本，Full ISO包含了所有的包，可用于完整安装；OVA with virtual hardware v11用于vSphere 6.0平台；OVA with virtual hardware v13用于vSphere 6.5、6.7平台
+
+http://dl.bintray.com/vmware/photon/2.0/GA/ova/photon-custom-hw11-2.0-304b817.ova
+
+http://dl.bintray.com/vmware/photon/2.0/GA/ova/photon-custom-hw13-2.0-304b817.ova
+
+workstation
+http://dl.bintray.com/vmware/photon/2.0/GA/ova/photon-custom-lsilogic-hw11-2.0-304b817.ova
 
 打开 vSphere Client，登录
 
