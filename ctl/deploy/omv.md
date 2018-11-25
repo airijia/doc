@@ -65,7 +65,7 @@ OMV (OpenMediaVault)，是一个开源的基于Debian Linux的下一代网络附
 
 ![](http://pic.airijia.com/doc/20181125132410.png)
 
-Enable the plugin - 保存
+**Enable the plugin - 保存**
 
 ![](http://pic.airijia.com/doc/20181125132520.png)
 
@@ -130,7 +130,7 @@ Enable the plugin - 保存
 ![](http://pic.airijia.com/doc/20181125135417.png)
 
 
-如果现实，即启动成功，
+如图显示，即启动成功，
 
 ![](http://pic.airijia.com/doc/20181125135325.png)
 
