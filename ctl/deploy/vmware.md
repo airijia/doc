@@ -191,4 +191,4 @@ docker run -d \
 
 ## 相关链接
 
- - [vmware esxi6.5安装教程](https://zhuanlan.zhihu.com/p/30129843)
+[Workstation Player 常见问题解答](https://www.vmware.com/cn/products/player/faqs.html)

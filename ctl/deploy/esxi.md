@@ -246,7 +246,10 @@ docker run -d \
 
 ## 相关链接
 
- - [vmware esxi6.5安装教程](https://zhuanlan.zhihu.com/p/30129843)
+
+- [vSphere 6.0安装和设置](https://docs.vmware.com/cn/VMware-vSphere/6.0/vsphere-esxi-vcenter-server-602-installation-setup-guide.pdf)
+- [vSphere 6.5安装和设置](https://docs.vmware.com/cn/VMware-vSphere/6.5/vsphere-esxi-vcenter-server-65-installation-setup-guide.pdf)
+- [vSphere 6.7安装和设置](https://docs.vmware.com/tw/VMware-vSphere/6.7/vsphere-esxi-67-installation-setup-guide.pdf)
 
 
-https://www.yeboyzq.com/xvnihua/850.html
+- [ESXi 6.5安装配置](https://www.yeboyzq.com/xvnihua/850.html)
