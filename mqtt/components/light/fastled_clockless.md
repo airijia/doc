@@ -21,6 +21,8 @@
 
 ## 网页创建固件
 
+打开 [在线 MQTT 固件编译](http://airijia.com/ctl/firmware/list) 使用
+
 ![](https://ws1.sinaimg.cn/large/007fN5Xegy1fwxg8yw6t6j30w60jqtca.jpg)
 
 以 NodeMCU 8266 WS2812 芯片为例，搜索 ws2812  
@@ -36,14 +38,16 @@
 
 RGB 序列：三种颜色的排序；R=红，G=绿，B=蓝，根据实际情况填写
 
-打开 [在线 MQTT 固件编译](http://airijia.com/ctl/firmware/list) 使用
+
 
 
 ## 文件模板创建
 
+参考 [模板文件创建 MQTT 固件](mqtt/guides/yaml) 使用
+
 
 ```yaml
-    # 配置示例
+# 配置示例
 light:
   - platform: fastled_clockless
     chipset: WS2811
