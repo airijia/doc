@@ -26,6 +26,8 @@
 以 NodeMCU 8266 WS2812 芯片为例，搜索 ws2812  
 
 
+
+
 ![](https://ws1.sinaimg.cn/large/007fN5Xegy1fwxda34579j30ku0djmxh.jpg)
 
 数据端口：即GPIO，可以填开发板上的编号，例如「D1」；也可以填纯数字，例如「2」
@@ -34,7 +36,7 @@
 
 RGB 序列：三种颜色的排序；R=红，G=绿，B=蓝，根据实际情况填写
 
-
+打开 [在线 MQTT 固件编译](http://airijia.com/ctl/firmware/list) 使用
 
 
 ## 文件模板创建
