@@ -1,7 +1,7 @@
 # 单信号线 LED 灯带控制器
 
-单数据信号的 LED 灯带控制器，总计三根线连接，分别是供电（VCC）、地线（GND）和信号线（DO/SIG/DIN），典型的型号如 WS2812B
-跟双信号线(SPI总线)类型的灯带控制器相比，少一根 CLK ( clock，时钟序列)，所以称之为 `fastled_clockless`
+单数据信号的 LED 灯带控制器，总计三根线连接，分别是供电（VCC）、地线（GND）和信号线（DO/SIG/DIN），典型的型号如 WS2812B。跟双信号线(SPI总线)类型的灯带控制器相比，少一根 CLK ( clock，时钟序列)，所以称之为 `fastled_clockless`
+
 
 实例连接中，由 供电 + ESP芯片组 + 灯带 三部分组成
 
@@ -14,7 +14,7 @@
 
 | ![](https://ws1.sinaimg.cn/large/007fN5Xegy1fwxfzyopmcj30xa0k81fn.jpg ':size=200')|  WS2812B<br> 灯带 |   [![买买买](http://cdn.airijia.com/b6eca8da724952cc0251.gif ':size=150')](https://s.taobao.com/search?q=ws2812b) |
 |:-:|:-:|:-:|
-| ![](https://ws1.sinaimg.cn/large/007fN5Xegy1fwxbejdrw1j30b40b4tdc.jpg ':size=200')  | ESP01S模块用连接器<br> 配合EPS01S模块和灯带使用  |  [![买买买](http://cdn.airijia.com/b6eca8da724952cc0251.gif ':size=150')](https://item.taobao.com/item.htm?id=551951370518) |
+| ![](https://ws1.sinaimg.cn/large/007fN5Xegy1fwxbejdrw1j30b40b4tdc.jpg ':size=200')  | 灯带连接器<br> 配合EPS01S模块和灯带使用  |  [![买买买](http://cdn.airijia.com/b6eca8da724952cc0251.gif ':size=150')](https://item.taobao.com/item.htm?id=551951370518) |
 | ![](http://pic.airijia.com/doc/20181122164130.png ':size=200')| ESP01 |  [![买买买](http://cdn.airijia.com/b6eca8da724952cc0251.gif ':size=150')](https://item.taobao.com/item.htm?id=45607865463) |
 
 
@@ -63,8 +63,8 @@ light:
 - **chipset** (**必填**, 字符串): 指定使用的芯片组，具体值查看[支持芯片组](#支持芯片组)
 - **pin** (**必填**, [引脚](mqtt/guides/configuration-types#引脚)): 传输数据信号使用的端口
 - **num_leds** (**必填**, 整数): 连接的灯珠数量
-- **rgb_order** (*选填*, 字符串): 三种颜色的排序；R=红，G=绿，B=蓝。举例：如果设置排序为 RGB，当控制端指定显示红色（R）时，灯带却显示为蓝色（B），这是把排序改为 BGR，重新编译固件刷入，即可正确显示。可选值 `RGB`,`RBG`, `GRB`, `GBR`, `BRG` 和 `BGR`，默认值  `RGB`
-- **max_refresh_rate** (选填, [时长](mqtt/guides/configuration-types#时长)): 最大刷新率。举例：设置为16ms，会限制刷新率在 60Hz。默认值由驱动 IC 的默认值决定。
+- **rgb_order** (*选填*, 字符串): 三种颜色的排序；R=红，G=绿，B=蓝。举例：如果设置排序为 RGB，当控制端指定显示红色（R）时，灯带却显示为蓝色（B），这时把排序改成 BGR，重新编译固件刷入，即可正确显示。可选值 `RGB`,`RBG`, `GRB`, `GBR`, `BRG` 和 `BGR`，默认值  `RGB`
+- **max_refresh_rate** (选填, [时长](mqtt/guides/configuration-types#时长)): 最大刷新率。举例：设置为16ms，会限制刷新率在 60Hz。默认值由驱动 IC 的默认值决定
 - **gamma_correct** (*选填*, 浮点数): 伽马校正。默认值 `2.8`
 - **default_transition_length** (*选填*, [时长](mqtt/guides/configuration-types#时长)): 过度时长，如果智能中枢没提供此参数时的采用的值。默认值为 `1s`
 - **power_supply** (*选填*, [ID](mqtt/guides/configuration-types#id)): 使用 [直流电源](mqtt/components/power_supply) 给灯带供电时，在控制灯带的同时也控制电源
