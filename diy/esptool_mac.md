@@ -1,8 +1,11 @@
-# esptool.py 的安装与使用
+# esptool.py(MAC) 的安装与使用
 
-## 安装
 
-### 安装 Python 
+?> 如果插入 TTL刷机线 没有提示音，需要先[安装驱动](diy/ttl)
+
+
+
+## 安装 Python 
 
 High Sierra 之后的 Mac OS X，已经自带 python2.7，无需安装
 
@@ -18,7 +21,6 @@ python -V
 
 ![](https://ws1.sinaimg.cn/large/007fN5Xegy1fwweudy58oj30ga0a0mxn.jpg)
 
-?> TODO: 没有 python 的解决方法
 
 MAC 默认是不带 pip 的，所以要先安装pip
 
@@ -28,7 +30,10 @@ sudo easy_install pip
 
 ![](https://ws1.sinaimg.cn/large/007fN5Xegy1fwwey1vjgkj30q20huwj2.jpg)
 
-然后用 pip 安装 esptool
+
+## 安装 esptool.py
+
+用 pip 安装 esptool
 
 ```
 sudo pip install esptool
@@ -70,16 +75,15 @@ ls /dev/cu.wchusb*
 
 
 
-## 使用
+
+
+
+##  刷入固件
 
 以下演示，实际使用中要根据实机上的 USB 串口编号设置，如上面查到的 `/dev/cu.usbserial-1410`
 
 
-###  刷入
-
- 
-
-#### MQTT 固件
+### MQTT 固件
 
 **基本流程是：刷机模式插入 - 刷入 - 普通模式插入 - 调试或配对**
 
@@ -111,7 +115,7 @@ esptool.py -p /dev/cu.usbserial-1410 write_flash -fs 1MB -fm dout 0x0 666.bin
 刷入成功后，进入 智能中枢 使用
 
 
-#### 渡鸦 Homekit 直连固件
+### 渡鸦 Homekit 直连固件
 
 
 **基本流程是：刷机模式插入 - 擦除 - 刷机模式插入 - 刷入 - 普通模式插入 - 调试或配对**
@@ -159,7 +163,7 @@ esptool.py -p /dev/cu.usbserial-1410 -b 115200 write_flash -fs 1MB -fm dout -ff 
 
  
 
-### 调试
+## 调试固件
 
  
 
@@ -180,7 +184,7 @@ miniterm.py /dev/cu.usbserial-1410 115200
 
 
 
-### 备份与恢复
+## 备份与恢复固件
 
  
 

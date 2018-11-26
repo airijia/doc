@@ -34,7 +34,7 @@
 
 如果遇到故障不能刷入，可以将设备经由 TTL 线插到电脑上
 
-MQTT 固件工具
+使用 [MQTT 固件工具](diy/flasher)
 
 
 
@@ -43,7 +43,9 @@ MQTT 固件工具
 
 
 
-esptool 
+使用 [esptool](diy/esptool)
+
+ 
 
 开启调试
 `miniterm.py COM6 115200`

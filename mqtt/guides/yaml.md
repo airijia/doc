@@ -81,10 +81,21 @@ sensor:
 
 打开爱睿家智能中枢的 `固件` 选项卡 或者 [在线版](http://airijia.com/ctl/firmware/list)，点击`上传模板文件`
 
-图999
+
+![](http://pic.airijia.com/doc/20181126195516.png)
 
 
-固件模板创建成功，等待云端编译
+选择编辑好的 **yaml** 文件
+
+![](http://pic.airijia.com/doc/20181126195618.png)
+
+
+点击 **确定** 上传
+
+![](http://pic.airijia.com/doc/20181126195811.png)
+
+
+文件上传成功，等待云端编译
 
 ![](https://ws1.sinaimg.cn/large/007fN5Xegy1fww4awjtgpj311r0grdgu.jpg)
 

@@ -1,14 +1,18 @@
-## 安装
+# esptool.py 的安装与使用
 
 ?> 如果插入 TTL刷机线 没有提示音，需要先[安装驱动](diy/ttl)
-
-先安装 python2，然后用 pip (python2 自带) 安装 esptool.py
 
 [esptool 刷机](//player.bilibili.com/player.html?aid=28695194&cid=49702131&page=1 ':include :type=iframe width="720" height="530"')
 
 !> 部分参考此视频
 
-### 安装 Python 2
+
+
+先安装 python2，然后用 pip (python2 自带) 安装 esptool.py
+
+
+
+## 安装 Python 2
 
 打开官方网站 python.org
 
@@ -85,7 +89,7 @@ path=%path%;C:\Python27
 
 
 
-### 安装 esptool.py
+## 安装 esptool.py
 
 命令行输入
 
@@ -105,13 +109,12 @@ esptool.py
 
 
 
-## 使用
+## 刷入固件
 
 以下演示，实际使用中要根据实机上的 COM 口编号设置，如 COM3，COM6，COM7
 
-### 刷入
 
-#### MQTT 固件
+### MQTT 固件
 
 **基本流程是：刷机模式插入 - 刷入 - 拔掉USB - 普通模式插入 - 调试或配对**
 
@@ -125,12 +128,12 @@ esptool.py -p COM6 write_flash -fs 1MB -fm dout 0x0 D:\Download\666.bin
 
 刷入成功后，进入 智能中枢 使用
 
-#### 渡鸦 Homekit 直连固件
+### 渡鸦 Homekit 直连固件
 
 **基本流程是：刷机模式插入 - 擦除 - 拔掉USB - 刷机模式插入 - 刷入 - 拔掉USB - 普通模式插入 - 调试或配对**
 
 
-##### 手动输入命令
+#### 手动输入命令
 
 
 esp01 模块刷 渡鸦固件，**假设** 文件名为 666.bin，所在位置 D 盘 Download 目录，串口编号 COM6
@@ -167,7 +170,7 @@ esptool.py -p COM6 -b 115200 write_flash -fs 1MB -fm dout -ff 40m 0x0 rboot.bin 
 
 刷入成功后，[渡鸦固件配置 wifi 和 homekit 的方法](diy/raven) 
 
-##### 视频中的 1.bat
+#### 视频中的 1.bat
 
 新建一个文件，命名为 `1.bat`，复制下面的内容填入
 
@@ -189,7 +192,7 @@ pause
 
 ```
 
-### 调试
+## 调试固件
 
 输入 miniterm + 实机COM口 + 波特率 (通常为 115200 )
 
@@ -201,7 +204,7 @@ miniterm.py COM3 115200
 
 
 
-### 备份与恢复
+## 备份与恢复固件
 
 备份
 
