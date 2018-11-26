@@ -94,7 +94,8 @@ Itead 1CH Inching
 
 这个焊的有点夸张了...
 
-![âItead 1CHâçå¾çæç´¢ç"æ](http://tinkerman.cat/wp-content/uploads/2017/02/20170213_221200x.jpg)
+
+![](http://pic.airijia.com/doc/20181126215407.png)
 
 这个主意不错
 
