@@ -8,7 +8,7 @@
 ## SSH客户端
 
 windows 10下可以直接用 powershell
-推荐使用 cmder https://www.jeffjade.com/2016/01/13/2016-01-13-windows-software-cmder/
+推荐使用 [cmder](https://www.jeffjade.com/2016/01/13/2016-01-13-windows-software-cmder/)
 
 mac 调出终端
 
