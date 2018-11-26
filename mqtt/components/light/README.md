@@ -113,7 +113,7 @@ on_...:
     - light.turn_off: light_1
 ```
 
-Configuration options:
+配置参数
 
 - **id** (**必填**, [ID](mqtt/guides/configuration-types#id)): 灯的名称
 - **transition_length** (*选填*, [时长](mqtt/guides/configuration-types#时长), [模板化](mqtt/guides/automations#模板化)): 过度时长
