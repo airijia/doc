@@ -14,7 +14,7 @@
 
 ### 在 vSphere 6.0 下安装
 
-先下载 OVA 文件：[vSphere 6.0 用 v11](http://dl.bintray.com/vmware/photon/2.0/GA/ova/photon-custom-hw11-2.0-304b817.ova)
+先下载 OVA 文件：[vSphere 6.0 用 OVA with virtual hardware v11](http://dl.bintray.com/vmware/photon/2.0/GA/ova/photon-custom-hw11-2.0-304b817.ova)
 
 打开 vSphere Client，登录
 
@@ -67,7 +67,7 @@
 ### 在 vSphere  6.5/6.7 下安装
 
 
-先下载 OVA 文件：[vSphere 6.5/6.7 用 v13](http://dl.bintray.com/vmware/photon/2.0/GA/ova/photon-custom-hw13-2.0-304b817.ova)
+先下载 OVA 文件：[vSphere 6.5/6.7 用 OVA with virtual hardware v13](http://dl.bintray.com/vmware/photon/2.0/GA/ova/photon-custom-hw13-2.0-304b817.ova)
 
 
 浏览器打开 VMware ESXi 的管理界面
