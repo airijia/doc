@@ -143,3 +143,10 @@ Itead 1CH Inching
 关注 微信订阅号 获取更多教程
 
 ![](https://ws1.sinaimg.cn/large/007fN5Xegy1fv99qfit90j30by0byjsh.jpg)
+
+
+
+## 相关链接
+
+
+[PSF-X01 产品规格书](https://datasheet.lcsc.com/szlcsc/Coolkit-PSF-B01-GL_C168936.pdf)
