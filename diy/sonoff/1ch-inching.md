@@ -69,13 +69,13 @@ Itead 1CH Inching
 
 最终确认的针脚定义是这个 ↓
 
-![37117875-6ce0241c-2220-11e8-8a70-6b4a9b67a025.jpg (2375Ã1012)](https://user-images.githubusercontent.com/5835733/37117875-6ce0241c-2220-11e8-8a70-6b4a9b67a025.jpg)
+![](http://pic.airijia.com/doc/20181126213949.png)
 
 呃... RX , TX 就没引出？GPIO0呢？都没接出来？
 
 查下PSF-B01的针脚定义吧
 
-![1536752670358](../../../Users/wbird/AppData/Local/Temp/1536752670358.png)
+![](http://pic.airijia.com/doc/20181126214613.png)
 
 原来是对 8285 的封装
 
@@ -89,7 +89,8 @@ Itead 1CH Inching
 
 主要是PSF-B01上那几个脚比较麻烦.. 先看下网友们是如何发挥得把
 
-![29034982-580482a4-7b9a-11e7-901b-a8cf83351804.JPG (3024Ã4032)](https://user-images.githubusercontent.com/29548608/29034982-580482a4-7b9a-11e7-901b-a8cf83351804.JPG)
+
+![](http://pic.airijia.com/doc/20181126214516.png)
 
 这个焊的有点夸张了...
 
