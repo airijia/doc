@@ -99,6 +99,72 @@ OMV (OpenMediaVault)，是一个开源的基于Debian Linux的下一代网络附
 显示完成，点击**关闭**
 
 
+
+## 设置文件夹
+
+
+!> 已经自己建立好共享文件夹的跳过此部分
+
+**存储器 - 磁盘**，sda 是系统盘，sdb 外接硬盘/U盘
+
+
+![](http://pic.airijia.com/doc/20181127103532.png)
+
+
+现在格式化 sdb，**存储器 - 文件系统 - 创建** 
+
+
+
+![](http://pic.airijia.com/doc/20181127103917.png)
+
+选择 sdb
+
+
+![](http://pic.airijia.com/doc/20181127104026.png)
+
+
+!> sdb 上的所有数据会被抹掉
+
+![](http://pic.airijia.com/doc/20181127104119.png)
+
+
+显示完成，关闭
+
+
+![](http://pic.airijia.com/doc/20181127105047.png)
+
+
+挂载 sba
+
+
+![](http://pic.airijia.com/doc/20181127105133.png)
+
+
+点击 **应用**
+
+
+![](http://pic.airijia.com/doc/20181127105203.png)
+
+
+**访问权限管理 - 共享文件夹**，**添加**
+
+
+![](http://pic.airijia.com/doc/20181127105449.png)
+
+
+选择刚才建立的 sdb1，权限全开
+
+
+![](http://pic.airijia.com/doc/20181127105730.png)
+
+
+点击 **应用** 使配置生效
+
+![](http://pic.airijia.com/doc/20181127105815.png)
+
+
+
+
 ## 启动容器
 
 
@@ -107,18 +173,40 @@ OMV (OpenMediaVault)，是一个开源的基于Debian Linux的下一代网络附
 ![](http://pic.airijia.com/doc/20181125134613.png)
 
 
+**restart 策略** 选择 `always`，**网络模式** 选择 `Host`，**Environment variables** 不用改
 
 
-网络模式选择 `Host`。映射一个可被共享的目录——比如 `/home/airi/hass` 到 `/airi/hass`，作用是将智能中枢的配置文件夹引出。
+
+![](http://pic.airijia.com/doc/20181127121230.png)
 
 
-![](http://pic.airijia.com/doc/20181125134908.png)
 
-换句话说，左边的文件夹是你自己创建的，右边的`/airi/hass`是固定内容
+挂载刚才建好的文件夹 `666`
 
-点击保存，运行容器
+![](http://pic.airijia.com/doc/20181127121301.png)
+
+
+OMV 的共享文件夹在 **/sharedfolders** 下
+
+
+![](http://pic.airijia.com/doc/20181127111915.png)
+
+
+如图，将 OMV 的 `/sharedfolders/666` 挂载到容器的 `/airi/hass`，作用是将智能中枢的配置文件夹引出
+
+换句话说，左边的文件夹 `666` 是你自己创建的，右边的`/airi/hass`是固定内容
+
+![](http://pic.airijia.com/doc/20181127121723.png)
+
+
+
+核实无误点击保存，运行容器
+
+
+![](http://pic.airijia.com/doc/20181127121907.png)
 
 !> 这里一定要选`Host` 模式，否则无法正常运行
+
 
 
 
@@ -147,6 +235,34 @@ OMV (OpenMediaVault)，是一个开源的基于Debian Linux的下一代网络附
 
 
 ?> 本教程基于 OMV 4.x 版本，其他版本需作适当调整
+
+
+
+
+## 补充说明，开通远程共享
+
+
+**服务 - SMB/CIFS**，**共享**
+
+
+![](http://pic.airijia.com/doc/20181127122251.png)
+
+
+
+添加共享文件夹 **666**
+
+
+![](http://pic.airijia.com/doc/20181127122346.png)
+
+
+
+![](http://pic.airijia.com/doc/20181127122733.png)
+
+
+![](http://pic.airijia.com/doc/20181127123000.png)
+资源管理器打开 `\\192.168.168.163` 是配置文件的共享文件夹
+
+![](http://pic.airijia.com/doc/20181127122854.png)
 
 
 ## 相关链接
