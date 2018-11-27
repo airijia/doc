@@ -269,7 +269,7 @@ OMV 的共享文件夹在 **/sharedfolders** 下
 
 
 - [omv-extras 源的安装](https://www.openmediavault.cn/read-4.html)
-- [树莓派3b——玩转docker](https://www.jianshu.com/p/21ecf7ce1ce9)
+- [树莓派3b OMV 玩转docker](https://www.jianshu.com/p/21ecf7ce1ce9)
 
 
 
