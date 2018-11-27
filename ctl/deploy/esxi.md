@@ -239,9 +239,7 @@ docker run -d \
 ![](http://pic.airijia.com/doc/20181126100749.png)
 
 
-
-下一步看
-[X64 平台基于 docker 安装 airjiia/ctl ](ctl/deploy/x64)
+?> 下一步看 [X64 平台基于 docker 安装 airjiia/ctl ](ctl/deploy/x64)
 
 
 ## 相关链接
