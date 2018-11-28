@@ -1,4 +1,4 @@
-# 模板文件创建 MQTT 固件
+# 使用 USB 转 TTL 串口线刷固件
 
 
 
@@ -9,12 +9,22 @@
 ![](https://ws1.sinaimg.cn/large/007fN5Xegy1fww4qaz3kbj30hx06ot90.jpg)
 
 
-## 刷入
+## 软件刷入
+
+
+![](http://pic.airijia.com/doc/20181128144208.png)
+
 
 [MQTT 固件工具](diy/flasher)
 
-图形界面，使用简便，但不支持调试等功能
+图形界面，使用简便
 
+
+
+## 命令行刷入
+
+
+![](http://pic.airijia.com/doc/20181128144404.png)
 
 
 
