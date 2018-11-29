@@ -1,4 +1,4 @@
-# 群晖 DSM 安装
+# 群晖 DSM 安装 airijia/ctl 
 
 需要支持 docker 的 群晖（x86平台 DSM 版本大于 6.0）
 
