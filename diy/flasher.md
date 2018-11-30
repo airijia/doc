@@ -89,10 +89,18 @@
 
 ![](http://pic.airijia.com/doc/20181130152853.png)
 
-TTL 线没有连接任何模块的时候，就会报这个错误。所以如果你认为自己已经把连好了还是看到这个错误，再去检查三遍连线
+TTL 线没有连接任何模块的时候，就会报这个错误
+
+所以如果你认为自己已经把线连好了还是看到这个错误，再去检查三遍连线
 
 
 
+### Unexpected error: could not open port 'COM3': FileNotFoundError(2, '系统找不到指定的文件。', None, 2)
 
 
+![](http://pic.airijia.com/doc/20181130154519.png)
 
+
+TTL 线没有插到 USB 上，或者接错线了
+
+所以如果你认为自己已经把线连好了还是看到这个错误，再去检查三遍连线
