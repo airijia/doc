@@ -82,4 +82,17 @@
 
 
 
+## 常见问题
+
+### Unexpected error: could not open port 'COM3': PermissionError(13, '拒绝访问。', None, 5)
+
+
+![](http://pic.airijia.com/doc/20181130152853.png)
+
+TTL 线没有连接任何模块的时候，就会报这个错误。所以如果你认为自己已经把连好了还是看到这个错误，再去检查三遍连线
+
+
+
+
+
 
