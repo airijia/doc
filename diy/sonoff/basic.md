@@ -58,9 +58,15 @@ TTL刷机线（CH340G）
 
 2. 按住黑色按钮插入USB，为刷机模式
 
-刷机方法见 [esptool.py 使用方法](/diy/esptool) 
 
 
+刷机工具
+
+- [MQTT 固件工具](diy/flasher)
+
+
+- [esptool.py 的安装与使用](diy/esptool)
+- [esptool.py(MAC)的安装与使用](diy/esptool_mac)
 
 
 
