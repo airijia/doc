@@ -176,7 +176,8 @@ esptool.py -p COM6 -b 115200 write_flash -fs 1MB -fm dout -ff 40m 0x0 rboot.bin 
 
 **假设** 文件名为 666.bin，所在位置 D 盘 Download 目录，串口编号 COM6，里面的 `COM口` 和 `文件名` 要换成实际值
 
-!> 1.bat 文件要放到固件文件的同级目录下
+!>  `rboot.bin`，`blank_config.bin`，`666.bin` 这三个固件文件要跟 `1.bat` 在同一个文件夹下
+
 
 ```bat
 @echo off
