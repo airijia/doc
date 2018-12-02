@@ -289,6 +289,18 @@ A: 这两个命令运用的时候需要加上后缀py，即 esptool.py 和  mini
 ![](https://ws1.sinaimg.cn/large/007fN5Xegy1fwzkpkkrovj30j60l4dho.jpg)
 
 
+Q 提示AttributeError: function 'CancelIoEx' not found
+
+![](http://pic.airijia.com/doc/20181202201630.png)
+
+
+A 原因CancelIoEx函数，只在Vista及以上版本运行
+
+下载安装pyserial-3.0版本成功解决此问题
+
+```
+pip install pyserial==3.0
+```
 
 
 ## 相关链接
