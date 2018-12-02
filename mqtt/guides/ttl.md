@@ -27,8 +27,9 @@
 ![](http://pic.airijia.com/doc/20181128144404.png)
 
 
+[esptool.py 刷 MQTT 固件](diy/esptool#mqtt-固件)
 
-[esptool.py](diy/esptool#mqtt-固件)
+[esptool.py(MAC) 刷 MQTT 固件](diy/esptool#mqtt-固件)
 
 命令行界面，功能强大
 
