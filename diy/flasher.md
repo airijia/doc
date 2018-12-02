@@ -104,3 +104,12 @@ TTL 线没有连接任何模块的时候，就会报这个错误
 TTL 线没有插到 USB 上，或者接错线，比如线接反了
 
 所以如果你认为自己已经把线连好了还是看到这个错误，再去检查三遍连线
+
+
+
+###  无法定位程序输入点 Getfinalpathnamebyhandlew 于动态链接库 kernel32.dll 上
+
+![](http://pic.airijia.com/doc/20181202172626.png)
+
+最低系统要求为 Vista，WIN XP不能用
+
