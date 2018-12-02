@@ -294,7 +294,7 @@ Q 提示AttributeError: function 'CancelIoEx' not found
 ![](http://pic.airijia.com/doc/20181202201630.png)
 
 
-A 原因CancelIoEx函数，只在Vista及以上版本运行
+A 原因 CancelIoEx 函数，只在Vista及以上版本运行
 
 下载安装pyserial-3.0版本成功解决此问题
 
