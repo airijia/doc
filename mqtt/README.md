@@ -17,23 +17,43 @@
 
 ## 适配中枢
 
- - 爱睿家智能中枢（airijia/ctl）
+### 爱睿家智能中枢（airijia/ctl）
 
-    免配置，自动发现
-
- - Hass (Home Assistant)
+?> 免配置，自动发现，默认的用户名和密码为空，编译固件的时候都不用填
 
 
-在配置文件（通常为 configuration.yaml）增加如下内容，以使用 Hass 内置的 [HBMQTT](https://www.home-assistant.io/docs/mqtt/broker#embedded-broker) 为例
+### Hass 内置
 
+使用 Hass 内置的 [HBMQTT](https://www.home-assistant.io/docs/mqtt/broker#embedded-broker)
+
+在配置文件（通常为 configuration.yaml）增加如下内容
 
 ```yaml
+# HBMQTT
 mqtt:
   password: airi
   discovery: true
   discovery_prefix: airi
 ```
 如上设置，编译固件是需要填入的 MQTT 用户名为 `homeassistant` (默认值)，密码为 `airi`
+
+
+### Hass 外接
+
+以外接 Mosquitto 为例
+
+在配置文件（通常为 configuration.yaml）增加如下内容
+
+```yaml
+# Mosquitto
+mqtt:
+  broker: 127.0.0.1 # Mosquitto 服务器IP
+  # ... 其他 MQTT 配置
+  discovery: true
+  discovery_prefix: airi
+```
+
+如上设置，编译固件是需要填入的 MQTT 用户名和密码由 Mosquitto 确定，默认都为空
  
 
 ## 基本使用
