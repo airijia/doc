@@ -149,4 +149,6 @@ Itead 1CH Inching
 ## 相关链接
 
 
-[PSF-X01 产品规格书](https://datasheet.lcsc.com/szlcsc/Coolkit-PSF-B01-GL_C168936.pdf)
+- [PSF-X01 产品规格书](https://datasheet.lcsc.com/szlcsc/Coolkit-PSF-B01-GL_C168936.pdf)
+- [ESP8285 技术规格表](https://www.espressif.com/sites/default/files/documentation/0a-esp8285_datasheet_cn.pdf)
+
