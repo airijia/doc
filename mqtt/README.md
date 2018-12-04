@@ -24,8 +24,7 @@
  - Hass (Home Assistant)
 
 
-在配置文件（通常为 configuration.yaml）增加如下内容，以使用 Hass 内置的 MQTT 为例
-
+在配置文件（通常为 configuration.yaml）增加如下内容，以使用 Hass 内置的 [HBMQTT](https://www.home-assistant.io/docs/mqtt/broker#embedded-broker) 为例
 
 
 ```yaml
