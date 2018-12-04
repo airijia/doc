@@ -23,14 +23,19 @@
 
  - Hass (Home Assistant)
 
-   在配置文件（通常为 configuration.yaml）MQTT 的尾部增加如下内容
+
+在配置文件（通常为 configuration.yaml）增加如下内容，以使用 Hass 内置的 MQTT 为例
+
+
 
 ```yaml
 mqtt:
-  # ... 其他 MQTT 配置
+  password: airi
   discovery: true
   discovery_prefix: airi
 ```
+如上设置，MQTT 用户名为 `homeassistant` (默认值)，密码为 `airi`
+ 
 
 ## 基本使用
 
