@@ -33,7 +33,7 @@ mqtt:
   discovery: true
   discovery_prefix: airi
 ```
-如上设置，MQTT 用户名为 `homeassistant` (默认值)，密码为 `airi`
+如上设置，编译固件是需要填入的 MQTT 用户名为 `homeassistant` (默认值)，密码为 `airi`
  
 
 ## 基本使用
