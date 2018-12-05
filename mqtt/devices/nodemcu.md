@@ -7,7 +7,20 @@
 --->
 
 
-市面上常见的 **NODEMCU V3** 开发板
+
+## CP2102 版
+
+
+![](http://pic.airijia.com/doc/20181205171519.png)
+
+
+![](http://pic.airijia.com/doc/20181205171543.png)
+
+
+
+## CH340G 版
+
+
 
 ![](http://pic.airijia.com/doc/20181205100046.png)
 
