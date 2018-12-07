@@ -21,7 +21,8 @@
 
 ### NodeMcu
 
-  -  [多合一传感器](diy/nodemcu/bruh)
+-  [多合一传感器](diy/nodemcu/bruh)
+-  [节日彩灯](diy/nodemcu/holiday)
 
 
 ## 刷机与调试

@@ -29,7 +29,7 @@
 
 
 
-!> 有的板 `VIN` 脚不是5V输出，要接 `VU` (USB直供电) 才行，详见 [NODEMCU 详解](mqtt/devices/nodemcu)
+!> 有的板 `VIN` 脚不是5V输出，要接 `VU` (USB直供电) 才行，详见 [NODEMCU 详解](diy/nodemcu/)
 
 ## 网页创建固件
 

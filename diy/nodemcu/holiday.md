@@ -3,7 +3,7 @@
 
 
 
-[](//player.bilibili.com/player.html?aid=35602736&cid=62434203&page=1 ':include :type=iframe width="720" height="1280"')
+?> 视频
 
 节日装饰彩灯
 
@@ -96,7 +96,7 @@
 
 
 
-按住 `FLASH` 将 NodeMCU  插入电脑的 USB 接口
+按住 `FLASH` 按钮 将 NodeMCU  插入电脑的 USB 接口
 
 ![](http://pic.airijia.com/doc/20181207125621.png)
 
@@ -112,7 +112,7 @@
 
 打开 MQTT 固件工具，选择`串口`，如果列表为空，先点击`刷新`
 
-?>  如果还没找到串口，需要安装 [驱动程序](mqtt/devices/nodemcu)
+?>  如果还没找到串口，需要安装 [驱动程序](diy/nodemcu/)
 
 ![](https://ws1.sinaimg.cn/large/007fN5Xegy1fxgtwlzzh9j30o30bvjrp.jpg)
 
@@ -151,25 +151,36 @@
 
 ## 连接灯串
 
+!> 先拔掉供电再连接灯串，一定不要接反！不要接反！不要接反！**接反直接炸灯**
+
 
 ![](http://pic.airijia.com/doc/20181207125233.png)
 
 
-需要连3根线，5V GND 信号
+需要连3根线，**红线**接 `VU`，**黑线**接 `GND`，**绿线**默认接在 `D5`
 
 ![](http://pic.airijia.com/doc/20181207151024.png)
 
 
+将 **NodeMCU** 和 **转接线** 连接
 
 
 
-信号默认接在 D5,
+
+
+将 **转接线** 和 **灯串** 连接
 
 
 
-cp2102 接 vin
-ch340g 接 
 
+
+将 **NodeMCU** 与 **USB线** 连接
+
+!> USB 线至少 2A，推荐 3A，随便乱接线的后果是 **冒烟!!!** 和 **火灾!!!**
+
+
+
+将 **USB线** 与 **充电宝** 连接
 
 
 
@@ -198,7 +209,7 @@ ch340g 接
 
 |英文名   | 中文名   | 简介  |
 |:-:|:-:|:-:|
-| color_wipe | 颜色擦除  | 随机生成的颜色队列，步进并替换掉当前的显示 |
+| color_wipe | 跑马灯 | 随机生成的颜色组成队列，步进并替换掉当前的显示 |
 | fireworks | 焰火  | 类似焰火样式的多彩效果  |
 | flicker | 同步闪烁  | 整体在当前的颜色和亮度值附近徘徊  |
 | flicker_fastled | 异步闪烁  | 各个点分别当前颜色和亮度值附近徘徊  |
@@ -312,6 +323,7 @@ ch340g 接
 
 ## 其他板的接线
 
+cp2102 接 vin
 
 ![](http://pic.airijia.com/doc/20181207145200.png)
 

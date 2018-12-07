@@ -96,14 +96,14 @@ MQTT 定制固件的功能有可以通过两种方式使用
 
 ## 支持设备
 
-- [Sonoff 系列](mqtt/devices/sonoff)
+- [Sonoff 系列](diy/sonoff/)
  
 
 
 <!-- - [ESP01/ESP01S](mqtt/devices/esp01)
 - [D1 系列](mqtt/devices/d1)
-- [NodeMCU ESP8266](mqtt/devices/nodemcu_esp8266)
-- [NodeMCU ESP32](mqtt/devices/nodemcu_esp32)
+- [NodeMCU ESP8266](diy/nodemcu/_esp8266)
+- [NodeMCU ESP32](diy/nodemcu/_esp32)
 - [ESP8266 系列通用](mqtt/devices/esp8266)
 - [ESP32 系列通用](mqtt/devices/esp32) -->
 
