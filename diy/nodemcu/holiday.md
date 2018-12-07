@@ -36,42 +36,55 @@
 
 
 
-打开 [在线编译固件](http://airijia.com/ctl/firmware/list)
+打开 [在线编译固件](http://airijia.com/ctl/firmware/list)，如图选择
 
-如图选择
-
-
+![](http://pic.airijia.com/doc/20181207151458.png)
 
 
+![](http://pic.airijia.com/doc/20181207151619.png)
 
 
-默认情况下，MQTT 服务器填入智能中枢的 IP 即可，例如 `192.168.1.201`，端口默认 `1883`
+主机名随便填，比如 `666`
 
 
-
-彩灯设置，默认值即可，灯珠数 `50`，排序 `RGB`
+![](http://pic.airijia.com/doc/20181207152251.png)
 
 
 
+填入 WiFi 信息。默认情况下，MQTT 服务器填入智能中枢的 IP 即可，例如 `192.168.1.201`，端口保持默认 `1883`
 
+
+![](http://pic.airijia.com/doc/20181207152322.png)
+
+
+
+彩灯设置的三项保持默认值即可，数据端口 `D5`，灯珠数 `50`，RGB 序列 `BRG`
+
+
+![](http://pic.airijia.com/doc/20181207152346.png)
+
+
+
+核对信息后提交
+
+![](http://pic.airijia.com/doc/20181207152400.png)
 
 
 
 等待编译
 
+![](http://pic.airijia.com/doc/20181207152220.png)
 
 
-编译完成
+编译完成，下载文件到本地
 
 
+![](http://pic.airijia.com/doc/20181207152414.png)
 
 
+解压缩提取 `666.bin` 文件
 
-
-
-下载文件到本地，解压，`666.bin` 文件
-
-
+![](http://pic.airijia.com/doc/20181207152523.png)
 
 ## 刷入固件
 
@@ -115,7 +128,6 @@
 ![](https://ws1.sinaimg.cn/large/007fN5Xegy1fxgtzy4vl9j30o90ayzkk.jpg)
 
 
-!> 插入 TTL 线的时候，模块一定要处在**刷机模式**，即按住 `RESET` 按钮后再插入 USB 口
 
 点击刷写
 
