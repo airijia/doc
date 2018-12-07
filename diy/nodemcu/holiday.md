@@ -145,8 +145,9 @@
 
 需要连3根线，5V GND 信号
 
+![](http://pic.airijia.com/doc/20181207151024.png)
 
-![](http://pic.airijia.com/doc/20181207145427.png)
+
 
 
 
