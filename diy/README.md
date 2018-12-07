@@ -22,7 +22,7 @@
 ### NodeMcu
 
 -  [多合一传感器](diy/nodemcu/bruh)
--  [节日彩灯](diy/nodemcu/holiday)
+-  [节日彩灯](diy/nodemcu/fesevel)
 
 
 ## 刷机与调试
