@@ -2,7 +2,13 @@
 
 刷写和调试 MQTT 固件的专用工具，不需要配置繁杂的参数，只要选择目标 **串口** 和 **固件** 文件即可
 
-软件下载，加 [QQ群 303748038](//shang.qq.com/wpa/qunwpa?idkey=3bbdaf94d24cfee521803a3cf91cca04938b00848b72efdc9a3ec01cac802100)
+
+## 软件下载
+
+- [Windows 版(WIN 7 及以上)](http://pic.airijia.com/download/win.zip)
+- [MAC OS版](http://pic.airijia.com/download/mac.zip)
+
+使用中有疑问，加 QQ群 303748038 咨询
 
 ## 基本界面
 
@@ -75,7 +81,7 @@
 
 ## 苹果 MAC 版
 
-只是界面略有不同，功能一样
+只是界面略有不同，功能和使用方法是一样的
 
 ![](http://pic.airijia.com/doc/20181122212616.png)
 
