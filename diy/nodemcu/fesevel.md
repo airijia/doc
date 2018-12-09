@@ -1,24 +1,21 @@
-# 圣诞树彩灯
+# 节日装饰彩灯串
+
+节日用的装饰彩灯串，可语音(siri)控制，可远程手机控制，比如人在楼下，控制阳台的彩灯串开关和变色
+
+
+[](//player.bilibili.com/player.html?aid=37702334&cid=66282378&page=1 ':include :type=iframe width="720" height="1280"')
 
 
 
-
-?> 视频
-
-节日装饰彩灯
-
-
-
+!> 需搭配智能中枢(airi或者自建的hass)使用
 
 
 ## 硬件准备
 
-
-
-| ![](http://pic.airijia.com/doc/20181122164201.png ':size=200')| DIY 装饰彩灯套餐 |  [![买买买](http://cdn.airijia.com/b6eca8da724952cc0251.gif ':size=150')](https://item.taobao.com/item.htm?id=583765007252) |
+| ![](http://pic.airijia.com/doc/20181209133708.png ':size=200')| DIY 装饰彩灯套餐 |  [![买买买](http://cdn.airijia.com/b6eca8da724952cc0251.gif ':size=150')](https://item.taobao.com/item.htm?id=583765007252) |
 |:-:|:-:|:-:|
 | ![](http://pic.airijia.com/doc/20181205171519.png ':size=200')| NodeMCU  |  [![买买买](http://cdn.airijia.com/b6eca8da724952cc0251.gif ':size=150')](https://item.taobao.com/item.htm?id=45559178968) |
-| ![](http://pic.airijia.com/doc/20181207141945.png ':size=200')| 灯串 |  [![买买买](http://cdn.airijia.com/b6eca8da724952cc0251.gif ':size=150')](https://item.taobao.com/item.htm?id=45559318689) |
+| ![](http://pic.airijia.com/doc/20181207141945.png ':size=200')| 彩灯串 |  [![买买买](http://cdn.airijia.com/b6eca8da724952cc0251.gif ':size=150')](https://item.taobao.com/item.htm?id=45559318689) |
 | ![](http://pic.airijia.com/doc/20181207143052.png ':size=200')| 3A 数据线 |  [![买买买](http://cdn.airijia.com/b6eca8da724952cc0251.gif ':size=150')](https://item.taobao.com/item.htm?id=551847261565) |
 | ![](http://pic.airijia.com/doc/20181207143538.png ':size=200')| 3P 转接头 |  [![买买买](http://cdn.airijia.com/b6eca8da724952cc0251.gif ':size=150')](https://item.taobao.com/item.htm?id=554416181732) |
 
