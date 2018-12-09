@@ -8,7 +8,7 @@
 - [Windows 版(WIN 7 及以上)](http://pic.airijia.com/download/win.zip)
 - [MAC OS版](http://pic.airijia.com/download/mac.zip)
 
-使用中有疑问，加 QQ群 303748038 咨询
+使用中有疑问，加 QQ群 **303748038** 咨询
 
 ## 基本界面
 
