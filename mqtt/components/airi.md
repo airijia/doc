@@ -33,7 +33,7 @@ airi:
     priority: -10
     # ...
     then:
-      - switch.turn_off:
+      - switch.turn_on:
           id: switch_1
 ```
 
@@ -57,12 +57,10 @@ ESP 模块即将关闭时时执行的自动化动作，
 ```yaml
 airi:
   # ...
-  on_boot:
-    priority: -10
-    # ...
+  # ...
+  on_shutdown:
     then:
-      - switch.turn_off:
-          id: switch_1
+      - switch.turn_off: switch_1
 ```
 
 
