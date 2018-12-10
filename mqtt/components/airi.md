@@ -30,7 +30,7 @@ ESP 模块启动时执行的自动化动作，此动作默认排在所有启动�
 airi:
   # ...
   on_boot:
-    priority: -10
+    priority: 20
     # ...
     then:
       - switch.turn_on:
