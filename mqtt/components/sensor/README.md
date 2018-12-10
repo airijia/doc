@@ -91,7 +91,7 @@ Above example configuration entry is probably a bit useless, but shows every fil
 
 ## 读数间隔
 
-默认情况下，MQTT 固件每读值 `15` 次计算平均值后发布一次数值，同时读数间隔 `update_interval` 参数的默认值是每 `15s` 读值一次，也就是全默认的情况下，每 `15s x 15` 3分45秒 发布一次数值。将  `filters:` 设备 `[]` 可以禁用读数间隔功能，直接无间隔输出原始值
+默认情况下，MQTT 固件每读值 `15` 次计算平均值后发布一次数值，同时读数间隔 `update_interval` 参数的默认值是每 `15s` 读值一次，也就是全默认的情况下，每 `15s x 15` 3分45秒 发布一次数值。将  `filters:` 设置为 `[]` 可以禁用读数间隔功能，直接无间隔输出原始值
 
 
 ```
