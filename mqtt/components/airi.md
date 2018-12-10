@@ -57,7 +57,6 @@ ESP 模块即将关闭时时执行的自动化动作，
 ```yaml
 airi:
   # ...
-  # ...
   on_shutdown:
     then:
       - switch.turn_off: switch_1
