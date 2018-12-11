@@ -50,6 +50,8 @@
 
 填入 WiFi 信息。默认情况下，MQTT 服务器填入智能中枢的 IP 即可，例如 `192.168.1.201`，端口保持默认 `1883`
 
+?> 不确定 MQTT 信息先看 [MQTT配置](#MQTT配置)
+
 
 ![](http://pic.airijia.com/doc/20181207152322.png)
 
@@ -149,11 +151,7 @@
 
 ## 连接彩灯串
 
-!> 先拔掉供电再连接彩灯串，一定不要接反！不要接反！不要接反！**接反直接炸灯**
-
-
-
-
+!> 先拔掉 USB 供电再连接彩灯串，一定不要接反！不要接反！不要接反！**接反直接炸灯**
 
 
 
@@ -208,8 +206,9 @@
 ![](http://pic.airijia.com/doc/20181210170333.png)
 
 
+如图连接，不要太暴力，正常不会插反
 
-p 连接效果
+![](http://pic.airijia.com/doc/20181211100317.png)
 
 
 
@@ -217,36 +216,49 @@ p 连接效果
 ### 将 NodeMCU 和 转接线 连接
 
 
-
-
-![](http://pic.airijia.com/doc/20181207125233.png)
-
-
-需要连3根线，**红线**接 `VU`，**黑线**接 `GND`，**绿线**默认接在 `D5`
-
-![](http://pic.airijia.com/doc/20181207151024.png)
+![](http://pic.airijia.com/doc/20181211093751.png)
 
 
 
 
-
-p9 成品
-
-p10 另一角度 
+需要连3根线，**红线**接 `VU`，**黑线**接 `GND(G)`，**蓝线**默认接在 `D5`
 
 
+![](http://pic.airijia.com/doc/20181211093141.png)
 
+
+
+
+![](http://pic.airijia.com/doc/20181211101245.png)
+
+
+
+各种特效的说明
+
+
+|英文名   | 中文名   | 简介  |
+|:-:|:-:|:-:|
+| color_wipe | 跑马灯 | 随机生成的颜色组成队列，步进并替换掉当前的显示 |
+| fireworks | 焰火  | 类似焰火样式的多彩效果  |
+| flicker | 同步闪烁  | 整体在当前的颜色和亮度值附近徘徊  |
+| flicker_fastled | 异步闪烁  | 各个点分别当前颜色和亮度值附近徘徊  |
+| rainbow | 彩虹  | 类似彩虹的多彩效果 |
+| random |  随机色 | 整体变换为不同的颜色  |
+| scan |  流光 | 单点、快速的做往复运动 |
+| twinkle |  闪亮 |  随机的单点渐亮渐灭 |
+| twinkle_random | 随机色闪亮 |  随机单点、随机颜色的渐亮渐灭 |
+| z!!_strobe |  爆闪 |  **最高亮度**爆闪！！！除非有特殊需求，否则不建议使用 |
 
 
 
 
 ### 将 NodeMCU 与 USB线 连接
 
-!> USB 线至少 2A，推荐 3A，用不合格线的后果是 **冒烟!!!** 和 **火灾!!!**
+!> USB 线至少 2A，推荐 3A，用不合格线的轻则颜色失真，重则 **冒烟!!!** 、 **火灾!!!**
 
+将 USB 线的扁口端与 NodeMCU 连接
 
-p 11 
-
+![](http://pic.airijia.com/doc/20181211101608.png)
 
 
 
@@ -254,16 +266,42 @@ p 11
 ### 将 USB线 与 充电宝 连接
 
 
-
-p 12
-
+将 USB 线的大口端与 充电宝 (**最好支持快充**) 连接
 
 
+![](http://pic.airijia.com/doc/20181211101844.png)
 
 
-## 中枢设置
 
-浏览器打开 `192.168.1.201:8233`
+连线全部完成的效果
+
+
+![](http://pic.airijia.com/doc/20181211103106.png)
+
+
+
+开灯(需中枢配置后)
+
+
+![](http://pic.airijia.com/doc/20181211103548.png)
+
+
+彩虹效果(需中枢配置后)
+
+![](http://pic.airijia.com/doc/20181211103717.png)
+
+
+
+
+
+
+
+
+
+## airi 中枢设置
+
+
+airi 可以直接自动发现，不用配置。直接浏览器打开 `192.168.1.201:8233`
 
 ![](http://pic.airijia.com/doc/20181207100541.png)
 
@@ -281,19 +319,6 @@ p 12
 
 ![](http://pic.airijia.com/doc/20181207102721.png)
 
-
-|英文名   | 中文名   | 简介  |
-|:-:|:-:|:-:|
-| color_wipe | 跑马灯 | 随机生成的颜色组成队列，步进并替换掉当前的显示 |
-| fireworks | 焰火  | 类似焰火样式的多彩效果  |
-| flicker | 同步闪烁  | 整体在当前的颜色和亮度值附近徘徊  |
-| flicker_fastled | 异步闪烁  | 各个点分别当前颜色和亮度值附近徘徊  |
-| rainbow | 彩虹  | 类似彩虹的多彩效果 |
-| random |  随机色 | 整体变换为不同的颜色  |
-| scan |  流光 | 单点、快速的做往复运动 |
-| twinkle |  闪亮 |  随机的单点渐亮渐灭 |
-| twinkle_random | 随机色闪亮 |  随机单点、随机颜色的渐亮渐灭 |
-| z!!_strobe |  爆闪 |  **最高亮度**爆闪！！！除非有特殊需求，否则不建议使用 |
 
 
 
@@ -393,6 +418,47 @@ p 12
 
 
 
+
+## MQTT配置
+
+
+### 爱睿家智能中枢（airijia/ctl）
+
+?> 免配置，自动发现，默认的用户名和密码为空，编译固件的时候都不用填
+
+
+### Hass 内置
+
+使用 Hass (Home Assistant) 内置的 [HBMQTT](https://www.home-assistant.io/docs/mqtt/broker#embedded-broker)
+
+在配置文件（通常为 configuration.yaml）增加如下内容
+
+```yaml
+# HBMQTT
+mqtt:
+  password: airi
+  discovery: true
+  discovery_prefix: airi
+```
+如上设置，编译固件时需要填入的 MQTT 用户名为 `homeassistant` (默认值)，密码为 `airi`
+
+
+### Hass 外接
+
+以外接 Mosquitto 为例
+
+在配置文件（通常为 configuration.yaml）增加如下内容
+
+```yaml
+# Mosquitto
+mqtt:
+  broker: 127.0.0.1 # Mosquitto 服务器IP
+  # ... 其他 MQTT 配置
+  discovery: true
+  discovery_prefix: airi
+```
+
+如上设置，编译固件时需要填入的 MQTT 用户名和密码由 Mosquitto 配置决定，默认都为空
 
 
 
