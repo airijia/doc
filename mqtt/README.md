@@ -31,11 +31,11 @@
 ```yaml
 # HBMQTT
 mqtt:
-  password: airi
+  password: 123
   discovery: true
   discovery_prefix: airi
 ```
-如上设置，编译固件时需要填入的 MQTT 用户名为 `homeassistant` (默认值)，密码为 `airi`
+如上设置，编译固件时需要填入的 MQTT 用户名为 `homeassistant` (默认值)，密码为 `123`
 
 
 ### Hass 外接
