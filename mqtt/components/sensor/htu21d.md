@@ -1,6 +1,6 @@
 #  HTU21D/SI7021 温湿度传感器
 
-HTU21D，SI7021 都使用这个组件，Sonoff S20/TH10/TH16 使用的高精度温湿度探头正是 SI7021
+HTU21D，SI7021 都使用这个组件，Sonoff S22/TH10/TH16 使用的高精度温湿度探头正是 SI7021
 
 ![](https://ws1.sinaimg.cn/large/007fN5Xegy1fxfhj5ex5vj30mw05qjrj.jpg)
 
