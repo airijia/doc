@@ -93,6 +93,6 @@ sudo docker run -d \
 sudo reboot
 ```
 
-[ARM 平台基于 docker 安装 airjiia/ctl ](ctl/deploy/arm32v6)
+?> 下一步看 [ARM 平台基于 docker 安装 airjiia/ctl ](ctl/deploy/arm32v6)
 
 

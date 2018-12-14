@@ -116,7 +116,20 @@ volumes:
 浏览器打开 `192.168.1.127:8233`
 
 
-[ctl 初次使用](ctl/init)
+?> 下一步看 [ctl 初次使用](ctl/init)
+
+
+
+
+## 进阶使用
+
+
+### 想在宿主机上编辑配置文件
+
+如图找到配置文件 **hass_data** 对应的的目录，本案例中是 `/var/lib/docker/volumes/hass_data/_data`
+
+![](http://pic.airijia.com/doc/20181214141956.png)
+
 
 
 
