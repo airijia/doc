@@ -10,6 +10,9 @@
  -  [1ch-inching 单路点动](diy/sonoff/1ch-inching)
 
 
+ -  [Sonoff 系列引脚定义](diy/sonoff/)
+
+
 ## 传感器
 
 
