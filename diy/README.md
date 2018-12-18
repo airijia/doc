@@ -18,14 +18,17 @@
 
 ### ESP01 
 
- -  [DHT11 温湿度](diy/esp01/dht11)
- -  [红外人体传感器](diy/esp01/pir)
+- [DHT11 温湿度](diy/esp01/dht11)
+- [红外人体传感器](diy/esp01/pir)
+
 
 
 ### NodeMcu
 
--  [多合一传感器](diy/nodemcu/bruh)
--  [节日彩灯](diy/nodemcu/festival)
+
+- [节日彩灯](diy/nodemcu/festival)
+- [SHT30 温湿度](diy/nodemcu/sht30)
+- [多合一传感器](diy/nodemcu/bruh)
 
 
 ## 刷机与调试
