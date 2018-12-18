@@ -40,16 +40,14 @@ TTL刷机线（CH340G）
 
 
 
+![](http://pic.airijia.com/doc/20181218144215.png)
 
 
 
-
-![](http://pic.airijia.com/doc/20181218143415.png)
-
+![](http://pic.airijia.com/doc/20181218144226.png)
 
 
 
-![](http://pic.airijia.com/doc/20181218143443.png)
 
 
 
