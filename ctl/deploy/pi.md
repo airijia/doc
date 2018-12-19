@@ -2,7 +2,9 @@
 
 ## 安装系统
 
-安装系统并开启 ssh 服务，这一步骤需要接显示器
+安装系统并开启 ssh 服务
+
+参考 [树莓派开启SSH的N种方法](https://www.jianshu.com/p/654ee08d2b3a)
 
 
 ## SSH客户端
