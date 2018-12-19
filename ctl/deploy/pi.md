@@ -9,12 +9,12 @@
 
 ## SSH客户端
 
-windows 10下可以直接用 powershell
-WIN7 推荐使用 [Win下必备神器之Cmder](https://www.jeffjade.com/2016/01/13/2016-01-13-windows-software-cmder/)
+WIN 10 下可以直接用 powershell
+
+WIN 7 推荐使用 [Win下必备神器之Cmder](https://www.jeffjade.com/2016/01/13/2016-01-13-windows-software-cmder/)
 
 
-
-mac 参考 [如何在Mac电脑上打开终端](https://zh.wikihow.com/%E5%9C%A8Mac%E7%94%B5%E8%84%91%E4%B8%8A%E6%89%93%E5%BC%80%E7%BB%88%E7%AB%AF)
+MAC 参考 [如何在Mac电脑上打开终端](https://zh.wikihow.com/%E5%9C%A8Mac%E7%94%B5%E8%84%91%E4%B8%8A%E6%89%93%E5%BC%80%E7%BB%88%E7%AB%AF)
 
 
 
