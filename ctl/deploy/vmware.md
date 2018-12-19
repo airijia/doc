@@ -65,7 +65,7 @@ VMware Workstation Player 是 VMware 推出的一款简易虚拟机软件，是 
 ## 配置 Photon OS
 
 
-WIN 10 下可以直接用 powershell
+WIN 10 可以直接使用 PowerShell 和 cmd 自带的 ssh
 
 WIN 7 推荐使用 [Win下必备神器之Cmder](https://www.jeffjade.com/2016/01/13/2016-01-13-windows-software-cmder/)
 
