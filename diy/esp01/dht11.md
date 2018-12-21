@@ -47,14 +47,7 @@ TTL 刷机线
 
 ## MQTT 固件使用
 
-**MQTT 固件可以用**
-
-
-- [MQTT 固件工具](diy/flasher)
-
-
-- [esptool.py 的安装与使用](diy/esptool)
-- [esptool.py(MAC)的安装与使用](diy/esptool_mac)
+[MQTT 固件工具](diy/flasher)
 
 
 
@@ -80,10 +73,7 @@ mqtt:
 ## 渡鸦(Homekit 直连)固件使用
 
 
-**渡鸦(Homekit 直连)固件可以用**
-
-- [esptool.py 的安装与使用](diy/esptool)
-- [esptool.py(MAC)的安装与使用](diy/esptool_mac)
+使用 [渡鸦固件工具](raven/flasher)
 
 
 刷完固件后需要配置 WiFi 和接入 Homekit

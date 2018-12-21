@@ -98,13 +98,12 @@ TTL刷机线（CH340G）
 
 
 
-刷机工具
 
-- [MQTT 固件工具](diy/flasher)
+MQTT 固件使用 [MQTT 固件工具](diy/flasher)
 
 
-- [esptool.py 的安装与使用](diy/esptool)
-- [esptool.py(MAC)的安装与使用](diy/esptool_mac)
+渡鸦 HomeKit 直连固件使用 [渡鸦固件工具](raven/flasher)
+
 
 
 ### 黑色按钮断了怎么办？
