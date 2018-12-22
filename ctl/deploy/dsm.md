@@ -126,12 +126,13 @@ airijia/ctl 镜像下载完成后，点击启动
 ![](https://ws1.sinaimg.cn/large/007fN5Xegy1fx6gt3w65sj30u80jsgmg.jpg)
 
 
-`//192.168.1.201/docker/airi` 即可访问
+文件管理器输入 **\\192.168.1.201\docker\airi** 即可访问
 
 
 ![](https://ws1.sinaimg.cn/large/007fN5Xegy1fx6gurv0soj30qe0feab1.jpg)
 
 
-[ctl 初次使用](ctl/init)
+
+?> 下一步看 [ctl 初次使用](ctl/init)
 
 
