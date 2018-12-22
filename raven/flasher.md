@@ -140,6 +140,25 @@ NodeMcu, D1 mini等开发板选择 **DIO**，Sonoff、ESP01等选择 **DOUT**
 
 ![](http://pic.airijia.com/doc/20181222190219.png)
 
+### 不能执行的解决方法
+
+![](http://pic.airijia.com/doc/20181222192623.png)
+
+
+打开 **系统偏好设置 - 安全性与隐私**
+
+![](http://pic.airijia.com/doc/20181222192828.png)
+
+点击 **仍然打开**
+
+
+![](http://pic.airijia.com/doc/20181222192931.png)
+
+点击 **打开**
+
+![](http://pic.airijia.com/doc/20181222193021.png)
+
+
 
 
 ## 常见问题
