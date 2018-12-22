@@ -32,7 +32,7 @@ uart:
 # 配置 传感器
 sensor:
   - platform: pmsx003
-    type: PMX003
+    type: PMSX003
     pm_1_0:
       name: "Particulate Matter <1.0µm Concentration"
     pm_2_5:
