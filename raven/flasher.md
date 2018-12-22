@@ -137,7 +137,8 @@ NodeMcu, D1 mini等开发板选择 **DIO**，Sonoff、ESP01等选择 **DOUT**
 
 只是界面略有不同，功能和使用方法是一样的
 
-PPP
+
+![](http://pic.airijia.com/doc/20181222190219.png)
 
 
 
