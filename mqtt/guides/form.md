@@ -10,9 +10,7 @@
 
 ![](https://ws1.sinaimg.cn/large/007fN5Xegy1fww2o32id0j30l40bkaa9.jpg)
 
-主机名，即 hostname，用于局域网内的设备识别
-
-描述仅用于标识，随便填
+主机名，即 hostname，用于局域网内的设备识别；描述仅用于标识，随便填
 
 ![](https://ws1.sinaimg.cn/large/007fN5Xegy1fww2t1m1exj30vj0dadg5.jpg)
 
@@ -32,7 +30,7 @@
 
 
 
-一般需要等待 2-5 分钟，如果页面没变化，按 F5 刷新浏览器
+一般需要等待 1 分钟左右，如果页面没变化，按 F5 刷新浏览器
 
 显示**已完成**，表示已经编译成功
 
@@ -43,7 +41,7 @@
 ## 刷入固件
 
 
-下载文件后刷入，工具使用 esptool ([WIN](diy/esptool)，[MAC](diy/esptool_mac)) ，或者 [MQTT 固件工具](diy/flasher)
+下载文件后，解压出 `.bin` 文件，刷入工具使用 [MQTT 固件工具](diy/flasher) ，或者  esptool ([WIN](diy/esptool)，[MAC](diy/esptool_mac))
 
 
 

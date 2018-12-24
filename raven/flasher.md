@@ -143,6 +143,14 @@ PPP
 
 ## 常见问题
 
+## 连不上 wifi
+
+wifi的ssd 或者 密码错误
+
+![](http://pic.airijia.com/doc/20181224145307.png)
+
+
+
 ### Unexpected error: could not open port 'COM3': PermissionError(13, '拒绝访问。', None, 5)
 
 
