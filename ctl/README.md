@@ -8,6 +8,23 @@
 [爱睿家智能中枢 V1](//player.bilibili.com/player.html?aid=26627767&cid=45795189&page=1 ':include :type=iframe width="720" height="530"')
 
 
+## 使用说明
+
+假设 airi的地址是 192.168.1.201，打开浏览器（推荐使用chrome）
+
+
+浏览器打开 `192.168.1.201:8233` 是 airijia/ctl 的配置页面
+
+![](http://pic.airijia.com/doc/20181126103723.png)
+
+
+资源管理器打开 `\\192.168.1.201` 是配置文件的共享文件夹，用户名 `airi`，密码 `airijia.com`
+
+
+![](http://pic.airijia.com/doc/20181126103401.png)
+
+
+
 
 ## 补充说明
 
