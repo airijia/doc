@@ -205,23 +205,6 @@ miniterm.py COM3 115200
 
 
 
-## 备份与恢复固件
-
-备份
-
-```shell
-esptool.py --port COM3 read_flash 0x00000 0x100000 sonoff-backup.bin
-```
-
-恢复
-
-```shell
-esptool.py --port COM3 write_flash --flash_size 1MB --flash_mode dout 0x00000 sonoff-backup.bin
-```
-
-
-
-
 
 
 
