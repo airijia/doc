@@ -61,7 +61,7 @@ will_message:
 - **topic** (*必填*, 字符串): 消息发布到的主题
 - **payload** (*必填*, 字符串): 消息的内容，发出时会被实际有效负载包裹，比如 `log_topic`
 - **qos** (*选填*, 整数): QoS 等级，最多一次`0`（默认），至少一次`1`，确保仅一次`2`
-- **retain** (*选填*, boolean): 此消息是否标记为保留消息，默认为是 `True`
+- **retain** (*选填*, 布尔值): 此消息是否标记为保留消息，默认为是 `True`
 
 
 
@@ -103,12 +103,12 @@ mqtt:
 **配置参数**
 
 - **name** (**必填**, 字符串): 组件名称
-- **retain** (*选填*, boolean): 发布的消息是否标记为保留消息。默认为是`True`
-- **discovery** (*选填*, boolean): 子组件是否会被自动发现，默认继承父组件的值
+- **retain** (*选填*, 布尔值): 发布的消息是否标记为保留消息。默认为是`True`
+- **discovery** (*选填*, 布尔值): 子组件是否会被自动发现，默认继承父组件的值
 - **availability** (*选填*): 组件发布的可用状态消息的格式。默认基于 [遗愿和重生消息](#遗愿和重生消息) 基础上扩展 
 - **state_topic** (*选填*, 字符串): 组件状态变化时，消息发布到的主题名称。默认值 `<TOPIC_PREFIX>/<COMPONENT_TYPE>/<COMPONENT_NAME>/state`
 - **command_topic** (*选填*, 字符串): 订阅远程控制的主题名称。默认值 `<TOPIC_PREFIX>/<COMPONENT_TYPE>/<COMPONENT_NAME>/command`
-- **internal** (*选填*, boolean): 将组件内部化。内部化组件不会发布任何 MQTT消息，也不会自动发现侦测到，但可以被模块自身的 [自动化](mqtt/guides/automations)。 只设置 `id` 不设置 `name` 等效于本参数设置为`True`
+- **internal** (*选填*, 布尔值): 将组件内部化。内部化组件不会发布任何 MQTT消息，也不会自动发现侦测到，但可以被模块自身的 [自动化](mqtt/guides/automations)。 只设置 `id` 不设置 `name` 等效于本参数设置为`True`
 
 
 !> 改变以上参数的设置后，需要重启 Hass 服务才能生效

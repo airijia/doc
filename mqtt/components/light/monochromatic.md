@@ -22,7 +22,7 @@ output:
     pin: 5
     frequency: 1000 Hz
     id: output1
-# 配置实例
+# 配置示例
 light:
   - platform: monochromatic
     name: "Kitchen Lights"

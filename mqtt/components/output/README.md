@@ -21,7 +21,7 @@ output:
 
 - **id** (**必填**, [ID](mqtt/guides/configuration-types#id)): 输出组件 ID
 - **power_supply** (*选填*, [ID](mqtt/guides/configuration-types#id)): 要控制的 [直流开关电源](mqtt/components/power_supply) 的 ID
-- **inverted** (*选填*, boolean): 输出量是否要翻转。默认为否 `False`.
+- **inverted** (*选填*, 布尔值): 输出量是否要翻转。默认为否 `False`.
 - **max_power** (*选填*, 浮点数): 最大输出量系数，所有输出量将于这个值相乘后输出，赋值范围 `0 ~ 1`，默认为 `1`
 
 
