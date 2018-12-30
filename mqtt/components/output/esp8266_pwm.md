@@ -2,7 +2,7 @@
 
 脉宽调制（Pulse Width Modulation，PWM）是在保持波的频率不变的同时改变脉宽的技术。理论上 GPIO0-GPIO16 都可以用作 PWM，但实际使用中要根据实际电路来使用。比如 NodeMCU，是用软件编程加上定时器中断方法实现的，D1 ~ D8 可用于 PWM
 
-ESP8266 软件模拟的PMW 实际使用中的调光效果远不如 ESP32 硬件封装 [LEDC](mqtt/components/light/ledc)
+ESP8266 软件模拟的PMW 实际使用中的调光效果远不如 ESP32 硬件封装 [LEDC](mqtt/components/output/ledc)
 
 
 ```yaml

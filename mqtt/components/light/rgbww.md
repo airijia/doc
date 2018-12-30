@@ -62,7 +62,7 @@ light:
 - 以及[MQTT 组件](mqtt/components/mqtt#MQTT-组件基本配置项)的基本配置项
 
 
-?> 本组件只可以配合**浮点数输出**的组件使用，比如 [ESP8266 PWM](mqtt/components/light/esp8266_pwm) 和 [ESP32 LEDC](mqtt/components/light/ledc) 。**不可以用** [GPIO 输出](mqtt/components/light/gpio) 等类型
+?> 本组件只可以配合**浮点数输出**的组件使用，比如 [ESP8266 PWM](mqtt/components/output/esp8266_pwm) 和 [ESP32 LEDC](mqtt/components/output/ledc) 。**不可以用** [GPIO 输出](mqtt/components/light/gpio) 等类型
 
 
 ## 相关链接
