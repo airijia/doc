@@ -44,7 +44,7 @@ filters:
 借助传感器过滤器，可以就很方便的对传感器的读值进行简单的二次处理，复杂的处理还是在智能中枢的  [Filter Sensor](ctl/components/filter_sensor) 中完成
 
 ```
-# 过滤器示例
+# 过滤器示例，这个示例仅供展示过滤器的语法，不能用于实际配置
 filters:
   - offset: 2.0
   - multiply: 1.2
@@ -67,7 +67,6 @@ filters:
   - lambda: return x * (9.0/5.0) + 32.0;
 ```
 
-Above example configuration entry is probably a bit useless, but shows every filter there is currently:
 
 - **offset**: 偏移量
 - **multiply**: 每次读值都与这个值相乘
