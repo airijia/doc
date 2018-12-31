@@ -133,10 +133,36 @@ call.perform();
 ```
 
 
-## 灯光特效
+## 灯类通用特效
 
 
-!> TODO: 待补充
+### 随机颜色
+
+持续的渐变成随机颜色
+
+```yaml
+light:
+  - platform: ...
+    # ...
+    effects:
+      - random:
+          name: Random Effect With Custom Values
+          transition_length: 5s
+          update_interval: 7s
+```
+
+配置参数
+
+- **name** (*选填*, 字符串): 特效名称，默认为 `Random`
+- **transition_length** (*选填*, [时长](mqtt/guides/configuration-types#时长)): 颜色过渡的持续时间，默认为`5s`
+- **update_interval** (*选填*, [时长](mqtt/guides/configuration-types#时长)): 单个颜色的持续时间
+
+
+
+
+## 独立寻址LED特效
+
+
 
 
 ## 相关链接
