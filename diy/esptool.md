@@ -108,13 +108,39 @@ esptool.py
 输入显示即安装完成
 
 
+## 驱动 COM 口
 
-## 刷入固件
+
+?> 首次使用，需要安装 [python 和 esptool](diy/esptool)
+
+### WIN 10
+
+**此电脑 - 属性**
+
+![](http://pic.airijia.com/doc/20181218101240.png)
+
+
+**设备管理器**
+
+![](http://pic.airijia.com/doc/20181218101326.png)
+
+
+查看 **端口(COM 和 LPT)**，本案例中 `COM3` 便是 NodeMCU
+
+
+![](http://pic.airijia.com/doc/20181218101423.png)
+
+
+?>  如果还没找到串口，需要安装 [驱动程序](diy/nodemcu/)
+
+
+
+## 刷入 MQTT 固件
 
 以下演示，实际使用中要根据实机上的 COM 口编号设置，如 COM3，COM6，COM7
 
 
-### MQTT 固件
+
 
 **基本流程是：刷机模式插入 - 刷入 - 拔掉USB - 普通模式插入 - 调试或配对**
 
@@ -128,12 +154,12 @@ esptool.py -p COM6 write_flash -fs 1MB -fm dout 0x0 D:\Download\666.bin
 
 刷入成功后，进入 智能中枢 使用
 
-### 渡鸦 Homekit 直连固件
+## 刷入渡鸦 Homekit 直连固件
 
 **基本流程是：刷机模式插入 - 擦除 - 拔掉USB - 刷机模式插入 - 刷入 - 拔掉USB - 普通模式插入 - 调试或配对**
 
 
-#### 手动输入命令
+### 手动输入命令
 
 
 esp01 模块刷 渡鸦固件，**假设** 文件名为 666.bin，所在位置 D 盘 Download 目录，串口编号 COM6
@@ -170,28 +196,93 @@ esptool.py -p COM6 -b 115200 write_flash -fs 1MB -fm dout -ff 40m 0x0 rboot.bin 
 
 刷入成功后，[渡鸦固件配置 wifi 和 homekit 的方法](diy/raven) 
 
-#### 视频中的 1.bat
+### 视频中的 1.bat
 
 新建一个文件，命名为 `1.bat`，复制下面的内容填入
 
-**假设** 文件名为 666.bin，所在位置 D 盘 Download 目录，串口编号 COM6，里面的 `COM口` 和 `文件名` 要换成实际值
+**假设** 文件名为 666.bin，所在位置 D 盘 Download 目录，里面的和 `文件名` 要换成实际值
 
 !>  `rboot.bin`，`blank_config.bin`，`666.bin` 这三个固件文件要跟 `1.bat` 在同一个文件夹下
-
 
 ```bat
 @echo off
 
-echo 刷机模式(安装黑色按钮)把硬件设备和USB刷机线一起插入 USB ...
+set one=%1
+
+if "%one%"=="" (
+echo "你要刷COM几?") else (
+echo 刷 **COM%one%**
+echo 用 **刷机模式**，硬件设备和USB刷机线一起插入 USB口 ，然后...
 pause
-esptool.py -p COM3 erase_flash
-echo 拔掉整个 USB，用刷机模式重新插入...
+esptool.py -p COM8 erase_flash
+echo 拔掉整个 USB，用 **刷机模式** 重新插入，然后...
 pause
-esptool.py -p COM3 --baud 115200 write_flash -fs 8m -fm dout -ff 40m 0x0 rboot.bin 0x1000 blank_config.bin 0x2000 666.bin
-echo 刷固件完成
+esptool.py -p COM8 --baud 115200 write_flash -fs 8m -fm dout -ff 40m 0x0 rboot.bin 0x1000 blank_config.bin 0x2000 666.bin
+echo 拔掉整个 USB，用 **运行模式** 重新插入，然后...
 pause
+miniterm.py COM8 115200
+)
+
 
 ```
+
+进入存放固件文件的文件夹，在空白处 `shift+鼠标右键`，选择 **在此处打开 Powershell 窗口**
+
+
+![](http://pic.airijia.com/doc/20181218103251.png)
+
+
+在弹出的 **PowerShell** 窗口中输入，1.bat + 上一步查到的 COM 口编号
+
+```
+.\1.bat 3
+```
+
+![](http://pic.airijia.com/doc/20181218103944.png)
+
+
+按提示操作，刷机模式插入 NodeMCU，然后继续
+
+
+![](http://pic.airijia.com/doc/20181218104019.png)
+
+擦除完成，拔掉 NodeMCU。再次使用刷机模式插入 NodeMCU，然后继续
+
+![](http://pic.airijia.com/doc/20181218104443.png)
+
+开始刷入
+
+![](http://pic.airijia.com/doc/20181218104647.png)
+
+
+刷入完成，按照提示，拔掉 NodeMCU。再次使用**运行模式**插入 NodeMCU，然后继续
+
+![](http://pic.airijia.com/doc/20181218104732.png)
+
+
+
+如图显示才是初始化成功
+
+
+![](http://pic.airijia.com/doc/20181218105010.png)
+
+
+如图显示是初始化失败，要检查连线
+
+![](http://pic.airijia.com/doc/20181218105210.png)
+
+
+反复进入调试模式的方法，输入 miniterm.py + COM口 + 115200
+
+```
+miniterm.py COM3 115200
+```
+
+如果 COM口正确，会弹出另一个窗口显示调试内容
+
+![](http://pic.airijia.com/doc/20181218105501.png)
+
+
 
 ## 调试固件
 
@@ -202,9 +293,6 @@ miniterm.py COM3 115200
 ```
 
 ![](https://ws1.sinaimg.cn/large/007fN5Xegy1fwvzdxtl9kj30o2047aa6.jpg)
-
-
-
 
 
 

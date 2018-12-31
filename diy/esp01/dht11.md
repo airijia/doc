@@ -99,37 +99,6 @@ mqtt:
 
 ![](https://ws1.sinaimg.cn/large/007fN5Xegy1fv5bnmlz6ij30m80m81ag.jpg)
 
-### 校准值设置
-
-因为模块自身有发热，而且距离温湿度传感器很近，会造成一定的误差。
-
-固件默认根据 3V3 的输入电压 和 ESP01S直接插在底座上的的运行环境， 设置了默认的校准值，如果你的模块工作环境和电压不同，可以自行调整
-
-**App Store 搜索安装 eve system** 
-
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fww0oq555hj30y20oohdt.jpg)
-
-打开eve
-
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fv5bqockf7j31350sfwqz.jpg)
-
-选择 类型 
-
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fv5bqg5zr5j31300siacm.jpg)
-
-编辑
-
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fv5bq7yh8ij314n0tsq8g.jpg)
-
-将 校准选项 设置为显示
-
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fv5bptcz8pj313a0s9aen.jpg)
-
-点击完成
-
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fv5bpli7xej313b0sbn0j.jpg)
-
-修改温度校准值
 
 
 
