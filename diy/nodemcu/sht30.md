@@ -398,15 +398,32 @@ mqtt:
 ![](https://ws1.sinaimg.cn/large/007fN5Xegy1fxgu7vjt18j30o30irjtc.jpg)
 
 
-
-
-
 ## 进阶使用
 
+**上传模板文件** 的方式创建固件
+
+?> 基本五大件的配置查看 [模板文件创建 MQTT 固件](mqtt/guides/yaml)
+
+需要用到 [I²C 总线](mqtt/components/i2c) 和 [SHT3X-D 温湿度传感器](mqtt/components/sensor/sht3xd) 两个组件
 
 
+```yaml
+# ... 基本五大件略过
 
+# I²C
+i2c:
+  sda: D4
+  scl: D5
+  scan: False
 
-
-
+# SHT30
+sensor:
+  - platform: sht3xd
+    temperature:
+      name: "Living Room Temperature"
+    humidity:
+      name: "Living Room Humidity"
+    address: 0x44
+    update_interval: 15s
+```
 

@@ -37,7 +37,7 @@ output:
   ... 
 # 灯组件
 light:
-  - platform: rgbw
+  - platform: rgb
     name: "Livingroom Lights"
     red: output_1
     green: output_2
