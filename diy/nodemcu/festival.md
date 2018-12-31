@@ -4,7 +4,9 @@
 节日用的装饰彩灯串，可语音(siri)控制，可远程手机控制，比如人在楼下，控制阳台的彩灯串开关和变色
 
 
-[](//player.bilibili.com/player.html?aid=37702334&cid=66282378&page=1 ':include :type=iframe width="720" height="1280"')
+[渡鸦固件特效](//player.bilibili.com/player.html?aid=39542860&cid=69474609&page=1 ':include :type=iframe width="720" height="1280"')
+
+渡鸦固件特效
 
 
 
