@@ -306,7 +306,7 @@ light:
 
 配置参数
 
-- **name** (*选填*, 字符串): 特效名称，默认为 `Color Wipe`.
+- **name** (*选填*, 字符串): 特效名称，默认为 `Color Wipe`
 - **colors**(*选填*, 列表): The colors to shift in at the beginning of the strip. Defaults to shifting in random colors.
   - **red** (*选填*, 百分比): 红光通道的值，默认为 `100%`
   - **green** (*选填*, 百分比): 绿光通道的值，默认为 `100%`
@@ -375,7 +375,7 @@ light:
 
 配置参数
 
-- **name** (*选填*, 字符串): 特效名称，默认为 `Random Twinkle`.
+- **name** (*选填*, 字符串): 特效名称，默认为 `Random Twinkle`
 - **twinkle_probability** (*选填*, 百分比): 选中概率
 - **progress_interval** (*选填*, [时长](mqtt/guides/configuration-types#时长)): 闪烁持续时间，会影响到单个灯珠特效的持续时间，默认为 `4ms`
 
@@ -421,7 +421,7 @@ light:
 
 配置参数
 
-- **name** (*选填*, 字符串): 特效名称，默认为 `FastLED Flicker`.
+- **name** (*选填*, 字符串): 特效名称，默认为 `FastLED Flicker`
 - **update_interval** (*选填*, [时长](mqtt/guides/configuration-types#时长)): 更新间隔，默认为 `16ms`
 - **intensity** (*选填*, 百分比): 闪烁强度，即随机偏移量的最大幅度，默认为`5%`
 
