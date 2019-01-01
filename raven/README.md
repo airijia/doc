@@ -25,7 +25,7 @@
 
 ![](http://pic.airijia.com/doc/20181224145657.png)
 
-想要接入的 WiFi 名称和密码
+想要接入的 WiFi 名称和密码，比如当前手机使用的 WiFi 名称和密码
 
 
 
