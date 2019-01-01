@@ -146,7 +146,7 @@ light:
     # ...
     effects:
       - random:
-          name: Random Effect With Custom Values
+          name: Random
           transition_length: 5s
           update_interval: 7s
 ```
@@ -158,9 +158,277 @@ light:
 - **update_interval** (*选填*, [时长](mqtt/guides/configuration-types#时长)): 单个颜色的持续时间
 
 
+### 频闪
+
+定义一组颜色亮度的列表，并按顺序执行
+
+```yaml
+light:
+  - platform: ...
+    # ...
+    effects:
+      - strobe:
+          name: Strobe
+          colors:
+            - state: True
+              brightness: 100%
+              red: 100%
+              green: 90%
+              blue: 0%
+              duration: 500ms
+            - state: False
+              duration: 250ms
+            - state: True
+              brightness: 100%
+              red: 0%
+              green: 100%
+              blue: 0%
+              duration: 500ms
+```
+
+配置参数
+
+- **name** (*选填*, 字符串): 特效名称，默认为 `Strobe`
+- **colors**(*选填*, 列表): 执行颜色和亮度的列表，默认为快速切换灯的开关
+  - **state** (*选填*, 布尔值): 定义灯的开关状态，默认为打开 `True`
+  - **brightness** (*选填*, 百分比): 开灯时的亮度，默认为 `100%`
+  - **red** (*选填*, 百分比): 开灯时红光通道的值，默认为 `100%`
+  - **green** (*选填*, 百分比): 开灯时绿光通道的值，默认为 `100%`
+  - **blue** (*选填*, 百分比): 开灯时蓝光通道的值，默认为 `100%`
+  - **white** (*选填*, 百分比): 开灯时白光通道的值，默认为 `100%`
+  - **duration** (**必填**, [时长](mqtt/guides/configuration-types#时长)): 此颜色和亮度的持续时间
+
+### 同步闪烁
+
+整体在当前的颜色和亮度值附近徘徊
+
+```yaml
+light:
+  - platform: ...
+    # ...
+    effects:
+      - flicker:
+          name: Flicker
+          alpha: 95%
+          intensity: 1.5%
+```
+
+配置参数
+
+- **name** (*选填*, 字符串): 特效名称，默认为 `Flicker`
+- **alpha** (*选填*, 百分比): 末次颜色对闪烁变幻的影响，类似指数移动平均值的平滑因子，默认为 `95%`
+- **intensity** (*选填*, 百分比): 闪烁强度，即随机偏移量的最大幅度，默认为 `1.5%`
+
+### 自定义特效
+
+借助 [Lambda 表达式](mqtt/guides/automations#lambdas-表达式), 自定义灯光特效
+
+```yaml
+light:
+  - platform: ...
+    # ...
+    effects:
+      - lambda:
+          name: My Custom Effect
+          update_interval: 1s
+          lambda: >-
+            static int state = 0;
+            if (state == 0) {
+              id(my_light).start_transition(light::LightColorValues::from_rgb(1.0, 1.0, 1.0)));
+            } else if (state == 1) {
+              id(my_light).start_transition(light::LightColorValues::from_rgb(1.0, 0.0, 1.0)));
+            } else if (state == 2) {
+              id(my_light).start_transition(light::LightColorValues::from_rgb(0.0, 0.0, 1.0)));
+            } else {
+              id(my_light).start_transition(light::LightColorValues::from_rgb(0.0, 0.0, 0.0)));
+            }
+            state += 1;
+            if (state == 4)
+              state = 0;
+```
+
+配置参数
+
+- **name** (**必填**, 字符串): 特效名称
+- **update_interval** (*选填*, [时长](mqtt/guides/configuration-types#时长)): 执行间隔，默认为 `0ms` 表示无间隔执行
+- **lambda** (**必填**, [Lambda 表达式](mqtt/guides/automations#lambdas-表达式)): 执行的代码，多使用静态变量
+
 
 
 ## 独立寻址LED特效
+
+
+
+### 彩虹
+
+类似彩虹的多彩变幻效果
+
+```yaml
+light:
+  - platform: fastled_...
+    # ...
+    effects:
+      - fastled_rainbow:
+          name: Rainbow
+          speed: 10
+          width: 50
+```
+
+配置参数
+
+- **name** (*选填*, 字符串): 特效名称，默认为 `Rainbow`
+- **speed** (*选填*, 整数): 特效的速度，默认为 `10`
+- **width** (*选填*, 整数): 彩虹的整体尺寸，默认为 `50`
+
+### 跑马灯
+
+即颜色擦除，随机生成的颜色组成队列，步进并替换掉当前的显示
+
+```yaml
+light:
+  - platform: fastled_...
+    # ...
+    effects:
+      - fastled_color_wipe:
+          name: Color Wipe
+          colors:
+            - red: 100%
+              green: 100%
+              blue: 100%
+              num_leds: 1
+            - red: 0%
+              green: 0%
+              blue: 0%
+              num_leds: 1
+          add_led_interval: 100ms
+          reverse: False
+```
+
+配置参数
+
+- **name** (*选填*, 字符串): 特效名称，默认为 `Color Wipe`.
+- **colors**(*选填*, 列表): The colors to shift in at the beginning of the strip. Defaults to shifting in random colors.
+  - **red** (*选填*, 百分比): 红光通道的值，默认为 `100%`
+  - **green** (*选填*, 百分比): 绿光通道的值，默认为 `100%`
+  - **blue** (*选填*, 百分比): 蓝光通道的值，默认为 `100%`
+  - **random** (*选填*, 布尔值): 是否设为随机颜色，如果设为 `True`，则覆盖前面三项的 RGB 赋值, 默认为 `False`
+  - **num_leds** (*选填*, 整数): 此组颜色的灯珠数量
+- **add_led_interval** (*选填*, [时长](mqtt/guides/configuration-types#时长)): The interval with which to shift in new leds at the beginning of the strip. Defaults to `100ms`.
+- **reverse** (*选填*, 布尔值): 是否反转步进的方向，默认为不反转 `False`
+
+
+### 流光
+ 
+单点、快速的做往复运动
+
+```yaml
+light:
+  - platform: fastled_...
+    # ...
+    effects:
+      - fastled_scan:
+          name: Scan
+          move_interval: 100ms
+```
+
+配置参数
+
+- **name** (*选填*, 字符串): 特效名称，默认为 `Scan`
+- **move_interval** (*选填*, [时长](mqtt/guides/configuration-types#时长)): 向前移动一个等著的时间间隔，默认为 `100ms`
+
+### 闪亮
+
+随机单点的渐亮渐灭
+
+```yaml
+light:
+  - platform: fastled_...
+    # ...
+    effects:
+      - fastled_twinkle:
+      - fastled_twinkle:
+          name: Twinkle
+          twinkle_probability: 5%
+          progress_interval: 4ms
+```
+
+配置参数
+
+- **name** (*选填*, 字符串): 特效名称，默认为 `Twinkle`
+- **twinkle_probability** (*选填*, 百分比): 选中概率
+- **progress_interval** (*选填*, [时长](mqtt/guides/configuration-types#时长)): 闪烁持续时间，会影响到单个灯珠特效的持续时间，默认为 `4ms`
+
+### 随机色闪亮
+
+随机单点、随机颜色的渐亮渐灭
+
+```yaml
+light:
+  - platform: fastled_...
+    # ...
+    effects:
+      - fastled_random_twinkle:
+          name: Random Twinkle
+          twinkle_probability: 5%
+          progress_interval: 32ms
+```
+
+配置参数
+
+- **name** (*选填*, 字符串): 特效名称，默认为 `Random Twinkle`.
+- **twinkle_probability** (*选填*, 百分比): 选中概率
+- **progress_interval** (*选填*, [时长](mqtt/guides/configuration-types#时长)): 闪烁持续时间，会影响到单个灯珠特效的持续时间，默认为 `4ms`
+
+### 烟花
+
+类似烟花样式的随机火花效果
+
+```yaml
+light:
+  - platform: fastled_...
+    # ...
+    effects:
+      - fastled_fireworks:
+          name: Fireworks
+          update_interval: 32ms
+          spark_probability: 10%
+          use_random_color: false
+          fade_out_rate: 120
+```
+
+配置参数
+
+- **name** (*选填*, 字符串): 特效名称，默认为 `Fireworks`
+- **update_interval** (*选填*, [时长](mqtt/guides/configuration-types#时长)): 特效间隔，默认为 `32ms`
+- **spark_probability** (*选填*, 百分比): 选中概率，默认为 `10%`
+- **use_random_color** (*选填*, 布尔值): 是否使用随机颜色，默认为 `False` 使用当前设置的颜色
+- **fade_out_rate** (*选填*, 整数): 淡出(熄灭)速度，谨慎设置，防止太慢导致单点火花不“熄灭”或太快导致无法”点燃“整条灯带，默认为 `120`
+
+### 异步闪烁
+
+各个点分别当前颜色和亮度值附近徘徊
+
+```yaml
+light:
+  - platform: fastled_...
+    # ...
+    effects:
+      - fastled_flicker:
+          name: FastLED Flicker
+          update_interval: 16ms
+          intensity: 5%
+```
+
+配置参数
+
+- **name** (*选填*, 字符串): 特效名称，默认为 `FastLED Flicker`.
+- **update_interval** (*选填*, [时长](mqtt/guides/configuration-types#时长)): 更新间隔，默认为 `16ms`
+- **intensity** (*选填*, 百分比): 闪烁强度，即随机偏移量的最大幅度，默认为`5%`
+
+
+
+
+
 
 
 
@@ -176,3 +444,6 @@ light:
 -  [可调五色(红绿蓝冷白暖白)](mqtt/components/light/rgbww)
 -  [单信号线 LED 灯带](mqtt/components/light/fastled_clockless)
 -  [双信号线 LED 灯带](mqtt/components/light/fastled_spi)
+
+
+- [WS2812FX library by @kitesurfer1404](https://github.com/kitesurfer1404/WS2812FX)
