@@ -25,7 +25,7 @@
 
 ![](http://pic.airijia.com/doc/20181224145657.png)
 
-Wifi 信息和 homekit 配对码
+想要接入的 WiFi 名称和密码
 
 
 
