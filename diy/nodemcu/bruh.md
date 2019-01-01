@@ -10,17 +10,15 @@
 
 
 
+## 相关产品
 
-<!-- ## 相关产品
-
-| ![](http://pic.airijia.com/doc/20181122164201.png ':size=200')| 整套购买 |  [![买买买](http://cdn.airijia.com/b6eca8da724952cc0251.gif ':size=150')](https://item.taobao.com/item.htm?id=582672122003) |
+| ![](http://pic.airijia.com/doc/20181205171519.png ':size=200')| NodeMCU  |  [![买买买](http://cdn.airijia.com/b6eca8da724952cc0251.gif ':size=150')](https://item.taobao.com/item.htm?id=45559178968) |
 |:-:|:-:|:-:|
-| ![](http://pic.airijia.com/doc/20181122164130.png ':size=200')| NODEMCU |  [![买买买](http://cdn.airijia.com/b6eca8da724952cc0251.gif ':size=150')](https://item.taobao.com/item.htm?id=45559178968) |
 | ![](http://pic.airijia.com/doc/20181122164130.png ':size=200')| DHT22 |  [![买买买](http://cdn.airijia.com/b6eca8da724952cc0251.gif ':size=150')](https://item.taobao.com/item.htm?id=551993243366) |
 | ![](http://pic.airijia.com/doc/20181122164130.png ':size=200')|  TMT光敏 |  [![买买买](http://cdn.airijia.com/b6eca8da724952cc0251.gif ':size=150')](https://item.taobao.com/item.htm?id=45528547048) |
 | ![](http://pic.airijia.com/doc/20181122164130.png ':size=200')|  PIR |  [![买买买](http://cdn.airijia.com/b6eca8da724952cc0251.gif ':size=150')](https://item.taobao.com/item.htm?id=551934438418) |
 | ![](http://pic.airijia.com/doc/20181122164130.png ':size=200')|  三色共阴 |  [![买买买](http://cdn.airijia.com/b6eca8da724952cc0251.gif ':size=150')](https://item.taobao.com/item.htm?id=551925481875) |
- -->
+
 
 
 接线图参考
