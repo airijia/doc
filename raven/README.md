@@ -67,3 +67,13 @@
 刷完固件后，**无需配置 WiFi**，直接打开 HomeKit 进行配对
 
 使用有疑问详询 QQ 群 [38049942](https://shang.qq.com/wpa/qunwpa?idkey=eb028eb95506e4ee49beab0dc0147e821298e1865ba3379963e45a1900e40c22)
+
+
+
+## 常见问题
+
+### 断电重新上电后失去响应
+
+已知的是梅林固件对 mDNS / Bonjour 支持的问题
+
+[mDNS / Bonjour not forwarding WLAN -> LAN ](https://github.com/RMerl/asuswrt-merlin.ng/issues/162)
