@@ -19,7 +19,7 @@
 | ★★★★★ | Magic Home | [单色](diy/magichome/monochromatic) | 单色只调光 |
 | ★★★★★ | Magic Home | [RGB三色](diy/magichome/rgb) |  |
 | ★★★★★ | Magic Home | [RGBW四色](diy/magichome/rgbw) |  |
-| ★★★★★ | Magic Home | [单数据线](diy/magichome/fastled_clockless) | WS2812B/WS2811 |
+| ★★★★ | Magic Home | [单数据线](diy/magichome/fastled_clockless) | WS2812B/WS2811 |
 | ★★★★★ | Sonoff | [Sonoff B1 多彩灯泡](diy/sonoff/b1) |  |
 
 
