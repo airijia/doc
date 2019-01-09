@@ -266,7 +266,24 @@ display:
 ```
 
 
-0.96寸的 OLED的分辨率是 128x64，坐标原点位于屏幕左上角，如果是黄蓝双色的屏幕，屏幕上方 128x16 的区域为黄色，屏幕下方 128x48 的区域为黄色
+### 配置时间和时区
+
+配置 SNTP 服务，设置 ID 为 `sntp_time`，设置时区为 `Asia/Shanghai`
+
+
+更详细的使用，参考 [时间](mqtt/components/time)
+
+### 配置字体
+
+使用 roboto 字体，配置 16 和 48 两种尺寸，分别命名为 `font_16` 和 `font_48`
+
+
+更详细的使用，参考 [字体](mqtt/components/display/#字体) 
+
+### 配置显示屏
+
+
+0.96 英寸的 OLED 分辨率是 128x64，坐标原点位于屏幕左上角，如果是黄蓝双色的屏幕，屏幕上方 128x16 的区域为黄色，屏幕下方 128x48 的区域为蓝色
 
 
 坐标图 P
@@ -277,7 +294,7 @@ display:
 it.strftime(0, 0, id(font_16), "%H:%M", id(sntp_time).now());
 ```
 
-格式化当前时间的小时数和分钟数，以**font_16**，在坐标 0,0 处（左上角）显示，默认为左对齐，所以不用设置 `TextAlign`
+格式化当前时间的小时数和分钟数，以之前配置的字体 **font_16**，在坐标 0,0 处（左上角）显示，默认为左对齐，所以不用设置 `TextAlign`
 
 
 
@@ -293,7 +310,7 @@ it.printf(64, 40, id(font_48), TextAlign::CENTER, "%.1f°", id(temperature).stat
 
 以**font_48**，在坐标 64,40 处（下半区域正中）`TextAlign::CENTER` 居中显示 ``温度数``+ ``°``，`.1f` 表示将浮点数四舍五入到小数点后 1 位
 
-更详细的用法，参考[SSD1306 OLED I2C显示屏](mqtt/components/display/ssd1306_i2c)  和 [显示屏核心组件](mqtt/components/display/) 
+更详细的用法，参考 [SSD1306 OLED I2C显示屏](mqtt/components/display/ssd1306_i2c)  和 [显示屏核心组件](mqtt/components/display/) 
 
 
 ## 相关链接
