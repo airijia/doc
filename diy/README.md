@@ -7,11 +7,11 @@
 | 难度 | 品牌 | 型号 | 简介 |
 |:-|:-:|:-:|:-:|
 | ★ | NodeMCU | [SHT30 温湿度](diy/nodemcu/sht30) | 温湿度 适合新手入门 |
+| ★★ | NodeMCU | [LEGO 积木式带显示屏温湿度](diy/nodemcu/lego) | 温湿度带显示屏 适合新手 |
 | ★★ | ESP01 | [DHT11 温湿度](diy/esp01/dht11) | 温湿度 体积小 |
 | ★★★★ | ESP01 | [多合一传感器](diy/nodemcu/bruh) |  |
 
 
-<!-- | ★★ | NodeMCU | [LEGO积木式带显示屏 温湿度](diy/nodemcu/lego) | 温湿度带显示屏 适合新手 | -->
 
 ## 灯/灯带
 

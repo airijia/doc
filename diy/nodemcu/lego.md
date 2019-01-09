@@ -1,5 +1,9 @@
 # 自制 OLED 显示温湿度计
 
+
+!> 此教程尚未完成！！！
+
+
 积木式 OLED 显示温度计
 
 ![](http://pic.airijia.com/doc/20190109170515.png)
@@ -22,11 +26,26 @@
 **以下需自备**
 
 - Micro USB 数据线 (安卓扁口)
-- 带 USB 接口电脑，操作系统 **WIN 7** 及以上或 **MAC OS**)
+- 带 USB 接口电脑，操作系统 **WIN 7 及以上** 或 **MAC OS**
 - 绝缘胶带
 
 
 ## 组装硬件
+
+### 制作Y型线
+
+
+
+
+### 连线
+
+I2C
+
+
+
+### 塞入外壳
+
+
 
 
 
@@ -110,7 +129,7 @@ mqtt:
 ![](http://pic.airijia.com/doc/20181231141300.png)
 
 
-**SSD1306 地址** 填入 `0x36`，**SHT30 地址** 填入 `0x44`
+**SSD1306 地址** 填入 `0x36`，重刷间隔 填入 `1s`，**SHT30 地址** 填入 `0x44`，读取间隔填入 `60ms`
 
 ![](http://pic.airijia.com/doc/20181231141925.png)
 
@@ -143,14 +162,7 @@ mqtt:
 
 
 
-按住 `FLASH` 按钮 将 NodeMCU  插入电脑的 USB 接口
-
-![](http://pic.airijia.com/doc/20181207125621.png)
-
-
-
-
-
+将 NodeMCU 的 USB 线插入电脑的 USB 接口
 
 
 
@@ -194,13 +206,19 @@ mqtt:
 
 
 
+
+### 常见问题
+
+
+
+
 ## 进阶使用
 
 **上传模板文件** 的方式创建固件
 
 ?> 基本五大件的配置查看 [模板文件创建 MQTT 固件](mqtt/guides/yaml)
 
-需要用到 [I²C 总线](mqtt/components/i2c),  [SHT3X-D 温湿度传感器](mqtt/components/sensor/sht3xd) 和  [SSD1306 OLED 显示组件](mqtt/components/display/ssd1306) 三个组件
+需要用到 [I²C 总线](mqtt/components/i2c),  [SHT3X-D 温湿度传感器](mqtt/components/sensor/sht3xd) 和  [SSD1306 OLED I2C显示屏](mqtt/components/display/ssd1306_i2c)，[时间](mqtt/components/time) 等多个组件
 
 
 ```yaml
@@ -243,8 +261,47 @@ display:
     update_interval: 1s
     lambda: >-
       it.strftime(0, 0, id(font_16), "%H:%M", id(sntp_time).now());
-      it.printf(128, 0, id(font_16), TextAlign::TOP_RIGHT, "%.1f%%", id(humidity).state);
+      it.printf(128, 0, id(font_16), TextAlign::RIGHT, "%.1f%%", id(humidity).state);
       it.printf(64, 40, id(font_48), TextAlign::CENTER, "%.1f°", id(temperature).state);
 ```
+
+
+0.96寸的 OLED的分辨率是 128x64，坐标原点位于屏幕左上角，如果是黄蓝双色的屏幕，屏幕上方 128x16 的区域为黄色，屏幕下方 128x48 的区域为黄色
+
+
+坐标图 P
+
+
+
+```c++
+it.strftime(0, 0, id(font_16), "%H:%M", id(sntp_time).now());
+```
+
+格式化当前时间的小时数和分钟数，以**font_16**，在坐标 0,0 处（左上角）显示，默认为左对齐，所以不用设置 `TextAlign`
+
+
+
+```c++
+it.printf(128, 0, id(font_16), TextAlign::TOP_RIGHT, "%.1f%%", id(humidity).state);
+```
+以**font_16**，在坐标 128,0 处（右上角）`TextAlign::RIGHT` 右对齐显示 ``湿度数``+ ``%``，`.1f` 表示将浮点数四舍五入到小数点后 1 位
+
+
+```c++
+it.printf(64, 40, id(font_48), TextAlign::CENTER, "%.1f°", id(temperature).state);
+```
+
+以**font_48**，在坐标 64,40 处（下半区域正中）`TextAlign::CENTER` 居中显示 ``温度数``+ ``°``，`.1f` 表示将浮点数四舍五入到小数点后 1 位
+
+更详细的用法，参考[SSD1306 OLED I2C显示屏](mqtt/components/display/ssd1306_i2c)  和 [显示屏核心组件](mqtt/components/display/) 
+
+
+## 相关链接
+
+- [I²C 总线](mqtt/components/i2c),
+- [SHT3X-D 温湿度传感器](mqtt/components/sensor/sht3xd)
+- [显示屏核心组件](mqtt/components/display/) 
+- [SSD1306 OLED I2C显示屏](mqtt/components/display/ssd1306_i2c)
+- [时间](mqtt/components/time)
 
 
