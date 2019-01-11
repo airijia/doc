@@ -46,6 +46,201 @@ I2C
 ### 塞入外壳
 
 
+## 刷渡鸦固件(HomeKit 直连)
+
+无需中枢直连 苹果 HomeKit，适合入门体验
+
+
+### 下载固件
+
+打开 [在线编译固件](http://airijia.com/ctl/firmware/list)，点击 **新建固件**
+
+
+![](http://pic.airijia.com/doc/20181231125754.png)
+
+
+如图依次选择 **渡鸦 HomeKit 直连** - **NodeMCU** - **NodeMCU SSD1306 SHT30**
+
+![](http://pic.airijia.com/doc/20190111162118.png)
+
+刷入主机名，比如 `666`
+
+![](http://pic.airijia.com/doc/20190111162216.png)
+输入 WiFi 名称和密码
+
+![](http://pic.airijia.com/doc/20190111162301.png)
+
+温湿度的显示名称
+
+![](http://pic.airijia.com/doc/20190111162324.png)
+
+
+确认无误后点击提交
+
+![](http://pic.airijia.com/doc/20190111162338.png)
+
+
+等待编译
+
+![](http://pic.airijia.com/doc/20190111155649.png)
+
+
+显示**已完成**，表示已经编译成功，点击下载固件文件
+
+
+![](http://pic.airijia.com/doc/20190111155711.png)
+
+
+
+### 刷入固件
+
+
+下载文件后，解压出 **666.bin** 文件，刷入工具使用 **渡鸦固件工具**
+
+
+- [下载渡鸦固件 Windows 版](http://pic.airijia.com/download/raven-win.zip)
+- [下载渡鸦固件 MAC OS 版](http://pic.airijia.com/download/raven-mac.zip)
+
+
+将 NodeMCU 的 USB 线插入电脑的 USB 接口
+
+
+
+选择串口
+
+![](http://pic.airijia.com/doc/20181231133457.png)
+
+
+
+如果列表为空，先点击 **刷新**
+
+![](http://pic.airijia.com/doc/20181231133313.png)
+
+
+
+
+选择了 `COM8`
+
+
+![](http://pic.airijia.com/doc/20181231133159.png)
+
+
+
+
+!> 如果还没找到串口，需要 [安装 NodeMCU 驱动](diy/nodemcu/)
+
+
+
+浏览文件并添加固件
+
+![](http://pic.airijia.com/doc/20181231133747.png)
+
+
+![](http://pic.airijia.com/doc/20181231133725.png)
+
+
+
+
+
+
+
+
+
+
+
+添加了 D盘 Download 文件夹下的 `666.bin` 文件
+
+
+![](http://pic.airijia.com/doc/20181231133957.png)
+
+
+
+
+模式选择 `DIO`
+
+
+![](http://pic.airijia.com/doc/20181231133827.png)
+
+
+
+
+
+点击刷写
+
+![](http://pic.airijia.com/doc/20181231134238.png)
+
+控制台开始出现信息
+
+![](http://pic.airijia.com/doc/20181231134255.png)
+
+
+![](http://pic.airijia.com/doc/20181231134317.png)
+
+
+刷写完成
+
+![](http://pic.airijia.com/doc/20181231134356.png)
+
+
+
+
+
+
+
+
+
+
+
+### 调试固件
+
+插入 NodeMCU，选择 **串口** 后点击 **调试** (不需要选择固件)，如图显示便连接成功了
+
+
+![](http://pic.airijia.com/doc/20181231134847.png)
+
+
+显示 **Could not initialize SHT3x sensor** 是传感器连接失败，通常是接线错误
+
+
+![](http://pic.airijia.com/doc/20181231134517.png)
+
+
+
+### 接入 HomeKit
+
+
+
+打开 **家庭** APP
+
+![](https://ws1.sinaimg.cn/large/007fN5Xegy1fv5btipro1j31710wdx6p.jpg)
+
+依次选择 **添加配件 - 没有代码或无法扫描**
+
+![](https://ws1.sinaimg.cn/large/007fN5Xegy1fv5bt5et03j317p0tre81.jpg)
+
+![](https://ws1.sinaimg.cn/large/007fN5Xegy1fv5bsxvarnj31240q11kx.jpg)
+
+正常这里会看到跟刚才接入 AP 同样名称的配件，如果看不到，要多等一会儿
+
+![](https://ws1.sinaimg.cn/large/007fN5Xegy1fv5bskjgp7j317y0nfqn0.jpg)
+
+输入下载固件时设置的配对编码，默认为 `38049942`
+
+![](https://ws1.sinaimg.cn/large/007fN5Xegy1fv5bsakzffj30v90eutfl.jpg)
+
+等待 30 ~ 60 秒之后，显示配件已添加
+
+![](https://ws1.sinaimg.cn/large/007fN5Xegy1fv5brk7sacj317m0tp1kx.jpg)
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -106,13 +301,16 @@ mqtt:
 
 如图依次选择 **NodeMCU ESP8266 - 温湿度 - SSD1306 + SHT30**
 
-![](http://pic.airijia.com/doc/20181231135612.png)
+
+![](http://pic.airijia.com/doc/20190111155000.png)
+
 
 
 
 主机名随便填，比如 `666`
 
-![](http://pic.airijia.com/doc/20181231140449.png)
+
+![](http://pic.airijia.com/doc/20190111155115.png)
 
 
 
@@ -121,31 +319,43 @@ mqtt:
 ?> 其他信息根据 [中枢配置](#中枢配置) 填写
 
 
-![](http://pic.airijia.com/doc/20181231140758.png)
+![](http://pic.airijia.com/doc/20190111155157.png)
 
 **SDA引脚** 填入 `D2`，**SCL引脚** 填入 `D1`
 
 
-![](http://pic.airijia.com/doc/20181231141300.png)
+![](http://pic.airijia.com/doc/20190111155233.png)
 
 
-**SSD1306 地址** 填入 `0x36`，重刷间隔 填入 `1s`，**SHT30 地址** 填入 `0x44`，读取间隔填入 `60ms`
 
-![](http://pic.airijia.com/doc/20181231141925.png)
+**SHT30 地址** 填入 `0x44`，读取间隔填入 `1s`
+
+
+![](http://pic.airijia.com/doc/20190111161039.png)
+
+
+
+**SSD1306 地址** 填入 `0x3C`，重刷间隔填入 `1s`
+
+
+![](http://pic.airijia.com/doc/20190111155413.png)
+
 
 核对信息后提交
 
-![](http://pic.airijia.com/doc/20181231141952.png)
+![](http://pic.airijia.com/doc/20190111155558.png)
+
+
 
 等待编译
 
-![](http://pic.airijia.com/doc/20181207152220.png)
+![](http://pic.airijia.com/doc/20190111155649.png)
 
 
 编译完成，下载文件到本地
 
 
-![](http://pic.airijia.com/doc/20181207152414.png)
+![](http://pic.airijia.com/doc/20190111155711.png)
 
 
 
@@ -209,12 +419,106 @@ mqtt:
 
 ### 常见问题
 
+暂无
 
 
 
-## 进阶使用
 
-**上传模板文件** 的方式创建固件
+## 进阶使用1
+
+**上传模板文件** 的方式创建 MQTT 固件
+
+显示温湿度，不适用黄蓝双色的屏幕
+
+
+
+?> 基本五大件的配置查看 [模板文件创建 MQTT 固件](mqtt/guides/yaml)
+
+需要用到 [I²C 总线](mqtt/components/i2c),  [SHT3X-D 温湿度传感器](mqtt/components/sensor/sht3xd) 和  [SSD1306 OLED I2C显示屏](mqtt/components/display/ssd1306_i2c) 等多个组件
+
+
+```yaml
+# ... 基本五大件略过
+
+# I²C
+i2c:
+  sda: D2
+  scl: D1
+  scan: False
+# SHT30
+sensor:
+  - platform: sht3xd
+    temperature:
+      name: "Living Room Temperature"
+      id: temperature
+    humidity:
+      name: "Living Room Humidity"
+      id: humidity
+    address: 0x44
+    update_interval: 1s
+# 字体
+font:
+  - file: "roboto.ttf"
+    id: font_32
+    size: 32
+# OLED
+display:
+  - platform: ssd1306_i2c
+    model: "SSD1306 128x64"
+    address: 0x3C
+    update_interval: 1s
+    lambda: >-
+      it.printf(20, 16, id(font_32), "%.1f°", id(temperature).raw_state);
+      it.printf(20, 48, id(font_32), "%.1f%%", id(humidity).raw_state);
+```
+
+### 配置字体
+
+使用 roboto 字体，配置字体大小 32，命名为 `font_32`
+
+
+更详细的使用，参考 [字体](mqtt/components/display/#字体) 
+
+### 配置显示屏
+
+
+0.96 英寸的 OLED 分辨率是 128x64，坐标原点位于屏幕左上角
+
+
+坐标图 P
+
+
+
+
+
+
+```c++
+it.printf(20, 0, id(font_32), "%.1f°", id(temperature).raw_state);
+```
+以**font_32**，在坐标 20,16 处（屏幕上半距左 20）显示 ``温度数``+ ``°``，`.1f` 表示将浮点数四舍五入到小数点后 1 位
+
+
+```c++
+it.printf(64, 40, id(font_48), TextAlign::CENTER, "%.1f°", id(temperature).raw_state);
+```
+以**font_32**，在坐标 20,48 处（屏幕下半距左 20）显示 ``湿度数``+ ``%``，`.1f` 表示将浮点数四舍五入到小数点后 1 位
+
+
+更详细的用法，参考 [SSD1306 OLED I2C显示屏](mqtt/components/display/ssd1306_i2c)  和 [显示屏核心组件](mqtt/components/display/) 
+
+
+
+
+## 进阶使用2
+
+
+**上传模板文件** 的方式创建 MQTT 固件
+
+显示温湿度的同时加上当前的时间，搭配上黄下蓝的显示屏最佳
+
+![](http://pic.airijia.com/doc/20190111153545.png)
+
+
 
 ?> 基本五大件的配置查看 [模板文件创建 MQTT 固件](mqtt/guides/yaml)
 
@@ -244,7 +548,7 @@ sensor:
       name: "Living Room Humidity"
       id: humidity
     address: 0x44
-    update_interval: 60ms
+    update_interval: 1s
 # 字体
 font:
   - file: "roboto.ttf"
@@ -261,8 +565,8 @@ display:
     update_interval: 1s
     lambda: >-
       it.strftime(0, 0, id(font_16), "%H:%M", id(sntp_time).now());
-      it.printf(128, 0, id(font_16), TextAlign::RIGHT, "%.1f%%", id(humidity).state);
-      it.printf(64, 40, id(font_48), TextAlign::CENTER, "%.1f°", id(temperature).state);
+      it.printf(128, 0, id(font_16), TextAlign::RIGHT, "%.1f%%", id(humidity).raw_state);
+      it.printf(64, 40, id(font_48), TextAlign::CENTER, "%.1f°", id(temperature).raw_state);
 ```
 
 
@@ -299,13 +603,13 @@ it.strftime(0, 0, id(font_16), "%H:%M", id(sntp_time).now());
 
 
 ```c++
-it.printf(128, 0, id(font_16), TextAlign::TOP_RIGHT, "%.1f%%", id(humidity).state);
+it.printf(128, 0, id(font_16), TextAlign::TOP_RIGHT, "%.1f%%", id(humidity).raw_state);
 ```
 以**font_16**，在坐标 128,0 处（右上角）`TextAlign::RIGHT` 右对齐显示 ``湿度数``+ ``%``，`.1f` 表示将浮点数四舍五入到小数点后 1 位
 
 
 ```c++
-it.printf(64, 40, id(font_48), TextAlign::CENTER, "%.1f°", id(temperature).state);
+it.printf(64, 40, id(font_48), TextAlign::CENTER, "%.1f°", id(temperature).raw_state);
 ```
 
 以**font_48**，在坐标 64,40 处（下半区域正中）`TextAlign::CENTER` 居中显示 ``温度数``+ ``°``，`.1f` 表示将浮点数四舍五入到小数点后 1 位
