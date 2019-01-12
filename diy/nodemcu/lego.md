@@ -1,26 +1,23 @@
 # 自制 OLED 显示温湿度计
 
 
-!> 此教程尚未完成！！！
-
 
 积木式 OLED 显示温度计
 
-![](http://pic.airijia.com/doc/20190109170515.png)
-
-![](http://pic.airijia.com/doc/20190109170538.png)
-
-![](http://pic.airijia.com/doc/20190109170605.png)
 
 
 ## 硬件准备
 
-| ![](http://pic.airijia.com/doc/20181231110322.png ':size=200')| 整套购买 |  [![买买买](http://cdn.airijia.com/b6eca8da724952cc0251.gif ':size=150')](https://item.taobao.com/item.htm?id=577014079869) | 
+
+| ![](http://pic.airijia.com/doc/20190112174252.png ':size=200')| 整套购买 |  [![买买买](http://cdn.airijia.com/b6eca8da724952cc0251.gif ':size=150')](https://item.taobao.com/item.htm?id=577014079869) | 
 |:-:|:-:|:-:|
 | ![](http://pic.airijia.com/doc/20181205171519.png ':size=200')| 0.96寸 OLED 屏幕+积木壳  |  [![买买买](http://cdn.airijia.com/b6eca8da724952cc0251.gif ':size=150')](https://item.taobao.com/item.htm?id=585830522424) |
 | ![](http://pic.airijia.com/doc/20181205171519.png ':size=200')| NodeMCU CP2102 |  [![买买买](http://cdn.airijia.com/b6eca8da724952cc0251.gif ':size=150')](https://item.taobao.com/item.htm?id=585975819567) |
 | ![](http://pic.airijia.com/doc/20181231110437.png ':size=200')| SHT30 传感器 |  [![买买买](http://cdn.airijia.com/b6eca8da724952cc0251.gif ':size=150')](https://item.taobao.com/item.htm?id=585205682947) |
 | ![](http://pic.airijia.com/doc/20181122162418.png ':size=200')| 杜邦线 母对母 |  [![买买买](http://cdn.airijia.com/b6eca8da724952cc0251.gif ':size=150')](https://item.taobao.com/item.htm?id=45608073136) |
+
+
+
 
 
 **以下需自备**
@@ -32,19 +29,181 @@
 
 ## 组装硬件
 
+制作 1分2 杜邦线，组合外壳，并将各元件连接起来
+
+
 ### 制作Y型线
+
+取四种颜色，各两根母对母杜邦线，为了方便对号入座，本例中使用红黑蓝绿这四种颜色
+
+?>因为壳子内空间有限，除了预留给SHT30那四段，其他保持 5cm 左右即可
+
+取两根红线
+
+
+
+
+三个端口剥皮 
+
+
+
+
+
+
+将铜丝拧到一起去
+
+
+
+
+
+
+
+用绝缘胶带缠好
+
+
+
+
+
+其他三种颜色如法炮制
+
+
+
+
+
+
 
 
 
 
 ### 连线
 
-I2C
+<!-- 显示屏引脚图
+
+VCC GND SCL SDA
+
+
+SHT30引脚图
+
+
+scl sda gnd vcc -->
 
 
 
-### 塞入外壳
 
+<!-- SCL - D1 蓝
+SDA - D2 绿
+VCC - 3V3
+GND - GND -->
+
+
+
+如图将各组件连接
+
+![](http://pic.airijia.com/doc/20190112174633.png)
+
+
+
+将 NodeMCU 与 USB线连接
+
+
+
+
+
+
+连接后的效果
+
+
+
+### 组装外壳
+
+
+将 SSD1306 显示屏放入面板
+
+
+
+
+
+
+用绝缘胶带辅助定位 (橡皮泥或者黏土更佳)
+
+
+
+将一块 1x6x5 墙板放到底板 (4x8) 上
+
+
+
+显示屏面板 叠加一块 1x4x1 后，放到底板上
+
+
+
+将 NodeMCU 倾斜放入 墙板
+
+
+
+放入另一块 1x6x5 墙板，固定住 NodeMCU
+
+
+
+
+
+USB 线两端放入两个 1x1
+
+
+
+
+加两层 1x4
+
+
+
+两端放入两个 1x1， 中间放入 1x2 平行线
+
+
+
+
+
+
+将 SHT30 从中间探出
+
+
+
+加一层 1x4
+
+
+
+
+
+加 顶板 4x6 
+
+
+
+
+加 4个 1x2 平行线
+
+
+
+
+
+
+
+
+
+
+
+
+完成
+
+
+
+
+
+
+
+插入 USB 到电脑，开始刷固件
+
+
+
+
+直连 HomeKit 刷[渡鸦固件](#刷渡鸦固件homekit-直连)，连 Hass 等中枢刷 [MQTT 固件](#刷-mqtt-固件-连-hass-等中枢)
 
 ## 刷渡鸦固件(HomeKit 直连)
 
