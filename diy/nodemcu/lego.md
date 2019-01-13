@@ -6,10 +6,20 @@
 
 
 
+A3套餐成品效果图
+
+![](http://pic.airijia.com/doc/20190109170515.png)
+
+
+
+A2套餐组合进乐高的效果
+
+![](http://pic.airijia.com/doc/20190113123535.png)
+
 ## 硬件准备
 
 
-| ![](http://pic.airijia.com/doc/20190112174252.png ':size=200')| 整套购买(A3套餐) |  [![买买买](http://cdn.airijia.com/b6eca8da724952cc0251.gif ':size=150')](https://item.taobao.com/item.htm?id=577014079869) | 
+| ![](http://pic.airijia.com/doc/20190112174252.png ':size=200')| 整套购买(A2或A3套餐) |  [![买买买](http://cdn.airijia.com/b6eca8da724952cc0251.gif ':size=150')](https://item.taobao.com/item.htm?id=577014079869) | 
 |:-:|:-:|:-:|
 | ![](http://pic.airijia.com/doc/20190113113732.png ':size=200')| 0.96寸 OLED 屏幕+积木壳  |  [![买买买](http://cdn.airijia.com/b6eca8da724952cc0251.gif ':size=150')](https://item.taobao.com/item.htm?id=585830522424) |
 | ![](http://pic.airijia.com/doc/20181205171519.png ':size=200')| NodeMCU CP2102 |  [![买买买](http://cdn.airijia.com/b6eca8da724952cc0251.gif ':size=150')](https://item.taobao.com/item.htm?id=585975819567) |
