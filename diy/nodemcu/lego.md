@@ -46,38 +46,39 @@ A2套餐组合进乐高的效果
 
 取四种颜色，各两根母对母杜邦线，为了方便对号入座，本例中使用红黑蓝绿这四种颜色
 
+![](http://pic.airijia.com/doc/20190113151101.png)
+
+
+
+
+取两根红线，如图切割
+
+![](http://pic.airijia.com/doc/20190113150436.png)
+
+
+
 ?>因为壳子内空间有限，除了预留给SHT30那四段，其他保持 5cm 左右即可
-
-取两根红线
-
 
 
 
 三个端口剥皮 
 
 
-
+![](http://pic.airijia.com/doc/20190113151811.png)
 
 
 
 将铜丝拧到一起去
 
+![](http://pic.airijia.com/doc/20190113152016.png)
 
 
 
 
 
+用绝缘胶带缠好，其他三种颜色也是同样的处理顺序
 
-用绝缘胶带缠好
-
-
-
-
-
-其他三种颜色如法炮制
-
-
-
+![](http://pic.airijia.com/doc/20190113152137.png)
 
 
 
@@ -112,95 +113,111 @@ GND - GND -->
 ![](http://pic.airijia.com/doc/20190112174633.png)
 
 
-
-将 NodeMCU 与 USB线连接
-
-
-
-
-
-
 连接后的效果
+
+![](http://pic.airijia.com/doc/20190113152437.png)
+
 
 
 
 ### 组装外壳
 
 
-将 SSD1306 显示屏放入面板
+将 SSD1306 显示屏放入面板，用绝缘胶带辅助定位 (橡皮泥或者黏土更佳)
+
+
+![](http://pic.airijia.com/doc/20190113152918.png)
 
 
 
 
-
-
-用绝缘胶带辅助定位 (橡皮泥或者黏土更佳)
 
 
 
 将一块 1x6x5 墙板放到底板 (4x8) 上
+
+![](http://pic.airijia.com/doc/20190113153057.png)
 
 
 
 显示屏面板 叠加一块 1x4x1 后，放到底板上
 
 
+![](http://pic.airijia.com/doc/20190113153138.png)
 
-将 NodeMCU 倾斜放入 墙板
 
+![](http://pic.airijia.com/doc/20190113153508.png)
+
+
+
+将 NodeMCU 接上 USB 线并倾斜放入 墙板
+
+
+![](http://pic.airijia.com/doc/20190113153319.png)
 
 
 放入另一块 1x6x5 墙板，固定住 NodeMCU
 
 
-
+![](http://pic.airijia.com/doc/20190113153415.png)
 
 
 USB 线两端放入两个 1x1
+
+![](http://pic.airijia.com/doc/20190113153646.png)
+
 
 
 
 
 加两层 1x4
 
-
+![](http://pic.airijia.com/doc/20190113153804.png)
 
 两端放入两个 1x1， 中间放入 1x2 平行线
 
 
+![](http://pic.airijia.com/doc/20190113154024.png)
 
 
 
+整理线材，将 SHT30 从中间探出
 
-将 SHT30 从中间探出
+
+![](http://pic.airijia.com/doc/20190113154047.png)
 
 
 
 加一层 1x4
 
+![](http://pic.airijia.com/doc/20190113154137.png)
+
+
+
+
+再加一层 1x4
+
+![](http://pic.airijia.com/doc/20190113154320.png)
 
 
 
 
 加 顶板 4x6 
 
-
+![](http://pic.airijia.com/doc/20190113154347.png)
 
 
 加 4个 1x2 平行线
 
 
-
-
-
-
-
-
-
-
+![](http://pic.airijia.com/doc/20190113154434.png)
 
 
 完成
+
+![](http://pic.airijia.com/doc/20190113154517.png)
+
+
 
 
 
