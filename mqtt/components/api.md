@@ -20,9 +20,15 @@ api:
 
 
 
-## `homeassistant.service` Action
+## 动作
 
-使用[自动化](mqtt/guides/automations)组件，调用中枢的服务，效果等同中枢 8123 里面的  `CALL SERVICE`
+配合 [自动化](mqtt/guides/automations) 的动作
+
+
+### homeassistant.service
+
+
+调用中枢的服务，效果等同中枢 8123 里面的  `CALL SERVICE`
 
 
 ```yaml
@@ -47,7 +53,7 @@ on_...:
 
 **配置项**
 
-- **service** (**Required**, 字符串): The Home Assistant [Service](https://www.home-assistant.io/docs/scripts/service-calls/) to call.
-- **data** (*选填*, 映射): Optional *static* data to pass along with the service call.
-- **data_template** (*选填*, 映射): Optional template data to pass along with the service call. This is evaluated on the Home Assistant side with Home Assistant’s templating engine.
-- **variables** (*选填*, 映射): Optional variables that can be used in the `data_template`. Values are [lambdas](https://esphomelib.com/esphomeyaml/guides/automations.html#config-lambda) and will be evaluated before sending the request.
+- **service** (**Required**, 字符串): 要调用的 [Service](ctl/scripts/service-calls)
+- **data** (*选填*, 映射): 传递的静态参数
+- **data_template** (*选填*, 映射): 传递的模板化参数，语法结构依照 Hass 模板引擎，参考 [Service](ctl/scripts/service-calls)
+- **variables** (*选填*, 映射): 使用 [lambdas 表达式] 语法定义的可选变量，供 `data_template` 调用 
