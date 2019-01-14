@@ -171,6 +171,7 @@ MQTT 定制固件的功能有可以通过两种方式使用
 -  [GPIO/物理开关](mqtt/components/binary_sensor/gpio)
 -  [连接状态](mqtt/components/binary_sensor/status)
 
+
 ## 开关
 
 -  [开关核心组件](mqtt/components/switch/)
@@ -207,7 +208,16 @@ MQTT 定制固件的功能有可以通过两种方式使用
 -  [MY9231/MY9291 LED 灯泡](mqtt/components/light/my9231)
 
 
+## 文本传感器
 
+-  [文本传感器核心组件](mqtt/components/text_sensor/)
+-  [MQTT 订阅传感器](mqtt/components/text_sensor/mqtt_subscribe)
+
+
+
+## 显示屏
+-  [显示屏核心组件](mqtt/components/display/)
+-  [SSD1306 OLED 显示屏](mqtt/components/display/ssd1306_i2c)
 
 <!-- ## 风扇
 
