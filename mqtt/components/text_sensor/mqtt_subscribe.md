@@ -30,8 +30,7 @@ text_sensor:
 
 
 以 [自制 OLED 显示温湿度计](diy/nodemcu/lego#进阶使用1) 为例
-
-这个固件会向 MQTT 发布两条信息，分别是温度 `666/sensor/temperature/state` 和湿度 `666/sensor/humidity/state` 的值
+主题发布的结构是 **主机名/设备类型/设备ID/state**，666这个固件会向 MQTT 发布两条信息，分别是温度 `666/sensor/temperature/state` 和湿度 `666/sensor/humidity/state` 的值
 
 ```yaml
 airi:
@@ -80,9 +79,8 @@ display:
     topic: 666/sensor/temperature/state
 ```
 
-主题发布的结构是 **主机名/设备类型/ID/state**，666下属的温度计即为 `666/sensor/temperature/state`
 
-订阅此主题，使用 ID `temperature` 标识
+订阅主题 `666/sensor/temperature/state`，使用 ID `temperature` 标识
 
 
 ### 配置显示屏
