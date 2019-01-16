@@ -161,8 +161,8 @@ MQTT 定制固件的功能有可以通过两种方式使用
 
 
 -  [软件逻辑传感器](mqtt/components/light/)
--  [运行时间](mqtt/components/light/)
--  [WiFi 信号强度](mqtt/components/light/) -->
+-  [运行时间](mqtt/components/light/)-->
+-  [WiFi 信号强度](mqtt/components/sensor/wifi_signal) 
 
 
 ## 二进制传感器

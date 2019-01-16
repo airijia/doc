@@ -1,14 +1,16 @@
-# 中枢文本
+# 中枢数值传感器
 
-从 airi 或 hass 等中枢获取指定设备的值，本功能依赖于 [原生 API](mqtt/components/api)
+从 airi 或 hass 等中枢获取指定设备的数值，本功能依赖于 [原生 API](mqtt/components/api)
+
+?> 这个组件只能获取数值，如果想获取任意类型的文本，需要使用 [中枢文本传感器](mqtt/components/text_sensor/homeassistant)
 
 
 ```yaml
 # 配置示例
-text_sensor:
+sensor:
   - platform: homeassistant
-    name: "Weather Forecast From Home Assistant"
-    entity_id: sensor.weather_forecast
+    name: "Temperature Sensor From Home Assistant"
+    entity_id: sensor.temperature_sensor
 ```
 
 ## **配置项**

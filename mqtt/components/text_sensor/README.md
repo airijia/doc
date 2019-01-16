@@ -17,7 +17,7 @@ icon: "mdi:water-percent"
 - **name** (**必填**, 字符串): 传感器名称
 - **icon** (*选填*, 图标): 自定义显示图标
 
-<!-- **自动化**
+**自动化**
 
 - **on_value** (*选填*, [自动化](mqtt/guides/automations)): [在指定值触发](#on_value)
 
@@ -61,4 +61,4 @@ text_sensor:
   // For example, create a custom log message when a value is received:
   std::字符串 val = id(my_sensor).state;
   ESP_LOGI("main", "Value of my sensor: %s", val.c_str());
-  ``` -->
+  ```

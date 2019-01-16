@@ -1,21 +1,23 @@
-# 中枢API
+# 原生 API
 
-!> 需 airi > 0.3.0 或 hass > 0.85.3
+!> 本功能需 airi > 0.3.0 或 hass > 0.85.3
 
-用来替代简单自动发现的集成 API，更快更高效更稳定
+用来替代简单自动发现的集成 API，更快更高效更稳定。工作原理是在节点的固件上运行 API 服务，中枢发现后可连入，省略了 MQTT 的服务配置
 
 
 ```yaml
 # 配置示例
 api:
+  port: 6053
   password: 'MyPassword'
+  reboot_timeout: 5min
 ```
 
 **配置参数**
 
-- **port** (*选填*, 整数): 中枢 API 使用的端口，默认为 `6053`
-- **password** (*选填*, 字符串): 中枢 API 使用的密码，默认为无密码
-- **reboot_timeout** (*选填*, [时长](mqtt/guides/configuration-types#时长)): 持续的无法连接中枢 API转发器时，节点会在设置的时长后重启。默认 `5min`，设置成 `0s` 将禁用此功能
+- **port** (*选填*, 整数): API 服务使用的端口，默认为 `6053`
+- **password** (*选填*, 字符串): API 服务使用的密码，默认无密码
+- **reboot_timeout** (*选填*, [时长](mqtt/guides/configuration-types#时长)): 持续的没有连接连入到此节点上的 API 服务时，节点将在设置的时长后重启。默认 `5min`，设置成 `0s` 将禁用此功能
 - **id** (*选填*, [ID](mqtt/guides/configuration-types#id)): 本组件的 ID
 
 
