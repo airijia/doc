@@ -647,6 +647,14 @@ font:
   - file: "roboto.ttf"
     id: font_32
     size: 32
+# 图标
+image:
+  - file: "mdi/thermometer.png"
+    id: thermometer
+    resize: 32x32
+  - file: "mdi/water-percent.png"
+    id: water
+    resize: 32x32
 # OLED
 display:
   - platform: ssd1306_i2c
@@ -654,9 +662,13 @@ display:
     address: 0x3C
     update_interval: 1s
     lambda: >-
-      it.printf(20, 16, id(font_32), "%.1f°", id(temperature).raw_state);
-      it.printf(20, 48, id(font_32), "%.1f%%", id(humidity).raw_state);
+      it.image(0, 0, id(thermometer));
+      it.printf(32, 16, id(font_32), "%.1f°", id(temperature).raw_state);
+      it.image(0, 32, id(water));
+      it.printf(32, 48, id(font_32), "%.1f%%", id(humidity).raw_state);
 ```
+
+
 
 ### 配置字体
 
@@ -664,6 +676,14 @@ display:
 
 
 更详细的使用，参考 [字体](mqtt/components/display/#字体) 
+
+
+### 配置图标
+
+使用 thermometer 和 water-percent 两个图标，并重新设置大小为 32x32
+
+
+更详细的使用，参考 [图标](mqtt/components/display/#图标) 
 
 ### 配置显示屏
 
@@ -675,8 +695,10 @@ display:
 
 
 
-
-
+```c++
+it.image(0, 0, id(thermometer));
+```
+在坐标 0,0 处（屏幕左上角）显示 `thermometer` 图标
 
 ```c++
 it.printf(20, 0, id(font_32), "%.1f°", id(temperature).raw_state);
@@ -802,6 +824,126 @@ it.printf(64, 40, id(font_48), TextAlign::CENTER, "%.1f°", id(temperature).raw_
 
 更详细的用法，参考 [SSD1306 OLED I2C显示屏](mqtt/components/display/ssd1306_i2c)  和 [显示屏核心组件](mqtt/components/display/) 
 
+
+
+## 进阶使用3
+
+获取中枢里面的传感器的状态，比如人体动作传感器，当此传感器处于激活时，暂停温度的显示，显示动作激活图标，反之则正常显示温度
+
+
+```yaml
+# ... 基本五大件略过
+
+# I²C
+i2c:
+  sda: D2
+  scl: D1
+  scan: False
+# SHT30
+sensor:
+  - platform: sht3xd
+    temperature:
+      name: "Living Room Temperature"
+      id: temperature
+    humidity:
+      name: "Living Room Humidity"
+      id: humidity
+    address: 0x44
+    update_interval: 1s
+# 文本传感器
+text_sensor:
+  - platform: homeassistant
+    # name: "Temperature Sensor From Home Assistant"
+    entity_id: binary_sensor.motion_sensor_158d0001c21c68
+    id: motion
+# 字体
+font:
+  - file: "roboto.ttf"
+    id: font_32
+    size: 32
+# 图标
+image:
+  - file: "mdi/thermometer.png"
+    id: thermometer
+    resize: 32x32
+  - file: "mdi/water-percent.png"
+    id: water
+    resize: 32x32
+  # 启用 run 图标
+  - file: "mdi/run.png"
+    id: run
+    resize: 64x64
+# OLED
+display:
+  - platform: ssd1306_i2c
+    model: "SSD1306 128x64"
+    address: 0x3C
+    update_interval: 1s
+    lambda: >-
+      if (id(motion).state == 'on') {
+        it.image(32, 0, id(run));
+      } else {
+        it.image(0, 0, id(thermometer));
+        it.printf(32, 16, id(font_32), "%.1f°", id(temperature).raw_state);
+        it.image(0, 32, id(water));
+        it.printf(32, 48, id(font_32), "%.1f%%", id(humidity).raw_state);
+      }
+```
+
+与 [进阶使用1](#进阶使用1) 相同的部分略过...
+
+### 获取中枢传感器状态
+
+中枢 8123 端口界面中的 **开发者工具 - 状态** 找到需要使用的人体传感器
+
+![](http://pic.airijia.com/doc/20190118160323.png)
+
+如图所示的 `binary_sensor.motion_sensor_158d0001c21c68` 就是人体传感器的 **entity_id**
+
+
+```yaml
+text_sensor:
+  - platform: homeassistant
+    entity_id: binary_sensor.motion_sensor_158d0001c21c68
+    id: motion
+```
+
+使用 [中枢文本传感器组件](mqtt/components/text_sensor/homeassistant) 获取 **binary_sensor.motion_sensor_158d0001c21c68** 这个 **entity_id** 对应的 **state** ，字符串格式，激活时为 `on`，休眠时为 `off`
+
+
+
+### 定义动作图标
+
+
+```yaml
+# 图标
+image:
+  - file: "mdi/run.png"
+    id: run
+    resize: 64x64
+```
+
+使用图标 `run`，设置大小为 64x64。如果觉得动感不够，可以用 **run-fast.png**
+
+### 判断状态并选择输出数据
+
+
+```c++
+      if (id(motion).state == 'on') {
+        it.image(32, 0, id(run));
+      } else {
+        // ... 同进阶使用1
+      }
+```
+
+当 motion 的值为 `on` 时，在坐标 32,0 处（图标是 64x64，这样等同于居中显示）显示图标 **run**，不为 `on` 时，显示温湿度数据
+
+更详细的用法，参考 [中枢文本传感器组件](mqtt/components/text_sensor/homeassistant)， [SSD1306 OLED I2C显示屏](mqtt/components/display/ssd1306_i2c)  和 [显示屏核心组件](mqtt/components/display/) 
+
+
+<!-- ## 进阶使用4
+
+搭配天气预报，多图标综合 -->
 
 ## 相关链接
 
