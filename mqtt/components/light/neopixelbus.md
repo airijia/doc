@@ -18,20 +18,20 @@ light:
 
 **Base Options:**
 
-- **name** (**Required**, string): The name of the light.
-- **gamma_correct** (*Optional*, float): The [gamma correction factor](https://en.wikipedia.org/wiki/Gamma_correction) for the light. Defaults to `2.8`.
-- **id** (*Optional*, [ID](https://esphomelib.com/esphomeyaml/guides/configuration-types.html#config-id)): Manually specify the ID used for code generation.
-- **color_correct** (*Optional*, list of percentages): The color correction for each channel. This denotes the maximum brightness of the red, green, blue[, white] channel. Defaults to `color_correct: [100%, 100%, 100%]`.
-- **default_transition_length** (*Optional*, [Time](https://esphomelib.com/esphomeyaml/guides/configuration-types.html#config-time)): The length of the transition if no transition parameter is provided by Home Assistant. Defaults to `1s`.
-- **power_supply** (*Optional*, [ID](https://esphomelib.com/esphomeyaml/guides/configuration-types.html#config-id)): The [Power Supply Component](https://esphomelib.com/esphomeyaml/components/power_supply.html) to connect to this light. When the light is turned on, the power supply will automatically be switched on too.
-- **effects** (*Optional*, list): A list of [light effects](https://esphomelib.com/esphomeyaml/components/light/index.html#light-effects) to use for this light.
+- **name** (**Required**, 字符串): The name of the light.
+- **gamma_correct** (*选填*, float): The [gamma correction factor](https://en.wikipedia.org/wiki/Gamma_correction) for the light. Defaults to `2.8`.
+- **id** (*选填*, [ID](https://esphomelib.com/esphomeyaml/guides/configuration-types.html#config-id)): Manually specify the ID used for code generation.
+- **color_correct** (*选填*, list of percentages): The color correction for each channel. This denotes the maximum brightness of the red, green, blue[, white] channel. Defaults to `color_correct: [100%, 100%, 100%]`.
+- **default_transition_length** (*选填*, [Time](https://esphomelib.com/esphomeyaml/guides/configuration-types.html#config-time)): The length of the transition if no transition parameter is provided by Home Assistant. Defaults to `1s`.
+- **power_supply** (*选填*, [ID](https://esphomelib.com/esphomeyaml/guides/configuration-types.html#config-id)): The [Power Supply Component](https://esphomelib.com/esphomeyaml/components/power_supply.html) to connect to this light. When the light is turned on, the power supply will automatically be switched on too.
+- **effects** (*选填*, list): A list of [light effects](https://esphomelib.com/esphomeyaml/components/light/index.html#light-effects) to use for this light.
 - All other options from [MQTT Component](https://esphomelib.com/esphomeyaml/components/mqtt.html#config-mqtt-component).
 
 **Type Options:**
 
-- **type** (*Optional*, string): The type of light. This is used to specify if it is an RGBW or RGB light and in which order the colors are. Defaults to `GRB`. Change this if you have lights with white value and/or the colors are in the wrong order.
+- **type** (*选填*, 字符串): The type of light. This is used to specify if it is an RGBW or RGB light and in which order the colors are. Defaults to `GRB`. Change this if you have lights with white value and/or the colors are in the wrong order.
 
-- variant(Optional, string): The chipset variant. You can read more about thesehere
+- variant(Optional, 字符串): The chipset variant. You can read more about thesehere
 (some of the info on that page is not entirely correct). One of these values:
   - `800KBPS` (default)
   - `400KBPS`
@@ -40,7 +40,7 @@ light:
   - `WS2813` (same as `WS2812X`)
   - `WS2812` (same as `800KBPS`)
   - `LC8812` (same as `SK6812`)
-- method(Optional, string): The method to transmit the data with. You can read more about these here:ESP32,ESP8266
+- method(Optional, 字符串): The method to transmit the data with. You can read more about these here:ESP32,ESP8266
   - `ESP8266_DMA` (default for ESP8266)
   - `ESP8266_UART0`
   - `ESP8266_UART1`

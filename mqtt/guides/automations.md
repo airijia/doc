@@ -117,51 +117,44 @@ Templates (Lambdas)
 
 ## 所有触发器
 
-- [mqtt.on_message](mqtt/components/mqtt#on_message)
-- [sensor.on_value](mqtt/components/sensor/#on_value)
-- [sensor.on_value_range](mqtt/components/sensor/#on_value_range)
-- [sensor.on_raw_value](mqtt/components/sensor/#on_raw_value)
-- [binary_sensor.on_press](mqtt/components/binary_sensor/#on_press)
-- [binary_sensor.on_release](mqtt/components/binary_sensor/#on_release)
-- [binary_sensor.on_click](mqtt/components/binary_sensor/#on_click)
-- [binary_sensor.on_double_click](mqtt/components/binary_sensor/#on_double_click)
-- [airi.on_boot](mqtt/components/airi#on_boot)
-- [airi.on_shutdown](mqtt/components/airi#on_shutdown)
-- [airi.on_loop](mqtt/components/airi#on_loop)
-
-
-
-
-
-
-
+- [mqtt.on_message](mqtt/components/mqtt#on_message) / [mqtt.on_message](mqtt/components/mqtt#on_json_message)
+- [sensor.on_value](mqtt/components/sensor/#on_value) / [sensor.on_value_range](mqtt/components/sensor/#on_value_range) / [sensor.on_raw_value](mqtt/components/sensor/#on_raw_value)
+- [binary_sensor.on_press](mqtt/components/binary_sensor/#on_press) / [binary_sensor.on_release](mqtt/components/binary_sensor/#on_release) / [binary_sensor.on_state](mqtt/components/binary_sensor/#on_state) / [binary_sensor.on_click](mqtt/components/binary_sensor/#on_click) / [binary_sensor.on_double_click](mqtt/components/binary_sensor/#on_double_click) / [binary_sensor.on_multi_click](mqtt/components/binary_sensor/#on_multi_click)
+- [airi.on_boot](mqtt/components/airi#on_boot) / [airi.on_shutdown](mqtt/components/airi#on_shutdown) / [airi.on_loop](mqtt/components/airi#on_loop)
+<!-- pn532.on_tag -->
+<!-- time.on_time -->
+- [time.on_time](mqtt/components/time#on_time) 
+<!-- interval.interval -->
 
 
 ## 所有动作
 
+
 - [delay](#delay)
 - [lambda](#lambda)
-- [if](#if)
-- [mqtt.publish](mqtt/components/mqtt#mqttpublish)
-- [switch.toggle](mqtt/components/switch/#switchtoggle)
-- [switch.turn_off](mqtt/components/switch/#switchturn_off)
-- [switch.turn_on](mqtt/components/switch/#switchturn_on)
-- [light.toggle](mqtt/components/light/#lighttoggle)
-- [light.turn_on](mqtt/components/light/#lightturn_on)
-- [light.turn_off](mqtt/components/light/#lightturn_off)
+- [if](#if) / [while](#while)
+<!-- component.update -->
+<!-- script.execute / script.stop -->
+<!-- logger.log -->
+<!-- homeassistant.service -->
+- [mqtt.publish](mqtt/components/mqtt#mqttpublish) / [mqtt.publish](mqtt/components/mqtt#mqttpublish_json) 
+- [switch.toggle](mqtt/components/switch/#switchtoggle) / [switch.turn_off](mqtt/components/switch/#switchturn_off) / [switch.turn_on](mqtt/components/switch/#switchturn_on)
+- [light.toggle](mqtt/components/light/#lighttoggle) / [light.turn_on](mqtt/components/light/#lightturn_on) /[light.turn_off](mqtt/components/light/#lightturn_off)
+<!-- cover.open / cover.close / cover.stop -->
+<!-- fan.toggle / fan.turn_off / fan.turn_on -->
+- [output.turn_off](mqtt/components/output/#outputturn_off) / [output.turn_on](mqtt/components/output/#outputturn_on) / [output.set_level](mqtt/components/output/#outputset_level)
+<!-- deep_sleep.enter / deep_sleep.prevent -->
 
-<!-- - [cover.open]
-- [cover.close]
-- [cover.stop]
-- [fan.toggle]
-- [fan.turn_off]
-- [fan.turn_on] -->
-- [output.turn_off](mqtt/components/output/#outputturn_off)
-- [output.turn_on](mqtt/components/output/#outputturn_on)
-- [output.set_level](mqtt/components/output/#outputset_level)
 
-<!-- - [deep_sleep.enter]
-- [deep_sleep.prevent] -->
+
+## 所有条件
+
+[lambda]
+and / or
+binary_sensor.is_on / binary_sensor.is_off
+switch.is_on / switch.is_off
+sensor.in_range
+
 
 
 ## 基本动作
