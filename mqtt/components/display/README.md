@@ -16,13 +16,13 @@
 比如使用 `mdi-walk` 这个图标，在 Hass 里面用来表示动作传感器无动作
 
 ```yaml
-# 文件名 `mdi/walk.png`，ID 使用 `walk`，原图尺寸是 256x256，设置显示为 `32x32`
+# 文件名 `mdi/walk`，ID 使用 `walk`，原图尺寸是 256x256，设置显示为 `32x32`
 image:
-  - file: "mdi/walk.png"
+  - file: "mdi/walk"
     id: walk
     resize: 32x32
 display:
-    ... 其他设置
+    # ... 其他设置
 
     lambda: >-
       it.image(0, 0, id(walk));
