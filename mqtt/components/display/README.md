@@ -10,15 +10,21 @@
 ## 图标
 
 
-[mdi 图标](https://materialdesignicons.com/)
-[mdi 图标列表](https://cdn.materialdesignicons.com/3.3.92/)
 
-比如使用 `mdi-walk` 这个图标，在 Hass 里面用来表示动作传感器无动作
+
+
+- [中枢常用图标](https://cdn.rawgit.com/james-fry/home-assistant-mdi/efd95d7a/home-assistant-mdi.html)
+- [mdi 所有图标列表](https://cdn.materialdesignicons.com/3.3.92/)
+- [mdi 图标](https://materialdesignicons.com/)
+
+比如使用 `mdi:walk` 这个图标，在 Hass 里面用来表示动作传感器无动作
+
+?> mdi:walk，mdi-walk，mdi/walk 这三种引用方法都可以使用
 
 ```yaml
-# 文件名 `mdi/walk`，ID 使用 `walk`，原图尺寸是 256x256，设置显示为 `32x32`
+# 图标名 `mdi:walk`，ID 使用 `walk`，原图尺寸是 256x256，设置显示为 `32x32`
 image:
-  - file: "mdi/walk"
+  - file: "mdi:walk"
     id: walk
     resize: 32x32
 display:
