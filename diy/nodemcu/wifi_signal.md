@@ -5,12 +5,12 @@
 在智能家居的部署实践中，有一个不大不小的困扰，就是如何得知某个位置的 WiFi 信号如何。常见方法是用手机等移动设备测试，但智能家居尤其是 DIY 产品经常需要塞到某些小角落或者比较高的位置，这类情况下一款小型便携的 WiFi 信号探测仪会是个好帮手
 
 
-![](http://pic.airijia.com/doc/20190120161957.png)
+![](http://pic.airijia.com/doc/20190120175201.png)
 
-显示 WiFi 信号 强度（颜色不均是拍摄原因）
+显示 WiFi 信号 强度
 
 
-![](http://pic.airijia.com/doc/20190120162119.png)
+![](http://pic.airijia.com/doc/20190120175220.png)
 
 尚未连接到 WiFi 时的显示
 
@@ -218,6 +218,7 @@ airi:
 wifi:
   ssid: 'wangluo'
   password: 'mima'
+  fast_connect: True
   id: wifi
 api:
   reboot_timeout: 0s
@@ -308,7 +309,7 @@ display:
 
 ### 配置图标
 
-使用多个表示不同 WiFi 信号强度的图标，具体名称见 [mdi 图标](https://materialdesignicons.com/)
+使用多个表示不同 WiFi 信号强度的图标，具体名称见 [mdi 图标列表](https://cdn.materialdesignicons.com/3.3.92/)
 
 更详细的使用，参考 [图标](mqtt/components/display/#图标)
 
@@ -320,8 +321,10 @@ int s;
 s = (int)id(wifi_signal).raw_state;
 ```
 
-定义整数 `s`，并将 **wifi_signal** **raw_state** 的值(浮点数) 转换为 int 后赋值给 **s**
-WiFi的信号强度是负值，越接近于 0 则信号强度越大
+定义整数 `s`，并将 **wifi_signal** 的值 **raw_state** (浮点数) 转换为整数后赋值给 **s**
+
+
+WiFi 信号强度是负值，越接近于 0 则信号强度越大
 
 
 ```c++
