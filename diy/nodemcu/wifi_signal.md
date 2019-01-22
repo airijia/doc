@@ -240,22 +240,22 @@ font:
     size: 48
 # 图标
 image:
-  - file: "mdi/wifi-strength-off-outline"
+  - file: "mdi-wifi-strength-off-outline"
     id: strength_off
     resize: 16x16
-  - file: "mdi/wifi-strength-outline"
+  - file: "mdi-wifi-strength-outline"
     id: strength0
     resize: 16x16
-  - file: "mdi/wifi-strength-1"
+  - file: "mdi-wifi-strength-1"
     id: strength1
     resize: 16x16
-  - file: "mdi/wifi-strength-2"
+  - file: "mdi-wifi-strength-2"
     id: strength2
     resize: 16x16
-  - file: "mdi/wifi-strength-3"
+  - file: "mdi-wifi-strength-3"
     id: strength3
     resize: 16x16
-  - file: "mdi/wifi-strength-4"
+  - file: "mdi-wifi-strength-4"
     id: strength4
     resize: 16x16
 i2c:

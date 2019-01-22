@@ -649,10 +649,10 @@ font:
     size: 32
 # 图标
 image:
-  - file: "mdi/thermometer.png"
+  - file: "mdi:thermometer.png"
     id: thermometer
     resize: 32x32
-  - file: "mdi/water-percent.png"
+  - file: "mdi:water-percent.png"
     id: water
     resize: 32x32
 # OLED
@@ -863,14 +863,14 @@ font:
     size: 32
 # 图标
 image:
-  - file: "mdi/thermometer.png"
+  - file: "mdi:thermometer.png"
     id: thermometer
     resize: 32x32
-  - file: "mdi/water-percent.png"
+  - file: "mdi:water-percent.png"
     id: water
     resize: 32x32
   # 启用 run 图标
-  - file: "mdi/run.png"
+  - file: "mdi:run.png"
     id: run
     resize: 64x64
 # OLED
@@ -918,7 +918,7 @@ text_sensor:
 ```yaml
 # 图标
 image:
-  - file: "mdi/run.png"
+  - file: "mdi:run.png"
     id: run
     resize: 64x64
 ```
