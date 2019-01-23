@@ -22,6 +22,7 @@ switch:
   - platform: gpio
     pin: 25
     name: "Living Room Dehumidifier"
+    restore_mode: ALWAYS_ON
 ```
 
 ## 配置参数
@@ -30,7 +31,7 @@ switch:
 - **name** (**必填**, 字符串): 开关的名称
 - **id** (*选填*, [ID](mqtt/guides/configuration-types#id)): 开关的 ID
 - **restore_mode** (*选填*): 开关的初始状态，可选值有:
- - `RESTORE_DEFAULT_OFF` (默认): 尝试恢复断电前的状态，如果不能恢复，则设置状态为关闭
+ - `RESTORE_DEFAULT_OFF` (默认) : 尝试恢复断电前的状态，如果不能恢复，则设置状态为关闭
  - `RESTORE_DEFAULT_ON` : 尝试恢复断电前的状态，如果不能恢复，则设置状态为开启
  - `ALWAYS_OFF` : 无视旧状态，直接设置状态为关闭
  - `ALWAYS_ON` : 无视旧状态，直接设置状态为开启
