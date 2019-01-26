@@ -6,16 +6,36 @@
 
 
 ```yaml
-# 配置示例
+# 最简使用
 wifi:
   ssid: MyHomeNetwork
   password: VerySafePassword
 
-  # 设置成静态 IP
+# 常规使用
+wifi:
+  ssid: MyHomeNetwork
+  password: VerySafePassword
+  fast_connect : true
+  id: wifi
+
+# 设置成静态 IP
+wifi:
+  ssid: MyHomeNetwork
+  password: VerySafePassword
+  fast_connect : true
+  id: wifi
   manual_ip:
     static_ip: 192.168.1.66
     gateway: 192.168.1.1
     subnet: 255.255.255.0
+
+# 多个 WiFi
+wifi:
+  networks:
+  - ssid: FirstNetworkToConnectTo
+    password: VerySafePassword
+  - ssid: SecondNetworkToConnectTo
+    password: VerySafePassword
 ```
 
 ## 配置参数
@@ -34,10 +54,10 @@ wifi:
   - **password** (*选填*, 字符串): AP 的密码
   - **channel** (*选填*, 整数): AP 使用的信道，1 到 14，默认为1
   - **manual_ip** (*选填*): 手动设置 AP 的 IP 地址
-<!-- - **domain** (*选填*, 字符串): Set the domain of the node hostname used for uploading. For example, if it’s set to `.local`, all uploads will be sent to `<HOSTNAME>.local`. Defaults to `.local`. -->
-<!-- TODO: 对ota有什么影响么? -->
+- **domain** (*选填*, 字符串): 此节点的域名后缀，如果设置为 `.local`, 则所有上传数据会指向 `<HOSTNAME>.local`。默认为`.local`
 - **reboot_timeout** (*选填*, [时长](mqtt/guides/configuration-types#时长)): 没有可用的的 WiFi 时，节点会在设置的时间后重启。默认 `60s`，设置成 `0s` 禁用此功能 
 - **power_save_mode** (*选填*, 字符串): [节能模式](#节能模式)
+- **fast_connect** (*选填*, 布尔值): 如果开启 (true)，则固件启动的时候，跳过全局扫描的步骤直连连接指定的 WiFi，显著提高启动速度，并方便连接隐藏 WiFi。默认为 `false`，不开启
 - **id** (*选填*, [ID](mqtt/guides/configuration-types#id)): 用于逻辑识别的 ID
 
 
@@ -80,3 +100,28 @@ wifi:
   # ...
   power_save_mode: none
 ```
+
+
+## 多个 WiFi
+
+
+设置多个网络信息，固件启动时将选择信号最强的连入
+
+```yaml
+# 配置示例
+wifi:
+  networks:
+  - ssid: FirstNetworkToConnectTo
+    password: VerySafePassword
+  - ssid: SecondNetworkToConnectTo
+    password: VerySafePassword
+  # Other options
+  # ...
+```
+
+**配置参数**
+
+- **ssid** (字符串): 要连入的 WiFi 网络名称
+- **password** (字符串): 要连入的 WiFi 密码
+- **channel** (整数): 使用的信道，可用值 1 到 14
+- **bssid** (字符串): 指定 bssid 即目标路由的物理地址 (MAC) 

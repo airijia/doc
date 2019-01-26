@@ -2,6 +2,8 @@
 
 MQTT 固件的核心组件之一，将节点作为客户端连接到 MQTT 转发器(broker)，进而通过智能中枢（airijia/clt 或 Hass）控制
 
+!> 新版建议使用 [API 组件](mqtt/components/api)
+
 
 ```yaml
 # 配置示例

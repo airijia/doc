@@ -1,14 +1,17 @@
 # 原生 API
 
-!> 本功能需 airi > 0.3.0 或 hass > 0.85.3
+!> 本功能需 airi > 0.3 或 hass > 0.85
 
-用来替代简单自动发现的集成 API，更快更高效更稳定。工作原理是在节点的固件上运行 API 服务，中枢发现后可连入，省略了 MQTT 的服务配置
+用来替代简单自动发现的集成 API，更快更高效更稳定。工作原理是在节点的固件上运行 API 服务，中枢发现后可连入，省略了 MQTT 服务器
 
 
 ```yaml
-# 配置示例
+# 日常使用
 api:
-  port: 6053
+  reboot_timeout: 0s
+# 复杂使用
+api:
+  port: 6666
   password: 'MyPassword'
   reboot_timeout: 5min
 ```

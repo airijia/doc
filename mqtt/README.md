@@ -1,9 +1,8 @@
-本文档是爱睿家智能在线定制 MQTT 固件的使用说明
+本文档是爱睿家智能在线定制固件的使用说明
 
-云端编译用于 ESP8266/ESP32 系列芯片的智能家居固件，基于 MQTT 通信协议，零配置即可被智能中枢（airijia/ctl 或 Hass）自动发现，支持 OTA（Over The Air）网刷，
+云端编译用于 ESP8266/ESP32 系列芯片的智能家居固件，零配置即可被智能中枢（airijia/ctl 或 Hass）自动发现，支持 OTA（Over The Air）网刷
 
 **无需任何编程基础** 既可以定制出强大的固件功能
-
 
 ## 产品特性
 
@@ -15,50 +14,9 @@
 - **批量部署终端**：功能已全固化至固件，批量部署再也无需重复 N 次冗长的配置过程
 - **酷炫隔空网刷**：启动层构建的 OTA（Over The Air）网刷功能，无需连电脑即可刷入固件
 
-## 适配中枢
-
-### 爱睿家智能中枢（airijia/ctl）
-
-?> 免配置，自动发现，默认的用户名和密码为空，编译固件的时候都不用填
-
-
-### Hass 内置
-
-使用 Hass 内置的 [HBMQTT](https://www.home-assistant.io/docs/mqtt/broker#embedded-broker)
-
-在配置文件（通常为 configuration.yaml）增加如下内容
-
-```yaml
-# HBMQTT
-mqtt:
-  password: 123
-  discovery: true
-  discovery_prefix: airi
-```
-如上设置，编译固件时需要填入的 MQTT 用户名为 `homeassistant` (默认值)，密码为 `123`
-
-
-### Hass 外接
-
-以外接 Mosquitto 为例
-
-在配置文件（通常为 configuration.yaml）增加如下内容
-
-```yaml
-# Mosquitto
-mqtt:
-  broker: 127.0.0.1 # Mosquitto 服务器IP
-  # ... 其他 MQTT 配置
-  discovery: true
-  discovery_prefix: airi
-```
-
-如上设置，编译固件时需要填入的 MQTT 用户名和密码由 Mosquitto 配置决定，默认都为空
- 
-
 ## 基本使用
 
-MQTT 定制固件的功能有可以通过两种方式使用
+定制固件的功能有可以通过两种方式使用
 
 1. 在线使用，浏览器打开 [http://airijia.com/ctl/firmware/list](http://airijia.com/ctl/firmware/list) ，可使用除 OTA 之外的所有功能
 2. 智能中枢中使用，可使用包括 OTA 在内的全部功能
@@ -80,6 +38,7 @@ MQTT 定制固件的功能有可以通过两种方式使用
 - [上传模板文件创建](mqtt/guides/yaml)
 - [核心组件](mqtt/components/airi)
 - [WiFi 组件](mqtt/components/wifi)
+- [API 组件](mqtt/components/api)
 - [MQTT 组件](mqtt/components/mqtt)
 - [OTA 组件](mqtt/components/ota)
 - [日志组件](mqtt/components/logger)
@@ -246,3 +205,47 @@ MQTT 定制固件的功能有可以通过两种方式使用
 
 
 <!-- ## 红外 -->
+
+
+
+
+##  适配 airi
+
+在爱睿家智能中枢 (airijia/ctl) 中使用
+
+点击 **设备 - DIY 设备** ，点击已被自动发现的设备后的 载入
+
+![](http://pic.airijia.com/doc/20190126163048.png)
+
+出现 **entity_id**，表示已经载入
+
+![](http://pic.airijia.com/doc/20190126163157.png)
+
+
+!> 设备已经刷好固件，但 DIY 设备列表中没有显示
+
+
+直接点击 **添加 DIY 设备**，输入目标设备的 hostname 添加
+
+![](http://pic.airijia.com/doc/20190126163246.png)
+
+
+##  适配 hass
+
+在 Hass 中枢 (Home assistant) 中使用
+
+点击 **配置 - 集成**
+
+![](http://pic.airijia.com/doc/20190126162531.png)
+
+
+点击 **已发现 - ESPHome - 配置** 
+
+![](http://pic.airijia.com/doc/20190126162559.png)
+
+!> 设备已经刷好固件，但发现中没有显示
+
+输入正确的 Host (.local如果不能识别就换成 .lan，如果还不行换成 IP ) 和端口(通常默认 6053，不用改)，然后SUBMIT
+
+![](http://pic.airijia.com/doc/20190126162652.png)
+

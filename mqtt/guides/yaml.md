@@ -6,7 +6,11 @@ MQTT 由基本功能和扩展功能两大部分构成
 
 ## 添加基本功能
 
-基本的网络，调试和升级功能，由 [核心](mqtt/components/airi)，[WiFi](mqtt/components/wifi)，[MQTT](mqtt/components/mqtt)，[OTA](mqtt/components/ota) 和 [日志](mqtt/components/logger) 合计五个组件构成
+基本的网络，调试和升级功能，由 [核心](mqtt/components/airi)，[WiFi](mqtt/components/wifi)，[API](mqtt/components/api)，[MQTT](mqtt/components/mqtt)，[OTA](mqtt/components/ota) 和 [日志](mqtt/components/logger) 合计六个组件构成
+
+
+!> 除特殊需求外，通常 API 和 MQTT 二选一即可
+
 
 配置示例，`拼音`的部分需要替换成实际的参数
 
@@ -20,9 +24,10 @@ airi:
 wifi:
   ssid: 'wangluo'
   password: 'mima'
-
-mqtt:
-  broker: 'dizhi'
+  fast_connect: true
+# 0.85 以后的版本才能支持
+api:
+  reboot_timeout: 0s
 
 ota:
 
