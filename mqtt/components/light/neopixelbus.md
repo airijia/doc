@@ -18,7 +18,7 @@ light:
 
 **Base Options:**
 
-- **name** (**Required**, 字符串): The name of the light.
+- **name** (**必填**, 字符串): The name of the light.
 - **gamma_correct** (*选填*, float): The [gamma correction factor](https://en.wikipedia.org/wiki/Gamma_correction) for the light. Defaults to `2.8`.
 - **id** (*选填*, [ID](https://esphomelib.com/esphomeyaml/guides/configuration-types.html#config-id)): Manually specify the ID used for code generation.
 - **color_correct** (*选填*, list of percentages): The color correction for each channel. This denotes the maximum brightness of the red, green, blue[, white] channel. Defaults to `color_correct: [100%, 100%, 100%]`.
@@ -50,11 +50,11 @@ light:
   - `ESP32_I2S_1` (default for ESP32)
   - `BIT_BANG`
 
-- **num_leds** (**Required**, int): The number of LEDs attached.
+- **num_leds** (**必填**, int): The number of LEDs attached.
 **Pin Options:** Some chipsets have two data pins to connect, others only have one. If you have one line, only specify `pin`, otherwise specify both `clock_pin` and `data_pin`.
-- **pin** (**Required**, [Pin](https://esphomelib.com/esphomeyaml/guides/configuration-types.html#config-pin)): The pin for the data line of the light.
-- **clock_pin** (**Required**, [Pin](https://esphomelib.com/esphomeyaml/guides/configuration-types.html#config-pin)): The pin for the clock line of the light, for two-pin lights.
-- **data_pin** (**Required**, [Pin](https://esphomelib.com/esphomeyaml/guides/configuration-types.html#config-pin)): The pin for the data line of the light, for two-pin lights.
+- **pin** (**必填**, [Pin](https://esphomelib.com/esphomeyaml/guides/configuration-types.html#config-pin)): The pin for the data line of the light.
+- **clock_pin** (**必填**, [Pin](https://esphomelib.com/esphomeyaml/guides/configuration-types.html#config-pin)): The pin for the clock line of the light, for two-pin lights.
+- **data_pin** (**必填**, [Pin](https://esphomelib.com/esphomeyaml/guides/configuration-types.html#config-pin)): The pin for the data line of the light, for two-pin lights.
 
 ## See Also
 

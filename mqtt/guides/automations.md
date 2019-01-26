@@ -106,6 +106,7 @@ dht11 温度
 
 
 ## Lambda 表达式
+
 Templates (Lambdas)
 
 使用模板化功能，几乎可以实现所有
@@ -113,6 +114,11 @@ Templates (Lambdas)
 匿名函数
 
 互锁或者调光
+
+### Lambda 动作
+
+
+### Lambda 条件
 
 
 ## 所有触发器
@@ -122,21 +128,20 @@ Templates (Lambdas)
 - [binary_sensor.on_press](mqtt/components/binary_sensor/#on_press) / [binary_sensor.on_release](mqtt/components/binary_sensor/#on_release) / [binary_sensor.on_state](mqtt/components/binary_sensor/#on_state) / [binary_sensor.on_click](mqtt/components/binary_sensor/#on_click) / [binary_sensor.on_double_click](mqtt/components/binary_sensor/#on_double_click) / [binary_sensor.on_multi_click](mqtt/components/binary_sensor/#on_multi_click)
 - [airi.on_boot](mqtt/components/airi#on_boot) / [airi.on_shutdown](mqtt/components/airi#on_shutdown) / [airi.on_loop](mqtt/components/airi#on_loop)
 <!-- pn532.on_tag -->
-<!-- time.on_time -->
 - [time.on_time](mqtt/components/time#on_time) 
-<!-- interval.interval -->
+- [interval.interval](#interval) 
 
 
 ## 所有动作
 
 
 - [delay](#delay)
-- [lambda](#lambda)
+- [lambda](#lambda-动作)
 - [if](#if) / [while](#while)
-<!-- component.update -->
-<!-- script.execute / script.stop -->
-<!-- logger.log -->
-<!-- homeassistant.service -->
+- [component.update](#componentupdate)
+- [script.execute](#scriptexecute) / [script.stop](#scriptstop)
+- [logger.log](mqtt/components/logger#loggerlog)
+- [homeassistant.service](mqtt/components/api#homeassistantservice)
 - [mqtt.publish](mqtt/components/mqtt#mqttpublish) / [mqtt.publish](mqtt/components/mqtt#mqttpublish_json) 
 - [switch.toggle](mqtt/components/switch/#switchtoggle) / [switch.turn_off](mqtt/components/switch/#switchturn_off) / [switch.turn_on](mqtt/components/switch/#switchturn_on)
 - [light.toggle](mqtt/components/light/#lighttoggle) / [light.turn_on](mqtt/components/light/#lightturn_on) /[light.turn_off](mqtt/components/light/#lightturn_off)
@@ -149,12 +154,11 @@ Templates (Lambdas)
 
 ## 所有条件
 
-[lambda]
-and / or
-binary_sensor.is_on / binary_sensor.is_off
-switch.is_on / switch.is_off
-sensor.in_range
-
+- [lambda](#lambda-动作)
+- [and](#and) / [or](#or)
+- [binary_sensor.is_on](mqtt/components/binary_sensor/#is_on) / [binary_sensor.is_off](mqtt/components/binary_sensor/#is_off)
+- [switch.is_on](mqtt/components/switch/#is_on) / [switch.is_off](mqtt/components/switch/#is_off)
+- [sensor.in_range](mqtt/components/sensor/#in_range)
 
 
 ## 基本动作
@@ -192,7 +196,7 @@ on_...:
 
 依据条件判断的结果的不同来执行不同的动作
 
-```
+```yaml
 # 当传感器 A 的值小于 30 时，点动开灯 5 秒，当传感器 A 的值大于等于 30 时，立即关灯
 on_...:
   then:
@@ -216,17 +220,41 @@ on_...:
 
 
 
+
+### while
+
+跟 [if](#if) 动作有点相像。**while** 的 **condition** 为 `True` 时，关联的动作将一直被执行，当 **condition** 变为 `False` 时，此系列动作即刻停止 
+
+```yaml
+# In a trigger:
+on_...:
+  - while:
+      condition:
+        binary_sensor.is_on: some_binary_sensor
+      then:
+        - logger.log: "Still executing"
+        - light.toggle: some_light
+        - delay: 5s
+```
+
+**配置参数**
+
+- **condition** (**必填**): 供判断用的条件
+- **then** (**必填**, [动作](mqtt/guides/automations#动作)): while 判断为否之前持续执行的动作
+
+
+
 ### component.update
 
-手新发出 `update()` 指令，获取组件状态
+手动发出 `update()` 指令，立即获取组件最新的状态，注意只可在少部分组件上工作
 
-
-```
+```yaml
 on_...:
   then:
+    # 常用方法
     - component.update: my_component
 
-    # The same as:
+    # 等效方法
     - lambda: 'id(my_component).update();'
 ```
 
@@ -234,10 +262,10 @@ on_...:
 
 ### script.execute
 
-定义一段脚本，方便代码复用，比如有多个不同的触发器执行相同的动作，此时不需要每次都定义动作，复用这段脚本即可
+定义一段脚本，方便代码复用，比如有多个不同的触发器执行相同的动作，此时不需要每次都定义动作，执行这个脚本即可
 
 
-```
+```yaml
 # 动作
 script:
   - id: my_script
@@ -256,6 +284,79 @@ on_...:
     - script.execute: my_script
 ```
 
+
+### script.stop
+
+停止自定义脚本的执行，如果此脚本并没有在执行
+
+!> 注意现在只有基本自带 **delay** 的情况下才可以被停止
+
+
+```yaml
+script:
+  - id: my_script
+    then:
+      - switch.turn_on: my_switch
+      # 必须有 delay
+      - delay: 1s
+      - switch.turn_off: my_switch
+
+# in a trigger:
+on_...:
+  then:
+    - script.stop: my_script
+```
+## 基本触发器
+
+### interval
+
+即时间间隔，方便执行循环动作的触发器，使用 [time.on_time](mqtt/components/time#on_time) 触发器可以实现同样的功能，但这个更便捷
+
+
+```yaml
+# 每隔 1 分钟切换 relay_1 
+interval:
+  - interval: 1min
+    then:
+      - switch.toggle: relay_1
+```
+
+- **interval** (**必填**, [时长](mqtt/guides/configuration-types#时长)): 循环动作的间隔
+- **then** (**必填**, [动作](mqtt/guides/automations#动作)): 执行的动作
+
+
+
+## 基本条件
+
+### and
+
+同时满足列出所有条件才判断为 `True`；如果任意一个条件为 `False`，则整体判断为 `False`
+
+```yaml
+on_...:
+  then:
+    - if:
+        condition:
+          and:
+            - binary_sensor.is_on: some_binary_sensor
+            - binary_sensor.is_on: other_binary_sensor
+        # ...
+```
+### or
+
+列出所有条件中的任意一项为 `True`时，整体也判断为 `True`；反之，如果全部 `False`，则整体判断为 `False`
+
+
+```yaml
+on_...:
+  then:
+    - if:
+        condition:
+          or:
+            - binary_sensor.is_on: some_binary_sensor
+            - binary_sensor.is_on: other_binary_sensor
+        # ...
+```
 
 
 

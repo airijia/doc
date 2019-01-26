@@ -16,7 +16,7 @@ status_led:
 
 ## Configuration variables:
 
-- **pin** (**Required**, [Pin Schema](https://esphomelib.com/esphomeyaml/guides/configuration-types.html#config-pin-schema)): The GPIO pin to operate the status LED on.
+- **pin** (**必填**, [Pin Schema](https://esphomelib.com/esphomeyaml/guides/configuration-types.html#config-pin-schema)): The GPIO pin to operate the status LED on.
 - **id** (*选填*, [ID](https://esphomelib.com/esphomeyaml/guides/configuration-types.html#config-id)): Manually specify the ID used for code generation.
 
 Note

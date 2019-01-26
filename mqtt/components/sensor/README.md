@@ -124,7 +124,11 @@ sensor:
 
 在指定区间内触发
 
-```
+如果只定义了一项，比如 `above: 5`，表示 从 5 到 +∞ 都将激活动作执行
+
+!> 注意，这个动作只会在从**区间外**变更至**区间内**时执行一次，比如从 4 度变为 6 度时执行一次。另外，重新启动时如果首个值在区间内也会执行动作
+
+```yaml
 sensor:
   - platform: dallas
     # ...
@@ -155,6 +159,33 @@ sensor:
             id: light_1
             red: !lambda "return x/255;"
 ```
+
+## 条件
+
+### in_range
+
+跟 [on_value_range](#on_value_range)触发器有点像，区别在这个用于条件判断，当传感器的值在定义区间内时，条件判断为 `True`
+
+如果只定义了一项，如下面案例 `above: 50.0`，表示 从 50 到 +∞ 都返回 `True`
+
+
+```yaml
+on_...:
+  if:
+    condition:
+      sensor.in_range:
+        id: my_sensor
+        above: 50.0
+    then:
+    - script.execute: my_script
+```
+
+**配置参数**
+
+- **above** (*选填*, 浮点数): 可触发的最小值
+- **below** (*选填*, 浮点数): 可触发的最大值
+
+
 
 
 ### lambda

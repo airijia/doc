@@ -98,3 +98,29 @@ some_config_option:
 
 
 
+## 替换变量
+
+供替换的全局变量，减少繁琐的复制黏贴工作量
+
+
+```yaml
+substitutions:
+  devicename: livingroom
+  upper_devicename: Livingroom
+
+airi:
+  name: $devicename
+  # ...
+
+sensor:
+- platform: dht
+  # ...
+  temperature:
+    name: $upper_devicename Temperature
+  humidity:
+    name: $upper_devicename Humidity
+```
+
+在需要替换的位置加入 `$substitution_key`，比如 `$devicename` 就是指在此处显示 **devicename** 对应的值 **livingroom**
+
+

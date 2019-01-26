@@ -140,6 +140,32 @@ binary_sensor:
 <!-- ### `on_multi_click` -->
 
 
+## 条件
+
+
+### is_on
+
+检查二进制传感器的值是否为 `ON`
+
+```yaml
+on_...:
+  if:
+    condition:
+      binary_sensor.is_on: my_binary_sensor
+```
+
+
+### is_off
+
+检查二进制传感器的值是否为 `OFF`
+
+```yaml
+on_...:
+  if:
+    condition:
+      binary_sensor.is_off: my_binary_sensor
+```
+
 
 ### lambda
 

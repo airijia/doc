@@ -58,7 +58,7 @@ on_...:
 
 **配置项**
 
-- **service** (**Required**, 字符串): 要调用的 [Service](ctl/scripts/service-calls)
+- **service** (**必填**, 字符串): 要调用的 [Service](ctl/scripts/service-calls)
 - **data** (*选填*, 映射): 传递的静态参数
 - **data_template** (*选填*, 映射): 传递的模板化参数，语法结构依照 Hass 模板引擎，参考 [Service](ctl/scripts/service-calls)
 - **variables** (*选填*, 映射): 使用 [lambdas 表达式] 语法定义的可选变量，供 `data_template` 调用 

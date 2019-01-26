@@ -22,6 +22,8 @@ switch:
 
 
 
+## 动作
+
 ### switch.toggle
 
 此动作用于切换指定 ID 开关的状态
@@ -56,6 +58,35 @@ on_...:
   then:
     - switch.turn_off: relay_1
 ```
+
+ ## 条件
+
+
+### is_on
+
+检查开关的状态是否为 `ON`
+
+
+```yaml
+on_...:
+  if:
+    condition:
+      switch.is_on: my_switc
+```
+
+### is_off
+
+检查开关的状态是否为 `OFF`
+
+
+```yaml
+on_...:
+  if:
+    condition:
+      switch.is_off: my_switc
+```
+
+
 
 ### 使用 lambda 表达式
 
