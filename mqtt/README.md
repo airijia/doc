@@ -31,6 +31,12 @@
 - [从其他固件迁移](mqtt/guides/migrate)
 
 
+- [适配 airi](#适配-airi)
+- [适配 hass](#适配-hass)
+
+
+
+
 
 
 ## 进阶使用

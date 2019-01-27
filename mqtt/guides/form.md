@@ -14,15 +14,20 @@
 
 ![](https://ws1.sinaimg.cn/large/007fN5Xegy1fww2t1m1exj30vj0dadg5.jpg)
 
-如果使用的爱睿家智能中枢（airjia/ctl），MQTT 服务器的地址与 ctl 的地址相同，端口是默认的 1883
+<!-- 如果使用的爱睿家智能中枢（airjia/ctl），MQTT 服务器的地址与 ctl 的地址相同，端口是默认的 1883 -->
 
-其他场景根据实际情况填写
+<!-- 其他场景根据实际情况填写 -->
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fww2wznn82j30tn0p1wf8.jpg)
+填入 WiFi 名称和密码
+
+![](http://pic.airijia.com/doc/20190127090824.png)
+<!-- ![](https://ws1.sinaimg.cn/large/007fN5Xegy1fww2wznn82j30tn0p1wf8.jpg)  -->
 
 核对信息无误后提交
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fww4ajd4jjj30jm0fbmxf.jpg)
+![](http://pic.airijia.com/doc/20190127091050.png)
+
+<!-- ![](https://ws1.sinaimg.cn/large/007fN5Xegy1fww4ajd4jjj30jm0fbmxf.jpg) -->
 
 固件模板创建成功，等待云端编译
 
