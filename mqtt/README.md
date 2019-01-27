@@ -217,7 +217,7 @@
 
 ##  适配 airi
 
-在爱睿家智能中枢 (airijia/ctl) 中使用
+在爱睿家智能中枢 (airijia/ctl) 中使用 (版本 > 0.3)
 
 点击 **设备 - DIY 设备** ，点击已被自动发现的设备后的 载入
 
@@ -238,7 +238,7 @@
 
 ##  适配 hass
 
-在 Hass 中枢 (Home assistant) 中使用
+在 Hass 中枢 (Home assistant) 中使用 (版本 > 0.85)
 
 点击 **配置 - 集成**
 
