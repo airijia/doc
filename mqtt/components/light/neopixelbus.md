@@ -22,7 +22,7 @@ light:
 - **gamma_correct** (*选填*, float): The [gamma correction factor](https://en.wikipedia.org/wiki/Gamma_correction) for the light. Defaults to `2.8`.
 - **id** (*选填*, [ID](https://esphomelib.com/esphomeyaml/guides/configuration-types.html#config-id)): Manually specify the ID used for code generation.
 - **color_correct** (*选填*, list of percentages): The color correction for each channel. This denotes the maximum brightness of the red, green, blue[, white] channel. Defaults to `color_correct: [100%, 100%, 100%]`.
-- **default_transition_length** (*选填*, [Time](https://esphomelib.com/esphomeyaml/guides/configuration-types.html#config-time)): The length of the transition if no transition parameter is provided by Home Assistant. Defaults to `1s`.
+- **default_transition_length** (*选填*, [时长](mqtt/guides/configuration-types#时长)): The length of the transition if no transition parameter is provided by Home Assistant. Defaults to `1s`.
 - **power_supply** (*选填*, [ID](https://esphomelib.com/esphomeyaml/guides/configuration-types.html#config-id)): The [Power Supply Component](https://esphomelib.com/esphomeyaml/components/power_supply.html) to connect to this light. When the light is turned on, the power supply will automatically be switched on too.
 - **effects** (*选填*, list): A list of [light effects](https://esphomelib.com/esphomeyaml/components/light/index.html#light-effects) to use for this light.
 - All other options from [MQTT Component](https://esphomelib.com/esphomeyaml/components/mqtt.html#config-mqtt-component).

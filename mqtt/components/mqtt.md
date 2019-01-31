@@ -123,7 +123,7 @@ mqtt:
 
 ### on_message
 
-当收到指定主题的消息时，触发对应的动作，即作为 [自动化](mqtt/guides/automations) 的触发器使用
+当收到指定主题的消息时，触发对应的动作，作为 [自动化](mqtt/guides/automations) 的触发器使用
 
 ```yaml
 mqtt:
@@ -160,9 +160,59 @@ mqtt:
          - # ...
 ```
 
-## on_json_message
+### on_json_message
 
-?> 新特性 待完善
+当收到指定主题的消息时，触发对应的动作，作为 [自动化](mqtt/guides/automations) 的触发器使用
+
+
+With this configuration option you can write complex automations whenever a JSON-encoded MQTT message is received. To use the message content, use a [lambda](https://esphomelib.com/esphomeyaml/guides/automations.html#config-lambda)template, the decoded message payload is available under the name `x` inside that lambda.
+
+The `x` object is of type `JsonObject` by the [ArduinoJson](https://github.com/bblanchon/ArduinoJson) library, and you can use all of the methods of that library to access data.
+
+Basically, you can access elements by typing `x["THE_KEY"]` and save them into local variables. Please note that it’s a good idea to check if the key exists in the Json Object by calling `containsKey` first as the ESP will crash if an element that does not exist is accessed.
+
+```yaml
+mqtt:
+  # ...
+  on_json_message:
+    topic: the/topic
+      then:
+      - light.turn_on:
+          id: living_room_lights
+
+          transition_length: !lambda >-
+            int length = 1000;
+            if (x.containsKey("length"))
+              length = x["length"];
+            return length;
+
+          brightness: !lambda "return x["bright"];"
+
+          effect: !lambda >-
+            const char *effect = "None";
+            if (x.containsKey("effect"))
+              effect = x["effect"];
+            return effect;
+```
+
+Configuration variables:
+
+- **topic** (**必填**, string): The MQTT topic to subscribe to and listen for MQTT messages on. Every time a message with **this exact topic** is received, the automation will trigger.
+- **qos** (*选填*, integer): The MQTT Quality of Service to subscribe to the topic with. Defaults to 0.
+
+Note
+
+Due to the way this trigger works internally it is incompatible with certain actions and will trigger a compile failure. For example with the `delay` action.
+
+Note
+
+This action can also be used in [lambdas](https://esphomelib.com/esphomeyaml/guides/automations.html#config-lambda):
+
+```
+App.get_mqtt_client()->subscribe_json("the/topic", [=](JsonObject &root) {
+    // do something with JSON-decoded value root
+});
+```
 
 
 
@@ -199,5 +249,39 @@ on_...:
 
 ### mqtt.publish_json
 
+Publish a JSON-formatted MQTT message on a topic using this action in automations.
 
-?> 新特性 待完善
+The JSON message will be constructed using the [ArduinoJson](https://github.com/bblanchon/ArduinoJson) library. In the `payload`option you have access to a `root` object which will represents the base object of the JSON message. You can assign values to keys by using the `root["KEY_NAME"] =VALUE;` syntax as seen below.
+
+```
+on_...:
+  then:
+    - mqtt.publish_json:
+        topic: the/topic
+        payload: |-
+          root["key"] = id(my_sensor).state;
+          root["greeting"] = "Hello World";
+
+        # Will produce:
+        # {"key": 42.0, "greeting": "Hello World"}
+```
+
+Configuration options:
+
+- **topic** (*Required*, string, [templatable](https://esphomelib.com/esphomeyaml/guides/automations.html#config-templatable)): The MQTT topic to publish the message.
+- **payload** (*Required*, [lambda](https://esphomelib.com/esphomeyaml/guides/automations.html#config-lambda)): The message content.
+- **qos** (*选填*, int): The [Quality of Service](https://www.hivemq.com/blog/mqtt-essentials-part-6-mqtt-quality-of-service-levels) level of the topic. Defaults to 0.
+- **retain** (*选填*, boolean): If the published message should have a retain flag on or not. Defaults to `False`.
+
+Note
+
+This action can also be written in [lambdas](https://esphomelib.com/esphomeyaml/guides/automations.html#config-lambda):
+
+```
+mqtt:
+  # Give the mqtt component an ID
+  id: mqtt_client
+id(mqtt_client).publish_json("the/topic", [=](JsonObject &root) {
+  root["something"] = id(my_sensor).state;
+});
+```

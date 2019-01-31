@@ -12,7 +12,7 @@
 
 默认情况下，二进制传感器会匹配最接近的 `device_class`，如果自动匹配的不合意，则可以用自定义的覆盖掉
 
-```
+```yaml
 binary_sensor:
   - platform: ...
     device_class: motion
@@ -38,7 +38,7 @@ binary_sensor:
 
 借助二进制传感器的过滤器，可以就很方便的对传感器的读值进行二次处理，类似 [传感器过滤器](mqtt/components/sensor/#过滤器).
 
-```
+```yaml
 binary_sensor:
   - platform: ...
     # ...
@@ -72,7 +72,7 @@ binary_sensor:
 
 按下按钮时触发
 
-```
+```yaml
 binary_sensor:
   - platform: gpio
     # ...
@@ -86,7 +86,7 @@ binary_sensor:
 
 松开按钮时触发
 
-```
+```yaml
 binary_sensor:
   - platform: gpio
     # ...
@@ -99,7 +99,7 @@ binary_sensor:
 
 单击按钮时触发，即 `min_length` < (`on_press`+ `on_release`) < `max_length` 时触发
 
-```
+```yaml
 binary_sensor:
   - platform: gpio
     # ...
@@ -120,7 +120,7 @@ binary_sensor:
 
 双击按钮时触发，即单击点击 `on_click` x 2
 
-```
+```yaml
 binary_sensor:
   - platform: gpio
     # ...
@@ -137,7 +137,60 @@ binary_sensor:
 - **max_length** (*选填*, [时长](mqtt/guides/configuration-types#时长)): 判断为单次点击最大时长，默认为 `350ms`
 
 
-<!-- ### `on_multi_click` -->
+
+### on_multi_click
+
+预先定义一组动作，按钮执行匹配预定义序列的动作时触发
+
+```yaml
+binary_sensor:
+  - platform: gpio
+    # ...
+    on_multi_click:
+    - timing:
+        - ON for at most 1s
+        - OFF for at most 1s
+        - ON for 0.5s to 1s
+        - OFF for at least 0.2s
+      then:
+        - logger.log: "Double-Clicked"
+```
+
+**配置实例**
+
+- **timing**(**必填**): 定义多次点击动作序列的时长，语法结构如下
+  - `<ON/OFF> for <TIME> to <TIME>`
+  - `<ON/OFF> for at least <TIME>`
+  - `<ON/OFF> for at most <TIME>`
+- **invalid_cooldown** (*选填*, [时长](mqtt/guides/configuration-types#时长)): 多击动作的匹配开始时，如果后续的动作与预先设置的动作序列的时长 `timing`  不能完全匹配，视作没有激活多击动作。多击动作将在此参数设置的时长后才恢复匹配功能，默认 `1s`
+
+
+!> 务必在每段 `timing` 的结尾处设置 `OFF`，不然当存在多个序列时长定义时，极易混淆
+
+正确的样例，每段 `timing` 都以 `OFF` 结束
+
+```yaml
+on_multi_click:
+- timing:
+    - ON for at most 1s
+    - OFF for at most 1s
+    - ON for at most 1s
+    - OFF for at least 0.2s
+  then:
+    - logger.log: "Double Clicked"
+- timing:
+    - ON for 1s to 2s
+    - OFF for at least 0.5s
+  then:
+    - logger.log: "Single Long Clicked"
+- timing:
+    - ON for at most 1s
+    - OFF for at least 0.5s
+  then:
+    - logger.log: "Single Short Clicked"
+```
+
+
 
 
 ## 条件
@@ -167,14 +220,14 @@ on_...:
 ```
 
 
-### lambda
+## lambda
 
 使用 [lambda 表达式](mqtt/guides/automations#lambda-表达式) 控制二进制传感器发布和获取状态
 
 
 - `publish_state()`: 在任意位置使用 lambda 手动控制二进制传感器发布状态
 
-  ```
+  ```c++
   // Within lambda, publish an OFF state.
   id(my_binary_sensor).publish_state(false);
   
@@ -184,7 +237,7 @@ on_...:
 
 - `.state`: 在任意位置使用 lambda 手动获取二进制传感器状态
 
-  ```
+  ```c++
   // Within lambda, get the binary sensor state and conditionally do something
   if (id(my_binary_sensor).state) {
     // Binary sensor is ON, do something here
