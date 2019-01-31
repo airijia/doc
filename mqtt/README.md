@@ -59,9 +59,9 @@
 <!-- - [睡眠模式](mqtt/components/deep_sleep) -->
 
 
-## 支持设备
+<!-- ## 支持设备 -->
 
-- [Sonoff 系列](diy/sonoff/)
+<!-- - [Sonoff 系列](diy/sonoff/) -->
  
 
 

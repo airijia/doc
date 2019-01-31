@@ -1,6 +1,6 @@
-# 自动化和模板化
+# 自动化
 
-自动化和模板化是 MQTT 固件的两个非常强大的功能
+自动化赋予是 ESP 固件灵魂的功能
 
 智能家居环境中，以智能中枢（比如 Hass）或者流工具（比如 Node-RED）为核心，驱动不同的智能设备之间的自动化协作，称之为中枢自动化，或者**大**自动化。
 
@@ -8,10 +8,113 @@
 
 可以参考更容易理解的、基于 Sonoff Basic 的案例，[基于自动化实现 Basic 的基本功能](diy/sonoff/basic-auto)
 
+## 脱离网络环境运作
 
-## 组件构成
+即离线模式，在没有 API 和 MQTT连入、甚至没有 WiFi 连接的情况下也能执行自动化中的逻辑
 
-一个基本的自动化由三部分构成，触发器、动作和条件（可选）
+
+
+## 自动化构成
+
+一个基本的自动化由两部分构成，触发器和动作
+
+使用 `触发器` 启动自动化代码块，`then` 表示触发后对应的动作 ，连续的多个动作使用 `-` 连接。
+
+下例中，`on_press` 是触发器，`switch.turn_on`，`delay` 和 `switch.turn_off` 是动作
+
+这段代码块的作用为：按下按钮后，打开抽湿机的开关，延迟两秒后，关闭抽湿机
+
+```yaml
+# ...
+on_press:
+  then:
+    - switch.turn_on: dehumidifier1
+    - delay: 2s
+    - switch.turn_off: dehumidifier1
+```
+
+一个触发器可对应多个 `then`，一个 `then` 可以对应多个动作。下例是一样的执行效果
+
+```yaml
+# ...
+on_press:
+  - then:
+      - switch.toggle: dehumidifier1
+  - then:
+      - light.toggle: dehumidifier_indicator_light
+# 同样的效果
+on_press:
+  then:
+    - switch.toggle: dehumidifier1
+    - light.toggle: dehumidifier_indicator_light
+```
+
+使用 `on_value_range` 触发器，湿度大于 65% 时，打开抽湿机，湿度小于 50% 时，关闭抽湿机
+
+
+```yaml
+sensor:
+  - platform: dht
+    humidity:
+      name: "Living Room Humidity"
+      on_value_range:
+        - above: 65.0
+          then:
+            - switch.turn_on: dehumidifier1
+        - below: 50.0
+          then:
+            - switch.turn_off: dehumidifier1
+    temperature:
+      name: "Living Room Temperature"
+```
+
+
+
+
+## lambda 表达式
+
+使用 lambda 表达式置入一段 C++ 代码应对 yaml 无法实现的复杂自动化功能需求
+
+
+
+
+
+
+
+
+## 全局变量
+
+定义全局变量，可以在任意 lambdas 表达式中调用
+
+
+```yaml
+ # 定义全局变量
+ globals:
+   - id: my_global_int
+     type: int
+     restore_value: no
+     initial_value: '0'
+
+# 自动化中调用全局变量
+on_press:
+  then:
+    - lambda: >-
+        if (id(my_global_int) > 5) {
+          // global value is greater than 5
+          id(my_global_int) += 1;
+        } else {
+          id(my_global_int) += 10;
+        }
+
+        ESP_LOGD(TAG, "Global value is: %d", id(my_global_int));
+```
+
+**配置参数**
+
+- **id** (**必填**, [ID](mqtt/guides/configuration-types#id)): 本组件的 ID
+- **type** (**必填**, 字符串): 变量类型，例如 `bool`(布尔值，`true`/`false`), `int` (整数), `float` (浮点数), `int[50]` 50个整数构成的数组等等
+- **restore_value** (*选填*, 布尔值): 启动时试图恢复的值，默认为 `no`。注意，ESP8266 系列只有 96 bytes 可用
+- **initial_value** (*选填*, 字符串): 没有恢复值(restore_value)可用的时候，初始化完成后的默认值，默认为该类型变量在 C++ 中的默认值，例如 `int` 的默认值为 `0` 
 
 
 
@@ -49,11 +152,14 @@
 
 ## 所有条件
 
-- [lambda](#lambda-动作)
 - [and](#and) / [or](#or)
+- [lambda](#lambda-条件)
 - [binary_sensor.is_on](mqtt/components/binary_sensor/#is_on) / [binary_sensor.is_off](mqtt/components/binary_sensor/#is_off)
 - [switch.is_on](mqtt/components/switch/#is_on) / [switch.is_off](mqtt/components/switch/#is_off)
 - [sensor.in_range](mqtt/components/sensor/#in_range)
+
+
+
 
 
 ## 基本动作
@@ -73,12 +179,12 @@ on_...:
      - delay: !lambda "if (id(reed_switch).state) return 1000; else return 0;"
 ```
 
-?>异步非阻塞，延时不会影响其他代码运作
+延迟动作是异步非阻塞，不会影响所处代码块之外的代码运行
 
-### lambda
 
-嵌入一段 `C++` 代码并执行，详细查看 [Lambda 表达式](#lambdas-表达式)
+### lambda 动作
 
+使用 lambda 表达式定义动作，详细查看 [lambda 表达式](#lambdas-表达式)
 
 ```yaml
 on_...:
@@ -86,6 +192,26 @@ on_...:
     - lambda: >-
         id(some_binary_sensor).publish_state(false);
 ```
+
+使用 lambda 表达式传递模板化参数
+
+
+```yaml
+on_press:
+  then:
+    - light.turn_on:
+        id: some_light_id
+        transition_length: 0.5s
+        red: 0.8
+        green: 1.0
+        blue: !lambda >-
+          // 传感器 some_sensor 读值 0 - 100, 换算成蓝色通道输出值
+          return id(some_sensor).state / 100.0;
+```
+
+
+
+
 
 ### if
 
@@ -184,7 +310,7 @@ on_...:
 
 停止自定义脚本的执行，如果此脚本并没有在执行
 
-!> 注意现在只有基本自带 **delay** 的情况下才可以被停止
+!> 注意现在只有脚本自带 **delay** 的情况下才可以被停止
 
 
 ```yaml
@@ -254,22 +380,12 @@ on_...:
 ```
 
 
-## Lambda 表达式
-
-借助 C++ 的模板化功能，实现更复杂更强大的自动化动作
-
-Templates (Lambdas)
+### lambda 条件
 
 
 
-匿名函数
-
-互锁或者调光
-
-### Lambda 动作
 
 
-### Lambda 条件
 
 
 
