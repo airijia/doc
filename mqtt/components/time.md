@@ -11,30 +11,30 @@ The `time` component allows you to set up real time clock time sources for espho
 The preferred way to get time in esphomelib is using Home Assistant. With the `homeassistant` time platform, the [native API](https://esphomelib.com/esphomeyaml/components/api.html) connection to Home Assistant will be used to periodically synchronize the current time.
 
 ```
-# Example configuration entry
+# 配置示例
 time:
   - platform: homeassistant
     id: homeassistant_time
 ```
 
-Configuration variables:
+配置参数
 
-- **id** (*选填*, [ID](https://esphomelib.com/esphomeyaml/guides/configuration-types.html#config-id)): Specify the ID of the time for use in lambdas.
+- **id** (*选填*, [ID](mqtt/guides/configuration-types#id)): Specify the ID of the time for use in lambdas.
 - **timezone** (*选填*, 字符串): Manually tell esphomelib what timezone to use with [this format](https://www.gnu.org/software/libc/manual/html_node/TZ-Variable.html) (warning: the format is quite complicated) or the simpler [TZ database name](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) in the form <Region>/<City>. esphomeyaml tries to automatically infer the timezone string based on the timezone of the computer that is running esphomeyaml, but this might not always be accurate.
 - **on_time** (*选填*, [Automation](https://esphomelib.com/esphomeyaml/guides/automations.html#automation)): Automation to run at specific intervals using a cron-like syntax. See [on_time](https://esphomelib.com/esphomeyaml/components/time.html#time-on-time).
 
 ## SNTP Configuration
 
 ```
-# Example configuration entry
+# 配置示例
 time:
   - platform: sntp
     id: sntp_time
 ```
 
-Configuration variables:
+配置参数
 
-- **id** (*选填*, [ID](https://esphomelib.com/esphomeyaml/guides/configuration-types.html#config-id)): Specify the ID of the time for use in lambdas.
+- **id** (*选填*, [ID](mqtt/guides/configuration-types#id)): Specify the ID of the time for use in lambdas.
 - **timezone** (*选填*, 字符串): Manually tell esphomelib what timezone to use with [this format](https://www.gnu.org/software/libc/manual/html_node/TZ-Variable.html) (warning: the format is quite complicated) or the simpler [TZ database name](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) in the form <Region>/<City>. esphomeyaml tries to automatically infer the timezone string based on the timezone of the computer that is running esphomeyaml, but this might not always be accurate.
 - **servers** (*选填*, list of strings): Choose up to 3 NTP servers that are used for the clock source. Defaults to `0.pool.ntp.org`, `1.pool.ntp.org` and `2.pool.ntp.org`
 - **on_time** (*选填*, [Automation](https://esphomelib.com/esphomeyaml/guides/automations.html#automation)): Automation to run at specific intervals using a cron-like syntax. See [on_time](https://esphomelib.com/esphomeyaml/components/time.html#time-on-time).
@@ -119,7 +119,7 @@ time:
           - switch.toggle: my_switch
 ```
 
-Configuration variables:
+配置参数
 
 - **seconds** (*选填*, 字符串): 秒，默认为 `*` (任意)， 范围从 0 到 59 Specify for which seconds of the minute the automation will trigger. Defaults to `*` (all seconds). Range is from 0 to 59.
 - **minutes** (*选填*, 字符串): 分钟，默认为 `*` (任意)， 范围从 0 到 59Specify for which minutes of the hour the automation will trigger. Defaults to `*` (all minutes). Range is from 0 to 59.

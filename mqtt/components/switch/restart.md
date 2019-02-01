@@ -5,14 +5,14 @@ The `restart` switch platform allows you to restart your node remotely through H
 [![../../../_images/restart-ui.png](https://esphomelib.com/_images/restart-ui.png)](https://esphomelib.com/_images/restart-ui.png)
 
 ```
-# Example configuration entry
+# 配置示例
 switch:
   - platform: restart
     name: "Living Room Restart"
 ```
 
-## Configuration variables:
+## 配置参数
 
-- **name** (**Required**, string): The name for the switch.
-- **id** (*Optional*, [ID](https://esphomelib.com/esphomeyaml/guides/configuration-types.html#config-id)): Manually specify the ID used for code generation.
+- **name** (**必填**, 字符串): The name for the switch.
+- **id** (*Optional*, [ID](mqtt/guides/configuration-types#id)): Manually specify the ID used for code generation.
 - All other options from [Switch](https://esphomelib.com/esphomeyaml/components/switch/index.html#config-switch) and [MQTT Component](https://esphomelib.com/esphomeyaml/components/mqtt.html#config-mqtt-component).

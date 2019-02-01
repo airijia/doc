@@ -3,7 +3,7 @@
 The `uart` switch platform allows you to send a pre-defined sequence of bytes on a [UART bus](https://esphomelib.com/esphomeyaml/components/uart.html) when triggered.
 
 ```
-# Example configuration entry
+# 配置示例
 uart:
   baud_rate: 9600
   tx_pin: D0
@@ -17,10 +17,10 @@ switch:
     data: [0xDE, 0xAD, 0xBE, 0xEF]
 ```
 
-## Configuration variables:
+## 配置参数
 
-- **data** (**Required**, string or list of bytes): The data to send via UART. Either an ASCII string or a list of bytes.
-- **name** (**Required**, string): The name for the switch.
-- **uart_id** (*Optional*, [ID](https://esphomelib.com/esphomeyaml/guides/configuration-types.html#config-id)): Manually specify the ID of the UART hub.
-- **id** (*Optional*, [ID](https://esphomelib.com/esphomeyaml/guides/configuration-types.html#config-id)): Manually specify the ID used for code generation.
+- **data** (**必填**, string or list of bytes): The data to send via UART. Either an ASCII string or a list of bytes.
+- **name** (**必填**, 字符串): The name for the switch.
+- **uart_id** (*Optional*, [ID](mqtt/guides/configuration-types#id)): Manually specify the ID of the UART hub.
+- **id** (*Optional*, [ID](mqtt/guides/configuration-types#id)): Manually specify the ID used for code generation.
 - All other options from [Switch](https://esphomelib.com/esphomeyaml/components/switch/index.html#config-switch) and [MQTT Component](https://esphomelib.com/esphomeyaml/components/mqtt.html#config-mqtt-component).

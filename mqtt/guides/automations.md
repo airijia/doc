@@ -8,17 +8,18 @@
 
 可以参考更容易理解的、基于 Sonoff Basic 的案例，[基于自动化实现 Basic 的基本功能](diy/sonoff/basic-auto)
 
-## 脱离网络环境运作
+**脱离网络环境运作**
 
 即离线模式，在没有 API 和 MQTT连入、甚至没有 WiFi 连接的情况下也能执行自动化中的逻辑
 
+默认情况下，ESP 固件在没有有效的 WiFi 和 API(或 MQTT)链接时，会在默认的时长(5min)后重启，即 `reboot_timeout` 参数。如果需要避免重启，需要设置 `reboot_timeout` 为 `0` 禁用重启功能
 
 
 ## 自动化构成
 
-一个基本的自动化由两部分构成，触发器和动作
+一个基本的自动化由两部分构成，**触发器(trigger)** 和 **动作(action)**
 
-使用 `触发器` 启动自动化代码块，`then` 表示触发后对应的动作 ，连续的多个动作使用 `-` 连接。
+使用 **触发器** 启动自动化代码块，`then` 表示触发后对应的动作 ，连续的多个动作使用 `-` 连接。
 
 下例中，`on_press` 是触发器，`switch.turn_on`，`delay` 和 `switch.turn_off` 是动作
 
@@ -75,16 +76,59 @@ sensor:
 
 使用 lambda 表达式置入一段 C++ 代码应对 yaml 无法实现的复杂自动化功能需求
 
+按复杂程度，可以分为三种应用方式
+
+### 传递参数
+
+使用 lambda 表达式传递模板化参数
+
+比如依据传感器读值来控制灯的某通道的值
+
+```yaml
+on_press:
+  then:
+    - light.turn_on:
+        id: some_light_id
+        transition_length: 0.5s
+        red: 0.8
+        green: 1.0
+        blue: >-
+          // 传感器 some_sensor 读值 0 - 100, 换算成蓝色通道输出值
+          return id(some_sensor).state / 100.0;
+```
+
+
+### 单个环节
+
+使用 lambda 表达式 定义动作和条件，也是最常用的实现
+
+
+详见 [lambda 动作](#lambda-动作) 和 [lambda 条件](#lambda-条件)
+
+
+
+
+### 整个环节
+
+完全用 C++ 实现自动化的所有环节，功能最强大，也最难使用，适合有一定基础的用户
+
+```yaml
+    # 其他配置 ...
+    lambda: >-
+      if (id(top_end_stop).state) {
+        return cover::COVER_OPEN;
+      } else {
+        return cover::COVER_CLOSED;
+      }
+```
 
 
 
 
 
+### 全局变量
 
-
-## 全局变量
-
-定义全局变量，可以在任意 lambdas 表达式中调用
+定义全局变量，可以在任意 lambda 表达式中调用
 
 
 ```yaml
@@ -184,7 +228,7 @@ on_...:
 
 ### lambda 动作
 
-使用 lambda 表达式定义动作，详细查看 [lambda 表达式](#lambdas-表达式)
+使用 lambda 表达式定义动作，详细查看 [lambda 表达式](#lambda-表达式)
 
 ```yaml
 on_...:
@@ -193,21 +237,7 @@ on_...:
         id(some_binary_sensor).publish_state(false);
 ```
 
-使用 lambda 表达式传递模板化参数
 
-
-```yaml
-on_press:
-  then:
-    - light.turn_on:
-        id: some_light_id
-        transition_length: 0.5s
-        red: 0.8
-        green: 1.0
-        blue: !lambda >-
-          // 传感器 some_sensor 读值 0 - 100, 换算成蓝色通道输出值
-          return id(some_sensor).state / 100.0;
-```
 
 
 
@@ -382,9 +412,19 @@ on_...:
 
 ### lambda 条件
 
+使用 lambda 表达式定义条件，详细查看 [lambda 表达式](#lambda-表达式)
 
 
-
+```yaml
+on_...:
+  then:
+    - if:
+        condition:
+          # 返回 true 或 false
+          lambda: >-
+            return id(some_sensor).state < 30;
+        # ...
+```
 
 
 

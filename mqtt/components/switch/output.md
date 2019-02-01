@@ -4,8 +4,8 @@ The `output` switch platform allows you to use any output component as a switch.
 
 [![../../../_images/output-ui.png](https://esphomelib.com/_images/output-ui.png)](https://esphomelib.com/_images/output-ui.png)
 
-```
-# Example configuration entry
+```yaml
+# 配置示例
 output:
   - platform: gpio
     pin: 25
@@ -16,15 +16,11 @@ switch:
     output: 'generic_out'
 ```
 
-## Configuration variables:
+## 配置参数
 
-- **output** (**Required**, [ID](https://esphomelib.com/esphomeyaml/guides/configuration-types.html#config-id)): The ID of the output component to use.
-- **name** (**Required**, string): The name for the switch.
-- **id** (*Optional*, [ID](https://esphomelib.com/esphomeyaml/guides/configuration-types.html#config-id)): Manually specify the ID used for code generation.
-- All other options from [Switch](https://esphomelib.com/esphomeyaml/components/switch/index.html#config-switch) and [MQTT Component](https://esphomelib.com/esphomeyaml/components/mqtt.html#config-mqtt-component).
+- **output** (**必填**, [ID](mqtt/guides/configuration-types#id)): 要调用的输出组件的 ID
+- **name** (**必填**, 字符串): 组件名称
+- **id** (*Optional*, [ID](mqtt/guides/configuration-types#id)): 本组件的 ID
+- 以及 [开关核心组件](mqtt/components/switch/) 和 [MQTT 组件](mqtt/components/mqtt#MQTT-组件基本配置项) 的基本配置项
 
-## See Also
 
-- [Output Component](https://esphomelib.com/esphomeyaml/components/output/index.html)
-- [API Reference](https://esphomelib.com/api/switch/index.html)
-- [Edit this page on GitHub](https://github.com/OttoWinter/esphomedocs/blob/current/esphomeyaml/components/switch/output.rst)

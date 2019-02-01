@@ -195,9 +195,9 @@ mqtt:
             return effect;
 ```
 
-Configuration variables:
+配置参数
 
-- **topic** (**必填**, string): The MQTT topic to subscribe to and listen for MQTT messages on. Every time a message with **this exact topic** is received, the automation will trigger.
+- **topic** (**必填**, 字符串): The MQTT topic to subscribe to and listen for MQTT messages on. Every time a message with **this exact topic** is received, the automation will trigger.
 - **qos** (*选填*, integer): The MQTT Quality of Service to subscribe to the topic with. Defaults to 0.
 
 Note

@@ -39,6 +39,36 @@ switch:
 
 
 
+定义低电平有效的开关，需要定义引脚参数
+
+```yaml
+switch:
+  - platform: gpio
+    pin:
+      number: 25
+      inverted: yes
+```
 
 
-?> TODO: 启动状态问题，待补充
+
+瞬时型开关，即点动功能，需要配合 [模板化开关](mqtt/components/switch/template)
+
+
+
+```yaml
+switch:
+  # GPIO 开关
+  - platform: gpio
+    pin: 25
+    id: relay
+  # 模板化开关
+  - platform: template
+    name: "Momentary Switch"
+    optimistic: yes
+    turn_on_action:
+    - switch.turn_on: relay
+    - delay: 100ms
+    - switch.turn_off: relay
+```
+
+
