@@ -56,6 +56,11 @@
 - [SPI 总线](mqtt/components/spi)
 - [UART 总线](mqtt/components/uart)
 - [直流开关电源](mqtt/components/power_supply)
+
+
+- [时间](mqtt/components/time)
+
+
 <!-- - [睡眠模式](mqtt/components/deep_sleep) -->
 
 
