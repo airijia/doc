@@ -610,7 +610,10 @@ mqtt:
 
 
 
-## 进阶使用1
+## 进阶使用
+
+
+### 上传模板文件创建
 
 **上传模板文件** 的方式创建 MQTT 固件
 
@@ -644,7 +647,7 @@ sensor:
     update_interval: 1s
 # 字体
 font:
-  - file: "roboto.ttf"
+  - file: "roboto"
     id: font_32
     size: 32
 # 图标
@@ -670,7 +673,7 @@ display:
 
 
 
-### 配置字体
+#### 配置字体
 
 使用 roboto 字体，配置字体大小 32，命名为 `font_32`
 
@@ -678,14 +681,14 @@ display:
 更详细的使用，参考 [字体](mqtt/components/display/#字体) 
 
 
-### 配置图标
+#### 配置图标
 
 使用 thermometer 和 water-percent 两个图标，并重新设置大小为 32x32
 
 
 更详细的使用，参考 [图标](mqtt/components/display/#图标) 
 
-### 配置显示屏
+#### 配置显示屏
 
 
 0.96 英寸的 OLED 分辨率是 128x64，坐标原点位于屏幕左上角
@@ -717,7 +720,7 @@ it.printf(64, 40, id(font_48), TextAlign::CENTER, "%.1f°", id(temperature).raw_
 
 
 
-## 进阶使用2
+### 温湿度加时间
 
 
 **上传模板文件** 的方式创建 MQTT 固件
@@ -759,10 +762,10 @@ sensor:
     update_interval: 1s
 # 字体
 font:
-  - file: "roboto.ttf"
+  - file: "roboto"
     id: font_48
     size: 48
-  - file: "roboto.ttf"
+  - file: "roboto"
     id: font_16
     size: 16
 # OLED
@@ -778,21 +781,21 @@ display:
 ```
 
 
-### 配置时间和时区
+#### 配置时间和时区
 
 配置 SNTP 服务，设置 ID 为 `sntp_time`，设置时区为 `Asia/Shanghai`
 
 
 更详细的使用，参考 [时间](mqtt/components/time)
 
-### 配置字体
+#### 配置字体
 
 使用 roboto 字体，配置 16 和 48 两种尺寸，分别命名为 `font_16` 和 `font_48`
 
 
 更详细的使用，参考 [字体](mqtt/components/display/#字体) 
 
-### 配置显示屏
+#### 配置显示屏
 
 
 0.96 英寸的 OLED 分辨率是 128x64，坐标原点位于屏幕左上角，如果是黄蓝双色的屏幕，屏幕上方 128x16 的区域为黄色，屏幕下方 128x48 的区域为蓝色
@@ -826,7 +829,7 @@ it.printf(64, 40, id(font_48), TextAlign::CENTER, "%.1f°", id(temperature).raw_
 
 
 
-## 进阶使用3
+### 配合传感器
 
 获取中枢里面的传感器的状态，比如人体动作传感器，当此传感器处于激活时，暂停温度的显示，显示动作激活图标，反之则正常显示温度
 
@@ -858,19 +861,19 @@ text_sensor:
     id: motion
 # 字体
 font:
-  - file: "roboto.ttf"
+  - file: "roboto"
     id: font_32
     size: 32
 # 图标
 image:
-  - file: "mdi:thermometer.png"
+  - file: "mdi:thermometer"
     id: thermometer
     resize: 32x32
-  - file: "mdi:water-percent.png"
+  - file: "mdi:water-percent"
     id: water
     resize: 32x32
   # 启用 run 图标
-  - file: "mdi:run.png"
+  - file: "mdi:run"
     id: run
     resize: 64x64
 # OLED
@@ -892,7 +895,7 @@ display:
 
 与 [进阶使用1](#进阶使用1) 相同的部分略过...
 
-### 获取中枢传感器状态
+#### 获取中枢传感器状态
 
 中枢 8123 端口界面中的 **开发者工具 - 状态** 找到需要使用的人体传感器
 
@@ -912,20 +915,20 @@ text_sensor:
 
 
 
-### 定义动作图标
+#### 定义动作图标
 
 
 ```yaml
 # 图标
 image:
-  - file: "mdi:run.png"
+  - file: "mdi:run"
     id: run
     resize: 64x64
 ```
 
 使用图标 `run`，设置大小为 64x64。如果觉得动感不够，可以用 **run-fast.png**
 
-### 判断状态并选择输出数据
+#### 判断状态并选择输出数据
 
 
 ```c++
@@ -941,9 +944,11 @@ image:
 更详细的用法，参考 [中枢文本传感器组件](mqtt/components/text_sensor/homeassistant)， [SSD1306 OLED I2C显示屏](mqtt/components/display/ssd1306_i2c)  和 [显示屏核心组件](mqtt/components/display/) 
 
 
-<!-- ## 进阶使用4
+### 实时气象站
 
-搭配天气预报，多图标综合 -->
+结合彩云天气
+
+
 
 ## 相关链接
 
