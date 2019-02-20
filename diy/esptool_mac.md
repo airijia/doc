@@ -83,13 +83,13 @@ ls /dev/cu.wchusb*
 以下演示，实际使用中要根据实机上的 USB 串口编号设置，如上面查到的 `/dev/cu.usbserial-1410`
 
 
-### MQTT 固件
+### ESPHome 固件
 
 **基本流程是：刷机模式插入 - 刷入 - 普通模式插入 - 调试或配对**
 
  
 
-sonoff basic 刷 MQTT 固件，文件名 666.bin，所在位置 Downloads 目录，/dev/ttyUSB0
+sonoff basic 刷 ESPHome 固件，文件名 666.bin，所在位置 Downloads 目录，/dev/ttyUSB0
 
 切换到Downloads 目录下
 
@@ -205,7 +205,7 @@ esptool.py erase_flash
 
 - [刷固件资料集合](/diy/)
     - [esptool.py 的安装与使用](/diy/esptool)
-    - [MQTT 固件](/mqtt/)
+    - [ESPHome 固件](/mqtt/)
     - [渡鸦固件](/diy/raven)
 
-- [MQTT 固件](/mqtt/)
+- [ESPHome 固件](/mqtt/)

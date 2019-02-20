@@ -1,8 +1,8 @@
 # MQTT 组件
 
-MQTT 固件的核心组件之一，将节点作为客户端连接到 MQTT 转发器(broker)，进而通过智能中枢（airijia/clt 或 Hass）控制
+ESPHome 固件的核心组件之一，将节点作为客户端连接到 MQTT 转发器(broker)，进而通过智能中枢（airijia/clt 或 Hass）控制
 
-!> 新版建议使用 [API 组件](mqtt/components/api)
+!> 新版建议使用 [API 组件](esphome/components/api)
 
 
 ```yaml
@@ -31,10 +31,10 @@ mqtt:
 - **birth_message** (*选填*, [MQTT消息](#MQTT消息)): 与转发器建立连接时发布的消息。详情查看 [遗愿和重生消息](#遗愿和重生消息)
 - **will_message** (*选填*, [MQTT消息](#MQTT消息)): 与转发器失去连接时发布的消息。详情查看 [遗愿和重生消息](#遗愿和重生消息)
 - **shutdown_message** (*选填*, [MQTT消息](#MQTT消息)): 本节点执行关机，即将关闭与转发器连接是发布的消息。详情查看 [遗愿和重生消息](#遗愿和重生消息)
-- **reboot_timeout** (*选填*, [时长](mqtt/guides/configuration-types#时长)): 持续的无法连接转发器时，节点会在设置的时长后重启。默认 `60s`，设置成 `0s` 禁用此功能
-- **keepalive** (*选填*, [时长](mqtt/guides/configuration-types#时长)): 连接持续有效时间，增加这个值会加快节点的响应速度但同时也会增加路由器压力。默认 `15s`
-- **on_message** (*选填*, [自动化](mqtt/guides/automations)): 接到特定消息时触发的特定动作。详情查看 [on_message](#on_message)
-- **id** (*选填*, [ID](mqtt/guides/configuration-types#id)): 本组件的 ID
+- **reboot_timeout** (*选填*, [时长](esphome/guides/configuration-types#时长)): 持续的无法连接转发器时，节点会在设置的时长后重启。默认 `60s`，设置成 `0s` 禁用此功能
+- **keepalive** (*选填*, [时长](esphome/guides/configuration-types#时长)): 连接持续有效时间，增加这个值会加快节点的响应速度但同时也会增加路由器压力。默认 `15s`
+- **on_message** (*选填*, [自动化](esphome/guides/automations)): 接到特定消息时触发的特定动作。详情查看 [on_message](#on_message)
+- **id** (*选填*, [ID](esphome/guides/configuration-types#id)): 本组件的 ID
 
 
 ## MQTT消息
@@ -110,7 +110,7 @@ mqtt:
 - **availability** (*选填*): 组件发布的可用状态消息的格式。默认基于 [遗愿和重生消息](#遗愿和重生消息) 基础上扩展 
 - **state_topic** (*选填*, 字符串): 组件状态变化时，消息发布到的主题名称。默认值 `<TOPIC_PREFIX>/<COMPONENT_TYPE>/<COMPONENT_NAME>/state`
 - **command_topic** (*选填*, 字符串): 订阅远程控制的主题名称。默认值 `<TOPIC_PREFIX>/<COMPONENT_TYPE>/<COMPONENT_NAME>/command`
-- **internal** (*选填*, 布尔值): 将组件内部化。内部化组件不会发布任何 MQTT消息，也不会自动发现侦测到，但可以被模块自身的 [自动化](mqtt/guides/automations)。 只设置 `id` 不设置 `name` 等效于本参数设置为`True`
+- **internal** (*选填*, 布尔值): 将组件内部化。内部化组件不会发布任何 MQTT消息，也不会自动发现侦测到，但可以被模块自身的 [自动化](esphome/guides/automations)。 只设置 `id` 不设置 `name` 等效于本参数设置为`True`
 
 
 !> 改变以上参数的设置后，需要重启 Hass 服务才能生效
@@ -118,12 +118,12 @@ mqtt:
 
 ## 触发器
 
-[自动化](mqtt/guides/automations)相关
+[自动化](esphome/guides/automations)相关
 
 
 ### on_message
 
-当收到指定主题的消息时，触发对应的动作，作为 [自动化](mqtt/guides/automations) 的触发器使用
+当收到指定主题的消息时，触发对应的动作，作为 [自动化](esphome/guides/automations) 的触发器使用
 
 ```yaml
 mqtt:
@@ -162,7 +162,7 @@ mqtt:
 
 ### on_json_message
 
-当收到指定主题的消息时，触发对应的动作，作为 [自动化](mqtt/guides/automations) 的触发器使用
+当收到指定主题的消息时，触发对应的动作，作为 [自动化](esphome/guides/automations) 的触发器使用
 
 
 With this configuration option you can write complex automations whenever a JSON-encoded MQTT message is received. To use the message content, use a [lambda](https://esphomelib.com/esphomeyaml/guides/automations.html#config-lambda)template, the decoded message payload is available under the name `x` inside that lambda.
@@ -221,7 +221,7 @@ App.get_mqtt_client()->subscribe_json("the/topic", [=](JsonObject &root) {
 
 ### mqtt.publish
 
- [自动化](mqtt/guides/automations) 的动作，被触发后，发布 MQTT 消息
+ [自动化](esphome/guides/automations) 的动作，被触发后，发布 MQTT 消息
 
 ```
 on_...:
@@ -240,10 +240,10 @@ on_...:
 ```
 **配置参数**
 
-- **topic** (**必填**, 字符串, [模板化](mqtt/guides/automations#模板化)): 消息发布到得主题
-- **payload** (**必填**, 字符串, [模板化](mqtt/guides/automations#模板化)): 消息内容
-- **qos** (*选填*, 整数, [模板化](mqtt/guides/automations#模板化)):QoS 等级，最多一次`0`（默认），至少一次`1`，确保仅一次`2`
-- **retain** (*选填*, 布尔值, [模板化](mqtt/guides/automations#模板化)): 是否标记为保留消息，默认为否 `False`
+- **topic** (**必填**, 字符串, [模板化](esphome/guides/automations#模板化)): 消息发布到得主题
+- **payload** (**必填**, 字符串, [模板化](esphome/guides/automations#模板化)): 消息内容
+- **qos** (*选填*, 整数, [模板化](esphome/guides/automations#模板化)):QoS 等级，最多一次`0`（默认），至少一次`1`，确保仅一次`2`
+- **retain** (*选填*, 布尔值, [模板化](esphome/guides/automations#模板化)): 是否标记为保留消息，默认为否 `False`
 
 
 

@@ -13,7 +13,7 @@
 
 ## 文件模板创建
 
-需要搭配 [UART 总线](mqtt/components/uart) 组件，使用波特率 `9600`
+需要搭配 [UART 总线](esphome/components/uart) 组件，使用波特率 `9600`
 
 
 修改参数中 `type:` 来支持不同的设备类型：
@@ -45,20 +45,20 @@ sensor:
 
 - **pm_1_0** (*选填*): 
   - **name** (**必填**): PM 1.0 的显示名称
-  - 以及 [传感器核心组件](mqtt/components/sensor/#基本配置) 和 [MQTT 组件基本配置](mqtt/components/mqtt#MQTT-组件基本配置项)
+  - 以及 [传感器核心组件](esphome/components/sensor/#基本配置) 和 [MQTT 组件基本配置](esphome/components/mqtt#MQTT-组件基本配置项)
 - **pm_2_5** (*选填*):
   - **name** (**必填**): PM 2.5 的显示名称
-  - 以及 [传感器核心组件](mqtt/components/sensor/#基本配置) 和 [MQTT 组件基本配置](mqtt/components/mqtt#MQTT-组件基本配置项)
+  - 以及 [传感器核心组件](esphome/components/sensor/#基本配置) 和 [MQTT 组件基本配置](esphome/components/mqtt#MQTT-组件基本配置项)
 - **pm_10_0** (*选填*): 
   - **name** (**必填**): PM 10 的显示名称
-  - 以及 [传感器核心组件](mqtt/components/sensor/#基本配置) 和 [MQTT 组件基本配置](mqtt/components/mqtt#MQTT-组件基本配置项)
+  - 以及 [传感器核心组件](esphome/components/sensor/#基本配置) 和 [MQTT 组件基本配置](esphome/components/mqtt#MQTT-组件基本配置项)
 - **temperature** (*选填*): `PMS5003T` 和 `PMS5003ST` 可用
   - **name** (**必填**): 温度传感器的名称
-  - 以及 [传感器核心组件](mqtt/components/sensor/#基本配置) 和 [MQTT 组件基本配置](mqtt/components/mqtt#MQTT-组件基本配置项)
+  - 以及 [传感器核心组件](esphome/components/sensor/#基本配置) 和 [MQTT 组件基本配置](esphome/components/mqtt#MQTT-组件基本配置项)
 - **humidity** (*选填*): `PMS5003T` 和 `PMS5003ST` 可用 
   - **name** (**必填**): 湿度传感器的名称
-  - 以及 [传感器核心组件](mqtt/components/sensor/#基本配置) 和 [MQTT 组件基本配置](mqtt/components/mqtt#MQTT-组件基本配置项)
+  - 以及 [传感器核心组件](esphome/components/sensor/#基本配置) 和 [MQTT 组件基本配置](esphome/components/mqtt#MQTT-组件基本配置项)
 - **formaldehyde** (*选填*): `PMS5003ST` 可用
   - **name** (**必填**): 甲醛传感器的名称
-  - 以及 [传感器核心组件](mqtt/components/sensor/#基本配置) 和 [MQTT 组件基本配置](mqtt/components/mqtt#MQTT-组件基本配置项)
-- **uart_id** (*选填*, [ID](mqtt/guides/configuration-types#id)): 指定使用的 UART 总线 ID，只有存在多个 UART 的时候需要配置
+  - 以及 [传感器核心组件](esphome/components/sensor/#基本配置) 和 [MQTT 组件基本配置](esphome/components/mqtt#MQTT-组件基本配置项)
+- **uart_id** (*选填*, [ID](esphome/guides/configuration-types#id)): 指定使用的 UART 总线 ID，只有存在多个 UART 的时候需要配置

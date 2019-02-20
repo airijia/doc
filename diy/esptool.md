@@ -135,7 +135,7 @@ esptool.py
 
 
 
-## 刷入 MQTT 固件
+## 刷入 ESPHome 固件
 
 以下演示，实际使用中要根据实机上的 COM 口编号设置，如 COM3，COM6，COM7
 
@@ -144,7 +144,7 @@ esptool.py
 
 **基本流程是：刷机模式插入 - 刷入 - 拔掉USB - 普通模式插入 - 调试或配对**
 
-sonoff basic 刷 MQTT 固件，文件名 666.bin，所在位置D盘 Download 目录，COM6
+sonoff basic 刷 ESPHome 固件，文件名 666.bin，所在位置D盘 Download 目录，COM6
 
 ```shell
 esptool.py -p COM6 write_flash -fs 1MB -fm dout 0x0 D:\Download\666.bin

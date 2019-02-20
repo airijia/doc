@@ -1,6 +1,6 @@
 # 文本传感器
 
-文本传感器类似[普通传感器](mqtt/)，区别是普通传感器输出**数字**类型的数值，文本传感器则输出任何类型的**文本值**
+文本传感器类似[普通传感器](esphome/)，区别是普通传感器输出**数字**类型的数值，文本传感器则输出任何类型的**文本值**
 
 
 
@@ -19,7 +19,7 @@ icon: "mdi:water-percent"
 
 **自动化**
 
-- **on_value** (*选填*, [自动化](mqtt/guides/automations)): [在指定值触发](#on_value)
+- **on_value** (*选填*, [自动化](esphome/guides/automations)): [在指定值触发](#on_value)
 
 ## 触发器
 
@@ -41,12 +41,12 @@ text_sensor:
             ESP_LOGD("main", "The current version is %s", x.c_str());
 ```
 
-详细使用参考 [自动化组件](mqtt/guides/automations) 
+详细使用参考 [自动化组件](esphome/guides/automations) 
 
 
 ### lambda
 
-使用 [lambda 表达式](mqtt/guides/automations#lambda-表达式) 控制文本传感器发布和获取值
+使用 [lambda 表达式](esphome/guides/automations#lambda-表达式) 控制文本传感器发布和获取值
 
 - `publish_state()`: 手动控制文本传感器发布值
 

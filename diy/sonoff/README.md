@@ -1,7 +1,7 @@
 # Sonoff 系列
 
 
-在 [核心组件](mqtt/components/airi) 中，要设置 `board` 为 `esp01_1m`， `board_flash_mode` 为 `dout`
+在 [核心组件](esphome/components/airi) 中，要设置 `board` 为 `esp01_1m`， `board_flash_mode` 为 `dout`
 
 ```
 airi:
@@ -151,7 +151,7 @@ airi:
 | GPIO13 | HLW8012 CF1 Pin       |
 | GPIO14 | HLW8012 CF Pin        |
 
-搭配 [HLW8012 功率](mqtt/components/sensor/hlw8012)
+搭配 [HLW8012 功率](esphome/components/sensor/hlw8012)
 
 ## Sonoff Pow R2
 
@@ -163,7 +163,7 @@ airi:
 | GPIO12 | **Relay and Red LED**   |
 | GPIO13 | **Blue LED (inverted)** |
 
-搭配 [CSE7766 功率](mqtt/components/sensor/cse7766)
+搭配 [CSE7766 功率](esphome/components/sensor/cse7766)
 
 
 ## Slampher
@@ -198,7 +198,7 @@ airi:
 | GPIO12 | Cold White Channel      |
 | GPIO14 | Warm White Channel      |
 
-配合 [可调五色(红绿蓝冷白暖白)](mqtt/components/light/rgbww)，[ESP8266 PWM(软调光)](mqtt/components/output/esp8266_pwm) 这两个组件使用
+配合 [可调五色(红绿蓝冷白暖白)](esphome/components/light/rgbww)，[ESP8266 PWM(软调光)](esphome/components/output/esp8266_pwm) 这两个组件使用
 
 
 
@@ -209,11 +209,11 @@ airi:
 | GPIO12 | **Light**          |
 | GPIO13 | Red LED (inverted) |
 
-配合 [可调亮度的灯](mqtt/components/light/monochromatic)， [ESP8266 PWM(软调光)](mqtt/components/output/esp8266_pwm)  组件使用
+配合 [可调亮度的灯](esphome/components/light/monochromatic)， [ESP8266 PWM(软调光)](esphome/components/output/esp8266_pwm)  组件使用
 
 ## Sonoff B1, Ai-Thinker AiLight
 
-配合 [MY9231/MY9291 LED](mqtt/components/output/my9231) 使用
+配合 [MY9231/MY9291 LED](esphome/components/output/my9231) 使用
 
 ## Sonoff S31
 
@@ -223,7 +223,7 @@ airi:
 | GPIO12 | **Relay and Red LED**    |
 | GPIO13 | **Green LED (inverteD)** |
 
-搭配 [CSE7766 功率](mqtt/components/sensor/cse7766)
+搭配 [CSE7766 功率](esphome/components/sensor/cse7766)
 
 
 
@@ -240,7 +240,7 @@ airi:
 | GPIO3  | UART RX pin (for external sensors) |
 
 
-配合 [可调四色(红绿蓝白)](mqtt/components/light/rgbw)，[ESP8266 PWM(软调光)](mqtt/components/output/esp8266_pwm) 组件使用
+配合 [可调四色(红绿蓝白)](esphome/components/light/rgbw)，[ESP8266 PWM(软调光)](esphome/components/output/esp8266_pwm) 组件使用
 
 ## Arilux LC01
 
@@ -256,7 +256,7 @@ airi:
 | GPIO3  | UART RX pin (for external sensors) |
 
 
-配合 [可调四色(红绿蓝白)](mqtt/components/light/rgbw)，[ESP8266 PWM(软调光)](mqtt/components/output/esp8266_pwm) 组件使用
+配合 [可调四色(红绿蓝白)](esphome/components/light/rgbw)，[ESP8266 PWM(软调光)](esphome/components/output/esp8266_pwm) 组件使用
 
 ## Arilux LC11
 
@@ -272,5 +272,5 @@ airi:
 | GPIO1  | UART TX pin (for external sensors) |
 | GPIO3  | UART RX pin (for external sensors) |
 
-配合 [可调五色(红绿蓝冷白暖白)](mqtt/components/light/rgbww)，[ESP8266 PWM(软调光)](mqtt/components/output/esp8266_pwm) 这两个组件使用
+配合 [可调五色(红绿蓝冷白暖白)](esphome/components/light/rgbww)，[ESP8266 PWM(软调光)](esphome/components/output/esp8266_pwm) 这两个组件使用
 

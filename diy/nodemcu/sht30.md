@@ -236,7 +236,7 @@ NodeMCU 和 SHT30 的针脚是已经焊好的，如图连线即可
 
 
 
-## 刷 MQTT 固件 (连 Hass 等中枢)
+## 刷 ESPHome 固件 (连 Hass 等中枢)
 
 基于 MQTT 通信协议，零配置即可被智能中枢（airijia/ctl 或 Hass）自动发现，支持 OTA（Over The Air）网刷
 
@@ -342,8 +342,8 @@ mqtt:
 下载文件后，解压出 **666.bin** 文件，刷入工具使用 **MQTT固件工具**
 
 
-- [下载 MQTT 固件 Windows 版](http://pic.airijia.com/download/win.zip)
-- [下载 MQTT 固件 MAC OS 版](http://pic.airijia.com/download/mac.zip)
+- [下载 ESPHome 固件 Windows 版](http://pic.airijia.com/download/win.zip)
+- [下载 ESPHome 固件 MAC OS 版](http://pic.airijia.com/download/mac.zip)
 
 
 
@@ -362,7 +362,7 @@ mqtt:
 
 
 
-打开 MQTT 固件工具，选择`串口`，如果列表为空，先点击`刷新`
+打开 ESPHome 固件工具，选择`串口`，如果列表为空，先点击`刷新`
 
 ?>  如果还没找到串口，需要安装 [驱动程序](diy/nodemcu/)
 
@@ -402,9 +402,9 @@ mqtt:
 
 **上传模板文件** 的方式创建固件
 
-?> 基本五大件的配置查看 [模板文件创建 MQTT 固件](mqtt/guides/yaml)
+?> 基本五大件的配置查看 [模板文件创建 ESPHome 固件](esphome/guides/yaml)
 
-需要用到 [I²C 总线](mqtt/components/i2c) 和 [SHT3X-D 温湿度传感器](mqtt/components/sensor/sht3xd) 两个组件
+需要用到 [I²C 总线](esphome/components/i2c) 和 [SHT3X-D 温湿度传感器](esphome/components/sensor/sht3xd) 两个组件
 
 
 ```yaml

@@ -15,7 +15,7 @@ logger:
 - **tx_buffer_size** (*选填*, 字符串): TX 缓冲区大小，默认为 `512`，降低这个值可以减少内存占用
 - **level** (*选填*, 字符串): 输出日志级别，所有低于这个级别的日志将不显示，默认为 `DEBUG`
 <!-- - **logs** (*选填*, mapping): Manually set the log level for a specific component or tag. See -->
-- **id** (*选填*, [ID](mqtt/guides/configuration-types#id)): 本组件的 ID
+- **id** (*选填*, [ID](esphome/guides/configuration-types#id)): 本组件的 ID
 
 
 ## 日志级别
@@ -35,7 +35,7 @@ logger:
 
 ### logger.log
 
-使用 **printf** 式样化输出一段信息到日志，具体使用方法参考 [格式化字符串](mqtt/components/display/#格式化字符串) 
+使用 **printf** 式样化输出一段信息到日志，具体使用方法参考 [格式化字符串](esphome/components/display/#格式化字符串) 
 
 
 Print a formatted message to the logs.
@@ -57,6 +57,6 @@ on_...:
 **配置参数**
 
 - **format** (**必填**, 字符串): printf 式样化字符串
-- **args** (*选填*, [Lambda 表达式](mqtt/guides/automations#lambdas-表达式) 列表): 供输出的变量
+- **args** (*选填*, [Lambda 表达式](esphome/guides/automations#lambdas-表达式) 列表): 供输出的变量
 - **level** (*选填*, 字符串): 参考[日志级别](#日志级别)，默认为 `DEBUG`
 - **tag** (*选填*, 字符串): 标签分类，默认为 `main`

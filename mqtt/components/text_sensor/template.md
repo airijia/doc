@@ -21,8 +21,8 @@ text_sensor:
 ## **配置项**
 
 - **name** (**必填**, 字符串): 此组件的名称
-- **lambda** (*选填*, [lambda](mqtt/guides/automations#lambda-表达式)): 定义开关状态的 lambda 表达式，只有 **有变化** 的状态才会发布相关消息到 MQTT，此参数跟 `optimistic` 参数二选一即可
+- **lambda** (*选填*, [lambda](esphome/guides/automations#lambda-表达式)): 定义开关状态的 lambda 表达式，只有 **有变化** 的状态才会发布相关消息到 MQTT，此参数跟 `optimistic` 参数二选一即可
 - **lambda** (*选填*, [lambda](https://esphomelib.com/esphomeyaml/guides/automations.html#config-lambda)): 读取传感器值的
-- **update_interval** (*选填*, [时长](mqtt/guides/configuration-types#时长)): 读值间隔，默认`60s`
-- **id** (*选填*, [ID](mqtt/guides/configuration-types#id)): 此组件的 ID
-- 以及 [文本传感器核心组件](mqtt/components/text_sensor/) 和 [MQTT 组件](mqtt/components/mqtt#MQTT-组件基本配置项)的基本配置项
+- **update_interval** (*选填*, [时长](esphome/guides/configuration-types#时长)): 读值间隔，默认`60s`
+- **id** (*选填*, [ID](esphome/guides/configuration-types#id)): 此组件的 ID
+- 以及 [文本传感器核心组件](esphome/components/text_sensor/) 和 [MQTT 组件](esphome/components/mqtt#MQTT-组件基本配置项)的基本配置项

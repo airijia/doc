@@ -18,7 +18,7 @@
 ![](https://ws1.sinaimg.cn/large/007fN5Xegy1fxd6bw2igzj309p0dfdgp.jpg)
 
 
-升级完成，重启模块后即可进入 MQTT 固件
+升级完成，重启模块后即可进入 ESPHome 固件
 
 ![](https://ws1.sinaimg.cn/large/007fN5Xegy1fxd6cedmcbj30ev0akwf5.jpg)
 

@@ -15,7 +15,7 @@
 ![](http://pic.airijia.com/doc/20181128144208.png)
 
 
-[MQTT 固件工具](diy/flasher)
+[ESPHome 固件工具](diy/flasher)
 
 图形界面，使用简便
 
@@ -27,9 +27,9 @@
 ![](http://pic.airijia.com/doc/20181128144404.png)
 
 
-[esptool.py 刷 MQTT 固件](diy/esptool#mqtt-固件)
+[esptool.py 刷 ESPHome 固件](diy/esptool#mqtt-固件)
 
-[esptool.py(MAC) 刷 MQTT 固件](diy/esptool#mqtt-固件)
+[esptool.py(MAC) 刷 ESPHome 固件](diy/esptool#mqtt-固件)
 
 命令行界面，功能强大
 

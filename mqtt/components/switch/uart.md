@@ -21,6 +21,6 @@ switch:
 
 - **data** (**必填**, string or list of bytes): The data to send via UART. Either an ASCII string or a list of bytes.
 - **name** (**必填**, 字符串): The name for the switch.
-- **uart_id** (*Optional*, [ID](mqtt/guides/configuration-types#id)): Manually specify the ID of the UART hub.
-- **id** (*Optional*, [ID](mqtt/guides/configuration-types#id)): Manually specify the ID used for code generation.
+- **uart_id** (*Optional*, [ID](esphome/guides/configuration-types#id)): Manually specify the ID of the UART hub.
+- **id** (*Optional*, [ID](esphome/guides/configuration-types#id)): Manually specify the ID used for code generation.
 - All other options from [Switch](https://esphomelib.com/esphomeyaml/components/switch/index.html#config-switch) and [MQTT Component](https://esphomelib.com/esphomeyaml/components/mqtt.html#config-mqtt-component).

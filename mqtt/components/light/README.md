@@ -5,7 +5,7 @@
 
 ## 灯动作
 
-配合 [自动化](mqtt/guides/automations) 的动作
+配合 [自动化](esphome/guides/automations) 的动作
 
 ### light.toggle
 
@@ -22,13 +22,13 @@ on_...:
 
 **配置参数**
 
-- **id** (**必填**, [ID](mqtt/guides/configuration-types#id)): 灯的 ID
-- **transition_length** (*选填*, [时长](mqtt/guides/configuration-types#时长), [模板化](mqtt/guides/automations#模板化)): 过度时长
+- **id** (**必填**, [ID](esphome/guides/configuration-types#id)): 灯的 ID
+- **transition_length** (*选填*, [时长](esphome/guides/configuration-types#时长), [模板化](esphome/guides/automations#模板化)): 过度时长
 
 
 **模板化** 
 
-相同动作使用 [模板化](mqtt/guides/automations#模板化) 的写法
+相同动作使用 [模板化](esphome/guides/automations#模板化) 的写法
 
 ```c++
 // 定义动作
@@ -66,22 +66,22 @@ on_...:
 
 **配置参数**
 
-- **id** (**必填**, [ID](mqtt/guides/configuration-types#id)): 当前组件的 ID
-- **transition_length** (*选填*, [时长](mqtt/guides/configuration-types#时长), [模板化](mqtt/guides/automations#模板化)): 过度时长
-- **brightness** (*选填*, 百分比, [模板化](mqtt/guides/automations#模板化)): 开灯时的亮度，赋值范围在 `0% ~ 100%` 或 `0.0 ~ 1.0`之间。默认不改变亮度
-- **red** (*选填*, 百分比, [模板化](mqtt/guides/automations#模板化)): 开灯时红光通道的值，赋值范围在 `0% ~ 100%` 或 `0.0 ~ 1.0`之间。默认不改变原值
-- **green** (*选填*, 百分比, [模板化](mqtt/guides/automations#模板化)): 开灯时绿光通道的值，赋值范围在 `0% ~ 100%` 或 `0.0 ~ 1.0`之间。默认不改变原值
-- **blue** (*选填*, 百分比, [模板化](mqtt/guides/automations#模板化)): 开灯时蓝光通道的值，赋值范围在 `0% ~ 100%` 或 `0.0 ~ 1.0`之间。默认不改变原值
-- **white** (*选填*, 百分比, [模板化](mqtt/guides/automations#模板化)): 开灯时白光通道的值，赋值范围在 `0% ~ 100%` 或 `0.0 ~ 1.0`之间。默认不改变原值
-- **flash_length** (*选填*, [时长](mqtt/guides/configuration-types#时长), [模板化](mqtt/guides/automations#模板化)): 如果设置此参数，开灯后会在调整亮度和颜色通道到新设置的值的 `n` 秒之后，返回之前的状态（类似开关点动）
-- **effect** (*选填*, 字符串, [模板化](mqtt/guides/automations#模板化)): 如果设置此参数，开灯时会启动对应的灯关特效
+- **id** (**必填**, [ID](esphome/guides/configuration-types#id)): 当前组件的 ID
+- **transition_length** (*选填*, [时长](esphome/guides/configuration-types#时长), [模板化](esphome/guides/automations#模板化)): 过度时长
+- **brightness** (*选填*, 百分比, [模板化](esphome/guides/automations#模板化)): 开灯时的亮度，赋值范围在 `0% ~ 100%` 或 `0.0 ~ 1.0`之间。默认不改变亮度
+- **red** (*选填*, 百分比, [模板化](esphome/guides/automations#模板化)): 开灯时红光通道的值，赋值范围在 `0% ~ 100%` 或 `0.0 ~ 1.0`之间。默认不改变原值
+- **green** (*选填*, 百分比, [模板化](esphome/guides/automations#模板化)): 开灯时绿光通道的值，赋值范围在 `0% ~ 100%` 或 `0.0 ~ 1.0`之间。默认不改变原值
+- **blue** (*选填*, 百分比, [模板化](esphome/guides/automations#模板化)): 开灯时蓝光通道的值，赋值范围在 `0% ~ 100%` 或 `0.0 ~ 1.0`之间。默认不改变原值
+- **white** (*选填*, 百分比, [模板化](esphome/guides/automations#模板化)): 开灯时白光通道的值，赋值范围在 `0% ~ 100%` 或 `0.0 ~ 1.0`之间。默认不改变原值
+- **flash_length** (*选填*, [时长](esphome/guides/configuration-types#时长), [模板化](esphome/guides/automations#模板化)): 如果设置此参数，开灯后会在调整亮度和颜色通道到新设置的值的 `n` 秒之后，返回之前的状态（类似开关点动）
+- **effect** (*选填*, 字符串, [模板化](esphome/guides/automations#模板化)): 如果设置此参数，开灯时会启动对应的灯关特效
 
 
 
 
 **模板化** 
 
-相同动作使用 [模板化](mqtt/guides/automations#模板化) 的写法
+相同动作使用 [模板化](esphome/guides/automations#模板化) 的写法
 
 ```c++
 // 定义动作
@@ -115,13 +115,13 @@ on_...:
 
 配置参数
 
-- **id** (**必填**, [ID](mqtt/guides/configuration-types#id)): 灯的名称
-- **transition_length** (*选填*, [时长](mqtt/guides/configuration-types#时长), [模板化](mqtt/guides/automations#模板化)): 过度时长
+- **id** (**必填**, [ID](esphome/guides/configuration-types#id)): 灯的名称
+- **transition_length** (*选填*, [时长](esphome/guides/configuration-types#时长), [模板化](esphome/guides/automations#模板化)): 过度时长
 
 
 **模板化** 
 
-相同动作使用 [模板化](mqtt/guides/automations#模板化) 的写法
+相同动作使用 [模板化](esphome/guides/automations#模板化) 的写法
 
 ```c++
 // 定义动作
@@ -154,8 +154,8 @@ light:
 配置参数
 
 - **name** (*选填*, 字符串): 特效名称，默认为 `Random`
-- **transition_length** (*选填*, [时长](mqtt/guides/configuration-types#时长)): 颜色过渡的持续时间，默认为`5s`
-- **update_interval** (*选填*, [时长](mqtt/guides/configuration-types#时长)): 单个颜色的持续时间
+- **transition_length** (*选填*, [时长](esphome/guides/configuration-types#时长)): 颜色过渡的持续时间，默认为`5s`
+- **update_interval** (*选填*, [时长](esphome/guides/configuration-types#时长)): 单个颜色的持续时间
 
 
 ### 频闪
@@ -196,7 +196,7 @@ light:
   - **green** (*选填*, 百分比): 开灯时绿光通道的值，默认为 `100%`
   - **blue** (*选填*, 百分比): 开灯时蓝光通道的值，默认为 `100%`
   - **white** (*选填*, 百分比): 开灯时白光通道的值，默认为 `100%`
-  - **duration** (**必填**, [时长](mqtt/guides/configuration-types#时长)): 此颜色和亮度的持续时间
+  - **duration** (**必填**, [时长](esphome/guides/configuration-types#时长)): 此颜色和亮度的持续时间
 
 ### 同步闪烁
 
@@ -221,7 +221,7 @@ light:
 
 ### 自定义特效
 
-借助 [Lambda 表达式](mqtt/guides/automations#lambdas-表达式), 自定义灯光特效
+借助 [Lambda 表达式](esphome/guides/automations#lambdas-表达式), 自定义灯光特效
 
 ```yaml
 light:
@@ -250,8 +250,8 @@ light:
 配置参数
 
 - **name** (**必填**, 字符串): 特效名称
-- **update_interval** (*选填*, [时长](mqtt/guides/configuration-types#时长)): 执行间隔，默认为 `0ms` 表示无间隔执行
-- **lambda** (**必填**, [Lambda 表达式](mqtt/guides/automations#lambdas-表达式)): 执行的代码，多使用静态变量
+- **update_interval** (*选填*, [时长](esphome/guides/configuration-types#时长)): 执行间隔，默认为 `0ms` 表示无间隔执行
+- **lambda** (**必填**, [Lambda 表达式](esphome/guides/automations#lambdas-表达式)): 执行的代码，多使用静态变量
 
 
 
@@ -313,7 +313,7 @@ light:
   - **blue** (*选填*, 百分比): 蓝光通道的值，默认为 `100%`
   - **random** (*选填*, 布尔值): 是否设为随机颜色，如果设为 `True`，则覆盖前面三项的 RGB 赋值, 默认为 `False`
   - **num_leds** (*选填*, 整数): 此组颜色的灯珠数量
-- **add_led_interval** (*选填*, [时长](mqtt/guides/configuration-types#时长)): The interval with which to shift in new leds at the beginning of the strip. Defaults to `100ms`.
+- **add_led_interval** (*选填*, [时长](esphome/guides/configuration-types#时长)): The interval with which to shift in new leds at the beginning of the strip. Defaults to `100ms`.
 - **reverse** (*选填*, 布尔值): 是否反转步进的方向，默认为不反转 `False`
 
 
@@ -334,7 +334,7 @@ light:
 配置参数
 
 - **name** (*选填*, 字符串): 特效名称，默认为 `Scan`
-- **move_interval** (*选填*, [时长](mqtt/guides/configuration-types#时长)): 向前移动一个等著的时间间隔，默认为 `100ms`
+- **move_interval** (*选填*, [时长](esphome/guides/configuration-types#时长)): 向前移动一个等著的时间间隔，默认为 `100ms`
 
 ### 闪亮
 
@@ -356,7 +356,7 @@ light:
 
 - **name** (*选填*, 字符串): 特效名称，默认为 `Twinkle`
 - **twinkle_probability** (*选填*, 百分比): 选中概率
-- **progress_interval** (*选填*, [时长](mqtt/guides/configuration-types#时长)): 闪烁持续时间，会影响到单个灯珠特效的持续时间，默认为 `4ms`
+- **progress_interval** (*选填*, [时长](esphome/guides/configuration-types#时长)): 闪烁持续时间，会影响到单个灯珠特效的持续时间，默认为 `4ms`
 
 ### 随机色闪亮
 
@@ -377,7 +377,7 @@ light:
 
 - **name** (*选填*, 字符串): 特效名称，默认为 `Random Twinkle`
 - **twinkle_probability** (*选填*, 百分比): 选中概率
-- **progress_interval** (*选填*, [时长](mqtt/guides/configuration-types#时长)): 闪烁持续时间，会影响到单个灯珠特效的持续时间，默认为 `4ms`
+- **progress_interval** (*选填*, [时长](esphome/guides/configuration-types#时长)): 闪烁持续时间，会影响到单个灯珠特效的持续时间，默认为 `4ms`
 
 ### 烟花
 
@@ -399,7 +399,7 @@ light:
 配置参数
 
 - **name** (*选填*, 字符串): 特效名称，默认为 `Fireworks`
-- **update_interval** (*选填*, [时长](mqtt/guides/configuration-types#时长)): 特效间隔，默认为 `32ms`
+- **update_interval** (*选填*, [时长](esphome/guides/configuration-types#时长)): 特效间隔，默认为 `32ms`
 - **spark_probability** (*选填*, 百分比): 选中概率，默认为 `10%`
 - **use_random_color** (*选填*, 布尔值): 是否使用随机颜色，默认为 `False` 使用当前设置的颜色
 - **fade_out_rate** (*选填*, 整数): 淡出(熄灭)速度，谨慎设置，防止太慢导致单点火花不“熄灭”或太快导致无法”点燃“整条灯带，默认为 `120`
@@ -422,7 +422,7 @@ light:
 配置参数
 
 - **name** (*选填*, 字符串): 特效名称，默认为 `FastLED Flicker`
-- **update_interval** (*选填*, [时长](mqtt/guides/configuration-types#时长)): 更新间隔，默认为 `16ms`
+- **update_interval** (*选填*, [时长](esphome/guides/configuration-types#时长)): 更新间隔，默认为 `16ms`
 - **intensity** (*选填*, 百分比): 闪烁强度，即随机偏移量的最大幅度，默认为`5%`
 
 
@@ -436,14 +436,14 @@ light:
 ## 相关链接
 
 
--  [普通灯](mqtt/components/light/binary)
--  [可调亮度的灯](mqtt/components/light/monochromatic)
--  [可调色温调亮度的灯](mqtt/components/light/cwww)
--  [可调三色(红绿蓝)](mqtt/components/light/rgb)
--  [可调四色(红绿蓝白)](mqtt/components/light/rgbw)
--  [可调五色(红绿蓝冷白暖白)](mqtt/components/light/rgbww)
--  [单信号线 LED 灯带](mqtt/components/light/fastled_clockless)
--  [双信号线 LED 灯带](mqtt/components/light/fastled_spi)
+-  [普通灯](esphome/components/light/binary)
+-  [可调亮度的灯](esphome/components/light/monochromatic)
+-  [可调色温调亮度的灯](esphome/components/light/cwww)
+-  [可调三色(红绿蓝)](esphome/components/light/rgb)
+-  [可调四色(红绿蓝白)](esphome/components/light/rgbw)
+-  [可调五色(红绿蓝冷白暖白)](esphome/components/light/rgbww)
+-  [单信号线 LED 灯带](esphome/components/light/fastled_clockless)
+-  [双信号线 LED 灯带](esphome/components/light/fastled_spi)
 
 
 - [WS2812FX library by @kitesurfer1404](https://github.com/kitesurfer1404/WS2812FX)

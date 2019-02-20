@@ -26,10 +26,10 @@ spi:
 
 ## 配置参数
 
-- **clk_pin** (**必填**, [引脚](mqtt/guides/configuration-types#引脚)): CLK 线
-- **mosi_pin** (*选填*, [引脚](mqtt/guides/configuration-types#引脚)): MOSI 线
-- **miso_pin** (*选填*, [引脚](mqtt/guides/configuration-types#引脚)): miso 线
-- **id** (*选填*, [ID](mqtt/guides/configuration-types#id)): 当前 SPI 总线的 ID，使用多个 SPI 总线时需要设置。
+- **clk_pin** (**必填**, [引脚](esphome/guides/configuration-types#引脚)): CLK 线
+- **mosi_pin** (*选填*, [引脚](esphome/guides/configuration-types#引脚)): MOSI 线
+- **miso_pin** (*选填*, [引脚](esphome/guides/configuration-types#引脚)): miso 线
+- **id** (*选填*, [ID](esphome/guides/configuration-types#id)): 当前 SPI 总线的 ID，使用多个 SPI 总线时需要设置。
 
 
 

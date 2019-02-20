@@ -100,7 +100,7 @@ text_sensor:
     id: motion
 ```
 
-使用 [中枢文本传感器组件](mqtt/components/text_sensor/homeassistant) 获取 **binary_sensor.motion_sensor_158d0001c21c68** 这个 **entity_id** 对应的 **state** ，字符串格式，激活时为 `on`，休眠时为 `off`
+使用 [中枢文本传感器组件](esphome/components/text_sensor/homeassistant) 获取 **binary_sensor.motion_sensor_158d0001c21c68** 这个 **entity_id** 对应的 **state** ，字符串格式，激活时为 `on`，休眠时为 `off`
 
 
 
@@ -130,4 +130,4 @@ image:
 
 当 motion 的值为 `on` 时，在坐标 32,0 处（图标是 64x64，这样等同于居中显示）显示图标 **run**，不为 `on` 时，显示温湿度数据
 
-更详细的用法，参考 [中枢文本传感器组件](mqtt/components/text_sensor/homeassistant)， [SSD1306 OLED I2C显示屏](mqtt/components/display/ssd1306_i2c)  和 [显示屏核心组件](mqtt/components/display/) 
+更详细的用法，参考 [中枢文本传感器组件](esphome/components/text_sensor/homeassistant)， [SSD1306 OLED I2C显示屏](esphome/components/display/ssd1306_i2c)  和 [显示屏核心组件](esphome/components/display/) 

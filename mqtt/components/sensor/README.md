@@ -28,15 +28,15 @@ filters:
 - **unit_of_measurement** (*选填*, 字符串): 度量衡
 - **icon** (*选填*, 图标): 自定义显示图标
 - **accuracy_decimals** (*选填*, 整数): 小数精度
-- **expire_after** (*选填*, [时长](mqtt/guides/configuration-types#时长)): 过期时间
+- **expire_after** (*选填*, [时长](esphome/guides/configuration-types#时长)): 过期时间
 - **filters** (*选填*): 详情查看 [传感器过滤器](#过滤器)
 
 **自动化**
 
-- **on_value** (*选填*, [自动化](mqtt/guides/automations)): [在指定值触发](#on_value)
-- **on_value_range** (*选填*, [自动化](mqtt/guides/automations)): [在指定区间内触发](#on_value_range)
-- **on_raw_value** (*选填*, [自动化](mqtt/guides/automations)): [在指定区间内触发](#on_raw_value)
-- 以及 [MQTT 组件](mqtt/components/mqtt#MQTT-组件基本配置项) 的基本配置项
+- **on_value** (*选填*, [自动化](esphome/guides/automations)): [在指定值触发](#on_value)
+- **on_value_range** (*选填*, [自动化](esphome/guides/automations)): [在指定区间内触发](#on_value_range)
+- **on_raw_value** (*选填*, [自动化](esphome/guides/automations)): [在指定区间内触发](#on_raw_value)
+- 以及 [MQTT 组件](esphome/components/mqtt#MQTT-组件基本配置项) 的基本配置项
 
 
 ## 过滤器
@@ -90,7 +90,7 @@ filters:
 
 ## 读数间隔
 
-默认情况下，MQTT 固件每读值 `15` 次计算平均值后发布一次数值，同时读数间隔 `update_interval` 参数的默认值是每 `15s` 读值一次，也就是全默认的情况下，每 `15s x 15` 3分45秒 发布一次数值。将  `filters:` 设置为 `[]` 可以禁用读数间隔功能，直接无间隔输出原始值
+默认情况下，ESPHome 固件每读值 `15` 次计算平均值后发布一次数值，同时读数间隔 `update_interval` 参数的默认值是每 `15s` 读值一次，也就是全默认的情况下，每 `15s x 15` 3分45秒 发布一次数值。将  `filters:` 设置为 `[]` 可以禁用读数间隔功能，直接无间隔输出原始值
 
 
 ```
@@ -190,7 +190,7 @@ on_...:
 
 ### lambda
 
-使用 [lambda 表达式](mqtt/guides/automations#lambda-表达式) 控制传感器发布和获取状态
+使用 [lambda 表达式](esphome/guides/automations#lambda-表达式) 控制传感器发布和获取状态
 
 - `publish_state()`: 在任意位置使用 lambda 手动控制传感器发布状态
 

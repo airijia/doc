@@ -377,7 +377,7 @@
 ![](http://pic.airijia.com/doc/20181231173447.png)
 
 
-## 刷 MQTT 固件 (连 Hass 等中枢)
+## 刷 ESPHome 固件 (连 Hass 等中枢)
 
 
 基于 MQTT 通信协议，零配置即可被智能中枢（airijia/ctl 或 Hass）自动发现，支持 OTA（Over The Air）网刷
@@ -484,7 +484,7 @@ mqtt:
 
 ### 刷入固件
 
-下载 MQTT 固件工具 ( [WIN](http://pic.airijia.com/download/win.zip)，[MAC](http://pic.airijia.com/download/mac.zip))
+下载 ESPHome 固件工具 ( [WIN](http://pic.airijia.com/download/win.zip)，[MAC](http://pic.airijia.com/download/mac.zip))
  
 ![](https://ws1.sinaimg.cn/large/007fN5Xegy1fxgto0jvc6j30pb0nizlv.jpg)
 
@@ -506,7 +506,7 @@ mqtt:
 
 
 
-打开 MQTT 固件工具，选择`串口`，如果列表为空，先点击`刷新`
+打开 ESPHome 固件工具，选择`串口`，如果列表为空，先点击`刷新`
 
 ?>  如果还没找到串口，需要安装 [驱动程序](diy/nodemcu/)
 

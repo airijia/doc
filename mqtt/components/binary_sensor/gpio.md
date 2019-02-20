@@ -15,10 +15,10 @@ binary_sensor:
 
 ## 配置参数
 
-- **pin** (**必填**, [引脚](mqtt/guides/configuration-types#引脚)): The pin to periodically check.
+- **pin** (**必填**, [引脚](esphome/guides/configuration-types#引脚)): The pin to periodically check.
 - **name** (**必填**, 字符串): 本组件的名称
-- **id** (*选填*, [ID](mqtt/guides/configuration-types#id)): 本组件的 ID
-- 以及 [二进制传感器核心组件](mqtt/components/binary_sensor/) 和 [MQTT 组件](mqtt/components/mqtt#MQTT-组件基本配置项)的基本配置项
+- **id** (*选填*, [ID](esphome/guides/configuration-types#id)): 本组件的 ID
+- 以及 [二进制传感器核心组件](esphome/components/binary_sensor/) 和 [MQTT 组件](esphome/components/mqtt#MQTT-组件基本配置项)的基本配置项
 
 
 !>很多时候，读取开关状态需要 `INPUT_PULLUP` ：
@@ -35,7 +35,7 @@ binary_sensor:
 
 ## 翻转引脚
 
-翻转 [引脚](mqtt/guides/configuration-types#引脚)) 的二进制读值，即 0 变 1, 1 变 0
+翻转 [引脚](esphome/guides/configuration-types#引脚)) 的二进制读值，即 0 变 1, 1 变 0
 
 
 ```
@@ -50,7 +50,7 @@ binary_sensor:
 
 ## 抖动抑制
 
-某些二进制传感器(例如触摸开关)连接时，一旦按下按键常常会出现几次断续的通、断现象。[二进制传感器过滤器](mqtt/components/binary_sensor/#过滤器) 的抖动抑制功能即用来消除这种产生断续接触的纹波信号，在其输出端提供无扰动的转换。
+某些二进制传感器(例如触摸开关)连接时，一旦按下按键常常会出现几次断续的通、断现象。[二进制传感器过滤器](esphome/components/binary_sensor/#过滤器) 的抖动抑制功能即用来消除这种产生断续接触的纹波信号，在其输出端提供无扰动的转换。
 
 
 ```

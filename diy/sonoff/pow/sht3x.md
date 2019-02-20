@@ -41,7 +41,7 @@
 
 ## 刷入固件
 
-下载 MQTT 固件工具 ( [WIN](http://pic.airijia.com/download/win.zip)，[MAC](http://pic.airijia.com/download/mac.zip))
+下载 ESPHome 固件工具 ( [WIN](http://pic.airijia.com/download/win.zip)，[MAC](http://pic.airijia.com/download/mac.zip))
  
 ![](https://ws1.sinaimg.cn/large/007fN5Xegy1fxgto0jvc6j30pb0nizlv.jpg)
 
@@ -63,7 +63,7 @@
 
 
 
-打开 MQTT 固件工具，选择`串口`，如果列表为空，先点击`刷新`
+打开 ESPHome 固件工具，选择`串口`，如果列表为空，先点击`刷新`
 
 ?>  如果还没找到串口，需要安装 [驱动程序](diy/nodemcu/)
 

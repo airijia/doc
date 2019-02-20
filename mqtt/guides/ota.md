@@ -3,13 +3,13 @@
 ?> 本功能只能在智能中枢 ([airijia/ctl](ctl/)) 的固件界面中使用
 
 
-使用智能中枢的隔空网刷 (OTA，Over The Air) 功能将 MQTT 固件刷入局域网内的设备
+使用智能中枢的隔空网刷 (OTA，Over The Air) 功能将 ESPHome 固件刷入局域网内的设备
 
 
 使用前提：
 
 - 智能中枢已经正确启动
-- 目标设备已刷 MQTT 固件
+- 目标设备已刷 ESPHome 固件
 - 目标设备与智能中枢在同一个局域网内
 
 
@@ -43,7 +43,7 @@
 
 
 
-使用 [MQTT 固件工具](diy/flasher)
+使用 [ESPHome 固件工具](diy/flasher)
 
 
 

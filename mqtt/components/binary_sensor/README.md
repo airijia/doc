@@ -25,18 +25,18 @@ binary_sensor:
 
 **自动化**
 
-- **on_press** (*选填*, [自动化](mqtt/guides/automations)): 按下按钮时触发，[on_press](mqtt/components/binary_sensor/#on_press)
-- **on_release** (*选填*, [自动化](mqtt/guides/automations)): 松开按钮时触发，[on_release](mqtt/components/binary_sensor/#on_release)
-- **on_click** (*选填*, [自动化](mqtt/guides/automations)): 单击按钮时触发，[on_click](mqtt/components/binary_sensor/#on_click)
-- **on_double_click** (*选填*, [自动化](mqtt/guides/automations)): 双击按钮时触发，[on_double_click](mqtt/components/binary_sensor/#on_double_click)
-<!-- - **on_multi_click** (*选填*, [自动化](mqtt/guides/automations)): -->
-- 以及 [MQTT 组件](mqtt/components/mqtt#MQTT-组件基本配置项) 的基本配置项
+- **on_press** (*选填*, [自动化](esphome/guides/automations)): 按下按钮时触发，[on_press](esphome/components/binary_sensor/#on_press)
+- **on_release** (*选填*, [自动化](esphome/guides/automations)): 松开按钮时触发，[on_release](esphome/components/binary_sensor/#on_release)
+- **on_click** (*选填*, [自动化](esphome/guides/automations)): 单击按钮时触发，[on_click](esphome/components/binary_sensor/#on_click)
+- **on_double_click** (*选填*, [自动化](esphome/guides/automations)): 双击按钮时触发，[on_double_click](esphome/components/binary_sensor/#on_double_click)
+<!-- - **on_multi_click** (*选填*, [自动化](esphome/guides/automations)): -->
+- 以及 [MQTT 组件](esphome/components/mqtt#MQTT-组件基本配置项) 的基本配置项
 
 
 
 ## 过滤器
 
-借助二进制传感器的过滤器，可以就很方便的对传感器的读值进行二次处理，类似 [传感器过滤器](mqtt/components/sensor/#过滤器).
+借助二进制传感器的过滤器，可以就很方便的对传感器的读值进行二次处理，类似 [传感器过滤器](esphome/components/sensor/#过滤器).
 
 ```yaml
 binary_sensor:
@@ -60,7 +60,7 @@ binary_sensor:
 - **invert**: 翻转
 - **delayed_on**: 收到 `ON` 信号时，开始计时，计时结束后，如果 `ON` 信号仍在，则正式发布状态为 `ON`，如果在等待过程中收到 `OFF` 信号，则立即取消发布。简单说，按下按钮足够长的时间才触发。**在触摸按钮防抖动上很好用**
 - **delayed_off**: 类似 `delayed_on`，用于判断 `OFF`
-- **lambda**: 将 [lambda 表达式](mqtt/guides/automations#lambda-表达式) 用作过滤器，可以引入其他判断条件来决定返回值的方式， `x`为传感器的实际值， `true` 为 ON, `false` 为 OFF, `{}` 为结束当前过滤器链
+- **lambda**: 将 [lambda 表达式](esphome/guides/automations#lambda-表达式) 用作过滤器，可以引入其他判断条件来决定返回值的方式， `x`为传感器的实际值， `true` 为 ON, `false` 为 OFF, `{}` 为结束当前过滤器链
 - **heartbeat**: 定期以给定间隔发布传感器的状态。状态变化时依旧会即时发布，不受此周期影响
 
 
@@ -112,8 +112,8 @@ binary_sensor:
 
 **配置参数**
 
-- **min_length** (*选填*, [时长](mqtt/guides/configuration-types#时长)): 判断为单次点击最短时长，默认为 `50ms`
-- **max_length** (*选填*, [时长](mqtt/guides/configuration-types#时长)): 判断为单次点击最大时长，默认为 `350ms`
+- **min_length** (*选填*, [时长](esphome/guides/configuration-types#时长)): 判断为单次点击最短时长，默认为 `50ms`
+- **max_length** (*选填*, [时长](esphome/guides/configuration-types#时长)): 判断为单次点击最大时长，默认为 `350ms`
 
 
 ### on_double_click
@@ -133,8 +133,8 @@ binary_sensor:
 
 **配置参数**
 
-- **min_length** (*选填*, [时长](mqtt/guides/configuration-types#时长)): 判断为单次点击最短时长，默认为 `50ms`
-- **max_length** (*选填*, [时长](mqtt/guides/configuration-types#时长)): 判断为单次点击最大时长，默认为 `350ms`
+- **min_length** (*选填*, [时长](esphome/guides/configuration-types#时长)): 判断为单次点击最短时长，默认为 `50ms`
+- **max_length** (*选填*, [时长](esphome/guides/configuration-types#时长)): 判断为单次点击最大时长，默认为 `350ms`
 
 
 
@@ -162,7 +162,7 @@ binary_sensor:
   - `<ON/OFF> for <TIME> to <TIME>`
   - `<ON/OFF> for at least <TIME>`
   - `<ON/OFF> for at most <TIME>`
-- **invalid_cooldown** (*选填*, [时长](mqtt/guides/configuration-types#时长)): 多击动作的匹配开始时，如果后续的动作与预先设置的动作序列的时长 `timing`  不能完全匹配，视作没有激活多击动作。多击动作将在此参数设置的时长后才恢复匹配功能，默认 `1s`
+- **invalid_cooldown** (*选填*, [时长](esphome/guides/configuration-types#时长)): 多击动作的匹配开始时，如果后续的动作与预先设置的动作序列的时长 `timing`  不能完全匹配，视作没有激活多击动作。多击动作将在此参数设置的时长后才恢复匹配功能，默认 `1s`
 
 
 !> 务必在每段 `timing` 的结尾处设置 `OFF`，不然当存在多个序列时长定义时，极易混淆
@@ -222,7 +222,7 @@ on_...:
 
 ## lambda
 
-使用 [lambda 表达式](mqtt/guides/automations#lambda-表达式) 控制二进制传感器发布和获取状态
+使用 [lambda 表达式](esphome/guides/automations#lambda-表达式) 控制二进制传感器发布和获取状态
 
 
 - `publish_state()`: 在任意位置使用 lambda 手动控制二进制传感器发布状态

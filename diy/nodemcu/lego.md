@@ -230,7 +230,7 @@ USB 线两端放入两个 1x1
 
 
 
-直连 HomeKit 刷[渡鸦固件](#刷渡鸦固件homekit-直连)，连 Hass 等中枢刷 [MQTT 固件](#刷-mqtt-固件-连-hass-等中枢)
+直连 HomeKit 刷[渡鸦固件](#刷渡鸦固件homekit-直连)，连 Hass 等中枢刷 [ESPHome 固件](#刷-mqtt-固件-连-hass-等中枢)
 
 ## 刷渡鸦固件(HomeKit 直连)
 
@@ -431,7 +431,7 @@ USB 线两端放入两个 1x1
 
 
 
-## 刷 MQTT 固件 (连 Hass 等中枢)
+## 刷 ESPHome 固件 (连 Hass 等中枢)
 
 基于 MQTT 通信协议，零配置即可被智能中枢（airijia/ctl 或 Hass）自动发现，支持 OTA（Over The Air）网刷
 
@@ -552,8 +552,8 @@ mqtt:
 下载文件后，解压出 **666.bin** 文件，刷入工具使用 **MQTT固件工具**
 
 
-- [下载 MQTT 固件 Windows 版](http://pic.airijia.com/download/win.zip)
-- [下载 MQTT 固件 MAC OS 版](http://pic.airijia.com/download/mac.zip)
+- [下载 ESPHome 固件 Windows 版](http://pic.airijia.com/download/win.zip)
+- [下载 ESPHome 固件 MAC OS 版](http://pic.airijia.com/download/mac.zip)
 
 
 
@@ -565,7 +565,7 @@ mqtt:
 
 
 
-打开 MQTT 固件工具，选择`串口`，如果列表为空，先点击`刷新`
+打开 ESPHome 固件工具，选择`串口`，如果列表为空，先点击`刷新`
 
 ?>  如果还没找到串口，需要安装 [驱动程序](diy/nodemcu/)
 
@@ -615,15 +615,15 @@ mqtt:
 
 ### 上传模板文件创建
 
-**上传模板文件** 的方式创建 MQTT 固件
+**上传模板文件** 的方式创建 ESPHome 固件
 
 显示温湿度，不适用黄蓝双色的屏幕
 
 
 
-?> 基本五大件的配置查看 [模板文件创建 MQTT 固件](mqtt/guides/yaml)
+?> 基本五大件的配置查看 [模板文件创建 ESPHome 固件](esphome/guides/yaml)
 
-需要用到 [I²C 总线](mqtt/components/i2c),  [SHT3X-D 温湿度传感器](mqtt/components/sensor/sht3xd) 和  [SSD1306 OLED I2C显示屏](mqtt/components/display/ssd1306_i2c) 等多个组件
+需要用到 [I²C 总线](esphome/components/i2c),  [SHT3X-D 温湿度传感器](esphome/components/sensor/sht3xd) 和  [SSD1306 OLED I2C显示屏](esphome/components/display/ssd1306_i2c) 等多个组件
 
 
 ```yaml
@@ -678,7 +678,7 @@ display:
 使用 roboto 字体，配置字体大小 32，命名为 `font_32`
 
 
-更详细的使用，参考 [字体](mqtt/components/display/#字体) 
+更详细的使用，参考 [字体](esphome/components/display/#字体) 
 
 
 #### 配置图标
@@ -686,7 +686,7 @@ display:
 使用 thermometer 和 water-percent 两个图标，并重新设置大小为 32x32
 
 
-更详细的使用，参考 [图标](mqtt/components/display/#图标) 
+更详细的使用，参考 [图标](esphome/components/display/#图标) 
 
 #### 配置显示屏
 
@@ -715,7 +715,7 @@ it.printf(64, 40, id(font_48), TextAlign::CENTER, "%.1f°", id(temperature).raw_
 以**font_32**，在坐标 20,48 处（屏幕下半距左 20）显示 ``湿度数``+ ``%``，`.1f` 表示将浮点数四舍五入到小数点后 1 位
 
 
-更详细的用法，参考 [SSD1306 OLED I2C显示屏](mqtt/components/display/ssd1306_i2c)  和 [显示屏核心组件](mqtt/components/display/) 
+更详细的用法，参考 [SSD1306 OLED I2C显示屏](esphome/components/display/ssd1306_i2c)  和 [显示屏核心组件](esphome/components/display/) 
 
 
 
@@ -723,7 +723,7 @@ it.printf(64, 40, id(font_48), TextAlign::CENTER, "%.1f°", id(temperature).raw_
 ### 温湿度加时间
 
 
-**上传模板文件** 的方式创建 MQTT 固件
+**上传模板文件** 的方式创建 ESPHome 固件
 
 显示温湿度的同时加上当前的时间，搭配上黄下蓝的显示屏最佳
 
@@ -731,9 +731,9 @@ it.printf(64, 40, id(font_48), TextAlign::CENTER, "%.1f°", id(temperature).raw_
 
 
 
-?> 基本五大件的配置查看 [模板文件创建 MQTT 固件](mqtt/guides/yaml)
+?> 基本五大件的配置查看 [模板文件创建 ESPHome 固件](esphome/guides/yaml)
 
-需要用到 [I²C 总线](mqtt/components/i2c),  [SHT3X-D 温湿度传感器](mqtt/components/sensor/sht3xd) 和  [SSD1306 OLED I2C显示屏](mqtt/components/display/ssd1306_i2c)，[时间](mqtt/components/time) 等多个组件
+需要用到 [I²C 总线](esphome/components/i2c),  [SHT3X-D 温湿度传感器](esphome/components/sensor/sht3xd) 和  [SSD1306 OLED I2C显示屏](esphome/components/display/ssd1306_i2c)，[时间](esphome/components/time) 等多个组件
 
 
 ```yaml
@@ -786,14 +786,14 @@ display:
 配置 SNTP 服务，设置 ID 为 `sntp_time`，设置时区为 `Asia/Shanghai`
 
 
-更详细的使用，参考 [时间](mqtt/components/time)
+更详细的使用，参考 [时间](esphome/components/time)
 
 #### 配置字体
 
 使用 roboto 字体，配置 16 和 48 两种尺寸，分别命名为 `font_16` 和 `font_48`
 
 
-更详细的使用，参考 [字体](mqtt/components/display/#字体) 
+更详细的使用，参考 [字体](esphome/components/display/#字体) 
 
 #### 配置显示屏
 
@@ -825,7 +825,7 @@ it.printf(64, 40, id(font_48), TextAlign::CENTER, "%.1f°", id(temperature).raw_
 
 以**font_48**，在坐标 64,40 处（下半区域正中）`TextAlign::CENTER` 居中显示 ``温度数``+ ``°``，`.1f` 表示将浮点数四舍五入到小数点后 1 位
 
-更详细的用法，参考 [SSD1306 OLED I2C显示屏](mqtt/components/display/ssd1306_i2c)  和 [显示屏核心组件](mqtt/components/display/) 
+更详细的用法，参考 [SSD1306 OLED I2C显示屏](esphome/components/display/ssd1306_i2c)  和 [显示屏核心组件](esphome/components/display/) 
 
 
 
@@ -911,7 +911,7 @@ text_sensor:
     id: motion
 ```
 
-使用 [中枢文本传感器组件](mqtt/components/text_sensor/homeassistant) 获取 **binary_sensor.motion_sensor_158d0001c21c68** 这个 **entity_id** 对应的 **state** ，字符串格式，激活时为 `on`，休眠时为 `off`
+使用 [中枢文本传感器组件](esphome/components/text_sensor/homeassistant) 获取 **binary_sensor.motion_sensor_158d0001c21c68** 这个 **entity_id** 对应的 **state** ，字符串格式，激活时为 `on`，休眠时为 `off`
 
 
 
@@ -941,7 +941,7 @@ image:
 
 当 motion 的值为 `on` 时，在坐标 32,0 处（图标是 64x64，这样等同于居中显示）显示图标 **run**，不为 `on` 时，显示温湿度数据
 
-更详细的用法，参考 [中枢文本传感器组件](mqtt/components/text_sensor/homeassistant)， [SSD1306 OLED I2C显示屏](mqtt/components/display/ssd1306_i2c)  和 [显示屏核心组件](mqtt/components/display/) 
+更详细的用法，参考 [中枢文本传感器组件](esphome/components/text_sensor/homeassistant)， [SSD1306 OLED I2C显示屏](esphome/components/display/ssd1306_i2c)  和 [显示屏核心组件](esphome/components/display/) 
 
 
 ### 实时气象站
@@ -952,10 +952,10 @@ image:
 
 ## 相关链接
 
-- [I²C 总线](mqtt/components/i2c),
-- [SHT3X-D 温湿度传感器](mqtt/components/sensor/sht3xd)
-- [显示屏核心组件](mqtt/components/display/) 
-- [SSD1306 OLED I2C显示屏](mqtt/components/display/ssd1306_i2c)
-- [时间](mqtt/components/time)
+- [I²C 总线](esphome/components/i2c),
+- [SHT3X-D 温湿度传感器](esphome/components/sensor/sht3xd)
+- [显示屏核心组件](esphome/components/display/) 
+- [SSD1306 OLED I2C显示屏](esphome/components/display/ssd1306_i2c)
+- [时间](esphome/components/time)
 
 

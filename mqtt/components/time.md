@@ -4,7 +4,7 @@
 
 ## hass 时间
 
-使用 [API](mqtt/components/api) 从 airi 或 hass 中枢获取时间
+使用 [API](esphome/components/api) 从 airi 或 hass 中枢获取时间
 
 ```yaml
 # 配置示例
@@ -15,9 +15,9 @@ time:
 
 配置参数
 
-- **id** (*选填*, [ID](mqtt/guides/configuration-types#id)): 此组件的 ID
+- **id** (*选填*, [ID](esphome/guides/configuration-types#id)): 此组件的 ID
 - **timezone** (*选填*, 字符串): 时区设置，常用值 `Asia/Shanghai` 
-- **on_time** (*选填*, [自动化](mqtt/guides/automations)): 在指定时间触发自动化动作， 详见 [on_time](#on_time)
+- **on_time** (*选填*, [自动化](esphome/guides/automations)): 在指定时间触发自动化动作， 详见 [on_time](#on_time)
 
 
 
@@ -34,10 +34,10 @@ time:
 
 配置参数
 
-- **id** (*选填*, [ID](mqtt/guides/configuration-types#id)): 此组件的 ID
+- **id** (*选填*, [ID](esphome/guides/configuration-types#id)): 此组件的 ID
 - **timezone** (*选填*, 字符串): 时区设置，常用值 `Asia/Shanghai` 
 - **servers** (*选填*, 字符串列表): 指定 3 个 NTP 服务器。默认值为  `0.pool.ntp.org`，`1.pool.ntp.org`，`2.pool.ntp.org`
-- **on_time** (*选填*, [自动化](mqtt/guides/automations)): 在指定时间触发自动化动作， 详见 [on_time](#on_time)
+- **on_time** (*选填*, [自动化](esphome/guides/automations)): 在指定时间触发自动化动作， 详见 [on_time](#on_time)
 
 
 

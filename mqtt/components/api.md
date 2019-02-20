@@ -20,14 +20,14 @@ api:
 
 - **port** (*选填*, 整数): API 服务使用的端口，默认为 `6053`
 - **password** (*选填*, 字符串): API 服务使用的密码，默认无密码
-- **reboot_timeout** (*选填*, [时长](mqtt/guides/configuration-types#时长)): 持续的没有连接连入到此节点上的 API 服务时，节点将在设置的时长后重启。默认 `5min`，设置成 `0s` 将禁用此功能
-- **id** (*选填*, [ID](mqtt/guides/configuration-types#id)): 本组件的 ID
+- **reboot_timeout** (*选填*, [时长](esphome/guides/configuration-types#时长)): 持续的没有连接连入到此节点上的 API 服务时，节点将在设置的时长后重启。默认 `5min`，设置成 `0s` 将禁用此功能
+- **id** (*选填*, [ID](esphome/guides/configuration-types#id)): 本组件的 ID
 
 
 
 ## 动作
 
-配合 [自动化](mqtt/guides/automations) 的动作
+配合 [自动化](esphome/guides/automations) 的动作
 
 
 ### homeassistant.service

@@ -44,7 +44,7 @@
 
 ## 刷机工具
 
-- [MQTT 固件工具](diy/flasher)
+- [ESPHome 固件工具](diy/flasher)
 - [渡鸦 固件工具](raven/flasher)
 
 

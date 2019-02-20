@@ -21,7 +21,7 @@
 
 ## 网页创建固件
 
-打开 [在线 MQTT 固件编译](http://airijia.com/ctl/firmware/list) 使用
+打开 [在线 ESPHome 固件编译](http://airijia.com/ctl/firmware/list) 使用
 
 ![](https://ws1.sinaimg.cn/large/007fN5Xegy1fwxg8yw6t6j30w60jqtca.jpg)
 
@@ -43,7 +43,7 @@ RGB 序列：三种颜色的排序；R=红，G=绿，B=蓝，根据实际情况�
 
 ## 文件模板创建
 
-参考 [模板文件创建 MQTT 固件](mqtt/guides/yaml) 使用
+参考 [模板文件创建 ESPHome 固件](esphome/guides/yaml) 使用
 
 
 ```yaml
@@ -61,16 +61,16 @@ light:
 
 - **name** (**必填**, 字符串): 名称，用于 MQTT 识别，不支持中文
 - **chipset** (**必填**, 字符串): 指定使用的芯片组，具体值查看[支持芯片组](#支持芯片组)
-- **pin** (**必填**, [引脚](mqtt/guides/configuration-types#引脚)): 传输数据信号使用的端口
+- **pin** (**必填**, [引脚](esphome/guides/configuration-types#引脚)): 传输数据信号使用的端口
 - **num_leds** (**必填**, 整数): 连接的灯珠数量
 - **rgb_order** (*选填*, 字符串): 三种颜色的排序；R=红，G=绿，B=蓝。举例：如果设置排序为 RGB，当控制端指定显示红色（R）时，灯带却显示为蓝色（B），这时把排序改成 BGR，重新编译固件刷入，即可正确显示。可选值 `RGB`,`RBG`, `GRB`, `GBR`, `BRG` 和 `BGR`，默认值  `RGB`
-- **max_refresh_rate** (选填, [时长](mqtt/guides/configuration-types#时长)): 最大刷新率。举例：设置为16ms，会限制刷新率在 60Hz。默认值由驱动 IC 的默认值决定
+- **max_refresh_rate** (选填, [时长](esphome/guides/configuration-types#时长)): 最大刷新率。举例：设置为16ms，会限制刷新率在 60Hz。默认值由驱动 IC 的默认值决定
 - **gamma_correct** (*选填*, 浮点数): 伽马校正。默认值 `2.8`
-- **default_transition_length** (*选填*, [时长](mqtt/guides/configuration-types#时长)): 过度时长，如果智能中枢没提供此参数时的采用的值。默认值为 `1s`
-- **power_supply** (*选填*, [ID](mqtt/guides/configuration-types#id)): 使用 [直流电源](mqtt/components/power_supply) 给灯带供电时，在控制灯带的同时也控制电源
-- **effects** (*选填*, 列表): 植入固件的[灯光特效](mqtt/components/light/#灯光特效)
-- **id** (*选填*, [ID](mqtt/guides/configuration-types#id)): 当前组件的 ID
-- 以及[MQTT 组件](mqtt/components/mqtt#MQTT-组件基本配置项)的基本配置项
+- **default_transition_length** (*选填*, [时长](esphome/guides/configuration-types#时长)): 过度时长，如果智能中枢没提供此参数时的采用的值。默认值为 `1s`
+- **power_supply** (*选填*, [ID](esphome/guides/configuration-types#id)): 使用 [直流电源](esphome/components/power_supply) 给灯带供电时，在控制灯带的同时也控制电源
+- **effects** (*选填*, 列表): 植入固件的[灯光特效](esphome/components/light/#灯光特效)
+- **id** (*选填*, [ID](esphome/guides/configuration-types#id)): 当前组件的 ID
+- 以及[MQTT 组件](esphome/components/mqtt#MQTT-组件基本配置项)的基本配置项
 
 
 
@@ -104,14 +104,14 @@ light:
 
 ## 相关链接
 
--  [灯核心组件](mqtt/components/light/)
-  -  [普通灯](mqtt/components/light/binary)
-  -  [可调亮度的灯](mqtt/components/light/monochromatic)
-  -  [可调色温调亮度的灯](mqtt/components/light/cwww)
-  -  [可调三色(红绿蓝)](mqtt/components/light/rgb)
-  -  [可调四色(红绿蓝白)](mqtt/components/light/rgbw)
-  -  [可调五色(红绿蓝冷白暖白)](mqtt/components/light/rgbww)
-  -  [双信号线 LED 灯带](mqtt/components/light/fastled_spi)
+-  [灯核心组件](esphome/components/light/)
+  -  [普通灯](esphome/components/light/binary)
+  -  [可调亮度的灯](esphome/components/light/monochromatic)
+  -  [可调色温调亮度的灯](esphome/components/light/cwww)
+  -  [可调三色(红绿蓝)](esphome/components/light/rgb)
+  -  [可调四色(红绿蓝白)](esphome/components/light/rgbw)
+  -  [可调五色(红绿蓝冷白暖白)](esphome/components/light/rgbww)
+  -  [双信号线 LED 灯带](esphome/components/light/fastled_spi)
 
 
 - [伽马校正](https://baike.baidu.com/item/%E4%BC%BD%E7%8E%9B%E6%A0%A1%E6%AD%A3/7257507)

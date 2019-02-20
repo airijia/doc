@@ -4,7 +4,7 @@
 
 智能家居环境中，以智能中枢（比如 Hass）或者流工具（比如 Node-RED）为核心，驱动不同的智能设备之间的自动化协作，称之为中枢自动化，或者**大**自动化。
 
-节点设备自身内部的自动化，称之为内部自动化 `internal automatic`，或者**小**自动化，通常情况下，这部分功能由固件的底层完成，并不能自定义。而在 MQTT 固件最强大的部分，就是可以自己来定义内部自动化具体细节。
+节点设备自身内部的自动化，称之为内部自动化 `internal automatic`，或者**小**自动化，通常情况下，这部分功能由固件的底层完成，并不能自定义。而在 ESPHome 固件最强大的部分，就是可以自己来定义内部自动化具体细节。
 
 可以参考更容易理解的、基于 Sonoff Basic 的案例，[基于自动化实现 Basic 的基本功能](diy/sonoff/basic-auto)
 
@@ -155,7 +155,7 @@ on_press:
 
 **配置参数**
 
-- **id** (**必填**, [ID](mqtt/guides/configuration-types#id)): 本组件的 ID
+- **id** (**必填**, [ID](esphome/guides/configuration-types#id)): 本组件的 ID
 - **type** (**必填**, 字符串): 变量类型，例如 `bool`(布尔值，`true`/`false`), `int` (整数), `float` (浮点数), `int[50]` 50个整数构成的数组等等
 - **restore_value** (*选填*, 布尔值): 启动时试图恢复的值，默认为 `no`。注意，ESP8266 系列只有 96 bytes 可用
 - **initial_value** (*选填*, 字符串): 没有恢复值(restore_value)可用的时候，初始化完成后的默认值，默认为该类型变量在 C++ 中的默认值，例如 `int` 的默认值为 `0` 
@@ -165,12 +165,12 @@ on_press:
 
 ## 所有触发器
 
-- [mqtt.on_message](mqtt/components/mqtt#on_message) / [mqtt.on_json_message](mqtt/components/mqtt#on_json_message)
-- [sensor.on_value](mqtt/components/sensor/#on_value) / [sensor.on_value_range](mqtt/components/sensor/#on_value_range) / [sensor.on_raw_value](mqtt/components/sensor/#on_raw_value)
-- [binary_sensor.on_press](mqtt/components/binary_sensor/#on_press) / [binary_sensor.on_release](mqtt/components/binary_sensor/#on_release) / [binary_sensor.on_state](mqtt/components/binary_sensor/#on_state) / [binary_sensor.on_click](mqtt/components/binary_sensor/#on_click) / [binary_sensor.on_double_click](mqtt/components/binary_sensor/#on_double_click) / [binary_sensor.on_multi_click](mqtt/components/binary_sensor/#on_multi_click)
-- [airi.on_boot](mqtt/components/airi#on_boot) / [airi.on_shutdown](mqtt/components/airi#on_shutdown) / [airi.on_loop](mqtt/components/airi#on_loop)
+- [mqtt.on_message](esphome/components/mqtt#on_message) / [mqtt.on_json_message](esphome/components/mqtt#on_json_message)
+- [sensor.on_value](esphome/components/sensor/#on_value) / [sensor.on_value_range](esphome/components/sensor/#on_value_range) / [sensor.on_raw_value](esphome/components/sensor/#on_raw_value)
+- [binary_sensor.on_press](esphome/components/binary_sensor/#on_press) / [binary_sensor.on_release](esphome/components/binary_sensor/#on_release) / [binary_sensor.on_state](esphome/components/binary_sensor/#on_state) / [binary_sensor.on_click](esphome/components/binary_sensor/#on_click) / [binary_sensor.on_double_click](esphome/components/binary_sensor/#on_double_click) / [binary_sensor.on_multi_click](esphome/components/binary_sensor/#on_multi_click)
+- [airi.on_boot](esphome/components/airi#on_boot) / [airi.on_shutdown](esphome/components/airi#on_shutdown) / [airi.on_loop](esphome/components/airi#on_loop)
 <!-- pn532.on_tag -->
-- [time.on_time](mqtt/components/time#on_time)
+- [time.on_time](esphome/components/time#on_time)
 - [interval.interval](#interval)
 
 
@@ -182,14 +182,14 @@ on_press:
 - [if](#if) / [while](#while)
 - [component.update](#componentupdate)
 - [script.execute](#scriptexecute) / [script.stop](#scriptstop)
-- [logger.log](mqtt/components/logger#loggerlog)
-- [homeassistant.service](mqtt/components/api#homeassistantservice)
-- [mqtt.publish](mqtt/components/mqtt#mqttpublish) / [mqtt.publish](mqtt/components/mqtt#mqttpublish_json) 
-- [switch.toggle](mqtt/components/switch/#switchtoggle) / [switch.turn_off](mqtt/components/switch/#switchturn_off) / [switch.turn_on](mqtt/components/switch/#switchturn_on)
-- [light.toggle](mqtt/components/light/#lighttoggle) / [light.turn_on](mqtt/components/light/#lightturn_on) /[light.turn_off](mqtt/components/light/#lightturn_off)
+- [logger.log](esphome/components/logger#loggerlog)
+- [homeassistant.service](esphome/components/api#homeassistantservice)
+- [mqtt.publish](esphome/components/mqtt#mqttpublish) / [mqtt.publish](esphome/components/mqtt#mqttpublish_json) 
+- [switch.toggle](esphome/components/switch/#switchtoggle) / [switch.turn_off](esphome/components/switch/#switchturn_off) / [switch.turn_on](esphome/components/switch/#switchturn_on)
+- [light.toggle](esphome/components/light/#lighttoggle) / [light.turn_on](esphome/components/light/#lightturn_on) /[light.turn_off](esphome/components/light/#lightturn_off)
 <!-- cover.open / cover.close / cover.stop -->
 <!-- fan.toggle / fan.turn_off / fan.turn_on -->
-- [output.turn_off](mqtt/components/output/#outputturn_off) / [output.turn_on](mqtt/components/output/#outputturn_on) / [output.set_level](mqtt/components/output/#outputset_level)
+- [output.turn_off](esphome/components/output/#outputturn_off) / [output.turn_on](esphome/components/output/#outputturn_on) / [output.set_level](esphome/components/output/#outputset_level)
 <!-- deep_sleep.enter / deep_sleep.prevent -->
 
 
@@ -198,9 +198,9 @@ on_press:
 
 - [and](#and) / [or](#or)
 - [lambda](#lambda-条件)
-- [binary_sensor.is_on](mqtt/components/binary_sensor/#is_on) / [binary_sensor.is_off](mqtt/components/binary_sensor/#is_off)
-- [switch.is_on](mqtt/components/switch/#is_on) / [switch.is_off](mqtt/components/switch/#is_off)
-- [sensor.in_range](mqtt/components/sensor/#in_range)
+- [binary_sensor.is_on](esphome/components/binary_sensor/#is_on) / [binary_sensor.is_off](esphome/components/binary_sensor/#is_off)
+- [switch.is_on](esphome/components/switch/#is_on) / [switch.is_off](esphome/components/switch/#is_off)
+- [sensor.in_range](esphome/components/sensor/#in_range)
 
 
 
@@ -266,8 +266,8 @@ on_...:
 **配置参数**
 
 - **if** (**必填**): 判断的条件
-- **then** (*选填*, [动作](mqtt/guides/automations#动作)): 判断为 `True` 时执行的动作，不填则无动作
-- **else** (*选填*, [动作](mqtt/guides/automations#动作)): 判断为 `False` 时执行的动作，不填则无动作
+- **then** (*选填*, [动作](esphome/guides/automations#动作)): 判断为 `True` 时执行的动作，不填则无动作
+- **else** (*选填*, [动作](esphome/guides/automations#动作)): 判断为 `False` 时执行的动作，不填则无动作
 
 
 
@@ -291,7 +291,7 @@ on_...:
 **配置参数**
 
 - **condition** (**必填**): 供判断用的条件
-- **then** (**必填**, [动作](mqtt/guides/automations#动作)): while 判断为否之前持续执行的动作
+- **then** (**必填**, [动作](esphome/guides/automations#动作)): while 判断为否之前持续执行的动作
 
 
 
@@ -361,7 +361,7 @@ on_...:
 
 ### interval
 
-即时间间隔，方便执行循环动作的触发器，使用 [time.on_time](mqtt/components/time#on_time) 触发器可以实现同样的功能，但这个更便捷
+即时间间隔，方便执行循环动作的触发器，使用 [time.on_time](esphome/components/time#on_time) 触发器可以实现同样的功能，但这个更便捷
 
 
 ```yaml
@@ -372,8 +372,8 @@ interval:
       - switch.toggle: relay_1
 ```
 
-- **interval** (**必填**, [时长](mqtt/guides/configuration-types#时长)): 循环动作的间隔
-- **then** (**必填**, [动作](mqtt/guides/automations#动作)): 执行的动作
+- **interval** (**必填**, [时长](esphome/guides/configuration-types#时长)): 循环动作的间隔
+- **then** (**必填**, [动作](esphome/guides/automations#动作)): 执行的动作
 
 
 

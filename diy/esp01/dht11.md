@@ -45,9 +45,9 @@ TTL 刷机线
 
 
 
-## MQTT 固件使用
+## ESPHome 固件使用
 
-[MQTT 固件工具](diy/flasher)
+[ESPHome 固件工具](diy/flasher)
 
 
 

@@ -1,12 +1,12 @@
-# 模板文件创建 MQTT 固件
+# 模板文件创建 ESPHome 固件
 
-以 ESP01 + DHT11 温湿度 为例演示如何编写 MQTT 固件的 yaml 模板文件
+以 ESP01 + DHT11 温湿度 为例演示如何编写 ESPHome 固件的 yaml 模板文件
 
 MQTT 由基本功能和扩展功能两大部分构成
 
 ## 添加基本功能
 
-基本的网络，调试和升级功能，由 [核心](mqtt/components/airi)，[WiFi](mqtt/components/wifi)，[API](mqtt/components/api)，[MQTT](mqtt/components/mqtt)，[OTA](mqtt/components/ota) 和 [日志](mqtt/components/logger) 合计六个组件构成
+基本的网络，调试和升级功能，由 [核心](esphome/components/airi)，[WiFi](esphome/components/wifi)，[API](esphome/components/api)，[MQTT](esphome/components/mqtt)，[OTA](esphome/components/ota) 和 [日志](esphome/components/logger) 合计六个组件构成
 
 
 !> 除特殊需求外，通常 API 和 MQTT 二选一即可
@@ -36,7 +36,7 @@ logger:
 
 ## 添加扩展功能
 
-传感器，开关等功能，本例中使用 [DHT 温湿度](mqtt/components/sensor/dht) 组件
+传感器，开关等功能，本例中使用 [DHT 温湿度](esphome/components/sensor/dht) 组件
 
 配置示例，`拼音`的部分需要替换成实际的参数
 
@@ -117,11 +117,11 @@ sensor:
 ## 刷入固件
 
 
-下载文件后刷入，工具使用 esptool ([WIN](diy/esptool)，[MAC](diy/esptool_mac)) ，或者 [MQTT 固件工具](diy/flasher)
+下载文件后刷入，工具使用 esptool ([WIN](diy/esptool)，[MAC](diy/esptool_mac)) ，或者 [ESPHome 固件工具](diy/flasher)
 
 
 
-如果使用的是 airi 智能中枢，还可以 [OTA 刷入](mqtt/guides/ota)
+如果使用的是 airi 智能中枢，还可以 [OTA 刷入](esphome/guides/ota)
 
 
 

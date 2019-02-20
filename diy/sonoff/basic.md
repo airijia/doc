@@ -114,7 +114,7 @@ TTL刷机线（CH340G）
 
 
 
-MQTT 固件使用 [MQTT 固件工具](diy/flasher)
+ESPHome 固件使用 [ESPHome 固件工具](diy/flasher)
 
 
 渡鸦 HomeKit 直连固件使用 [渡鸦固件工具](raven/flasher)
@@ -153,7 +153,7 @@ MQTT 固件使用 [MQTT 固件工具](diy/flasher)
 ### GPIO 14 连接传统墙壁开关
 
 
-?> 需要配合 [MQTT 固件](mqtt/) 使用
+?> 需要配合 [ESPHome 固件](esphome/) 使用
 
 通过 GPIO 14 连接墙开的方法， 可以实现 `WiFi` 和 `传统墙壁开关` 同时控制。
 

@@ -55,10 +55,10 @@ wifi:
   - **channel** (*选填*, 整数): AP 使用的信道，1 到 14，默认为1
   - **manual_ip** (*选填*): 手动设置 AP 的 IP 地址
 - **domain** (*选填*, 字符串): 此节点的域名后缀，如果设置为 `.local`, 则所有上传数据会指向 `<HOSTNAME>.local`。默认为`.local`
-- **reboot_timeout** (*选填*, [时长](mqtt/guides/configuration-types#时长)): 没有可用的的 WiFi 时，节点会在设置的时间后重启。默认 `60s`，设置成 `0s` 禁用此功能 
+- **reboot_timeout** (*选填*, [时长](esphome/guides/configuration-types#时长)): 没有可用的的 WiFi 时，节点会在设置的时间后重启。默认 `60s`，设置成 `0s` 禁用此功能 
 - **power_save_mode** (*选填*, 字符串): [节能模式](#节能模式)
 - **fast_connect** (*选填*, 布尔值): 如果开启 (true)，则固件启动的时候，跳过全局扫描的步骤直连连接指定的 WiFi，显著提高启动速度，并方便连接隐藏 WiFi。默认为 `false`，不开启
-- **id** (*选填*, [ID](mqtt/guides/configuration-types#id)): 用于逻辑识别的 ID
+- **id** (*选填*, [ID](esphome/guides/configuration-types#id)): 用于逻辑识别的 ID
 
 
 ## AP 模式

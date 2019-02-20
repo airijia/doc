@@ -148,8 +148,8 @@ NodeMCU 放到尺子另一面，为了方便检查线路，将有连线的那一
 下载文件后，解压出 **666.bin** 文件，刷入工具使用 **MQTT固件工具**
 
 
-- [下载 MQTT 固件 Windows 版](http://pic.airijia.com/download/win.zip)
-- [下载 MQTT 固件 MAC OS 版](http://pic.airijia.com/download/mac.zip)
+- [下载 ESPHome 固件 Windows 版](http://pic.airijia.com/download/win.zip)
+- [下载 ESPHome 固件 MAC OS 版](http://pic.airijia.com/download/mac.zip)
 
 
 
@@ -161,7 +161,7 @@ NodeMCU 放到尺子另一面，为了方便检查线路，将有连线的那一
 
 
 
-打开 MQTT 固件工具，选择`串口`，如果列表为空，先点击`刷新`
+打开 ESPHome 固件工具，选择`串口`，如果列表为空，先点击`刷新`
 
 ?>  如果还没找到串口，需要安装 [驱动程序](diy/nodemcu/)
 
@@ -204,9 +204,9 @@ NodeMCU 放到尺子另一面，为了方便检查线路，将有连线的那一
 
 **上传模板文件** 的方式创建固件
 
-?> 基本五大件的配置查看 [模板文件创建固件](mqtt/guides/yaml)
+?> 基本五大件的配置查看 [模板文件创建固件](esphome/guides/yaml)
 
-需要用到 [WiFi 信号强度](mqtt/components/sensor/wifi_signal) 、 [I²C 总线](mqtt/components/i2c)、  [SSD1306 OLED I2C显示屏](mqtt/components/display/ssd1306_i2c) 等多个组件
+需要用到 [WiFi 信号强度](esphome/components/sensor/wifi_signal) 、 [I²C 总线](esphome/components/i2c)、  [SSD1306 OLED I2C显示屏](esphome/components/display/ssd1306_i2c) 等多个组件
 
 
 ```yaml
@@ -296,7 +296,7 @@ display:
 
 带 **name** 参数标明可以在中枢中显示 
 
-更详细的使用，参考 [WiFi 信号强度](mqtt/components/sensor/wifi_signal) 
+更详细的使用，参考 [WiFi 信号强度](esphome/components/sensor/wifi_signal) 
 
 ### 配置字体
 
@@ -304,14 +304,14 @@ display:
 使用 roboto 字体，配置 16 和 48 两种尺寸，分别命名为 `font_16` 和 `font_48`
 
 
-更详细的使用，参考 [字体](mqtt/components/display/#字体) 
+更详细的使用，参考 [字体](esphome/components/display/#字体) 
 
 
 ### 配置图标
 
 使用多个表示不同 WiFi 信号强度的图标，具体名称见 [mdi 图标列表](https://cdn.materialdesignicons.com/3.3.92/)
 
-更详细的使用，参考 [图标](mqtt/components/display/#图标)
+更详细的使用，参考 [图标](esphome/components/display/#图标)
 
 
 ### 配置显示屏

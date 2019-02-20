@@ -1,4 +1,6 @@
-本文档是爱睿家智能在线定制固件的使用说明
+# ESPHome 固件中文文档
+
+[ESPHome](https://esphome.io/) 的中文使用说明
 
 云端编译用于 ESP8266/ESP32 系列芯片的智能家居固件，零配置即可被智能中枢（airijia/ctl 或 Hass）自动发现，支持 OTA（Over The Air）网刷
 
@@ -23,12 +25,12 @@
 
 
 
-- [网页创建固件](mqtt/guides/form)
+- [网页创建固件](esphome/guides/form)
 
 
-- [USB 刷入固件](mqtt/guides/ttl)
-- [OTA 刷入固件](mqtt/guides/ota)
-- [从其他固件迁移](mqtt/guides/migrate)
+- [USB 刷入固件](esphome/guides/ttl)
+- [OTA 刷入固件](esphome/guides/ota)
+- [从其他固件迁移](esphome/guides/migrate)
 
 
 - [适配 airi](#适配-airi)
@@ -41,27 +43,27 @@
 
 ## 进阶使用
 
-- [上传模板文件创建](mqtt/guides/yaml)
-- [核心组件](mqtt/components/airi)
-- [WiFi 组件](mqtt/components/wifi)
-- [API 组件](mqtt/components/api)
-- [MQTT 组件](mqtt/components/mqtt)
-- [OTA 组件](mqtt/components/ota)
-- [日志组件](mqtt/components/logger)
-- [配置类型](mqtt/guides/configuration-types)
+- [上传模板文件创建](esphome/guides/yaml)
+- [核心组件](esphome/components/airi)
+- [WiFi 组件](esphome/components/wifi)
+- [API 组件](esphome/components/api)
+- [MQTT 组件](esphome/components/mqtt)
+- [OTA 组件](esphome/components/ota)
+- [日志组件](esphome/components/logger)
+- [配置类型](esphome/guides/configuration-types)
 
 
-- [自动化](mqtt/guides/automations)
-- [I²C 总线](mqtt/components/i2c)
-- [SPI 总线](mqtt/components/spi)
-- [UART 总线](mqtt/components/uart)
-- [直流开关电源](mqtt/components/power_supply)
+- [自动化](esphome/guides/automations)
+- [I²C 总线](esphome/components/i2c)
+- [SPI 总线](esphome/components/spi)
+- [UART 总线](esphome/components/uart)
+- [直流开关电源](esphome/components/power_supply)
 
 
-- [时间](mqtt/components/time)
+- [时间](esphome/components/time)
 
 
-<!-- - [睡眠模式](mqtt/components/deep_sleep) -->
+<!-- - [睡眠模式](esphome/components/deep_sleep) -->
 
 
 <!-- ## 支持设备 -->
@@ -70,86 +72,86 @@
  
 
 
-<!-- - [ESP01/ESP01S](mqtt/devices/esp01)
-- [D1 系列](mqtt/devices/d1)
+<!-- - [ESP01/ESP01S](esphome/devices/esp01)
+- [D1 系列](esphome/devices/d1)
 - [NodeMCU ESP8266](diy/nodemcu/_esp8266)
 - [NodeMCU ESP32](diy/nodemcu/_esp32)
-- [ESP8266 系列通用](mqtt/devices/esp8266)
-- [ESP32 系列通用](mqtt/devices/esp32) -->
+- [ESP8266 系列通用](esphome/devices/esp8266)
+- [ESP32 系列通用](esphome/devices/esp32) -->
 
 
 ## 传感器
 
--  [传感器核心组件](mqtt/components/sensor/)
+-  [传感器核心组件](esphome/components/sensor/)
 
 
--  [D18B20 温度](mqtt/components/sensor/dallas)
-<!-- -  [MAX6675 温度](mqtt/components/sensor/dallas) -->
--  [DHT 温湿度](mqtt/components/sensor/dht)
-<!-- -  [DHT12 温湿度(I²C 总线)](mqtt/components/sensor/dht) -->
-<!-- -  [HDC1080 温湿度](mqtt/components/sensor/dallas) -->
--  [HTU21D/SI7021 温湿度](mqtt/components/sensor/htu21d)
--  [SHT3X-D 温湿度](mqtt/components/sensor/sht3xd)
+-  [D18B20 温度](esphome/components/sensor/dallas)
+<!-- -  [MAX6675 温度](esphome/components/sensor/dallas) -->
+-  [DHT 温湿度](esphome/components/sensor/dht)
+<!-- -  [DHT12 温湿度(I²C 总线)](esphome/components/sensor/dht) -->
+<!-- -  [HDC1080 温湿度](esphome/components/sensor/dallas) -->
+-  [HTU21D/SI7021 温湿度](esphome/components/sensor/htu21d)
+-  [SHT3X-D 温湿度](esphome/components/sensor/sht3xd)
 
 
-<!-- -  [MS5611 气压](mqtt/components/sensor/ms5611) -->
-<!-- -  [BMP085/BMP180 温度+气压](mqtt/components/sensor/ms5611) -->
-<!-- -  [BMP280 温度+气压](mqtt/components/sensor/ms5611) -->
-<!-- -  [BME280 温湿度+气压](mqtt/components/sensor/ms5611) -->
-<!-- -  [BME680 温湿度+气压+空气品质](mqtt/components/sensor/ms5611) -->
+<!-- -  [MS5611 气压](esphome/components/sensor/ms5611) -->
+<!-- -  [BMP085/BMP180 温度+气压](esphome/components/sensor/ms5611) -->
+<!-- -  [BMP280 温度+气压](esphome/components/sensor/ms5611) -->
+<!-- -  [BME280 温湿度+气压](esphome/components/sensor/ms5611) -->
+<!-- -  [BME680 温湿度+气压+空气品质](esphome/components/sensor/ms5611) -->
 
 
--  [MH-Z19 二氧化碳](mqtt/components/sensor/mhz19)
--  [PMSX003 颗粒物浓度](mqtt/components/sensor/pmsx003)
+-  [MH-Z19 二氧化碳](esphome/components/sensor/mhz19)
+-  [PMSX003 颗粒物浓度](esphome/components/sensor/pmsx003)
 
 
 
--  [BH1750 光强](mqtt/components/sensor/bh1750)
-<!-- -  [TSL2561 光强](mqtt/components/sensor/tsl2561) -->
+-  [BH1750 光强](esphome/components/sensor/bh1750)
+<!-- -  [TSL2561 光强](esphome/components/sensor/tsl2561) -->
 
 
--  [HLW8012 功率](mqtt/components/sensor/hlw8012)
--  [CSE7766 功率](mqtt/components/sensor/cse7766)
-<!-- -  [INA219 功率](mqtt/components/sensor/ms5611) -->
-<!-- -  [INA3221 功率](mqtt/components/sensor/ms5611) -->
+-  [HLW8012 功率](esphome/components/sensor/hlw8012)
+-  [CSE7766 功率](esphome/components/sensor/cse7766)
+<!-- -  [INA219 功率](esphome/components/sensor/ms5611) -->
+<!-- -  [INA3221 功率](esphome/components/sensor/ms5611) -->
 
 
-<!-- -  [HX711 压力](mqtt/components/sensor/ms5611) -->
-<!-- -  [TCS34725 颜色识别](mqtt/components/sensor/ms5611) -->
-<!-- -  [HMC5883L 罗盘](mqtt/components/sensor/ms5611) -->
-<!-- -  [MPU6050  陀螺仪](mqtt/components/sensor/ms5611) -->
-<!-- -  [超声波测距](mqtt/components/sensor/ms5611) -->
+<!-- -  [HX711 压力](esphome/components/sensor/ms5611) -->
+<!-- -  [TCS34725 颜色识别](esphome/components/sensor/ms5611) -->
+<!-- -  [HMC5883L 罗盘](esphome/components/sensor/ms5611) -->
+<!-- -  [MPU6050  陀螺仪](esphome/components/sensor/ms5611) -->
+<!-- -  [超声波测距](esphome/components/sensor/ms5611) -->
 
 
-- [ADC 模转数](mqtt/components/sensor/adc)
+- [ADC 模转数](esphome/components/sensor/adc)
 
-<!--   [ads1115 模转数](mqtt/components/sensor/ads1115)
--  [占空比](mqtt/components/sensor/adc)
--  [霍尔效应(ESP32)](mqtt/components/sensor/adc)
--  [脉冲计数](mqtt/components/sensor/ms5611)
--  [旋转编码器](mqtt/components/sensor/ms5611)
+<!--   [ads1115 模转数](esphome/components/sensor/ads1115)
+-  [占空比](esphome/components/sensor/adc)
+-  [霍尔效应(ESP32)](esphome/components/sensor/adc)
+-  [脉冲计数](esphome/components/sensor/ms5611)
+-  [旋转编码器](esphome/components/sensor/ms5611)
 
 
--  [软件逻辑传感器](mqtt/components/light/)
--  [运行时间](mqtt/components/light/)-->
--  [WiFi 信号强度](mqtt/components/sensor/wifi_signal) 
+-  [软件逻辑传感器](esphome/components/light/)
+-  [运行时间](esphome/components/light/)-->
+-  [WiFi 信号强度](esphome/components/sensor/wifi_signal) 
 
 
 ## 二进制传感器
 
--  [二进制传感器核心组件](mqtt/components/binary_sensor/)
--  [GPIO/物理开关](mqtt/components/binary_sensor/gpio)
--  [连接状态](mqtt/components/binary_sensor/status)
+-  [二进制传感器核心组件](esphome/components/binary_sensor/)
+-  [GPIO/物理开关](esphome/components/binary_sensor/gpio)
+-  [连接状态](esphome/components/binary_sensor/status)
 
 
 ## 开关
 
--  [开关核心组件](mqtt/components/switch/)
--  [GPIO 开关](mqtt/components/switch/gpio)
-<!-- -  [红外发射器](mqtt/components/switch/) -->
-<!-- -  [输出(Output)拟态开关](mqtt/components/switch/) -->
--  [模板化开关](mqtt/components/switch/template)
-<!-- -  [UART 指令开关](mqtt/components/switch/) -->
+-  [开关核心组件](esphome/components/switch/)
+-  [GPIO 开关](esphome/components/switch/gpio)
+<!-- -  [红外发射器](esphome/components/switch/) -->
+<!-- -  [输出(Output)拟态开关](esphome/components/switch/) -->
+-  [模板化开关](esphome/components/switch/template)
+<!-- -  [UART 指令开关](esphome/components/switch/) -->
 
 
 
@@ -157,55 +159,55 @@
 
 ## 输出
 
--  [输出核心组件](mqtt/components/output/)
--  [GPIO 输出](mqtt/components/output/gpio)
--  [ESP8266 PWM(软调光)](mqtt/components/output/esp8266_pwm)
-<!-- -  [ESP32 LEDC(硬调光)](mqtt/components/output/ledc) -->
-<!-- -  [MY9231/MY9291 LED](mqtt/components/output/my9231) -->
+-  [输出核心组件](esphome/components/output/)
+-  [GPIO 输出](esphome/components/output/gpio)
+-  [ESP8266 PWM(软调光)](esphome/components/output/esp8266_pwm)
+<!-- -  [ESP32 LEDC(硬调光)](esphome/components/output/ledc) -->
+<!-- -  [MY9231/MY9291 LED](esphome/components/output/my9231) -->
 
 
 ## 灯/灯带
 
--  [灯类核心组件](mqtt/components/light/)
--  [普通灯](mqtt/components/light/binary)
--  [可调亮度的灯](mqtt/components/light/monochromatic)
--  [可调色温调亮度的灯](mqtt/components/light/cwww)
--  [可调三色(红绿蓝)](mqtt/components/light/rgb)
--  [可调四色(红绿蓝白)](mqtt/components/light/rgbw)
--  [可调五色(红绿蓝冷白暖白)](mqtt/components/light/rgbww)
--  [单信号线 LED 灯带](mqtt/components/light/fastled_clockless)
--  [双信号线 LED 灯带](mqtt/components/light/fastled_spi)
--  [MY9231/MY9291 LED 灯泡](mqtt/components/light/my9231)
+-  [灯类核心组件](esphome/components/light/)
+-  [普通灯](esphome/components/light/binary)
+-  [可调亮度的灯](esphome/components/light/monochromatic)
+-  [可调色温调亮度的灯](esphome/components/light/cwww)
+-  [可调三色(红绿蓝)](esphome/components/light/rgb)
+-  [可调四色(红绿蓝白)](esphome/components/light/rgbw)
+-  [可调五色(红绿蓝冷白暖白)](esphome/components/light/rgbww)
+-  [单信号线 LED 灯带](esphome/components/light/fastled_clockless)
+-  [双信号线 LED 灯带](esphome/components/light/fastled_spi)
+-  [MY9231/MY9291 LED 灯泡](esphome/components/light/my9231)
 
 
 ## 文本传感器
 
--  [文本传感器核心组件](mqtt/components/text_sensor/)
--  [MQTT 订阅传感器](mqtt/components/text_sensor/mqtt_subscribe)
+-  [文本传感器核心组件](esphome/components/text_sensor/)
+-  [MQTT 订阅传感器](esphome/components/text_sensor/mqtt_subscribe)
 
 
 
 ## 显示屏
--  [显示屏核心组件](mqtt/components/display/)
--  [SSD1306 OLED 显示屏](mqtt/components/display/ssd1306_i2c)
+-  [显示屏核心组件](esphome/components/display/)
+-  [SSD1306 OLED 显示屏](esphome/components/display/ssd1306_i2c)
 
 <!-- ## 风扇
 
--  [风扇核心组件](mqtt/components/light/)
--  [普通风扇](mqtt/components/light/)
--  [调速风扇](mqtt/components/light/) -->
+-  [风扇核心组件](esphome/components/light/)
+-  [普通风扇](esphome/components/light/)
+-  [调速风扇](esphome/components/light/) -->
 
 
 <!-- ## 显示屏
 
--  [显示屏核心组件](mqtt/components/light/)
--  [串/并口液晶屏](mqtt/components/light/)
--  [I²C 总线液晶屏(PCF8574)](mqtt/components/light/)
--  [七段数码管(MAX7219)](mqtt/components/light/)
--  [触摸液晶屏(Nextion)](mqtt/components/light/)
--  [I²C 总线 OLED](mqtt/components/light/)
--  [SPI 总线 OLED](mqtt/components/light/)
--  [墨水屏](mqtt/components/light/) -->
+-  [显示屏核心组件](esphome/components/light/)
+-  [串/并口液晶屏](esphome/components/light/)
+-  [I²C 总线液晶屏(PCF8574)](esphome/components/light/)
+-  [七段数码管(MAX7219)](esphome/components/light/)
+-  [触摸液晶屏(Nextion)](esphome/components/light/)
+-  [I²C 总线 OLED](esphome/components/light/)
+-  [SPI 总线 OLED](esphome/components/light/)
+-  [墨水屏](esphome/components/light/) -->
 
 
 

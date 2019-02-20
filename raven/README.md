@@ -66,6 +66,8 @@
 
 刷完固件后，**无需配置 WiFi**，直接打开 HomeKit 进行配对
 
+参考 [HomeKit 进行配对](raven/homekit)
+
 使用有疑问详询 QQ 群 [38049942](https://shang.qq.com/wpa/qunwpa?idkey=eb028eb95506e4ee49beab0dc0147e821298e1865ba3379963e45a1900e40c22)
 
 

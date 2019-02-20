@@ -33,7 +33,7 @@
 
 ![](https://ws1.sinaimg.cn/large/007fN5Xegy1fxelvku9fhj30sk0fc74w.jpg)
 
-打开 [在线 MQTT 固件编译](http://airijia.com/ctl/firmware/list) 使用
+打开 [在线 ESPHome 固件编译](http://airijia.com/ctl/firmware/list) 使用
 
 
 
@@ -101,7 +101,7 @@ light:
 
 
 
-[DHT22](mqtt/components/sensor/dht)，[GPIO 二进制传感器](mqtt/components/binary_sensor/gpio)，[红绿蓝 LED](mqtt/components/light/rgb) 可以查阅相关文档，这里重点讲一下如何使用 使用 [ADC 模转数](mqtt/components/sensor/adc) 驱动
+[DHT22](esphome/components/sensor/dht)，[GPIO 二进制传感器](esphome/components/binary_sensor/gpio)，[红绿蓝 LED](esphome/components/light/rgb) 可以查阅相关文档，这里重点讲一下如何使用 使用 [ADC 模转数](esphome/components/sensor/adc) 驱动
 TEMT6000 这个模块
 
 ## TEMT6000
@@ -137,7 +137,7 @@ sensor:
 
 ## 相关链接
 
-- [ADC 模转数](mqtt/components/sensor/adc)
+- [ADC 模转数](esphome/components/sensor/adc)
 
 
 - [3D 打印外壳](https://www.thingiverse.com/thing:2239142)

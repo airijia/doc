@@ -1,7 +1,7 @@
 # 直流开关电源
 
 
-定义直流开关电源 `power_supply` 组件，该组件可以被 [输出组件](mqtt/components/output/) 调用。比如使用 ATX 电源给 LED 灯带供电时，可以由 ESP 芯片控制 ATX 电源的开关
+定义直流开关电源 `power_supply` 组件，该组件可以被 [输出组件](esphome/components/output/) 调用。比如使用 ATX 电源给 LED 灯带供电时，可以由 ESP 芯片控制 ATX 电源的开关
 
 
 ```
@@ -13,12 +13,12 @@ power_supply:
 
 ## 配置参数
 
-- **id** (**必填**, [ID](mqtt/guides/configuration-types#id)): 电源的 ID
-- **pin** (**必填**, [引脚](mqtt/guides/configuration-types#引脚)): 电源开关连接的引脚
-- **enable_time** (*选填*, [时长](mqtt/guides/configuration-types#时长)): 电源启动的延时，输出组件将在这个延时后再启动输出。默认值 `20ms`
-- **keep_on_time** (*选填*, [时长](mqtt/guides/configuration-types#时长)): 电源启动的延时，输出组件先关闭输出，然后在延时结束后再关闭电源。默认值 `10s`
+- **id** (**必填**, [ID](esphome/guides/configuration-types#id)): 电源的 ID
+- **pin** (**必填**, [引脚](esphome/guides/configuration-types#引脚)): 电源开关连接的引脚
+- **enable_time** (*选填*, [时长](esphome/guides/configuration-types#时长)): 电源启动的延时，输出组件将在这个延时后再启动输出。默认值 `20ms`
+- **keep_on_time** (*选填*, [时长](esphome/guides/configuration-types#时长)): 电源启动的延时，输出组件先关闭输出，然后在延时结束后再关闭电源。默认值 `10s`
 
-!> 配合 [输出组件](mqtt/components/output/) 使用
+!> 配合 [输出组件](esphome/components/output/) 使用
 
 
 
@@ -51,7 +51,7 @@ power_supply:
 
 ## 相关链接
 
-- [Output 组件](mqtt/components/output/)
+- [Output 组件](esphome/components/output/)
 
 
 

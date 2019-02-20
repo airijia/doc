@@ -16,9 +16,9 @@ airi:
 - **name** (**必填**, 字符串): 模块的名称，同时也是默认的主机名，在同一局域网内应该是唯一的，不可以重名。只可以使用大小写字母，数字和下划线
 - **platform** (**必填**, 字符串): 主板芯片组，可选项 `ESP32` 和 `ESP8266`
 - **board** (**必填**, 字符串): 主板型号，常用值有 `esp01_1m`(sonoff  系列和 esp01)，`d1_mini`，`nodemcuv2`，`nodemcu-32s`
-- **on_boot** (*选填*, [自动化](mqtt/guides/automations)): 模块启动时执行的自动化动作 详情看 [on_boot](#on_boot).
-- **on_shutdown** (*选填*, [自动化](mqtt/guides/automations)): 模块启动时执行的自动化动作 详情看 [on_shutdown](#on_shutdown).
-- **on_loop** (*选填*, [自动化](mqtt/guides/automations)): 模块启动时执行的自动化动作 详情看 [on_loop](#on_loop).
+- **on_boot** (*选填*, [自动化](esphome/guides/automations)): 模块启动时执行的自动化动作 详情看 [on_boot](#on_boot).
+- **on_shutdown** (*选填*, [自动化](esphome/guides/automations)): 模块启动时执行的自动化动作 详情看 [on_shutdown](#on_shutdown).
+- **on_loop** (*选填*, [自动化](esphome/guides/automations)): 模块启动时执行的自动化动作 详情看 [on_loop](#on_loop).
 
 ## 动作
 

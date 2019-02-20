@@ -18,7 +18,7 @@ switch:
 - **name** (**必填**, 字符串): 开关的名称
 - **icon** (*选填*, 图标): 中枢显示的图标
 - **inverted** (*选填*, 布尔值): 翻转状态。默认为否 `False`
-- 以及 [MQTT 组件](mqtt/components/mqtt#MQTT-组件基本配置项) 的基本配置项
+- 以及 [MQTT 组件](esphome/components/mqtt#MQTT-组件基本配置项) 的基本配置项
 
 
 
@@ -91,7 +91,7 @@ on_...:
 ### 使用 lambda 表达式
 
 
-借助 [Lambda 表达式](mqtt/guides/automations#lambdas-表达式), 可以实现一些复杂的自定义动作
+借助 [Lambda 表达式](esphome/guides/automations#lambdas-表达式), 可以实现一些复杂的自定义动作
 
 
 #### publish_state()

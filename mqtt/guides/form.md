@@ -1,4 +1,4 @@
-# 网页表单创建 MQTT 固件
+# 网页表单创建 ESPHome 固件
 
 ## 创建
 
@@ -46,11 +46,11 @@
 ## 刷入固件
 
 
-下载文件后，解压出 `.bin` 文件，刷入工具使用 [MQTT 固件工具](diy/flasher) ，或者  esptool ([WIN](diy/esptool)，[MAC](diy/esptool_mac))
+下载文件后，解压出 `.bin` 文件，刷入工具使用 [ESPHome 固件工具](diy/flasher) ，或者  esptool ([WIN](diy/esptool)，[MAC](diy/esptool_mac))
 
 
 
-如果使用的是 airi 智能中枢，还可以 [OTA 刷入](mqtt/guides/ota)
+如果使用的是 airi 智能中枢，还可以 [OTA 刷入](esphome/guides/ota)
 
 
 

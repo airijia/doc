@@ -28,6 +28,6 @@ uart:
 
 
 - **baud_rate** (**必填**, 整数): 波特率，常用值有 `9600` 和 `115200`
-- **tx_pin** (*选填*, [引脚](mqtt/guides/configuration-types#引脚)): 发送数据用引脚
-- **rx_pin** (*选填*, [引脚](mqtt/guides/configuration-types#引脚)): 接收数据用引脚
-- **id** (*选填*, [ID](mqtt/guides/configuration-types#id)): 用于逻辑识别的 ID，同时使用多个 UART 总线时必须设置
+- **tx_pin** (*选填*, [引脚](esphome/guides/configuration-types#引脚)): 发送数据用引脚
+- **rx_pin** (*选填*, [引脚](esphome/guides/configuration-types#引脚)): 接收数据用引脚
+- **id** (*选填*, [ID](esphome/guides/configuration-types#id)): 用于逻辑识别的 ID，同时使用多个 UART 总线时必须设置

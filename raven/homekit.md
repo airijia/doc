@@ -64,4 +64,4 @@
     - [esptool.py 的安装与使用](/diy/esptool)
     - [esptool.py(MAC)的安装与使用](/diy/esptool_mac)
 
-- [MQTT 固件](/mqtt/)
+- [ESPHome 固件](/mqtt/)
