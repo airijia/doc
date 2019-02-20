@@ -1,6 +1,6 @@
 # ESPHome 固件中文文档
 
-[ESPHome](https://esphome.io/) 的中文使用说明
+[在线编译 ESPHome 固件](http://airijia.com/ctl) 的使用说明
 
 云端编译用于 ESP8266/ESP32 系列芯片的智能家居固件，零配置即可被智能中枢（airijia/ctl 或 Hass）自动发现，支持 OTA（Over The Air）网刷
 
