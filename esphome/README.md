@@ -191,11 +191,11 @@
 -  [显示屏核心组件](esphome/components/display/)
 -  [SSD1306 OLED 显示屏](esphome/components/display/ssd1306_i2c)
 
-<!-- ## 风扇
+## 风扇
 
--  [风扇核心组件](esphome/components/light/)
--  [普通风扇](esphome/components/light/)
--  [调速风扇](esphome/components/light/) -->
+-  [风扇核心组件](esphome/components/fan/)
+-  [普通风扇](esphome/components/fan/binary)
+-  [调速风扇](esphome/components/fan/speed)
 
 
 <!-- ## 显示屏

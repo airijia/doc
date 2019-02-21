@@ -266,7 +266,7 @@ on_...:
         # {"key": 42.0, "greeting": "Hello World"}
 ```
 
-Configuration options:
+**配置参数**
 
 - **topic** (*Required*, string, [templatable](https://esphomelib.com/esphomeyaml/guides/automations.html#config-templatable)): The MQTT topic to publish the message.
 - **payload** (*Required*, [lambda](https://esphomelib.com/esphomeyaml/guides/automations.html#config-lambda)): The message content.

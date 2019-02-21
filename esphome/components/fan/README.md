@@ -1,35 +1,35 @@
-# Fan Component
+# 风扇
 
-With the `fan` domain you can create components that appear as fans in the Home Assistant frontend. A fan can be switched ON or OFF, optionally has a speed setting (`LOW`, `MEDIUM`, `HIGH`) and can have an oscillate output.
-
-[![https://d33wubrfki0l68.cloudfront.net/0ac7232fe74149e85799e55aeff3775c47c3d239/ca6a8/_images/fan-ui.png](https://d33wubrfki0l68.cloudfront.net/0ac7232fe74149e85799e55aeff3775c47c3d239/ca6a8/_images/fan-ui.png)](https://esphome.io/_images/fan-ui.png)
+风扇类的基本组件，具体使用分为 [普通风扇](esphome/components/fan/binary)  和 [可调速风扇](esphome/components/fan/speed)
 
 
+## 基本配置
 
-## Base Fan Configuration
-
-```
+```yaml
 fan:
   - platform: ...
     name: ...
 ```
 
-Configuration variables:
+**基本参数**
 
-- **name** (**Required**, string): The name of the fan.
-- **oscillation_state_topic** (*Optional*, string): The topic to publish fan oscillation state changes to.
-- **oscillation_command_topic** (*Optional*, string): The topic to receive oscillation commands on.
-- **speed_state_topic** (*Optional*, string): The topic to publish fan speed state changes to.
-- **speed_command_topic** (*Optional*, string): The topic to receive speed commands on.
-- All other options from [MQTT Component](https://esphome.io/components/mqtt#config-mqtt-component).
+基本参数可以在所有的风扇类组件中使用
+
+- **name** (**必填**, 字符串): 风扇的名称
+- **oscillation_state_topic** (*选填*, 字符串): 风扇摇摆状态的主题
+- **oscillation_command_topic** (*选填*, 字符串): 风扇摇摆动作的主题
+- **speed_state_topic** (*选填*, 字符串): 风扇转速状态的主题
+- **speed_command_topic** (*选填*, 字符串): 风扇调整转速动作的主题
 
 
 
-## `fan.toggle` Action
+## 动作
 
-Toggles the ON/OFF state of the fan with the given ID when executed.
+### fan.toggle
 
-```
+切换指定 ID 风扇的开关状态
+
+```yaml
 on_...:
   then:
     - fan.toggle: fan_1
@@ -37,33 +37,32 @@ on_...:
 
 
 
-## `fan.turn_off` Action
+### fan.turn_off
 
-Turns the fan with the given ID off when executed.
+关闭指定 ID 的风扇
 
-```
+```yaml
 on_...:
   then:
     - fan.turn_off: fan_1
 ```
 
 
+### fan.turn_on
 
-## `fan.turn_on` Action
+打开指定 ID 的风扇
 
-Turns the fan with the given ID off when executed.
-
-```
+```yaml
 on_...:
   then:
     - fan.turn_on:
         id: fan_1
-    # Shorthand:
+    # 简写
     - fan.turn_on: fan_1
 ```
 
-Configuration options:
+**配置参数**
 
-- **id** (**Required**, [ID](https://esphome.io/guides/configuration-types#config-id)): The ID of the fan.
-- **oscillating** (*Optional*, boolean, [templatable](https://esphome.io/guides/automations#config-templatable)): Set the oscillation state of the fan. Defaults to not affecting oscillation.
-- **speed** (*Optional*, string, [templatable](https://esphome.io/guides/automations#config-templatable)): Set the speed setting of the fan. One of `OFF`, `LOW`, `MEDIUM`, `HIGH`. If you template this value, return `fan::FAN_SPEED_...`, for example `fan::FAN_SPEED_HIGH`.
+- **id** (**必填**, [ID](esphome/guides/configuration-types#id)): 风扇的 ID
+- **oscillating** (*选填*, 布尔值,): 摇摆状态，默认为不改变旧状态
+- **speed** (*选填*, 字符串,): 风扇转速，可选值有`OFF`, `LOW`, `MEDIUM`, `HIGH`。如果在lambdas 表达式中使用，则使用形如`fan::FAN_SPEED_...`的格式, 例如 `fan::FAN_SPEED_HIGH`

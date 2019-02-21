@@ -11,7 +11,7 @@ HC-SR04 Ultrasonic Distance Sensor.
 [![https://d33wubrfki0l68.cloudfront.net/3af1d26721667d7b7da7cea66568d06f52371fff/81d50/_images/ultrasonic-ui.png](https://d33wubrfki0l68.cloudfront.net/3af1d26721667d7b7da7cea66568d06f52371fff/81d50/_images/ultrasonic-ui.png)](https://esphome.io/_images/ultrasonic-ui.png)
 
 ```
-# Example configuration entry
+# 配置示例
 sensor:
   - platform: ultrasonic
     trigger_pin: D1
@@ -19,15 +19,15 @@ sensor:
     name: "Ultrasonic Sensor"
 ```
 
-## Configuration variables:
+## **配置参数**
 
-- **trigger_pin** (**Required**, [Pin Schema](https://esphome.io/guides/configuration-types#config-pin-schema)): The output pin to periodically send the trigger pulse to.
-- **echo_pin** (**Required**, [Pin Schema](https://esphome.io/guides/configuration-types#config-pin-schema)): The input pin on which to wait for the echo.
-- **name** (**Required**, string): The name of the sensor.
-- **timeout_meter** (*Optional*, float): The number of meters for the timeout. Use either this or `timeout_time`. Defaults to 2 meters.
-- **timeout_time** (*Optional*, int): The number of microseconds for the timeout. Use either this or `timeout_meter`. Defaults to 11662µs.
-- **update_interval** (*Optional*, [Time](https://esphome.io/guides/configuration-types#config-time)): The interval to check the sensor. Defaults to `60s`.
-- **id** (*Optional*, [ID](https://esphome.io/guides/configuration-types#config-id)): Manually specify the ID used for code generation.
+- **trigger_pin** (**必填**, [Pin Schema](https://esphome.io/guides/configuration-types#config-pin-schema)): The output pin to periodically send the trigger pulse to.
+- **echo_pin** (**必填**, [Pin Schema](https://esphome.io/guides/configuration-types#config-pin-schema)): The input pin on which to wait for the echo.
+- **name** (**必填**, 字符串): The name of the sensor.
+- **timeout_meter** (*选填*, float): The number of meters for the timeout. Use either this or `timeout_time`. Defaults to 2 meters.
+- **timeout_time** (*选填*, int): The number of microseconds for the timeout. Use either this or `timeout_meter`. Defaults to 11662µs.
+- **update_interval** (*选填*, [Time](https://esphome.io/guides/configuration-types#config-time)): The interval to check the sensor. Defaults to `60s`.
+- **id** (*选填*, [ID](esphome/guides/configuration-types#id)): Manually specify the ID used for code generation.
 - All other options from [Sensor](https://esphome.io/components/sensor/#config-sensor) and [MQTT Component](https://esphome.io/components/mqtt#config-mqtt-component).
 
 ## Ultrasonic Timeouts

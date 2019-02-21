@@ -188,7 +188,7 @@ on_press:
 - [switch.toggle](esphome/components/switch/#switchtoggle) / [switch.turn_off](esphome/components/switch/#switchturn_off) / [switch.turn_on](esphome/components/switch/#switchturn_on)
 - [light.toggle](esphome/components/light/#lighttoggle) / [light.turn_on](esphome/components/light/#lightturn_on) /[light.turn_off](esphome/components/light/#lightturn_off)
 <!-- cover.open / cover.close / cover.stop -->
-<!-- fan.toggle / fan.turn_off / fan.turn_on -->
+- [fan.toggle](esphome/components/fan/#fantoggle) / [fan.turn_on](esphome/components/fan/#fanturn_on) /[fan.turn_off](esphome/components/fan/#fanturn_off)
 - [output.turn_off](esphome/components/output/#outputturn_off) / [output.turn_on](esphome/components/output/#outputturn_on) / [output.set_level](esphome/components/output/#outputset_level)
 <!-- deep_sleep.enter / deep_sleep.prevent -->
 
