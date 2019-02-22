@@ -47,7 +47,6 @@
 - [核心组件](esphome/components/airi)
 - [WiFi 组件](esphome/components/wifi)
 - [API 组件](esphome/components/api)
-- [MQTT 组件](esphome/components/mqtt)
 - [OTA 组件](esphome/components/ota)
 - [日志组件](esphome/components/logger)
 - [配置类型](esphome/guides/configuration-types)
@@ -61,6 +60,14 @@
 
 
 - [时间](esphome/components/time)
+- [状态灯](esphome/components/status_led)
+
+
+
+
+
+- [MQTT 组件](esphome/components/mqtt)
+
 
 
 <!-- - [睡眠模式](esphome/components/deep_sleep) -->

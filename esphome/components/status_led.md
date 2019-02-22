@@ -1,12 +1,10 @@
-# 状态指示
+# 状态灯
 
+通过控制 led 的闪烁来显示组件当前的状态
 
-
-The `status_led` hooks into all esphomelib components and can indicate the status of the device. Specifically, it will:
-
-- Blink slowly (about every second) when a **warning** is active. Warnings are active when for example reading a sensor value fails temporarily or the WiFi/MQTT connections are disrupted.
-- Blink quickly (multiple times per second) when an **error** is active. Errors indicate that esphomelib has found an error while setting up. In most cases, esphomelib will still try to recover from the error and continue with all other operations.
-- Stay off otherwise.
+- 慢闪(大约每秒 1 次)，表示**警告**，通常为网络连接失败、无法连接到传感器等影响继续启动的状况
+- 快闪(每秒数次)，表示**错误**，通常为不影响运行的错误，会尝试自动修复并继续
+- 保持关闭，表示无异常状态
 
 ```yaml
 # 配置示例
@@ -16,12 +14,11 @@ status_led:
 
 ## 配置参数
 
-- **pin** (**必填**, [Pin Schema](https://esphomelib.com/esphomeyaml/guides/configuration-types.html#config-pin-schema)): The GPIO pin to operate the status LED on.
-- **id** (*选填*, [ID](esphome/guides/configuration-types#id)): Manually specify the ID used for code generation.
+- **pin** (**必填**, [引脚](esphome/guides/configuration-types#引脚)): 连接 LED 的引脚
+- **id** (*选填*, [ID](esphome/guides/configuration-types#id)): 组件 ID
 
-Note
 
-If your LED is in an active-LOW mode (when it’s on if the output is enabled), use the `inverted` option of the [Pin Schema](https://esphomelib.com/esphomeyaml/guides/configuration-types.html#config-pin-schema):
+如果 LED 为低电平有效(active-LOW)，则需要反转引脚
 
 ```yaml
 status_led:

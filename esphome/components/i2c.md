@@ -5,7 +5,7 @@ I2C(Inter－Integrated Circuit)总线是80年代 PHILIPS 公司开发的**两线
 SDA（串行数据线）和SCL（串行时钟线）都是双向I/O线，只需要两根线即可同时连多个器件，每个连接到总线上的器件都有唯一的地址
 
 
-```
+```yaml
 # 配置示例
 i2c:
   sda: 21
