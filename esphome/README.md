@@ -142,13 +142,14 @@
 -  [软件逻辑传感器](esphome/components/light/)
 -  [运行时间](esphome/components/light/)-->
 -  [WiFi 信号强度](esphome/components/sensor/wifi_signal) 
-
+-  [中枢传感器](esphome/components/sensor/homeassistant)
 
 ## 二进制传感器
 
 -  [二进制传感器核心组件](esphome/components/binary_sensor/)
 -  [GPIO/物理开关](esphome/components/binary_sensor/gpio)
 -  [连接状态](esphome/components/binary_sensor/status)
+-  [中枢二进制传感器](esphome/components/binary_sensor/homeassistant)
 
 
 ## 开关
@@ -191,6 +192,7 @@
 
 -  [文本传感器核心组件](esphome/components/text_sensor/)
 -  [MQTT 订阅传感器](esphome/components/text_sensor/mqtt_subscribe)
+-  [中枢文本传感器](esphome/components/text_sensor/homeassistant)
 
 
 
