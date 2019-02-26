@@ -76,13 +76,45 @@ auto time = id(sntp_time).now();
 
 直接使用标准的 [C 库函数 – strftime()](http://wiki.jikexueyuan.com/project/c/strftime.html) 格式化时间的显示
 
+
 ```c++
 # 在显示屏组件中显示时间
 it.strftime(0, 0, id(font), "%Y-%m-%d %H:%M", id(time).now());
 ```
 
 
-## on_time
+
+Directive	Meaning	Example
+
+
+
+| 函数 | 结果 |  举例 |
+| ---- | --------------- | --------------- | 
+| %a | Abbreviated weekday name | Sat |
+| %A | Full weekday name | Saturday |
+| %w | Weekday as decimal number, where 0 is Sunday and 6 is Saturday | 6 |
+| %d | Day of month as zero-padded decimal number | 01, 02, …, 31 |
+| %b | Abbreviated month name | Aug |
+| %B | Full month name | August |
+| %m | Month as zero-padded decimal number|01, 02, …, 12 |
+| %y | Year without century as a zero-padded decimal number|00, 01, …, 99 |
+| %Y | Year with century as a decimal number|2018 |
+| %H | Hour (24-hour clock) as a zero-padded decimal number|00, 01, …, 23 |
+| %I | Hour (12-hour clock) as a zero-padded decimal number|00, 01, …, 12 |
+| %p | AM or PM designation|AM, PM |
+| %M | Minute as a zero-padded decimal number|00, 01, …, 59 |
+| %S | Second as a zero-padded decimal number|00, 01, …, 59 |
+| %j | Day of year as a zero-padded decimal number|001, 002, …, 366 |
+| %U | Week number of year (Sunday as the first day of the week) as a zero-padded decimal number. All days in a new year preceding the first Sunday are considered to be in week 0.|00, 01, …, 53 |
+| %W | Week number of year (Monday as the first day of the week) as a zero-padded decimal number. All days in a new year preceding the first Monday are considered to be in week 0.|00, 01, …, 53 |
+| %c | Date and time representation|Sat Aug 18 16:31:42 2018 |
+| %x | Date representation|08/18/18 |
+| %X | Time representation|16:31:42 |
+| %% | A literal % character|% |
+
+## 触发器
+
+### on_time
 
 强大的基于时间的自动化触发器，使用部分参考 [crontab](https://crontab.guru/)
 

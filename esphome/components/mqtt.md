@@ -270,7 +270,7 @@ on_...:
 
 - **topic** (*Required*, string, [templatable](https://esphomelib.com/esphomeyaml/guides/automations.html#config-templatable)): The MQTT topic to publish the message.
 - **payload** (*Required*, [lambda](https://esphomelib.com/esphomeyaml/guides/automations.html#config-lambda)): The message content.
-- **qos** (*选填*, int): The [Quality of Service](https://www.hivemq.com/blog/mqtt-essentials-part-6-mqtt-quality-of-service-levels) level of the topic. Defaults to 0.
+- **qos** (*选填*, 整数): The [Quality of Service](https://www.hivemq.com/blog/mqtt-essentials-part-6-mqtt-quality-of-service-levels) level of the topic. Defaults to 0.
 - **retain** (*选填*, boolean): If the published message should have a retain flag on or not. Defaults to `False`.
 
 Note

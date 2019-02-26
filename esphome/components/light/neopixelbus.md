@@ -50,7 +50,7 @@ light:
   - `ESP32_I2S_1` (default for ESP32)
   - `BIT_BANG`
 
-- **num_leds** (**必填**, int): The number of LEDs attached.
+- **num_leds** (**必填**, 整数): The number of LEDs attached.
 **Pin Options:** Some chipsets have two data pins to connect, others only have one. If you have one line, only specify `pin`, otherwise specify both `clock_pin` and `data_pin`.
 - **pin** (**必填**, [Pin](https://esphomelib.com/esphomeyaml/guides/configuration-types.html#config-pin)): The pin for the data line of the light.
 - **clock_pin** (**必填**, [Pin](https://esphomelib.com/esphomeyaml/guides/configuration-types.html#config-pin)): The pin for the clock line of the light, for two-pin lights.

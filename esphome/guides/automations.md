@@ -143,14 +143,14 @@ on_press:
 on_press:
   then:
     - lambda: >-
-        if (id(my_global_int) > 5) {
+        if (id(my_global_整数) > 5) {
           // global value is greater than 5
-          id(my_global_int) += 1;
+          id(my_global_整数) += 1;
         } else {
-          id(my_global_int) += 10;
+          id(my_global_整数) += 10;
         }
 
-        ESP_LOGD(TAG, "Global value is: %d", id(my_global_int));
+        ESP_LOGD(TAG, "Global value is: %d", id(my_global_整数));
 ```
 
 **配置参数**

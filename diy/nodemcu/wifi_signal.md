@@ -270,7 +270,7 @@ display:
     update_interval: 1s
     lambda: >-
       int s;
-      s = (int)id(wifi_signal).raw_state;
+      s = (整数)id(wifi_signal).raw_state;
       if( s > 0 ){
         it.printf(64, 40, id(font_48), TextAlign::CENTER, "%s", "...");
       }else{
@@ -318,7 +318,7 @@ display:
 
 ```c++
 int s;
-s = (int)id(wifi_signal).raw_state;
+s = (整数)id(wifi_signal).raw_state;
 ```
 
 定义整数 `s`，并将 **wifi_signal** 的值 **raw_state** (浮点数) 转换为整数后赋值给 **s**

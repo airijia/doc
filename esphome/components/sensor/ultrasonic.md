@@ -25,7 +25,7 @@ sensor:
 - **echo_pin** (**必填**, [Pin Schema](https://esphome.io/guides/configuration-types#config-pin-schema)): The input pin on which to wait for the echo.
 - **name** (**必填**, 字符串): The name of the sensor.
 - **timeout_meter** (*选填*, float): The number of meters for the timeout. Use either this or `timeout_time`. Defaults to 2 meters.
-- **timeout_time** (*选填*, int): The number of microseconds for the timeout. Use either this or `timeout_meter`. Defaults to 11662µs.
+- **timeout_time** (*选填*, 整数): The number of microseconds for the timeout. Use either this or `timeout_meter`. Defaults to 11662µs.
 - **update_interval** (*选填*, [Time](https://esphome.io/guides/configuration-types#config-time)): The interval to check the sensor. Defaults to `60s`.
 - **id** (*选填*, [ID](esphome/guides/configuration-types#id)): Manually specify the ID used for code generation.
 - All other options from [Sensor](https://esphome.io/components/sensor/#config-sensor) and [MQTT Component](https://esphome.io/components/mqtt#config-mqtt-component).
