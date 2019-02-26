@@ -1,10 +1,38 @@
 # 模板文件创建 ESPHome 固件
 
+
+
+## 使用示例模板
+
+以 sonoff basic 为例
+
+### 下载文件
+
+点击 [模板文件示例](https://github.com/airijia/esphome-config)
+
+
+
+### 编辑文件
+
+
+
+然后 [编译固件](#编译固件)
+
+
+
+
+## 自建模板文件
+
+
 以 ESP01 + DHT11 温湿度 为例演示如何编写 ESPHome 固件的 yaml 模板文件
 
-MQTT 由基本功能和扩展功能两大部分构成
+配置文件由基本功能和扩展功能两大部分构成
 
-## 添加基本功能
+
+### 基本功能
+
+
+
 
 基本的网络，调试和升级功能，由 [核心](esphome/components/airi)，[WiFi](esphome/components/wifi)，[API](esphome/components/api)，[MQTT](esphome/components/mqtt)，[OTA](esphome/components/ota) 和 [日志](esphome/components/logger) 合计六个组件构成
 
@@ -34,7 +62,7 @@ ota:
 logger:
 ```
 
-## 添加扩展功能
+### 扩展功能
 
 传感器，开关等功能，本例中使用 [DHT 温湿度](esphome/components/sensor/dht) 组件
 
@@ -51,7 +79,7 @@ sensor:
       name: 'shidu'
 ```
 
-## 上传文件
+### 保存文件
 
 点击复制下面的代码，存为yaml文件，将`拼音`的部分替换成实际的参数
 
@@ -83,6 +111,16 @@ sensor:
       name: 'shidu'
 
 ```
+
+### 编辑文件
+
+
+然后 [编译固件](#编译固件)
+
+
+## 编译固件
+
+
 
 打开爱睿家智能中枢的 `固件` 选项卡 或者 [在线版](http://airijia.com/ctl/firmware/list)，点击`上传模板文件`
 
