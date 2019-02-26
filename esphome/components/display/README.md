@@ -1,7 +1,8 @@
 # 显示屏
 
+驱动显示屏，显示图形和文字，支持如下显示屏:
 
-
+-  [SSD1306 OLED](esphome/components/display/ssd1306_i2c)
 
 
 
@@ -10,6 +11,19 @@
 
 ## 显示渲染引擎
 
+
+以分辨率为128x64的[ssd1306 oled](esphome/components/display/ssd1306_i2c) 为例，左上角为原点，坐标为[x=0,y=0]，右下角为最远处，坐标为 [x=128,y=64]
+
+使用 [lambda 表达式](esphome/guides/automations#lambda-表达式) 嵌入一段 C++ 代码控制渲染引擎，在显示屏组件的作用域中 `it` 表示调用渲染引擎对象
+
+```yaml
+display:
+  - platform: ...
+    # ...
+    lambda: >-
+      // 从坐标 [x=0,y=0] 到 [x=50,y=50] 画一条直线
+      it.line(0, 0, 50, 50);
+```
 
 ### 绘制图形
 
