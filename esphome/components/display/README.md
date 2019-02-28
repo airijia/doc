@@ -99,18 +99,34 @@ display:
 
 配置参数
 
-- **file** (**必填**, 字符串): 使用的字体名称，可选项有
-
-| 名称 | 全名 | 简介 |
-| ---- | --------------- | --------------- |
-| arial | | |
-| comic | | |
-| helvetica | | |
-| roboto | | |
-
+- **file** (**必填**, 字符串): 使用的字体名称
 - **id** (**必填**, [ID](esphome/guides/configuration-types#id)): 此字体的 ID
 - **size** (*选填*, 整数): 字体显示的 pt (非 pixel!)，如果想要使用同一种字体的不同尺寸，需要设置两份，默认值 `20`
 - **glyphs** (*选填*, list): 指定可显示的字符，只有指定范围内的字符会被转化并显示，默认值 `!"%()+,-_.:°0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz`
+
+**file** 可选名称
+
+| 名称 | 全名 | 简介 |
+| ---- | --------------- | --------------- |
+| arial | Arial| |
+| airilb | Arial Black| |
+| comic | Comic Sans MS | |
+| courier | Courier New | |
+| georgia | Georgia | |
+| impact | Impact | |
+| times | Times New Roman | |
+| trebuchet | Trebuchet MS | |
+| verdana | Verdana | |
+| helvetica | Helvetica| 苹果系统默认字体 无衬线 |
+| roboto | Roboto| 安卓系统默认字体 无衬线|
+
+
+字体参考效果
+
+![](http://pic.airijia.com/doc/20190228202833.png)
+
+
+![](http://pic.airijia.com/doc/20190228203755.png)
 
 
 
@@ -131,15 +147,6 @@ display:
 ```
 
 静态文字使用 [print](#静态字符串) ， 动态文字使用 [printf](#动态字符串)
-
-
-
-
-By default, ESPHome will *align* the text at the top left. That means if you enter the coordinates `[0,10]` for your text, the top left of the text will be at `[0,10]`. If you want to draw some text at the right side of the display, it is however sometimes useful to choose a different **text alignment**. When you enter `[0,10]` you’re really telling ESPHome that it should position the **anchor point** of the text at `[0,10]`. When using a different alignment, like `TOP_RIGHT`, the text will be positioned left of the anchor pointed, so that, as the name implies, the anchor point is a the *top right* corner of the text.
-
-
-
-
 
 
 默认情况下，字体显示是靠左靠上的，例如设置坐标为 `[0,10]`，则字体内容的左上角的坐标即为 `[0,10]`。如果设置字体 `TOP_RIGHT` 靠右靠上显示，则字体内容的右上角的坐标为 `[0,10]`

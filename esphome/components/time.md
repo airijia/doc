@@ -90,27 +90,27 @@ Directive	Meaning	Example
 
 | 函数 | 结果 |  举例 |
 | ---- | --------------- | --------------- | 
-| %a | Abbreviated weekday name | Sat |
-| %A | Full weekday name | Saturday |
-| %w | Weekday as decimal number, where 0 is Sunday and 6 is Saturday | 6 |
-| %d | Day of month as zero-padded decimal number | 01, 02, …, 31 |
-| %b | Abbreviated month name | Aug |
-| %B | Full month name | August |
-| %m | Month as zero-padded decimal number|01, 02, …, 12 |
-| %y | Year without century as a zero-padded decimal number|00, 01, …, 99 |
-| %Y | Year with century as a decimal number|2018 |
-| %H | Hour (24-hour clock) as a zero-padded decimal number|00, 01, …, 23 |
-| %I | Hour (12-hour clock) as a zero-padded decimal number|00, 01, …, 12 |
-| %p | AM or PM designation|AM, PM |
-| %M | Minute as a zero-padded decimal number|00, 01, …, 59 |
-| %S | Second as a zero-padded decimal number|00, 01, …, 59 |
-| %j | Day of year as a zero-padded decimal number|001, 002, …, 366 |
-| %U | Week number of year (Sunday as the first day of the week) as a zero-padded decimal number. All days in a new year preceding the first Sunday are considered to be in week 0.|00, 01, …, 53 |
-| %W | Week number of year (Monday as the first day of the week) as a zero-padded decimal number. All days in a new year preceding the first Monday are considered to be in week 0.|00, 01, …, 53 |
-| %c | Date and time representation|Sat Aug 18 16:31:42 2018 |
-| %x | Date representation|08/18/18 |
-| %X | Time representation|16:31:42 |
-| %% | A literal % character|% |
+| %a | 缩写的星期几| Sat |
+| %A | 星期几| Saturday |
+| %w | 数字星期几，星期日 = 0  | 6 |
+| %d | 日期 | 01, 02, …, 31 |
+| %b | 缩写的月份 | Aug |
+| %B | 月份 | August |
+| %m | 数字月份 |01, 02, …, 12 |
+| %y | 年份末两位 |00, 01, …, 99 |
+| %Y | 年份 | 2018 |
+| %H | 24小时制的小时 | 00, 01, …, 23 |
+| %I | 12小时制的小时 |00, 01, …, 12 |
+| %p | 上午下午 |AM, PM |
+| %M | 分 |00, 01, …, 59 |
+| %S | 秒 |00, 01, …, 59 |
+| %j | 一年中的第几天 |001, 002, …, 366 |
+| %U | 一年中的第几天(星期日作为每周第一天)，每年的第一个星期日之前得几天作为第 0 个星期|00, 01, …, 53 |
+| %W | 一年中的第几天(星期一作为每周第一天)，每年的第一个星期一之前得几天作为第 0 个星期|00, 01, …, 53 |
+| %c | 日期时间 |Sat Aug 18 16:31:42 2018 |
+| %x | 日期|08/18/18 |
+| %X | 时间 |16:31:42 |
+| %% | %符号 |% |
 
 ## 触发器
 
