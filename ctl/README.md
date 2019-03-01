@@ -8,6 +8,17 @@
 [爱睿家智能中枢 V1](//player.bilibili.com/player.html?aid=26627767&cid=45795189&page=1 ':include :type=iframe width="720" height="530"')
 
 
+
+## 相关产品
+
+| ![](http://pic.airijia.com/doc/20190301094146.png ':size=200')| 爱睿家智能中枢 |  [![买买买](http://cdn.airijia.com/b6eca8da724952cc0251.gif ':size=150')](https://item.taobao.com/item.htm?id=551916269657) |  
+|:-:|:-:|:-:|
+
+
+
+
+
+
 ## 使用说明
 
 假设 airi的地址是 192.168.1.201，打开浏览器（推荐使用chrome）
