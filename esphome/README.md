@@ -16,61 +16,48 @@
 - **批量部署终端**：功能已全固化至固件，批量部署再也无需重复 N 次冗长的配置过程
 - **酷炫隔空网刷**：启动层构建的 OTA（Over The Air）网刷功能，无需连电脑即可刷入固件
 
-## 基本使用
+## 基础使用
 
 定制固件的功能有可以通过两种方式使用
 
 1. 在线使用，浏览器打开 [http://airijia.com/ctl/firmware/list](http://airijia.com/ctl/firmware/list) ，可使用除 OTA 之外的所有功能
 2. 智能中枢中使用，可使用包括 OTA 在内的全部功能
 
-
-
-- [网页创建固件](esphome/guides/form)
-
-
-- [USB 刷入固件](esphome/guides/ttl)
-- [OTA 刷入固件](esphome/guides/ota)
-- [从其他固件迁移](esphome/guides/migrate)
-
-
-- [适配 airi](#适配-airi)
-- [适配 hass](#适配-hass)
-
-
+| [![](http://pic.airijia.com/image/http.svg ':size=100x100')](esphome/guides/yaml) | [![](http://pic.airijia.com/doc/20181122161759.png ':size=100x100')](esphome/guides/configuration-types) |  [![](http://pic.airijia.com/doc/20190303140002.png ':size=100x100')](esphome/components/mqtt) | 
+| :-: | :-: | :-: |
+| [网页表单编译固件](esphome/guides/form) |  [USB 刷入固件](esphome/guides/ttl) | [OTA 刷入固件](esphome/guides/ota) | 
+| [![](http://pic.airijia.com/image/tasmota.svg ':size=100x100')](esphome/guides/migrate_sonoff_tasmota) | [![](http://pic.airijia.com/image/espurna.svg ':size=100x100')](esphome/guides/migrate_espurna) | [![](http://pic.airijia.com/image/espeasy.svg ':size=100x100')](esphome/guides/migrate_espeasy) |
+|[从 Sonoff-Tasmota 迁移](esphome/guides/migrate_sonoff_tasmota)  | [从 ESPurna 迁移](esphome/guides/migrate_espurna)  |  [从 ESPEasy 迁移](esphome/guides/migrate_espeasy)  | 
+| [![](http://pic.airijia.com/doc/20190303140343.png ':size=100x100')](#适配-airi) | [![](http://pic.airijia.com/image/home-assistant.svg ':size=100x100')](#适配-hass) | |
+| [适配 airi](#适配-airi)  | [适配 hass](#适配-hass) |  | 
 
 
 
 
 ## 进阶使用
 
-- [上传模板文件创建](esphome/guides/yaml)
-- [核心组件](esphome/components/airi)
-- [WiFi 组件](esphome/components/wifi)
-- [API 组件](esphome/components/api)
-- [OTA 组件](esphome/components/ota)
-- [日志组件](esphome/components/logger)
-- [配置类型](esphome/guides/configuration-types)
-
-
-- [自动化](esphome/guides/automations)
-- [I²C 总线](esphome/components/i2c)
-- [SPI 总线](esphome/components/spi)
-- [UART 总线](esphome/components/uart)
-- [直流开关电源](esphome/components/power_supply)
-
-
-- [时间](esphome/components/time)
-- [状态灯](esphome/components/status_led)
+| [![](http://pic.airijia.com/doc/20190303135144.png ':size=100x100')](esphome/guides/yaml) | [![](http://pic.airijia.com/image/settings.svg ':size=100x100')](esphome/guides/configuration-types) |  [![](http://pic.airijia.com/image/auto-fix.svg ':size=100x100')](esphome/components/mqtt) | 
+| :-: | :-: | :-: |
+|  [上传模板文件编译固件](esphome/guides/yaml) |  [配置类型](esphome/guides/configuration-types) |[自动化](esphome/guides/automations) | 
 
 
 
+## 核心组件
+
+| [![](http://pic.airijia.com/image/cloud-circle.svg ':size=100x100')](esphome/components/esphome) | [![](http://pic.airijia.com/image/network-wifi.svg ':size=100x100')](esphome/components/wifi) |  [![](http://pic.airijia.com/image/mqtt.png ':size=260x68')](esphome/components/mqtt) | 
+| :-: | :-: | :-: |
+|  [核心组件](esphome/components/esphome) |[WiFi 组件](esphome/components/wifi) | [MQTT 组件](esphome/components/mqtt) | 
+| [![](http://pic.airijia.com/image/i2c.svg ':size=100x100')](esphome/components/i2c) | [![](http://pic.airijia.com/image/spi.svg ':size=100x100')](esphome/components/spi) |  [![](http://pic.airijia.com/image/uart.svg ':size=100x100')](esphome/components/uart) | 
+|  [I²C 总线](esphome/components/i2c) | [SPI 总线](esphome/components/spi) |  [UART 总线](esphome/components/uart) | 
+| [![](http://pic.airijia.com/image/system-update.svg ':size=100x100')](esphome/components/i2c) | [![](http://pic.airijia.com/image/file-document-box.svg ':size=100x100')](esphome/components/spi) | [![](http://pic.airijia.com/image/http.svg ':size=100x100')](esphome/components/web_server) | 
+|  [OTA 组件](esphome/components/ota) | [日志组件](esphome/components/logger) |  [web 服务](esphome/components/web_server)  | 
+| [![](http://pic.airijia.com/image/system-update.svg ':size=100x100')](esphome/components/i2c) | [![](http://pic.airijia.com/image/file-document-box.svg ':size=100x100')](esphome/components/spi) | [![](http://pic.airijia.com/image/hotel.svg ':size=100x100')](esphome/components/deep_sleep) | 
+| [API 组件](esphome/components/api)| [直流开关电源](esphome/components/power_supply) |  [休眠](esphome/components/deep_sleep)  | 
 
 
-- [MQTT 组件](esphome/components/mqtt)
 
 
 
-<!-- - [睡眠模式](esphome/components/deep_sleep) -->
 
 
 <!-- ## 支持设备 -->
@@ -146,87 +133,87 @@
 
 ## 二进制传感器
 
--  [二进制传感器核心组件](esphome/components/binary_sensor/)
--  [GPIO/物理开关](esphome/components/binary_sensor/gpio)
--  [连接状态](esphome/components/binary_sensor/status)
--  [中枢二进制传感器](esphome/components/binary_sensor/homeassistant)
 
-
-## 开关
-
--  [开关核心组件](esphome/components/switch/)
--  [GPIO 开关](esphome/components/switch/gpio)
-<!-- -  [红外发射器](esphome/components/switch/) -->
-<!-- -  [输出(Output)拟态开关](esphome/components/switch/) -->
--  [模板化开关](esphome/components/switch/template)
-<!-- -  [UART 指令开关](esphome/components/switch/) -->
-
-
-
+| [![](http://pic.airijia.com/image/folder-open.svg ':size=100x100')](esphome/components/binary_sensor/) | [![](http://pic.airijia.com/image/pin.svg ':size=100x100')](esphome/components/binary_sensor/gpio) |  [![](http://pic.airijia.com/image/home-assistant.svg ':size=100x100')](esphome/components/binary_sensor/homeassistant) | 
+| :-: | :-: | :-: |
+|  [开关核心组件](esphome/components/binary_sensor/) | [GPIO/物理开关](esphome/components/binary_sensor/gpio)) | [中枢二进制传感器](esphome/components/binary_sensor/homeassistant) | 
+| [![](http://pic.airijia.com/image/server-network.svg ':size=100x100')](esphome/components/binary_sensor/) | | |
+| [连接状态](esphome/components/binary_sensor/status) | | |
 
 
 ## 输出
 
--  [输出核心组件](esphome/components/output/)
--  [GPIO 输出](esphome/components/output/gpio)
--  [ESP8266 PWM(软调光)](esphome/components/output/esp8266_pwm)
-<!-- -  [ESP32 LEDC(硬调光)](esphome/components/output/ledc) -->
-<!-- -  [MY9231/MY9291 LED](esphome/components/output/my9231) -->
+
+
+| [![](http://pic.airijia.com/image/folder-open.svg ':size=100x100')](esphome/components/output/) | [![](http://pic.airijia.com/image/pwm.png ':size=100x100')](esphome/components/output/esp8266_pwm) |  [![](http://pic.airijia.com/image/pin.svg ':size=100x100')](esphome/components/output/gpio) | 
+| :-: | :-: | :-: |
+|  [开关核心组件](esphome/components/output/) | [ESP8266 PWM(软调光)](esphome/components/output/esp8266_pwm) | [GPIO 开关](esphome/components/output/gpio) | 
+
 
 
 ## 灯/灯带
 
--  [灯类核心组件](esphome/components/light/)
--  [普通灯](esphome/components/light/binary)
--  [可调亮度的灯](esphome/components/light/monochromatic)
--  [可调色温调亮度的灯](esphome/components/light/cwww)
--  [可调三色(红绿蓝)](esphome/components/light/rgb)
--  [可调四色(红绿蓝白)](esphome/components/light/rgbw)
--  [可调五色(红绿蓝冷白暖白)](esphome/components/light/rgbww)
--  [单信号线 LED 灯带](esphome/components/light/fastled_clockless)
--  [双信号线 LED 灯带](esphome/components/light/fastled_spi)
--  [MY9231/MY9291 LED 灯泡](esphome/components/light/my9231)
+
+| [![](http://pic.airijia.com/image/folder-open.svg ':size=100x100')](esphome/components/light/) | [![](http://pic.airijia.com/image/lightbulb.svg ':size=100x100')](esphome/components/light/binary) | [![](http://pic.airijia.com/image/brightness-medium.svg ':size=100x100')](esphome/components/light/monochromatic) |
+| :-: | :-: | :-: |
+| [灯组件](esphome/components/light/)  | [普通灯](esphome/components/light/binary) |  [可调亮度的灯](esphome/components/light/monochromatic) | 
+| [![](http://pic.airijia.com/image/brightness-medium.svg ':size=100x100')](esphome/components/light/cwww) | [![](http://pic.airijia.com/image/rgb.png ':size=100')](esphome/components/light/rgb) |  [![](http://pic.airijia.com/image/rgbw.png ':size=100')](esphome/components/light/rgbw) |
+| [可调色温调亮度的灯](esphome/components/light/cwww)  | [可调三色(红绿蓝)](esphome/components/light/rgb) |  [可调四色(红绿蓝白)](esphome/components/light/rgbw) |
+| [![](http://pic.airijia.com/image/rgbw.png ':size=100')](esphome/components/light/rgbww) | [![](http://pic.airijia.com/image/color_lens.svg ':size=100x100')](esphome/components/light/fastled_clockless) | [![](http://pic.airijia.com/image/color_lens.svg ':size=100x100')](esphome/components/light/fastled_spi)  |
+| [可调五色(红绿蓝冷白暖白)](esphome/components/light/rgbww)  | [单信号线 LED 灯带](esphome/components/light/fastled_clockless) |  [双信号线 LED 灯带](esphome/components/light/fastled_spi) |
+| [![](http://pic.airijia.com/image/color_lens.svg ':size=100x100')](esphome/components/light/partition) | [![](http://pic.airijia.com/image/my9231.svg ':size=200')](esphome/components/light/my9231) |  |
+| [灯带分区](esphome/components/light/partition) |  [MY9231/MY9291 LED 灯泡](esphome/components/light/my9231) |  |
 
 
-## 文本传感器
+## 开关
 
--  [文本传感器核心组件](esphome/components/text_sensor/)
--  [MQTT 订阅传感器](esphome/components/text_sensor/mqtt_subscribe)
--  [中枢文本传感器](esphome/components/text_sensor/homeassistant)
+
+
+| [![](http://pic.airijia.com/image/folder-open.svg ':size=100x100')](esphome/components/switch/) | [![](http://pic.airijia.com/image/pin.svg ':size=100x100')](esphome/components/switch/gpio) |  |
+| :-: | :-: | :-: |
+|  [开关核心组件](esphome/components/switch/) |  [GPIO 开关](esphome/components/switch/gpio) |  |
+| [![](http://pic.airijia.com/image/description.svg ':size=100x100')](esphome/components/switch/template) | | |
+|  [模板化开关](esphome/components/switch/template) |  |  |
+
+
+## 风扇
+
+| [![](http://pic.airijia.com/image/folder-open.svg ':size=100x100')](esphome/components/fan/) | [![](http://pic.airijia.com/image/fan.svg ':size=100x100')](esphome/components/fan/binary) | [![](http://pic.airijia.com/image/fan.svg ':size=100x100')](esphome/components/fan/speed) |
+| :-: | :-: | :-: |
+|  [风扇核心组件](esphome/components/fan/) |  [普通风扇](esphome/components/fan/binary) | [调速风扇](esphome/components/fan/speed) |
+
 
 
 
 ## 显示屏
--  [显示屏核心组件](esphome/components/display/)
--  [SSD1306 OLED 显示屏](esphome/components/display/ssd1306_i2c)
 
-## 风扇
-
--  [风扇核心组件](esphome/components/fan/)
--  [普通风扇](esphome/components/fan/binary)
--  [调速风扇](esphome/components/fan/speed)
-
-
-<!-- ## 显示屏
-
--  [显示屏核心组件](esphome/components/light/)
--  [串/并口液晶屏](esphome/components/light/)
--  [I²C 总线液晶屏(PCF8574)](esphome/components/light/)
--  [七段数码管(MAX7219)](esphome/components/light/)
--  [触摸液晶屏(Nextion)](esphome/components/light/)
--  [I²C 总线 OLED](esphome/components/light/)
--  [SPI 总线 OLED](esphome/components/light/)
--  [墨水屏](esphome/components/light/) -->
+| [![](http://pic.airijia.com/image/folder-open.svg ':size=100x100')](esphome/components/display/) | [![](http://pic.airijia.com/doc/20190303123232.png ':size=200')](esphome/components/display/) |  |
+| :-: | :-: | :-: |
+| [显示屏核心组件](esphome/components/display/)  | [SSD1306 OLED 显示屏](esphome/components/display/ssd1306_i2c)  |   |   |
 
 
 
 
-<!-- ## 蓝牙 -->
+
+## 文本传感器
+
+| [![](http://pic.airijia.com/image/folder-open.svg ':size=100x100')](esphome/components/text_sensor/) | [![](http://pic.airijia.com/image/home-assistant.svg ':size=100x100')](esphome/components/text_sensor/homeassistant) | [![](http://pic.airijia.com/image/mqtt.png ':size=260x68')](esphome/components/text_sensor/mqtt_subscribe) |
+| :-: | :-: | :-: |
+|  [文本传感器核心组件](esphome/components/text_sensor/) |  [中枢文本传感器](esphome/components/text_sensor/homeassistant) | [MQTT 订阅传感器](esphome/components/text_sensor/mqtt_subscribe) |
 
 
 
 
-<!-- ## 红外 -->
+
+## 其他组件
+
+
+- [时间](esphome/components/time)
+- [状态灯](esphome/components/status_led)
+
+
+
+
 
 
 

@@ -5,7 +5,7 @@
 
 ```yaml
 # 配置示例
-airi:
+esphome:
   name: livingroom
   platform: ESP8266
   board: esp01_1m
@@ -27,7 +27,7 @@ airi:
 ESP 模块启动时执行的自动化动作，此动作默认排在所有启动项初始化完成之后，可以通过修改优先权 `priority` 来修改自动化动作的启动次序
 
 ```yaml
-airi:
+esphome:
   # ...
   on_boot:
     priority: 20
@@ -52,7 +52,7 @@ ESP 模块即将关闭时时执行的自动化动作，
 
 
 ```yaml
-airi:
+esphome:
   # ...
   on_shutdown:
     then:
@@ -66,7 +66,7 @@ airi:
 
 
 ```yaml
-airi:
+esphome:
   # ...
   on_loop:
     then:
