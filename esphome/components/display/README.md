@@ -99,7 +99,7 @@ display:
 
 配置参数
 
-- **file** (**必填**, 字符串): 使用的字体，可选项参考 [可选字体](#可选字体)
+- **file** (**必填**, 字符串): 使用的字体，可选项参考 [字体列表](#字体列表)
 - **id** (**必填**, [ID](esphome/guides/configuration-types#id)): 此字体的 ID
 - **size** (*选填*, 整数): 字体显示的 pt (非 pixel!)，如果想要使用同一种字体的不同尺寸，需要设置两份，默认值 `20`
 - **glyphs** (*选填*, list): 指定可显示的字符，只有指定范围内的字符会被转化并显示，默认值 `!"%()+,-_.:°0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz`
@@ -125,44 +125,10 @@ display:
 
 默认情况下，字体显示是靠左靠上的，例如设置坐标为 `[0,10]`，则字体内容的左上角的坐标即为 `[0,10]`。如果设置字体 `TOP_RIGHT` 靠右靠上显示，则字体内容的右上角的坐标为 `[0,10]`
 
+TextAlign 的使用详见 [字体对齐方式](#字体对齐方式)
 
 
 
-```yaml
-display:
-  - platform: ...
-    # ...
-    lambda: >-
-      // Aligned on left by default
-      it.print(0, 0, id(my_font), "Left aligned");
-
-      // Aligned on right edge
-      it.print(it.get_width(), 0, id(my_font), TextAlign::TOP_RIGHT, "Right aligned");
-```
-
-TextAlign 字体对其方式
-
-| 名称 | 全名 | 简介 |
-| ---- | --------------- | --------------- |
-| TOP 	| |  |
-| CENTER_VERTICAL 	| |  |
-| BASELINE 	| |  |
-| BOTTOM 	| |  |
-| LEFT 	| |  |
-| CENTER_HORIZONTAL 	| |  |
-| RIGHT 	| |  |
-| TOP_LEFT 	| 靠上靠左 | 默认值 |
-| TOP_CENTER 	| 靠上居中 |  |
-| TOP_RIGHT 	| 靠上靠右 |  |
-| CENTER_LEFT 	| |  |
-| CENTER 	|  |  |
-| CENTER_RIGHT 	| |  |
-| BASELINE_LEFT 	| |  |
-| BASELINE_CENTER 	| |  |
-| BASELINE_RIGHT 	| |  |
-| BOTTOM_LEFT 	| |  |
-| BOTTOM_CENTER 	| |  |
-| BOTTOM_RIGHT | |  |
 
 
 
@@ -342,9 +308,10 @@ on_...:
       }
 ```
 
+## 附录
 
 
-## 可选字体
+### 字体列表
 
 | 名称 | 全名 | 简介 |
 | ---- | --------------- | --------------- |
@@ -382,3 +349,42 @@ on_...:
 **BebasNeue-Regular**
 
 ![](http://pic.airijia.com/doc/20190303110109.png)
+
+
+### 字体对齐方式
+
+```yaml
+display:
+  - platform: ...
+    # ...
+    lambda: >-
+      // 靠左(默认值)
+      it.print(0, 0, id(my_font), "Left aligned");
+
+      // 靠右
+      it.print(it.get_width(), 0, id(my_font), TextAlign::TOP_RIGHT, "Right aligned");
+```
+
+TextAlign 字体对其方式
+
+| 名称 | 全名 | 简介 |
+| ---- | --------------- | --------------- |
+| TOP 	| |  |
+| CENTER_VERTICAL 	| |  |
+| BASELINE 	| |  |
+| BOTTOM 	| |  |
+| LEFT 	| |  |
+| CENTER_HORIZONTAL 	| |  |
+| RIGHT 	| |  |
+| TOP_LEFT 	| 靠上靠左 | 默认值 |
+| TOP_CENTER 	| 靠上居中 |  |
+| TOP_RIGHT 	| 靠上靠右 |  |
+| CENTER_LEFT 	| |  |
+| CENTER 	|  |  |
+| CENTER_RIGHT 	| |  |
+| BASELINE_LEFT 	| |  |
+| BASELINE_CENTER 	| |  |
+| BASELINE_RIGHT 	| |  |
+| BOTTOM_LEFT 	| |  |
+| BOTTOM_CENTER 	| |  |
+| BOTTOM_RIGHT | |  |
