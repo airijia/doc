@@ -99,36 +99,10 @@ display:
 
 配置参数
 
-- **file** (**必填**, 字符串): 使用的字体名称
+- **file** (**必填**, 字符串): 使用的字体，可选项参考 [可选字体](#可选字体)
 - **id** (**必填**, [ID](esphome/guides/configuration-types#id)): 此字体的 ID
 - **size** (*选填*, 整数): 字体显示的 pt (非 pixel!)，如果想要使用同一种字体的不同尺寸，需要设置两份，默认值 `20`
 - **glyphs** (*选填*, list): 指定可显示的字符，只有指定范围内的字符会被转化并显示，默认值 `!"%()+,-_.:°0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz`
-
-**file** 可选名称
-
-| 名称 | 全名 | 简介 |
-| ---- | --------------- | --------------- |
-| arial | Arial| |
-| airilb | Arial Black| |
-| comic | Comic Sans MS | |
-| courier | Courier New | |
-| georgia | Georgia | |
-| impact | Impact | |
-| times | Times New Roman | |
-| trebuchet | Trebuchet MS | |
-| verdana | Verdana | |
-| helvetica | Helvetica| 苹果系统默认字体 无衬线 |
-| roboto | Roboto| 安卓系统默认字体 无衬线|
-
-
-字体参考效果
-
-![](http://pic.airijia.com/doc/20190228202833.png)
-
-
-![](http://pic.airijia.com/doc/20190228203755.png)
-
-
 
 
 
@@ -368,3 +342,43 @@ on_...:
       }
 ```
 
+
+
+## 可选字体
+
+| 名称 | 全名 | 简介 |
+| ---- | --------------- | --------------- |
+| arial | Arial| |
+| airilbd | Arial Black| |
+| comic | Comic Sans MS | |
+| cour | Courier New | |
+| georgia | Georgia | |
+| impact | Impact | |
+| times | Times New Roman | |
+| trebuc | Trebuchet MS | |
+| verdana | Verdana | |
+| helvetica | Helvetica| 苹果系统默认字体 无衬线 |
+| roboto | Roboto| 安卓系统默认字体 无衬线|
+| slkscr | Silkscreen | |
+| bebas-neue | BebasNeue-Regular | |
+
+
+字体参考效果
+
+**常用字体**
+
+![](http://pic.airijia.com/doc/20190228202833.png)
+
+**helvetica 和 roboto**
+
+![](http://pic.airijia.com/doc/20190228203755.png)
+
+
+**Silkscreen**
+
+
+![](http://pic.airijia.com/doc/20190303105858.png)
+
+**BebasNeue-Regular**
+
+![](http://pic.airijia.com/doc/20190303110109.png)
