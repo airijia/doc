@@ -18,18 +18,14 @@
 
 ## 基础使用
 
-定制固件的功能有可以通过两种方式使用
-
-1. 在线使用，浏览器打开 [http://airijia.com/ctl/firmware/list](http://airijia.com/ctl/firmware/list) ，可使用除 OTA 之外的所有功能
-2. 智能中枢中使用，可使用包括 OTA 在内的全部功能
 
 | [![](http://pic.airijia.com/image/http.svg ':size=100x100')](esphome/guides/yaml) | [![](http://pic.airijia.com/doc/20181122161759.png ':size=100x100')](esphome/guides/configuration-types) |  [![](http://pic.airijia.com/doc/20190303140002.png ':size=100x100')](esphome/components/mqtt) | 
 | :-: | :-: | :-: |
 | [网页表单编译固件](esphome/guides/form) |  [USB 刷入固件](esphome/guides/ttl) | [OTA 刷入固件](esphome/guides/ota) | 
 | [![](http://pic.airijia.com/image/tasmota.svg ':size=100x100')](esphome/guides/migrate_sonoff_tasmota) | [![](http://pic.airijia.com/image/espurna.svg ':size=100x100')](esphome/guides/migrate_espurna) | [![](http://pic.airijia.com/image/espeasy.svg ':size=100x100')](esphome/guides/migrate_espeasy) |
 |[从 Sonoff-Tasmota 迁移](esphome/guides/migrate_sonoff_tasmota)  | [从 ESPurna 迁移](esphome/guides/migrate_espurna)  |  [从 ESPEasy 迁移](esphome/guides/migrate_espeasy)  | 
-| [![](http://pic.airijia.com/doc/20190303140343.png ':size=100x100')](#适配-airi) | [![](http://pic.airijia.com/image/home-assistant.svg ':size=100x100')](#适配-hass) | |
-| [适配 airi](#适配-airi)  | [适配 hass](#适配-hass) |  | 
+| [![](http://pic.airijia.com/doc/20190303140343.png ':size=100x100')](esphome/guides/integration#airi)  | [![](http://pic.airijia.com/image/home-assistant.svg ':size=100x100')](esphome/guides/integration#hass) | |
+| [适配 airi](esphome/guides/integration#airi)  | [适配 Hass](esphome/guides/integration#hass) |  | 
 
 
 
@@ -51,7 +47,7 @@
 |  [I²C 总线](esphome/components/i2c) | [SPI 总线](esphome/components/spi) |  [UART 总线](esphome/components/uart) | 
 | [![](http://pic.airijia.com/image/system-update.svg ':size=100x100')](esphome/components/i2c) | [![](http://pic.airijia.com/image/file-document-box.svg ':size=100x100')](esphome/components/spi) | [![](http://pic.airijia.com/image/http.svg ':size=100x100')](esphome/components/web_server) | 
 |  [OTA 组件](esphome/components/ota) | [日志组件](esphome/components/logger) |  [web 服务](esphome/components/web_server)  | 
-| [![](http://pic.airijia.com/image/system-update.svg ':size=100x100')](esphome/components/i2c) | [![](http://pic.airijia.com/image/file-document-box.svg ':size=100x100')](esphome/components/spi) | [![](http://pic.airijia.com/image/hotel.svg ':size=100x100')](esphome/components/deep_sleep) | 
+| [![](http://pic.airijia.com/image/server-network.svg ':size=100x100')](esphome/components/i2c) | [![](http://pic.airijia.com/image/power.svg ':size=100x100')](esphome/components/spi) | [![](http://pic.airijia.com/image/hotel.svg ':size=100x100')](esphome/components/deep_sleep) | 
 | [API 组件](esphome/components/api)| [直流开关电源](esphome/components/power_supply) |  [休眠](esphome/components/deep_sleep)  | 
 
 
@@ -187,7 +183,7 @@
 
 ## 显示屏
 
-| [![](http://pic.airijia.com/image/folder-open.svg ':size=100x100')](esphome/components/display/) | [![](http://pic.airijia.com/doc/20190303123232.png ':size=200')](esphome/components/display/) |  |
+| [![](http://pic.airijia.com/image/folder-open.svg ':size=100x100')](esphome/components/display/) | [![](http://pic.airijia.com/doc/20190303123232.png ':size=200')](esphome/components/display/ssd1306_i2c) |  |
 | :-: | :-: | :-: |
 | [显示屏核心组件](esphome/components/display/)  | [SSD1306 OLED 显示屏](esphome/components/display/ssd1306_i2c)  |   |   |
 
@@ -214,47 +210,4 @@
 
 
 
-
-
-
-
-##  适配 airi
-
-在爱睿家智能中枢 (airijia/ctl) 中使用 (版本 > 0.3)
-
-点击 **设备 - DIY 设备** ，点击已被自动发现的设备后的 载入
-
-![](http://pic.airijia.com/doc/20190126163048.png)
-
-出现 **entity_id**，表示已经载入
-
-![](http://pic.airijia.com/doc/20190126163157.png)
-
-
-!> 设备已经刷好固件，但 **DIY 设备** 列表中没有显示
-
-
-直接点击 **添加 DIY 设备**，输入目标设备的 hostname 添加
-
-![](http://pic.airijia.com/doc/20190126163246.png)
-
-
-##  适配 hass
-
-在 Hass 中枢 (Home assistant) 中使用 (版本 > 0.85)
-
-点击 **配置 - 集成**
-
-![](http://pic.airijia.com/doc/20190126162531.png)
-
-
-点击 **已发现 - ESPHome - 配置** 
-
-![](http://pic.airijia.com/doc/20190126162559.png)
-
-!> 设备已经刷好固件，但**已发现**中没有显示
-
-输入正确的 Host (.local如果不能识别就换成 .lan，如果还不行换成 IP ) 和端口(通常默认 6053，不用改)，然后SUBMIT
-
-![](http://pic.airijia.com/doc/20190126162652.png)
 

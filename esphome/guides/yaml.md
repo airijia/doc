@@ -6,9 +6,9 @@
 
 以 sonoff basic 为例
 
-### 下载文件
+### 下载文件 
 
-点击 [模板文件示例](https://github.com/airijia/esphome-config)
+点击 [模板文件示例](https://gitee.com/airijia/esphome-config)
 
 
 
@@ -34,7 +34,7 @@
 
 
 
-基本的网络，调试和升级功能，由 [核心](esphome/components/airi)，[WiFi](esphome/components/wifi)，[API](esphome/components/api)，[MQTT](esphome/components/mqtt)，[OTA](esphome/components/ota) 和 [日志](esphome/components/logger) 合计六个组件构成
+基本的网络，调试和升级功能，由 [核心](esphome/components/esphome)，[WiFi](esphome/components/wifi)，[API](esphome/components/api)，[MQTT](esphome/components/mqtt)，[OTA](esphome/components/ota) 和 [日志](esphome/components/logger) 合计六个组件构成
 
 
 !> 除特殊需求外，通常 API 和 MQTT 二选一即可

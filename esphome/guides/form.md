@@ -1,8 +1,13 @@
 # 网页表单创建 ESPHome 固件
 
+网页表单创建 ESPHome 固件功能可以通过两种方式使用
+
+1. 在线使用，浏览器打开 [http://airijia.com/ctl/firmware/list](http://airijia.com/ctl/firmware/list) ，可使用除 OTA 之外的所有功能
+2. [智能中枢](ctl/)中使用，可使用包括 OTA 在内的全部功能
+
 ## 创建
 
-打开爱睿家智能中枢的 `固件` 选项卡 或者 [在线版](http://airijia.com/ctl/firmware/list)，点击`新建固件`
+打开爱睿家智能中枢的 **固件** 选项卡 或者 [在线](http://airijia.com/ctl/firmware/list)，点击 **新建固件**
 
 ![](https://ws1.sinaimg.cn/large/007fN5Xegy1fww2lrfcnaj30qm0f8q3f.jpg)
 

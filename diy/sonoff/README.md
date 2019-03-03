@@ -1,7 +1,7 @@
 # Sonoff 系列
 
 
-在 [核心组件](esphome/components/airi) 中，要设置 `board` 为 `esp01_1m`， `board_flash_mode` 为 `dout`
+在 [核心组件](esphome/components/esphome) 中，要设置 `board` 为 `esp01_1m`， `board_flash_mode` 为 `dout`
 
 ```
 airi:

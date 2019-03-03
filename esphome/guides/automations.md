@@ -168,7 +168,7 @@ on_press:
 - [mqtt.on_message](esphome/components/mqtt#on_message) / [mqtt.on_json_message](esphome/components/mqtt#on_json_message)
 - [sensor.on_value](esphome/components/sensor/#on_value) / [sensor.on_value_range](esphome/components/sensor/#on_value_range) / [sensor.on_raw_value](esphome/components/sensor/#on_raw_value)
 - [binary_sensor.on_press](esphome/components/binary_sensor/#on_press) / [binary_sensor.on_release](esphome/components/binary_sensor/#on_release) / [binary_sensor.on_state](esphome/components/binary_sensor/#on_state) / [binary_sensor.on_click](esphome/components/binary_sensor/#on_click) / [binary_sensor.on_double_click](esphome/components/binary_sensor/#on_double_click) / [binary_sensor.on_multi_click](esphome/components/binary_sensor/#on_multi_click)
-- [airi.on_boot](esphome/components/airi#on_boot) / [airi.on_shutdown](esphome/components/airi#on_shutdown) / [airi.on_loop](esphome/components/airi#on_loop)
+- [airi.on_boot](esphome/components/esphome#on_boot) / [airi.on_shutdown](esphome/components/esphome#on_shutdown) / [airi.on_loop](esphome/components/esphome#on_loop)
 <!-- pn532.on_tag -->
 - [time.on_time](esphome/components/time#on_time)
 - [interval.interval](#interval)
