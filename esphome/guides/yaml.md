@@ -8,7 +8,27 @@
 
 ### 下载文件 
 
-点击 [模板文件示例](https://gitee.com/airijia/esphome-config)
+打开 [模板文件示例@gitee.com](https://gitee.com/airijia/esphome-config)
+
+![](http://pic.airijia.com/doc/20190304092658.png)
+
+
+进入这个路径，点击要下载的yaml文件
+
+![](http://pic.airijia.com/doc/20190304092756.png)
+
+
+
+点击 **原始数据**
+
+
+![](http://pic.airijia.com/doc/20190304092926.png)
+
+
+鼠标右键，点击 **另存为**
+
+
+![](http://pic.airijia.com/doc/20190304093038.png)
 
 
 
@@ -16,9 +36,66 @@
 
 
 
-然后 [编译固件](#编译固件)
+用记事本打开下载好的 **.yaml** 文件，推荐使用 **notepad++**
 
 
+![](http://pic.airijia.com/doc/20190304093504.png)
+
+
+
+把这三项改成你自己的设置
+
+![](http://pic.airijia.com/doc/20190304093421.png)
+
+
+改成你自己的 WiFi，本实例中名称是 `wangluo`，密码是 `password`，主机名 `keting`，然后保存文件
+
+
+![](http://pic.airijia.com/doc/20190304093704.png)
+
+
+
+### 编译固件
+
+
+
+打开爱睿家智能中枢的 **固件** 选项卡 或者 [在线版](http://airijia.com/ctl/firmware/list)，点击**上传模板文件**
+
+
+![](http://pic.airijia.com/doc/20181126195516.png)
+
+
+选择编辑好的 **yaml** 文件
+
+![](http://pic.airijia.com/doc/20181126195618.png)
+
+
+点击 **确定** 上传
+
+![](http://pic.airijia.com/doc/20181126195811.png)
+
+
+文件上传成功，等待云端编译
+
+![](https://ws1.sinaimg.cn/large/007fN5Xegy1fww4awjtgpj311r0grdgu.jpg)
+
+
+
+一般需要等待 2-5 分钟，如果页面没变化，按 F5 刷新浏览器
+
+显示**已完成**，表示已经编译成功
+
+![](https://ws1.sinaimg.cn/large/007fN5Xegy1fww4eac4ntj30w90dk3z4.jpg)
+
+
+
+### 刷入固件
+
+
+下载文件后刷入  [ESPHome 固件工具](diy/flasher)
+
+
+如果使用的是 airi 智能中枢，还可以 [OTA 刷入](esphome/guides/ota)
 
 
 ## 自建模板文件
@@ -115,52 +192,7 @@ sensor:
 ### 编辑文件
 
 
-然后 [编译固件](#编译固件)
-
-
-## 编译固件
-
-
-
-打开爱睿家智能中枢的 `固件` 选项卡 或者 [在线版](http://airijia.com/ctl/firmware/list)，点击`上传模板文件`
-
-
-![](http://pic.airijia.com/doc/20181126195516.png)
-
-
-选择编辑好的 **yaml** 文件
-
-![](http://pic.airijia.com/doc/20181126195618.png)
-
-
-点击 **确定** 上传
-
-![](http://pic.airijia.com/doc/20181126195811.png)
-
-
-文件上传成功，等待云端编译
-
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fww4awjtgpj311r0grdgu.jpg)
-
-
-
-一般需要等待 2-5 分钟，如果页面没变化，按 F5 刷新浏览器
-
-显示**已完成**，表示已经编译成功
-
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fww4eac4ntj30w90dk3z4.jpg)
-
-
-
-## 刷入固件
-
-
-下载文件后刷入，工具使用 esptool ([WIN](diy/esptool)，[MAC](diy/esptool_mac)) ，或者 [ESPHome 固件工具](diy/flasher)
-
-
-
-如果使用的是 airi 智能中枢，还可以 [OTA 刷入](esphome/guides/ota)
-
+[编译固件](#编译固件) 和 [刷入固件](#编译固件)
 
 
 
