@@ -26,7 +26,7 @@ sensor:
 - **name** (**必填**, 字符串): The name of the sensor.
 - **timeout_meter** (*选填*, float): The number of meters for the timeout. Use either this or `timeout_time`. Defaults to 2 meters.
 - **timeout_time** (*选填*, 整数): The number of microseconds for the timeout. Use either this or `timeout_meter`. Defaults to 11662µs.
-- **update_interval** (*选填*, [Time](https://esphome.io/guides/configuration-types#config-time)): The interval to check the sensor. Defaults to `60s`.
+- **update_interval** (*选填*, [时长](esphome/guides/configuration-types#时长)): The interval to check the sensor. Defaults to `60s`.
 - **id** (*选填*, [ID](esphome/guides/configuration-types#id)): Manually specify the ID used for code generation.
 - All other options from [Sensor](https://esphome.io/components/sensor/#config-sensor) and [MQTT Component](https://esphome.io/components/mqtt#config-mqtt-component).
 

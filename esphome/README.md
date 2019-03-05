@@ -63,6 +63,8 @@
 |  [传感器核心组件](esphome/components/sensor/) | [ADC 模转数](esphome/components/sensor/adc) | |
 |  | [![](http://pic.airijia.com/image/bh1750.jpg ':size=120x150')](esphome/components/sensor/bh1750) |   | 
 | | [BH1750 光强](esphome/components/sensor/bh1750) | |
+| |  |  [![](http://pic.airijia.com/image/bmp180.jpg ':size=120x150')](esphome/components/sensor/bmp085) |
+|  |  | [BMP180/BMP085 温度+气压 ](esphome/components/sensor/bmp085) | 
 |  | [![](http://pic.airijia.com/image/cse7766.svg ':size=261x60')](esphome/components/sensor/cse7766) |    [![](http://pic.airijia.com/image/dallas.jpg ':size=85x150')](esphome/components/sensor/dallas) | 
 | |  [CSE7766 功率](esphome/components/sensor/cse7766) |  [D18B20 温度](esphome/components/sensor/dallas) |
 | [![](http://pic.airijia.com/image/dht.jpg ':size=120x150')](esphome/components/sensor/dht) |  |   | 
