@@ -19,10 +19,11 @@
 ## 基础使用
 
 
-| [![](http://pic.airijia.com/image/http.svg ':size=100x100')](esphome/guides/yaml) | [![](http://pic.airijia.com/doc/20181122161759.png ':size=100x100')](esphome/guides/configuration-types) |  [![](http://pic.airijia.com/doc/20190303140002.png ':size=100x100')](esphome/components/mqtt) | 
+|    |     |     |
 | :-: | :-: | :-: |
+| [![](http://pic.airijia.com/image/http.svg ':size=100x100')](esphome/guides/yaml) | [![](http://pic.airijia.com/doc/20181122161759.png ':size=100x100')](esphome/guides/configuration-types) |  [![](http://pic.airijia.com/doc/20190303140002.png ':size=100x100')](esphome/components/mqtt) | 
 | [网页表单编译固件](esphome/guides/form) |  [USB 刷入固件](esphome/guides/ttl) | [OTA 刷入固件](esphome/guides/ota) | 
-| [![](http://pic.airijia.com/image/tasmota.svg ':size=100x100')](esphome/guides/migrate_sonoff_tasmota) | [![](http://pic.airijia.com/image/espurna.svg ':size=100x100')](esphome/guides/migrate_espurna) | [![](http://pic.airijia.com/image/espeasy.svg ':size=100x100')](esphome/guides/migrate_espeasy) |
+| [![](http://pic.airijia.com/image/tasmota.svg ':size=291x63')](esphome/guides/migrate_sonoff_tasmota) | [![](http://pic.airijia.com/image/espurna.svg ':size=279x60')](esphome/guides/migrate_espurna) | [![](http://pic.airijia.com/image/espeasy.svg ':size=279x60')](esphome/guides/migrate_espeasy) |
 |[从 Sonoff-Tasmota 迁移](esphome/guides/migrate_sonoff_tasmota)  | [从 ESPurna 迁移](esphome/guides/migrate_espurna)  |  [从 ESPEasy 迁移](esphome/guides/migrate_espeasy)  | 
 | [![](http://pic.airijia.com/doc/20190303140343.png ':size=100x100')](esphome/guides/integration#airi)  | [![](http://pic.airijia.com/image/home-assistant.svg ':size=100x100')](esphome/guides/integration#hass) | |
 | [适配 airi](esphome/guides/integration#airi)  | [适配 Hass](esphome/guides/integration#hass) |  | 
