@@ -21,19 +21,19 @@
 
 |    |     |     |
 | :-: | :-: | :-: |
-| [![](http://pic.airijia.com/image/http.svg ':size=100x100')](esphome/guides/yaml) | [![](http://pic.airijia.com/doc/20181122161759.png ':size=100x100')](esphome/guides/configuration-types) |  [![](http://pic.airijia.com/doc/20190303140002.png ':size=100x100')](esphome/components/mqtt) | 
+| [![](http://pic.airijia.com/doc/20190305091925.png ':size=100x100')](esphome/guides/form) | [![](http://pic.airijia.com/doc/20181122161759.png ':size=100x100')](esphome/guides/ttl) |  [![](http://pic.airijia.com/doc/20190303140002.png ':size=100x100')](esphome/guides/ota) | 
 | [网页表单编译固件](esphome/guides/form) |  [USB 刷入固件](esphome/guides/ttl) | [OTA 刷入固件](esphome/guides/ota) | 
 | [![](http://pic.airijia.com/image/tasmota.svg ':size=291x63')](esphome/guides/migrate_sonoff_tasmota) | [![](http://pic.airijia.com/image/espurna.svg ':size=279x60')](esphome/guides/migrate_espurna) | [![](http://pic.airijia.com/image/espeasy.svg ':size=279x60')](esphome/guides/migrate_espeasy) |
 |[从 Sonoff-Tasmota 迁移](esphome/guides/migrate_sonoff_tasmota)  | [从 ESPurna 迁移](esphome/guides/migrate_espurna)  |  [从 ESPEasy 迁移](esphome/guides/migrate_espeasy)  | 
-| [![](http://pic.airijia.com/doc/20190303140343.png ':size=100x100')](esphome/guides/integration#airi)  | [![](http://pic.airijia.com/image/home-assistant.svg ':size=100x100')](esphome/guides/integration#hass) | |
-| [适配 airi](esphome/guides/integration#airi)  | [适配 Hass](esphome/guides/integration#hass) |  | 
+| [![](http://pic.airijia.com/doc/20190305092041.png ':size=100x100')](esphome/guides/integration#airi)  | [![](http://pic.airijia.com/image/home-assistant.svg ':size=100x100')](esphome/guides/integration#hass) | |
+| [适配 airi](esphome/guides/integration#airi)  | [适配 hass](esphome/guides/integration#hass) |  | 
 
 
 
 
 ## 进阶使用
 
-| [![](http://pic.airijia.com/doc/20190303135144.png ':size=100x100')](esphome/guides/yaml) | [![](http://pic.airijia.com/image/settings.svg ':size=100x100')](esphome/guides/configuration-types) |  [![](http://pic.airijia.com/image/auto-fix.svg ':size=100x100')](esphome/components/mqtt) | 
+| [![](http://pic.airijia.com/doc/20190303135144.png ':size=100x100')](esphome/guides/yaml) | [![](http://pic.airijia.com/image/settings.svg ':size=100x100')](esphome/guides/configuration-types) |  [![](http://pic.airijia.com/image/auto-fix.svg ':size=100x100')](esphome/guides/automations) | 
 | :-: | :-: | :-: |
 |  [上传模板文件编译固件](esphome/guides/yaml) |  [配置类型](esphome/guides/configuration-types) |[自动化](esphome/guides/automations) | 
 
@@ -46,9 +46,9 @@
 |  [核心组件](esphome/components/esphome) |[WiFi 组件](esphome/components/wifi) | [MQTT 组件](esphome/components/mqtt) | 
 | [![](http://pic.airijia.com/image/i2c.svg ':size=100x100')](esphome/components/i2c) | [![](http://pic.airijia.com/image/spi.svg ':size=100x100')](esphome/components/spi) |  [![](http://pic.airijia.com/image/uart.svg ':size=100x100')](esphome/components/uart) | 
 |  [I²C 总线](esphome/components/i2c) | [SPI 总线](esphome/components/spi) |  [UART 总线](esphome/components/uart) | 
-| [![](http://pic.airijia.com/image/system-update.svg ':size=100x100')](esphome/components/i2c) | [![](http://pic.airijia.com/image/file-document-box.svg ':size=100x100')](esphome/components/spi) | [![](http://pic.airijia.com/image/http.svg ':size=100x100')](esphome/components/web_server) | 
+| [![](http://pic.airijia.com/image/system-update.svg ':size=100x100')](esphome/components/ota) | [![](http://pic.airijia.com/image/file-document-box.svg ':size=100x100')](esphome/components/logger) | [![](http://pic.airijia.com/image/http.svg ':size=100x100')](esphome/components/web_server) | 
 |  [OTA 组件](esphome/components/ota) | [日志组件](esphome/components/logger) |  [web 服务](esphome/components/web_server)  | 
-| [![](http://pic.airijia.com/image/server-network.svg ':size=100x100')](esphome/components/i2c) | [![](http://pic.airijia.com/image/power.svg ':size=100x100')](esphome/components/spi) | [![](http://pic.airijia.com/image/hotel.svg ':size=100x100')](esphome/components/deep_sleep) | 
+| [![](http://pic.airijia.com/image/server-network.svg ':size=100x100')](esphome/components/api) | [![](http://pic.airijia.com/image/power.svg ':size=100x100')](esphome/components/power_supply) | [![](http://pic.airijia.com/image/hotel.svg ':size=100x100')](esphome/components/deep_sleep) | 
 | [API 组件](esphome/components/api)| [直流开关电源](esphome/components/power_supply) |  [休眠](esphome/components/deep_sleep)  | 
 
 
@@ -134,7 +134,7 @@
 | [![](http://pic.airijia.com/image/folder-open.svg ':size=100x100')](esphome/components/binary_sensor/) | [![](http://pic.airijia.com/image/pin.svg ':size=100x100')](esphome/components/binary_sensor/gpio) |  [![](http://pic.airijia.com/image/home-assistant.svg ':size=100x100')](esphome/components/binary_sensor/homeassistant) | 
 | :-: | :-: | :-: |
 |  [开关核心组件](esphome/components/binary_sensor/) | [GPIO/物理开关](esphome/components/binary_sensor/gpio)) | [中枢二进制传感器](esphome/components/binary_sensor/homeassistant) | 
-| [![](http://pic.airijia.com/image/server-network.svg ':size=100x100')](esphome/components/binary_sensor/) | | |
+| [![](http://pic.airijia.com/image/server-network.svg ':size=100x100')](esphome/components/binary_sensor/status) | | |
 | [连接状态](esphome/components/binary_sensor/status) | | |
 
 
