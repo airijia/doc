@@ -145,7 +145,7 @@ NodeMCU 放到尺子另一面，为了方便检查线路，将有连线的那一
 
 
 
-下载文件后，解压出 **666.bin** 文件，刷入工具使用 **MQTT固件工具**
+下载文件后，解压出 **666.bin** 文件，刷入工具使用 **ESPHome 固件工具**
 
 
 - [下载 ESPHome 固件 Windows 版](http://pic.airijia.com/download/win.zip)
