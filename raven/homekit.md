@@ -30,7 +30,7 @@
 
 
 
-## 接入 HomeKit
+## HomeKit 配对
 
 
 
