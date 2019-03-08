@@ -18,7 +18,36 @@ switch:
 - **name** (**必填**, 字符串): 开关的名称
 - **icon** (*选填*, 图标): 中枢显示的图标
 - **inverted** (*选填*, 布尔值): 翻转状态。默认为否 `False`
-- 以及 [MQTT 组件](esphome/components/mqtt#MQTT-组件基本配置项) 的基本配置项
+- **internal** (*选填*, 布尔值): 内部化，开启后此开关将只供内部调用，在中枢里不可见，默认为 `False`，如果只设置 **id**，不设置 **name** 等同于此项为 `True`
+- **on_turn_on** (*选填*, 自动化): 详见 [switch.on_turn_on](#switch.on_turn_on)
+- **on_turn_off** (*选填*, 自动化): 详见 [switch.on_turn_off](#switch.on_turn_off)
+- **inverted** (*选填*, 布尔值): 翻转状态。默认为否 `False`
+
+
+## 触发器
+
+### switch.on_turn_on
+
+开关被打开后会激活的触发器，例如实现点动功能
+
+
+```yaml
+switch:
+  - platform: gpio  # 或者其他类型
+    id: relay_1
+    # ...
+    on_turn_on:
+      - delay: 5s
+      - switch.turn_off:
+          id: relay_1
+```
+
+
+### switch.on_turn_off
+
+开关被关闭后会激活的触发器
+
+
 
 
 

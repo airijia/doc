@@ -174,6 +174,7 @@ on_press:
 <!-- pn532.on_tag -->
 - [time.on_time](esphome/components/time#on_time)
 - [interval.interval](#interval)
+- [switch.on_turn_on](esphome/components/switch/#switchon_turn_on) / [switch.on_turn_off](esphome/components/switch/#switchon_turn_off) 
 
 
 ## 所有动作
