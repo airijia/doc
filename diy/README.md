@@ -8,9 +8,11 @@
 |:-|:-:|:-:|:-:|
 | ★ | NodeMCU | [SHT30 温湿度](diy/nodemcu/sht30) | 温湿度 适合新手入门 |
 | ★ | NodeMCU | [WiFi 信号探测仪](diy/nodemcu/wifi_signal) | 修电脑爱好者们的好帮手 |
-| ★★ | NodeMCU | [LEGO 积木式带显示屏温湿度](diy/nodemcu/lego) | 温湿度带显示屏 适合新手 |
+| ★★ | NodeMCU | [LEGO 积木式带显示屏 三合一温湿度光强大气压](diy/nodemcu/3in1) | 三合一温湿度 适合新手 |
+| ★★★ | NodeMCU | [LEGO 积木式带显示屏温湿度](diy/nodemcu/lego) | 温湿度带显示屏 适合新手 |
 | ★★ | ESP01 | [DHT11 温湿度](diy/esp01/dht11) | 温湿度 体积小 |
-| ★★★★ | ESP01 | [多合一传感器](diy/nodemcu/bruh) |  |
+
+<!-- | ★★★★ | ESP01 | [多合一传感器](diy/nodemcu/bruh) |  | -->
 
 
 
