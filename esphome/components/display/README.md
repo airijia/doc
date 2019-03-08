@@ -316,7 +316,7 @@ on_...:
 | 名称 | 全名 | 简介 |
 | ---- | --------------- | --------------- |
 | arial | Arial| |
-| airilbd | Arial Black| |
+| arialbd | Arial Black| |
 | comic | Comic Sans MS | |
 | cour | Courier New | |
 | georgia | Georgia | |

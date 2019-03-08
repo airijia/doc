@@ -433,47 +433,6 @@ USB 线两端放入两个 1x1
 
 ## 刷 ESPHome 固件 (连 Hass 等中枢)
 
-基于 MQTT 通信协议，零配置即可被智能中枢（airijia/ctl 或 Hass）自动发现，支持 OTA（Over The Air）网刷
-
-### 中枢配置
-
-#### 爱睿家智能中枢（airijia/ctl）
-
-?> 免配置，自动发现，默认的用户名和密码为空，编译固件的时候都不用填
-
-
-#### Hass 内置
-
-使用 Hass 内置的 [HBMQTT](https://www.home-assistant.io/docs/mqtt/broker#embedded-broker)
-
-在配置文件（通常为 configuration.yaml）增加如下内容
-
-```yaml
-# HBMQTT
-mqtt:
-  password: 123
-  discovery: true
-  discovery_prefix: airi
-```
-如上设置，编译固件时需要填入的 MQTT 用户名为 `homeassistant` (默认值)，密码为 `123`
-
-
-#### Hass 外接
-
-以外接 Mosquitto 为例
-
-在配置文件（通常为 configuration.yaml）增加如下内容
-
-```yaml
-# Mosquitto
-mqtt:
-  broker: 127.0.0.1 # Mosquitto 服务器IP
-  # ... 其他 MQTT 配置
-  discovery: true
-  discovery_prefix: airi
-```
-
-如上设置，编译固件时需要填入的 MQTT 用户名和密码由 Mosquitto 配置决定，默认都为空
 
 
 ### 下载固件
@@ -599,6 +558,13 @@ mqtt:
 刷写完成
 
 ![](https://ws1.sinaimg.cn/large/007fN5Xegy1fxgu7vjt18j30o30irjtc.jpg)
+
+
+### 适配中枢
+
+- [适配 hass](esphome/guides/integration#hass)
+- [适配 airi](esphome/guides/integration#airi)
+
 
 
 
