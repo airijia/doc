@@ -37,9 +37,10 @@ switch:
     id: relay_1
     # ...
     on_turn_on:
-      - delay: 5s
-      - switch.turn_off:
-          id: relay_1
+      then:
+        - delay: 5s
+        - switch.turn_off:
+            id: relay_1
 ```
 
 
