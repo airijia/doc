@@ -589,7 +589,7 @@ USB 线两端放入两个 1x1
 
 ?> 基本五大件的配置查看 [模板文件创建 ESPHome 固件](esphome/guides/yaml)
 
-需要用到 [I²C 总线](esphome/components/i2c),  [SHT3X-D 温湿度传感器](esphome/components/sensor/sht3xd) 和  [SSD1306 OLED I2C显示屏](esphome/components/display/ssd1306_i2c) 等多个组件
+需要用到 [I²C 总线](esphome/components/i2c),  [SHT3X-D 温湿度传感器](esphome/components/sensor/sht3xd) 和  [SSD1306 OLED I2C显示屏](esphome/components/display/ssd1306) 等多个组件
 
 
 ```yaml
@@ -681,7 +681,7 @@ it.printf(64, 40, id(font_48), TextAlign::CENTER, "%.1f°", id(temperature).raw_
 以**font_32**，在坐标 20,48 处（屏幕下半距左 20）显示 ``湿度数``+ ``%``，`.1f` 表示将浮点数四舍五入到小数点后 1 位
 
 
-更详细的用法，参考 [SSD1306 OLED I2C显示屏](esphome/components/display/ssd1306_i2c)  和 [显示屏核心组件](esphome/components/display/) 
+更详细的用法，参考 [SSD1306 OLED I2C显示屏](esphome/components/display/ssd1306)  和 [显示屏核心组件](esphome/components/display/) 
 
 
 
@@ -699,7 +699,7 @@ it.printf(64, 40, id(font_48), TextAlign::CENTER, "%.1f°", id(temperature).raw_
 
 ?> 基本五大件的配置查看 [模板文件创建 ESPHome 固件](esphome/guides/yaml)
 
-需要用到 [I²C 总线](esphome/components/i2c),  [SHT3X-D 温湿度传感器](esphome/components/sensor/sht3xd) 和  [SSD1306 OLED I2C显示屏](esphome/components/display/ssd1306_i2c)，[时间](esphome/components/time) 等多个组件
+需要用到 [I²C 总线](esphome/components/i2c),  [SHT3X-D 温湿度传感器](esphome/components/sensor/sht3xd) 和  [SSD1306 OLED I2C显示屏](esphome/components/display/ssd1306)，[时间](esphome/components/time) 等多个组件
 
 
 ```yaml
@@ -791,7 +791,7 @@ it.printf(64, 40, id(font_48), TextAlign::CENTER, "%.1f°", id(temperature).raw_
 
 以**font_48**，在坐标 64,40 处（下半区域正中）`TextAlign::CENTER` 居中显示 ``温度数``+ ``°``，`.1f` 表示将浮点数四舍五入到小数点后 1 位
 
-更详细的用法，参考 [SSD1306 OLED I2C显示屏](esphome/components/display/ssd1306_i2c)  和 [显示屏核心组件](esphome/components/display/) 
+更详细的用法，参考 [SSD1306 OLED I2C显示屏](esphome/components/display/ssd1306)  和 [显示屏核心组件](esphome/components/display/) 
 
 
 
@@ -907,7 +907,7 @@ image:
 
 当 motion 的值为 `on` 时，在坐标 32,0 处（图标是 64x64，这样等同于居中显示）显示图标 **run**，不为 `on` 时，显示温湿度数据
 
-更详细的用法，参考 [中枢文本传感器组件](esphome/components/text_sensor/homeassistant)， [SSD1306 OLED I2C显示屏](esphome/components/display/ssd1306_i2c)  和 [显示屏核心组件](esphome/components/display/) 
+更详细的用法，参考 [中枢文本传感器组件](esphome/components/text_sensor/homeassistant)， [SSD1306 OLED I2C显示屏](esphome/components/display/ssd1306)  和 [显示屏核心组件](esphome/components/display/) 
 
 
 ### 实时气象站
@@ -921,7 +921,7 @@ image:
 - [I²C 总线](esphome/components/i2c),
 - [SHT3X-D 温湿度传感器](esphome/components/sensor/sht3xd)
 - [显示屏核心组件](esphome/components/display/) 
-- [SSD1306 OLED I2C显示屏](esphome/components/display/ssd1306_i2c)
+- [SSD1306 OLED I2C显示屏](esphome/components/display/ssd1306)
 - [时间](esphome/components/time)
 
 

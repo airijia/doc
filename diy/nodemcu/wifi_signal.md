@@ -206,7 +206,7 @@ NodeMCU 放到尺子另一面，为了方便检查线路，将有连线的那一
 
 ?> 基本五大件的配置查看 [模板文件创建固件](esphome/guides/yaml)
 
-需要用到 [WiFi 信号强度](esphome/components/sensor/wifi_signal) 、 [I²C 总线](esphome/components/i2c)、  [SSD1306 OLED I2C显示屏](esphome/components/display/ssd1306_i2c) 等多个组件
+需要用到 [WiFi 信号强度](esphome/components/sensor/wifi_signal) 、 [I²C 总线](esphome/components/i2c)、  [SSD1306 OLED I2C显示屏](esphome/components/display/ssd1306) 等多个组件
 
 
 ```yaml

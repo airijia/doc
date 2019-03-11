@@ -186,9 +186,9 @@
 
 ## 显示屏
 
-| [![](http://pic.airijia.com/image/folder-open.svg ':size=100x100')](esphome/components/display/) | [![](http://pic.airijia.com/doc/20190303123232.png ':size=200')](esphome/components/display/ssd1306_i2c) |  |
+| [![](http://pic.airijia.com/image/folder-open.svg ':size=100x100')](esphome/components/display/) | [![](http://pic.airijia.com/doc/20190303123232.png ':size=200')](esphome/components/display/ssd1306) |  |
 | :-: | :-: | :-: |
-| [显示屏核心组件](esphome/components/display/)  | [SSD1306 OLED 显示屏](esphome/components/display/ssd1306_i2c)  |   |   |
+| [显示屏核心组件](esphome/components/display/)  | [SSD1306 OLED 显示屏](esphome/components/display/ssd1306)  |   |   |
 
 
 
