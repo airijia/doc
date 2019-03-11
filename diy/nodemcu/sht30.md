@@ -424,6 +424,6 @@ sensor:
     humidity:
       name: "Living Room Humidity"
     address: 0x44
-    update_interval: 15s
+    update_interval: 60s
 ```
 

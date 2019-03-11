@@ -9,7 +9,7 @@
 sensor:
   - platform: wifi_signal
     name: "WiFi Signal Sensor"
-    update_interval: 1s
+    update_interval: 60s
 ```
 
 ## 配置参数

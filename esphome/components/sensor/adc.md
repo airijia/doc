@@ -13,7 +13,7 @@ sensor:
   - platform: adc
     pin: A0
     name: "Living Room Brightness"
-    update_interval: 15s
+    update_interval: 60s
 ```
 
 ## 配置参数

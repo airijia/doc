@@ -230,7 +230,7 @@ light:
     effects:
       - lambda:
           name: My Custom Effect
-          update_interval: 1s
+          update_interval: 60s
           lambda: >-
             static int state = 0;
             if (state == 0) {

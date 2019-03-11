@@ -70,7 +70,7 @@ display:
   - platform: ssd1306_i2c
     model: "SSD1306 128x64"
     address: 0x3C
-    update_interval: 1s
+    update_interval: 60s
     lambda: >-
       if (id(motion).state == 'on') {
         it.image(32, 0, id(run));

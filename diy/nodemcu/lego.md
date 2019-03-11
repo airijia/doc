@@ -610,7 +610,7 @@ sensor:
       name: "Living Room Humidity"
       id: humidity
     address: 0x44
-    update_interval: 1s
+    update_interval: 60s
 # 字体
 font:
   - file: "roboto"
@@ -629,7 +629,7 @@ display:
   - platform: ssd1306_i2c
     model: "SSD1306 128x64"
     address: 0x3C
-    update_interval: 1s
+    update_interval: 60s
     lambda: >-
       it.image(0, 0, id(thermometer));
       it.printf(32, 16, id(font_32), "%.1f°", id(temperature).raw_state);
@@ -725,7 +725,7 @@ sensor:
       name: "Living Room Humidity"
       id: humidity
     address: 0x44
-    update_interval: 1s
+    update_interval: 60s
 # 字体
 font:
   - file: "roboto"
@@ -739,7 +739,7 @@ display:
   - platform: ssd1306_i2c
     model: "SSD1306 128x64"
     address: 0x3C
-    update_interval: 1s
+    update_interval: 60s
     lambda: >-
       it.strftime(0, 0, id(font_16), "%H:%M", id(sntp_time).now());
       it.printf(128, 0, id(font_16), TextAlign::RIGHT, "%.1f%%", id(humidity).raw_state);
@@ -818,7 +818,7 @@ sensor:
       name: "Living Room Humidity"
       id: humidity
     address: 0x44
-    update_interval: 1s
+    update_interval: 60s
 # 文本传感器
 text_sensor:
   - platform: homeassistant
@@ -847,7 +847,7 @@ display:
   - platform: ssd1306_i2c
     model: "SSD1306 128x64"
     address: 0x3C
-    update_interval: 1s
+    update_interval: 60s
     lambda: >-
       if (id(motion).state == 'on') {
         it.image(32, 0, id(run));

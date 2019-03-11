@@ -62,7 +62,7 @@ display:
   - platform: ssd1306_i2c
     model: "SSD1306 128x64"
     address: 0x3C
-    update_interval: 1s
+    update_interval: 60s
     lambda: >-
       it.printf(20, 16, id(font_32), "%s°", id(temperature).state.c_str());
       it.printf(20, 48, id(font_32), "%s%%", id(humidity).state.c_str());

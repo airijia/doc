@@ -41,7 +41,7 @@ sensor:
       name: "Living Room Temperature"
     humidity:
       name: "Living Room Humidity"
-    update_interval: 15s
+    update_interval: 60s
 ```
 
 ### 配置参数

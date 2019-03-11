@@ -30,7 +30,7 @@ sensor:
       name: "MH-Z19 CO2 Value"
     temperature:
       name: "MH-Z19 Temperature"
-    update_interval: 15s
+    update_interval: 60s
 ```
 
 ### 配置参数
