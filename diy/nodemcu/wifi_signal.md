@@ -229,7 +229,7 @@ sensor:
   - platform: wifi_signal
     name: "WiFi Signal Sensor"
     id: wifi_signal
-    update_interval: 60s
+    update_interval: 1s
 # 字体
 font:
   - file: "roboto"
@@ -267,7 +267,7 @@ display:
   - platform: ssd1306_i2c
     model: "SSD1306 128x64"
     address: 0x3C
-    update_interval: 60s
+    update_interval: 1s
     lambda: >-
       int s;
       s = (整数)id(wifi_signal).raw_state;
