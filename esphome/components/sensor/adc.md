@@ -21,7 +21,7 @@ sensor:
 - **pin** (**必填**, : 读值的引脚
 - **name** (**必填**, 字符串): 传感器的名称
 - **attenuation** (*选填*): 只有 ESP32 可用. Specify the ADC attenuation to use. See [ESP32 衰减比](#ESP32_衰减比)
-- **update_interval** (*选填*, [时长](esphome/guides/configuration-types#时长)): [读数间隔](esphome/components/sensor/#读数间隔)，默认 `15s`
+- **update_interval** (*选填*, [时长](esphome/guides/configuration-types#时长)): 默认 `60s`
 - **id** (*选填*, [ID](esphome/guides/configuration-types#id)): 当前组件的 ID
 - 以及 [传感器核心组件](esphome/components/sensor/#基本配置) 和 [MQTT 组件基本配置](esphome/components/mqtt#MQTT-组件基本配置项)
 

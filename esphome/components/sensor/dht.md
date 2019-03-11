@@ -56,7 +56,7 @@ sensor:
   - **id** (*选填*, [ID](esphome/guides/configuration-types#id)): 当前组件的 ID
   - 以及 [传感器核心组件](esphome/components/sensor/#基本配置) 和 [MQTT 组件基本配置](esphome/components/mqtt#MQTT-组件基本配置项)
 - **model** (*选填*, 字符串): 指定使用的芯片组，可选值 `AUTO_DETECT`, `DHT11`, `DHT22`, `AM2302`, `RHT03` 默认值 `AUTO_DETECT`
-- **update_interval** (*选填*, [时长](esphome/guides/configuration-types#时长)): [读数间隔](esphome/components/sensor/#读数间隔)，默认 `15s`
+- **update_interval** (*选填*, [时长](esphome/guides/configuration-types#时长)): 默认 `60s`
 
 
 
