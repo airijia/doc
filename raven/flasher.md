@@ -84,8 +84,12 @@ NodeMcu, D1 mini等开发板选择 **DIO**，Sonoff、ESP01等选择 **DOUT**
 刷写完成
 
 
+然后去 [HomeKit 配对](raven/#配对)
+
 
 ## 调试固件
+
+!> 非必须，使用出现问题才需要调试
 
 运行模式插入 TTL 线，比如 basic，插入的时候什么都不按就是运行模式
 
