@@ -25,7 +25,7 @@ CH340G 正常是免驱的，插上即用
 http://www.wch.cn/downloads/CH341SER_EXE.html
 
 
-
+!> 如果小板插上 USB 没有反应，记得检查跳线帽
 
 
 ## Mac
