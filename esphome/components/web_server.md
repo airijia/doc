@@ -15,17 +15,17 @@ To conserve flash size, the CSS and JS files used on the root page to show a sim
 Example web server frontend.
 
 ```yaml
-# Example configuration entry
+# 配置示例
 web_server:
   port: 80
 ```
 
-## Configuration variables:
+## 配置参数:
 
-- **port** (*Optional*, int): The port the web server should open its socket on.
-- **css_url** (*Optional*, url): The URL that should be used for the CSS stylesheet. Defaults to <https://esphome.io/_static/webserver-v1.min.css> (updates will go to `v2`, `v3`, etc).
-- **js_url** (*Optional*, url): The URL that should be used for the JS script. Defaults to <https://esphome.io/_static/webserver-v1.min.js>.
-- **id** (*Optional*, [ID](https://esphome.io/guides/configuration-types#config-id)): Manually specify the ID used for code generation.
+- **port** (*选填*, 整数): The port the web server should open its socket on.
+- **css_url** (*选填*, url): The URL that should be used for the CSS stylesheet. Defaults to <https://esphome.io/_static/webserver-v1.min.css> (updates will go to `v2`, `v3`, etc).
+- **js_url** (*选填*, url): The URL that should be used for the JS script. Defaults to <https://esphome.io/_static/webserver-v1.min.js>.
+- **id** (*选填*, [ID](https://esphome.io/guides/configuration-types#config-id)): Manually specify the ID used for code generation.
 
 Note
 

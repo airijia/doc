@@ -34,7 +34,7 @@ Possible return values for the optional lambda:
 
 - **name** (**必填**, 字符串): The name of the cover.
 - **lambda** (*选填*, [lambda](https://esphome.io/guides/automations#config-lambda)): Lambda to be evaluated repeatedly to get the current state of the cover. Only state *changes* will be published to MQTT.
-- **optimistic** (*选填*, boolean): Whether to operate in optimistic mode - when in this mode, any command sent to the template cover will immediately update the reported state and no lambda needs to be used. Defaults to `false`.
+- **optimistic** (*选填*, 布尔值): Whether to operate in optimistic mode - when in this mode, any command sent to the template cover will immediately update the reported state and no lambda needs to be used. Defaults to `false`.
 - **open_action** (*选填*, [Action](https://esphome.io/guides/automations#config-action)): The action that should be performed when the remote (like Home Assistant’s frontend) requests the cover to be opened.
 - **close_action** (*选填*, [Action](https://esphome.io/guides/automations#config-action)): The action that should be performed when the remote requests the cover to be closed.
 - **stop_action** (*选填*, [Action](https://esphome.io/guides/automations#config-action)): The action that should be performed when the remote requests the cover to stopped.

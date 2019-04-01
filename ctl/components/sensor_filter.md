@@ -41,7 +41,7 @@ sensor:
 
 Filters can be chained and are applied according to the order present in the configuration file.
 
-### CONFIGURATION VARIABLES
+### 配置参数
 
 - entity_id
 

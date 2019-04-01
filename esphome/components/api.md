@@ -62,3 +62,56 @@ on_...:
 - **data** (*选填*, 映射): 传递的静态参数
 - **data_template** (*选填*, 映射): 传递的模板化参数，语法结构依照 Hass 模板引擎，参考 [Service](ctl/scripts/service-calls)
 - **variables** (*选填*, 映射): 使用 [lambdas 表达式] 语法定义的可选变量，供 `data_template` 调用 
+
+
+
+## 自定义 service
+
+
+t is also possible to get data from Home Assistant to ESPHome with user-defined services. When you declare services in your ESPHome YAML file, they will automatically show up in Home Assistant and you can call them directly.
+
+# 配置示例
+api:
+  services:
+    - service: start_laundry
+      then:
+        - switch.turn_on: relay
+        - delay: 3h
+        - switch.turn_off: relay
+For example with the configuration seen above, after uploading you will see a service called esphome.livingroom_start_laundry (livingroom is the node name) which you can then call.
+
+Additionally, you can also transmit data from Home Assistant to ESPHome with this method:
+
+```yaml
+# 配置示例
+api:
+  services:
+    - service: start_effect
+      variables:
+        my_brightness: int
+        my_effect: string
+      then:
+        - light.turn_on:
+            id: my_light
+            brightness: !lambda 'return my_brightness;'
+            my_effect: !lambda 'return my_effect;'
+```
+
+
+Using the variables key you can tell ESPHome which variables to expect from Home Assistant. For example the service seen above would be executed with something like this:
+
+```yaml
+# Example Home Assistant Service Call
+service: esphome.livingroom_start_effect
+data_template:
+  my_brightness: "{{ states.brightness.state }}"
+  my_effect: "Rainbow"
+```
+Then each variable you define in the variables section is accessible in the automation triggered by the user-defined service through the name you gave it in the variables section (note: this is a local variable, so do not wrap it in id(...) to access it).
+
+There are currently 4 types of variables:
+
+- bool: A boolean (ON/OFF). C++ type: bool
+- int: An integer. C++ type: int/int32_t
+- float: A floating point number. C++ type: float
+- string: A string. C++ type: std::string
