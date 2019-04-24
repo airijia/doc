@@ -36,7 +36,14 @@
 
 ## 组装硬件
 
-如果所示，针脚定义， 3V3就是那个**方孔**
+如果所示，针脚定义
+
+![](http://pic.airijia.com/doc/DSC_5553-2.jpg)
+
+
+按钮在背面
+
+![](http://pic.airijia.com/doc/单火接线.jpg)
 
 
 
