@@ -23,7 +23,7 @@ Sonoff Basic 模块
 
 TTL刷机线（CH340G）
 
-2.54mm 间距排针 
+刷机顶针
 
 电烙铁，焊锡
 
@@ -34,11 +34,12 @@ TTL刷机线（CH340G）
 | ![](http://pic.airijia.com/doc/20181122162053.png ':size=200')| Sonoff Basic |  [![买买买](http://cdn.airijia.com/b6eca8da724952cc0251.gif ':size=150')](https://item.taobao.com/item.htm?id=551950726641) |
 |:-:|:-:|:-:|
 | ![](http://pic.airijia.com/doc/20181122161759.png ':size=200')| CH340G 刷机线 |  [![买买买](http://cdn.airijia.com/b6eca8da724952cc0251.gif ':size=150')](https://item.taobao.com/item.htm?id=45528507062) |
-| ![](http://pic.airijia.com/doc/20181122162258.png ':size=200')| 2.54mm 排针 |  [![买买买](http://cdn.airijia.com/b6eca8da724952cc0251.gif ':size=150')](https://item.taobao.com/item.htm?id=551916669247) |
+| ![](http://pic.airijia.com/doc/20190423111153.png ':size=200')| 刷机顶针 |  [![买买买](http://cdn.airijia.com/b6eca8da724952cc0251.gif ':size=150')](https://item.taobao.com/item.htm?id=592072988764) |
 | ![](http://pic.airijia.com/doc/20181122162418.png ':size=200')| 杜邦线 |  [![买买买](http://cdn.airijia.com/b6eca8da724952cc0251.gif ':size=150')](https://item.taobao.com/item.htm?id=45608073136) |
 
 
 
+<!-- | ![](http://pic.airijia.com/doc/20181122162258.png ':size=200')| 2.54mm 排针 |  [![买买买](http://cdn.airijia.com/b6eca8da724952cc0251.gif ':size=150')](https://item.taobao.com/item.htm?id=551916669247) | -->
 
 
 ## 新版 2018年12月后
