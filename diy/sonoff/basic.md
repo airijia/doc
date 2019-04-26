@@ -196,4 +196,4 @@ ESPHome 固件使用 [ESPHome 固件工具](diy/flasher)
 
 关注 微信订阅号 获取更多教程
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fv99qfit90j30by0byjsh.jpg)
+![](http://pic.airijia.com/doc/20190426125528.png)

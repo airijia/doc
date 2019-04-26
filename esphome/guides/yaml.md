@@ -77,15 +77,14 @@
 
 文件上传成功，等待云端编译
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fww4awjtgpj311r0grdgu.jpg)
 
-
+![](http://pic.airijia.com/doc/20190426125239.png)
 
 一般需要等待 2-5 分钟，如果页面没变化，按 F5 刷新浏览器
 
 显示**已完成**，表示已经编译成功
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fww4eac4ntj30w90dk3z4.jpg)
+![](http://pic.airijia.com/doc/20190426125415.png)
 
 
 
