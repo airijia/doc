@@ -2,6 +2,8 @@
 
 智能家居 网红模块 iTead 易微联 Sonoff Basic 改装模块的刷机方法
 
+[免焊接刷 Basic](//player.bilibili.com/player.html?aid=50735241&cid=88826411&page=1 ':include :type=iframe width="720" height="530"')
+
 
 
 ## 常见错误
