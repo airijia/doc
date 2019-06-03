@@ -33,14 +33,14 @@ TTL 刷机线
 ## 接线
 
 
+![](http://pic.airijia.com/doc/20190603093526.png)
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fv5bx6iuefj30m80m8n3p.jpg)
+![](http://pic.airijia.com/doc/20190603093545.png)
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fv5bwq8j4vj30m80m8tim.jpg)
+![](http://pic.airijia.com/doc/20190603093555.png)
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fv5bwad3h6j30m80m848x.jpg)
+![](http://pic.airijia.com/doc/20190603093607.png)
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fv5bw1bjoxj30m80m8guh.jpg)
 
 
 
@@ -83,7 +83,9 @@ mqtt:
 
 **注意！模块体质不一样，如果 3V3 供电不正常，换用5V **
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fv5bvizmdkj30m80m84cm.jpg)
+
+![](http://pic.airijia.com/doc/20190603093622.png)
+
 
 将 ESP01S 插入 DHT11 底座，按如图所示接线
 
@@ -97,16 +99,16 @@ mqtt:
 
 模块需要预热，大约10分钟之后读值会比较准确
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fv5bnmlz6ij30m80m81ag.jpg)
 
 
-
+![](http://pic.airijia.com/doc/20190603093638.png)
 
 ## 锂电池供电
 
 支持3.7v锂电池供电，效果如图
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fv5bn2sw5jj30m80esdsf.jpg)
+![](http://pic.airijia.com/doc/20190603093841.png)
+
 
 
 
@@ -114,8 +116,7 @@ mqtt:
 
 关注 微信订阅号 获取更多咨询
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fv5c0h9du9j30by0bymxy.jpg)
-
+![](http://pic.airijia.com/doc/20190603093904.png)
 
 
 
