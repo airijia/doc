@@ -4,10 +4,10 @@
 HC-SR501 是一款比较常见的无源红外感应模块(Passive Infrared Sensors, PIR)，一般用于人体感应
 
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fx1t63kzmnj30by0amjv6.jpg)
+![](http://pic.airijia.com/doc/20190703094629.png)
 
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fx1t7shbkjj30po0hz4hb.jpg)
+![](http://pic.airijia.com/doc/20190703094638.png)
 
 
 
@@ -15,7 +15,7 @@ HC-SR501 是一款比较常见的无源红外感应模块(Passive Infrared Senso
 ## 成品效果
 
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fx1uwwyz3fj30rw03ojrb.jpg)
+![](http://pic.airijia.com/doc/20190703094647.png)
 
 **airi:8123 和 Hass 中的显示**
 
@@ -26,10 +26,10 @@ HC-SR501 是一款比较常见的无源红外感应模块(Passive Infrared Senso
 
 ## 相关产品
 
-| ![](https://ws1.sinaimg.cn/large/007fN5Xegy1fx1t63kzmnj30by0amjv6.jpg ':size=200')|  HC-SR501 |  [![买买买](http://cdn.airijia.com/b6eca8da724952cc0251.gif ':size=150')](https://item.taobao.com/item.htm?id=579062519836) |
+| ![](http://pic.airijia.com/doc/20190703094657.png ':size=200')|  HC-SR501 |  [![买买买](http://cdn.airijia.com/b6eca8da724952cc0251.gif ':size=150')](https://item.taobao.com/item.htm?id=579062519836) |
 |:-:|:-:|:-:|
-| ![](https://ws1.sinaimg.cn/large/007fN5Xegy1fx1usp2qf7j30gg0ggafd.jpg ':size=200') | ESP01S |  [![买买买](http://cdn.airijia.com/b6eca8da724952cc0251.gif ':size=150')](https://item.taobao.com/item.htm?id=45607865463) |
-| ![](https://ws1.sinaimg.cn/large/007fN5Xegy1fx1uzgvgt5j30ku0f9wjc.jpg ':size=200') | CH340G <br> 3v3 5v 双供电 | [![买买买](http://cdn.airijia.com/b6eca8da724952cc0251.gif ':size=150')](https://item.taobao.com/item.htm?id=45528507062) |
+| ![](http://pic.airijia.com/doc/20190703094708.png) ':size=200') | ESP01S |  [![买买买](http://cdn.airijia.com/b6eca8da724952cc0251.gif ':size=150')](https://item.taobao.com/item.htm?id=45607865463) |
+| ![](http://pic.airijia.com/doc/20190703094719.png) ':size=200') | CH340G <br> 3v3 5v 双供电 | [![买买买](http://cdn.airijia.com/b6eca8da724952cc0251.gif ':size=150')](https://item.taobao.com/item.htm?id=45528507062) |
 
 
 ## 接线 
@@ -47,7 +47,7 @@ HC-SR501 是一款比较常见的无源红外感应模块(Passive Infrared Senso
  打开 [在线编译固件](http://airijia.com/ctl/firmware/list)
 
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fx1vvqv2s1j30n00bzjs1.jpg)
+![](http://pic.airijia.com/doc/20190703094733.png)
 
 
 
@@ -73,7 +73,7 @@ binary_sensor:
 
 理论上可以 3.3V 供电，而且还有 3 跟线的接法，但不如 5V 稳定
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fx1tirm0axj30qr0np1kc.jpg)
+![](http://pic.airijia.com/doc/20190703094743.png)
 
 
 只接这三根线，可以配合只有 3v3 输出的模块使用

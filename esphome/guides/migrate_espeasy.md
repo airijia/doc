@@ -11,5 +11,4 @@
 
 进入 **Tools**，**Firmware** 下的 **Load** 选择下载的 bin 文件
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fxd6syaaffj30io0gs0ua.jpg)
-
+![](http://pic.airijia.com/doc/20190703104256.png)

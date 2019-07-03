@@ -39,4 +39,4 @@ For analog sensors please check the [component overview](https://www.home-assist
 
 
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fxdi20amt0j30ru0lc75s.jpg)
+![](http://pic.airijia.com/doc/20190703093031.png)

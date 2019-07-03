@@ -206,25 +206,25 @@ NodeMCU 和 SHT30 的针脚是已经焊好的，如图连线即可
 
 打开 **家庭** APP
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fv5btipro1j31710wdx6p.jpg)
+![](http://pic.airijia.com/doc/20190703102020.png)
 
 依次选择 **添加配件 - 没有代码或无法扫描**
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fv5bt5et03j317p0tre81.jpg)
+![](http://pic.airijia.com/doc/20190703102051.png)
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fv5bsxvarnj31240q11kx.jpg)
+![](http://pic.airijia.com/doc/20190703102122.png)
 
 正常这里会看到跟刚才接入 AP 同样名称的配件，如果看不到，要多等一会儿
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fv5bskjgp7j317y0nfqn0.jpg)
+![](http://pic.airijia.com/doc/20190703101401.png)
 
 输入下载固件时设置的配对编码，默认为 `38049942`
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fv5bsakzffj30v90eutfl.jpg)
+![](http://pic.airijia.com/doc/20190703101430.png)
 
 等待 30 ~ 60 秒之后，显示配件已添加
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fv5brk7sacj317m0tp1kx.jpg)
+![](http://pic.airijia.com/doc/20190703101447.png)
 
 
 
@@ -366,36 +366,36 @@ mqtt:
 
 ?>  如果还没找到串口，需要安装 [驱动程序](diy/nodemcu/)
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fxgtwlzzh9j30o30bvjrp.jpg)
+![](http://pic.airijia.com/doc/20190703101509.png)
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fxgtxnl1agj30o60a20t4.jpg)
+![](http://pic.airijia.com/doc/20190703101527.png)
 
 
 浏览文件并添加
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fxgtyujlmyj30oj0atq37.jpg)
+![](http://pic.airijia.com/doc/20190703101542.png)
 
 添加了 D盘 Download 文件夹下的 666.bin
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fxgtzy4vl9j30o90ayzkk.jpg)
+![](http://pic.airijia.com/doc/20190703101557.png)
 
 
 
 点击刷写
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fxgu36iiwkj30o708xjro.jpg)
+![](http://pic.airijia.com/doc/20190703101615.png)
 
 
 控制台开始出现信息
 
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fxgu4jloa0j30oe0f475f.jpg)
+![](http://pic.airijia.com/doc/20190703101637.png)
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fxgu4zif2rj30nx0ic76b.jpg)
+![](http://pic.airijia.com/doc/20190703101705.png)
 
 刷写完成
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fxgu7vjt18j30o30irjtc.jpg)
+![](http://pic.airijia.com/doc/20190703101726.png)
 
 
 ## 进阶使用

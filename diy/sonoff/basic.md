@@ -84,11 +84,11 @@ TTL刷机线（CH340G）
 
 在如图位置焊接 4P 排针
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fv98s4ndw1j30rs0fix4y.jpg)
+![](http://pic.airijia.com/doc/20190703102622.png)
 
 背面可以看的清楚一点，如图所示的 4 个孔，从 **方型** 孔的数出来 4 个
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fv99s6f1nyj315o0ndb2a.jpg)
+![](http://pic.airijia.com/doc/20190703102634.png)
 
 
 
@@ -96,11 +96,11 @@ TTL刷机线（CH340G）
 
 如果所示，针脚定义， 3V3就是那个**方孔**
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fv99j8cdr8j30m80b9qhb.jpg)
+![](http://pic.airijia.com/doc/20190703102644.png)
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fv98g4cpmfj30m80m87i5.jpg)
+![](http://pic.airijia.com/doc/20190703102653.png)
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fv98fip4v9j30m80m8asf.jpg)
+![](http://pic.airijia.com/doc/20190703102704.png)
 
 **注意**
 
@@ -163,14 +163,14 @@ ESPHome 固件使用 [ESPHome 固件工具](diy/flasher)
 
 如图所示，需要用到这两个接口 `GPIO14` 和 `GND`
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fxftesc3voj30rc0f21gx.jpg)
+![](http://pic.airijia.com/doc/20190703102716.png)
 
 
 接墙壁开关的输入连 Basic 的GPIO14 ，输出连 GND
 
 !> 注意！墙壁开关不要再跟任何交流电源有连接，不要接市电，不要接，不要接！！
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fxfqzw9lnej308c08qjtc.jpg)
+![](http://pic.airijia.com/doc/20190703102726.png)
 
 
 

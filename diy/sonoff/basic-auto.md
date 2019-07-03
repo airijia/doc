@@ -21,11 +21,11 @@ binary_sensor:
 按这个配置刷固件进 Basic 设备看看效果
 
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fx47akhet7j312i0mzai2.jpg)
+![](http://pic.airijia.com/doc/20190703102521.png)
 
 `GPIO12`的继电器工作正常，中枢发出的指令可以正确控制
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fx47hd6ho3j312g0jqdqt.jpg)
+![](http://pic.airijia.com/doc/20190703102530.png)
 
 (⊙o⊙)…，点击`GPIO0`时，`GPIO12`的继电器完全无动作，真的只被当做二进制传感器了？而且按下按钮视为`False`？松开按钮视为`True`？反了？
 
@@ -76,7 +76,7 @@ binary_sensor:
 
 触发器 `on_click` ，动作`switch.toggle`，这段简短代码的含义：单击`GPIO0`按钮时，切换`relay_1`，即`GPIO12`继电器的状态
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fx490spth7j30zb0lkdpk.jpg)
+![](http://pic.airijia.com/doc/20190703102545.png)
 
 单击`GPIO0`按钮，已经可以正确控制，图中日志分别对应的动作
 

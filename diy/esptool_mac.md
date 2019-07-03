@@ -11,7 +11,7 @@ High Sierra 之后的 Mac OS X，已经自带 python2.7，无需安装
 
 CMD+空格 聚焦搜索 打开终端
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fwweqm3w88j311p0h947j.jpg)
+![](http://pic.airijia.com/doc/20190703094915.png)
 
 命令行输入
 
@@ -19,7 +19,7 @@ CMD+空格 聚焦搜索 打开终端
 python -V
 ```
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fwweudy58oj30ga0a0mxn.jpg)
+![](http://pic.airijia.com/doc/20190703094924.png)
 
 
 MAC 默认是不带 pip 的，所以要先安装pip
@@ -28,7 +28,7 @@ MAC 默认是不带 pip 的，所以要先安装pip
 sudo easy_install pip
 ```
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fwwey1vjgkj30q20huwj2.jpg)
+![](http://pic.airijia.com/doc/20190703094934.png)
 
 
 ## 安装 esptool.py
@@ -39,7 +39,7 @@ sudo easy_install pip
 sudo pip install esptool
 ```
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fwwf0mdiktj30u00uygw3.jpg)
+![](http://pic.airijia.com/doc/20190703094944.png)
 
 
 
@@ -47,7 +47,7 @@ sudo pip install esptool
 esptool.py
 ```
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fwwf1laus7j30ka0g8mz1.jpg)
+![](http://pic.airijia.com/doc/20190703094955.png)
 
 如图显示即安装成功，不要在意错误提示，这里只是试一下命令是否正确安装了
 
@@ -65,11 +65,11 @@ ls /dev/cu.wchusb*
 ```
 
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fxbghe7995j30gy08et9e.jpg)
+![](http://pic.airijia.com/doc/20190703095004.png)
 
 查询到的串口设备名为 `/dev/cu.usbserial-1410`
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fxbgj3xu1uj310g09275m.jpg)
+![](http://pic.airijia.com/doc/20190703095014.png)
 
 没有查询到设备，这种情况需要装驱动
 
@@ -97,7 +97,7 @@ sonoff basic 刷 ESPHome 固件，文件名 666.bin，所在位置 Downloads 目
 cd ~/Downloads
 ```
 
- ![](https://ws1.sinaimg.cn/large/007fN5Xegy1fwwf8eirlej30e80b0mxj.jpg)
+![](http://pic.airijia.com/doc/20190703095025.png)
 
 
 
@@ -108,7 +108,7 @@ cd ~/Downloads
 esptool.py -p /dev/cu.usbserial-1410 write_flash -fs 1MB -fm dout 0x0 666.bin
 ```
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fxbgt79ztzj31ay0i6aee.jpg)
+![](http://pic.airijia.com/doc/20190703095036.png)
 
 
 
@@ -129,7 +129,7 @@ esp01 模块刷 渡鸦固件，文件名 `777.bin`，所在位置 `Downloads` �
    cd ~/Downloads
    ```
 
-    ![](https://ws1.sinaimg.cn/large/007fN5Xegy1fwwf8eirlej30e80b0mxj.jpg)
+![](http://pic.airijia.com/doc/20190703095049.png)
 
 
 
@@ -141,7 +141,7 @@ esp01 模块刷 渡鸦固件，文件名 `777.bin`，所在位置 `Downloads` �
 esptool.py -p /dev/cu.usbserial-1410 erase_flash
 ```
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fxbh2mipqvj30xa0imgpp.jpg)
+![](http://pic.airijia.com/doc/20190703095058.png)
 
 
 
@@ -151,8 +151,7 @@ esptool.py -p /dev/cu.usbserial-1410 erase_flash
 esptool.py -p /dev/cu.usbserial-1410 -b 115200 write_flash -fs 1MB -fm dout -ff 40m 0x0 rboot.bin 0x1000 blank_config.bin 0x2000 777.bin
 ```
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fxbh5jwvhsj31f803idh6.jpg)
-
+![](http://pic.airijia.com/doc/20190703095108.png)
 
 
  刷入成功后，[渡鸦固件配置 wifi 和 homekit 的方法](/diy/raven) 
@@ -176,8 +175,7 @@ miniterm.py /dev/cu.usbserial-1410 115200
 ```
 
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fxbh8h21q0j30z405ita6.jpg)
-
+![](http://pic.airijia.com/doc/20190703095118.png)
 
 
 

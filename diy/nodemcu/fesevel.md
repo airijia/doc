@@ -337,25 +337,26 @@
 
 打开 **家庭** APP
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fv5btipro1j31710wdx6p.jpg)
+![](http://pic.airijia.com/doc/20190703100716.png)
 
 依次选择 **添加配件 - 没有代码或无法扫描**
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fv5bt5et03j317p0tre81.jpg)
+![](http://pic.airijia.com/doc/20190703100726.png)
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fv5bsxvarnj31240q11kx.jpg)
+
+![](http://pic.airijia.com/doc/20190703100735.png)
 
 正常这里会看到跟刚才接入同样的主机名的配件，如果看不到，要多等一会儿
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fv5bskjgp7j317y0nfqn0.jpg)
+![](http://pic.airijia.com/doc/20190703100746.png)
 
 输入下载固件时设置的配对编码，默认为 `38049942`
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fv5bsakzffj30v90eutfl.jpg)
+![](http://pic.airijia.com/doc/20190703100755.png)
 
 等待 30 ~ 60 秒之后，显示配件已添加
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fv5brk7sacj317m0tp1kx.jpg)
+![](http://pic.airijia.com/doc/20190703100805.png)
 
 
 
@@ -486,7 +487,7 @@ mqtt:
 
 下载 ESPHome 固件工具 ( [WIN](http://pic.airijia.com/download/win.zip)，[MAC](http://pic.airijia.com/download/mac.zip))
  
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fxgto0jvc6j30pb0nizlv.jpg)
+![](http://pic.airijia.com/doc/20190703100951.png)
 
 
 
@@ -510,36 +511,38 @@ mqtt:
 
 ?>  如果还没找到串口，需要安装 [驱动程序](diy/nodemcu/)
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fxgtwlzzh9j30o30bvjrp.jpg)
+![](http://pic.airijia.com/doc/20190703100821.png)
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fxgtxnl1agj30o60a20t4.jpg)
+
+![](http://pic.airijia.com/doc/20190703100832.png)
 
 
 浏览文件并添加
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fxgtyujlmyj30oj0atq37.jpg)
+![](http://pic.airijia.com/doc/20190703100844.png)
 
 添加了 D盘 Download 文件夹下的 666.bin
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fxgtzy4vl9j30o90ayzkk.jpg)
+![](http://pic.airijia.com/doc/20190703100854.png)
 
 
 
 点击刷写
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fxgu36iiwkj30o708xjro.jpg)
+![](http://pic.airijia.com/doc/20190703100904.png)
 
 
 控制台开始出现信息
 
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fxgu4jloa0j30oe0f475f.jpg)
+![](http://pic.airijia.com/doc/20190703100913.png)
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fxgu4zif2rj30nx0ic76b.jpg)
+
+![](http://pic.airijia.com/doc/20190703100922.png)
 
 刷写完成
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fxgu7vjt18j30o30irjtc.jpg)
+![](http://pic.airijia.com/doc/20190703100933.png)
 
 
 

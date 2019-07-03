@@ -24,7 +24,7 @@
 
 
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fv6z7su6n0j30ku0fa7cg.jpg)
+![](http://pic.airijia.com/doc/20190703102219.png)
 
 ![img](http://dl.itead.cc/IM160722001/Self-lockIing-Inching-Mode-Wireless-Switch-5V-self-locking-1.gif)
 
@@ -59,7 +59,7 @@ Itead 1CH Inching
 
 ## 接线
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fv6zkla2bmj31ai0ka4qq.jpg)
+![](http://pic.airijia.com/doc/20190703102252.png)
 
 乍一看，跟 basic 有点像，那个 4pin 是依次是 3V3, RX, TX， GND？ 无脑接一下看看
 
@@ -83,7 +83,7 @@ Itead 1CH Inching
 
 
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fv702t46dtj31200whnpe.jpg)
+![](http://pic.airijia.com/doc/20190703102311.png)
 
 上电时，GPIO0接GND，跟 basic 模块上电时按住黑色按钮一样
 
@@ -105,11 +105,11 @@ Itead 1CH Inching
 
 上电之前，先接好左边的两个 （GND和3V3）
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fv70zq8yywj316u0x51kz.jpg)
+![](http://pic.airijia.com/doc/20190703102322.png)
 
 另分一根GND出来，接到如图的GPIO 0上上电，确认模块已通电，就可以送开（原理跟 basic 上电按黑色按钮一样 ）
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fv710szmz5j30wj0tuu0x.jpg)
+![](http://pic.airijia.com/doc/20190703102333.png)
 
 开始擦除/写入动作前，接上RX/TX两根线
 
@@ -119,7 +119,7 @@ Itead 1CH Inching
 
 所幸，刷完之后工作还挺正常的...
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fv711vyklaj31s80s7npf.jpg)
+![](http://pic.airijia.com/doc/20190703102343.png)
 
 上电默认这个红灯亮，是自锁模式，就是平时常用的开关模式
 
@@ -133,7 +133,7 @@ Itead 1CH Inching
 
 
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fv71ctn5h3j30py0fo7h4.jpg)
+![](http://pic.airijia.com/doc/20190703102354.png)
 
 ## 相关软件
 

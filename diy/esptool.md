@@ -16,39 +16,38 @@
 
 打开官方网站 python.org
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fwvyag3yqzj310n0kadjm.jpg)
+![](http://pic.airijia.com/doc/20190703095138.png)
 
 
 
 进入下载界面，选择 Python 2
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fwvyb0leinj30yv0mfacp.jpg)
+![](http://pic.airijia.com/doc/20190703095146.png)
 
 下载如图所示安装文件
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fwvy8pubh0j30ri0r9mzw.jpg)
+![](http://pic.airijia.com/doc/20190703095156.png)
 
 点击下载到本地的文件安装
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fwvybqrqjbj30hr09u0tp.jpg)
+![](http://pic.airijia.com/doc/20190703095206.png)
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fx7e5gzwuij30e00bzn0l.jpg)
+![](http://pic.airijia.com/doc/20190703095216.png)
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fx7e7qttrsj30do0bzad8.jpg)
+![](http://pic.airijia.com/doc/20190703095226.png)
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fx7e8b5xgej30dl0bwq88.jpg)
+![](http://pic.airijia.com/doc/20190703095236.png)
 
 !> 一定要记得勾选“Add python.exe to Path"
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fwvye584exj30gm0dvwgk.jpg)
+![](http://pic.airijia.com/doc/20190703095246.png)
 
 点击左下角开始按钮，输入 cmd
 打开：WIN 10 命令行提示符，WIN 7 命令行
 
 WIN 10
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fwvyi5cmq0j30ec0njq39.jpg)
-
+![](http://pic.airijia.com/doc/20190703095256.png)
 WIN 7
 
 
@@ -56,7 +55,7 @@ WIN 7
 
 ?> 鼠标在命令内容上悬停时，可以点击右侧的**点击复制**，复制内容，然后到 cmd 窗口中鼠标右键粘贴
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fx7ea3y5yij30h9047t8h.jpg)
+![](http://pic.airijia.com/doc/20190703095845.png)
 
 
 
@@ -68,13 +67,13 @@ WIN 7
 python --version
 ```
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fwvykeqblpj30hq06g0sq.jpg)
+![](http://pic.airijia.com/doc/20190703095857.png)
 
 如图显示即正确安装 python 2
 
 
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fx7gsua4eyj30e003ydg8.jpg)
+![](http://pic.airijia.com/doc/20190703095906.png)
 
 如果提示命令不存在，需要设置环境变量
 
@@ -150,7 +149,7 @@ sonoff basic 刷 ESPHome 固件，文件名 666.bin，所在位置D盘 Download 
 esptool.py -p COM6 write_flash -fs 1MB -fm dout 0x0 D:\Download\666.bin
 ```
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fwvzaublysj30w304gdg7.jpg)
+![](http://pic.airijia.com/doc/20190703095922.png)
 
 刷入成功后，进入 智能中枢 使用
 
@@ -178,21 +177,21 @@ D:
 cd Download
 ```
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fwvzjwaq11j30a90afaa0.jpg)
+![](http://pic.airijia.com/doc/20190703095932.png)
 
 2. 擦除
 
 ```
 esptool.py -p COM6 erase_flash
 ```
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fx57bxd1trj30if0cjjs8.jpg)
+![](http://pic.airijia.com/doc/20190703095942.png)
 
 3. 刷入 ( 这条命令是**整体，不换行**)
 
 ```shell
 esptool.py -p COM6 -b 115200 write_flash -fs 1MB -fm dout -ff 40m 0x0 rboot.bin 0x1000 blank_config.bin 0x2000 666.bin
 ```
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fx57abklv5j317d0l6wgh.jpg)
+![](http://pic.airijia.com/doc/20190703095953.png)
 
 刷入成功后，[渡鸦固件配置 wifi 和 homekit 的方法](diy/raven) 
 
@@ -292,7 +291,7 @@ miniterm.py COM3 115200
 miniterm.py COM3 115200
 ```
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fwvzdxtl9kj30o2047aa6.jpg)
+![](http://pic.airijia.com/doc/20190703100008.png)
 
 
 ## 备份与恢复固件
@@ -319,7 +318,7 @@ Q pip 等各种莫名其妙错误
 A 网络原因引起
 
 打开`文件资源管理器`
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fx5432fmw0j30ph0d2ta5.jpg)
+![](http://pic.airijia.com/doc/20190703100019.png)
 
 
 填入 
@@ -330,12 +329,12 @@ A 网络原因引起
 后回车，进入到用户文件夹
 
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fx546xpwhkj30gk0efaaw.jpg)
+![](http://pic.airijia.com/doc/20190703100029.png)
 
 新建并进入到名为 `pip` 的文件夹
 
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fx54xfn849j30lz04ot8n.jpg)
+![](http://pic.airijia.com/doc/20190703100038.png)
 
 
 新建 `pip.ini` 文件, 填入内容
@@ -364,7 +363,7 @@ A: 命令行输入
 python -m serial.tools.list_ports
 ```
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fwzkjfe5rvj30cu06zjre.jpg)
+![](http://pic.airijia.com/doc/20190703100048.png)
 
 COM6 正是 TTL 线插入的 COM 口
 
@@ -373,8 +372,7 @@ Q: 提示 'esptool' , 'miniterm'不是内部或外部命令，也不是可运行
 
 A: 这两个命令运用的时候需要加上后缀py，即 esptool.py 和  miniterm.py
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fwzkpkkrovj30j60l4dho.jpg)
-
+![](http://pic.airijia.com/doc/20190703100058.png)
 
 Q 提示AttributeError: function 'CancelIoEx' not found
 

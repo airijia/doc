@@ -6,7 +6,7 @@
 
 
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fxcakqeq09j30mw03qt8o.jpg)
+![](http://pic.airijia.com/doc/20190703103828.png)
 
 **airi:8123 和 Hass 中的显示**
 

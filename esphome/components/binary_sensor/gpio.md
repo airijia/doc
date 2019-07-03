@@ -2,7 +2,7 @@
 
 将 GPIO 的输入值用做二进制传感器
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fxdj3i5ot4j30mw02yq2v.jpg)
+![](http://pic.airijia.com/doc/20190703102740.png)
 
 ```
 # 配置示例

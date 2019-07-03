@@ -59,12 +59,12 @@
 
  - 配置快照功能已包括 `custom_components` 文件夹 （自定义组件）
 
- ![](https://ws1.sinaimg.cn/large/007fN5Xely1fx8pw68818j30cg07y3yq.jpg)
+![](http://pic.airijia.com/doc/20190703094547.png)
 
 
  - **设备列表 - 编辑中** 将显示更多的设备信息
 
-![](https://ws1.sinaimg.cn/large/007fN5Xely1fx8pxgi6rnj30ig0edaah.jpg)
+![](http://pic.airijia.com/doc/20190703094557.png)
 
 
 ## 0.2.0

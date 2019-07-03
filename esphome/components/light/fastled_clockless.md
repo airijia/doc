@@ -12,9 +12,9 @@
 
 ## 相关产品
 
-| ![](https://ws1.sinaimg.cn/large/007fN5Xegy1fwxfzyopmcj30xa0k81fn.jpg ':size=200')|  WS2812B<br> 灯带 |   [![买买买](http://cdn.airijia.com/b6eca8da724952cc0251.gif ':size=150')](https://s.taobao.com/search?q=ws2812b) |
+| ![](http://pic.airijia.com/doc/20190703102846.png ':size=200')|  WS2812B<br> 灯带 |   [![买买买](http://cdn.airijia.com/b6eca8da724952cc0251.gif ':size=150')](https://s.taobao.com/search?q=ws2812b) |
 |:-:|:-:|:-:|
-| ![](https://ws1.sinaimg.cn/large/007fN5Xegy1fwxbejdrw1j30b40b4tdc.jpg ':size=200')  | 灯带连接器<br> 配合EPS01S模块和灯带使用  |  [![买买买](http://cdn.airijia.com/b6eca8da724952cc0251.gif ':size=150')](https://item.taobao.com/item.htm?id=551951370518) |
+| ![](http://pic.airijia.com/doc/20190703102858.png ':size=200')  | 灯带连接器<br> 配合EPS01S模块和灯带使用  |  [![买买买](http://cdn.airijia.com/b6eca8da724952cc0251.gif ':size=150')](https://item.taobao.com/item.htm?id=551951370518) |
 | ![](http://pic.airijia.com/doc/20181122164130.png ':size=200')| ESP01 |  [![买买买](http://cdn.airijia.com/b6eca8da724952cc0251.gif ':size=150')](https://item.taobao.com/item.htm?id=45607865463) |
 
 
@@ -23,14 +23,14 @@
 
 打开 [在线 ESPHome 固件编译](http://airijia.com/ctl/firmware/list) 使用
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fwxg8yw6t6j30w60jqtca.jpg)
+![](http://pic.airijia.com/doc/20190703102912.png)
 
 以 NodeMCU 8266 WS2812 芯片为例，搜索 ws2812  
 
 
 
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fwxda34579j30ku0djmxh.jpg)
+![](http://pic.airijia.com/doc/20190703102925.png)
 
 数据端口：即GPIO，可以填开发板上的编号，例如「D1」；也可以填纯数字，例如「2」
 

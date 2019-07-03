@@ -5,7 +5,7 @@ DHT 系列的传感器，同时支持温度和湿度的显示
 
 
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fwx2v91ahvj30mw05qjrj.jpg)
+![](http://pic.airijia.com/doc/20190703103231.png)
 
 **airi:8123 和 Hass 中的显示**
 
@@ -14,19 +14,18 @@ DHT 系列的传感器，同时支持温度和湿度的显示
 
 ## 相关产品
 
-| ![](https://ws1.sinaimg.cn/large/007fN5Xegy1fwx2z19kicj30bh0bh415.jpg ':size=200')| DHT11<br> [说明书](http://www.aosong.com/userfiles/files/media/DHT11-V1_3%E8%AF%B4%E6%98%8E%E4%B9%A6%EF%BC%88%E8%AF%A6%E7%BB%86%E7%89%88%EF%BC%89.pdf) |  [![买买买](http://cdn.airijia.com/b6eca8da724952cc0251.gif ':size=150')](https://shop107898810.taobao.com/search.htm?search=y&keyword=dht11) |
+| ![](http://pic.airijia.com/doc/20190703103245.png ':size=200')| DHT11<br> [说明书](http://www.aosong.com/userfiles/files/media/DHT11-V1_3%E8%AF%B4%E6%98%8E%E4%B9%A6%EF%BC%88%E8%AF%A6%E7%BB%86%E7%89%88%EF%BC%89.pdf) |  [![买买买](http://cdn.airijia.com/b6eca8da724952cc0251.gif ':size=150')](https://shop107898810.taobao.com/search.htm?search=y&keyword=dht11) |
 |:-:|:-:|:-:|
-| ![](https://ws1.sinaimg.cn/large/007fN5Xegy1fwx2yfkvy1j30bh0bhjt5.jpg ':size=200')| DHT22<br> [说明书](http://www.aosong.com/userfiles/files/media/AM2302%E8%AF%A6%E7%BB%86%E7%89%88%E8%AF%B4%E6%98%8E%E4%B9%A6-V1_2.pdf) |  [![买买买](http://cdn.airijia.com/b6eca8da724952cc0251.gif ':size=150')](https://shop107898810.taobao.com/search.htm?search=y&keyword=dht22) |
-| ![](https://ws1.sinaimg.cn/large/007fN5Xegy1fwx30f1kmzj30xc0p07wh.jpg ':size=200')| AM2302<br> [说明书](http://www.aosong.com/userfiles/files/media/AM2302%E8%AF%A6%E7%BB%86%E7%89%88%E8%AF%B4%E6%98%8E%E4%B9%A6-V1_2.pdf) |  [![买买买](http://cdn.airijia.com/b6eca8da724952cc0251.gif ':size=150')](https://shop107898810.taobao.com/search.htm?search=y&keyword=am2302) |
-| ![](https://ws1.sinaimg.cn/large/007fN5Xegy1fwx3cp2h9kj30m80m8jyr.jpg ':size=200')| DHT11<br>  适配 ESP01 |  [![买买买](http://cdn.airijia.com/b6eca8da724952cc0251.gif ':size=150')](https://item.taobao.com/item.htm?id=551900769285) |
-| ![](https://ws1.sinaimg.cn/large/007fN5Xegy1fwx38z7ibuj30m80m8wqj.jpg ':size=200')| DHT11 <br>适配 d1 mini  |  [![买买买](http://cdn.airijia.com/b6eca8da724952cc0251.gif ':size=150')](https://item.taobao.com/item.htm?id=45607921354) |
-| ![](https://ws1.sinaimg.cn/large/007fN5Xegy1fwx3dui44aj30hs0hsafk.jpg ':size=200')| DHT22 <br>适配 d1 mini  |  [![买买买](http://cdn.airijia.com/b6eca8da724952cc0251.gif ':size=150')](https://item.taobao.com/item.htm?id=551859580509) |
+| ![](http://pic.airijia.com/doc/20190703103257.png ':size=200')| DHT22<br> [说明书](http://www.aosong.com/userfiles/files/media/AM2302%E8%AF%A6%E7%BB%86%E7%89%88%E8%AF%B4%E6%98%8E%E4%B9%A6-V1_2.pdf) |  [![买买买](http://cdn.airijia.com/b6eca8da724952cc0251.gif ':size=150')](https://shop107898810.taobao.com/search.htm?search=y&keyword=dht22) |
+| ![](http://pic.airijia.com/doc/20190703103310.png ':size=200')| AM2302<br> [说明书](http://www.aosong.com/userfiles/files/media/AM2302%E8%AF%A6%E7%BB%86%E7%89%88%E8%AF%B4%E6%98%8E%E4%B9%A6-V1_2.pdf) |  [![买买买](http://cdn.airijia.com/b6eca8da724952cc0251.gif ':size=150')](https://shop107898810.taobao.com/search.htm?search=y&keyword=am2302) |
+| ![](http://pic.airijia.com/doc/20190703103323.png ':size=200')| DHT11<br>  适配 ESP01 |  [![买买买](http://cdn.airijia.com/b6eca8da724952cc0251.gif ':size=150')](https://item.taobao.com/item.htm?id=551900769285) |
+| ![](http://pic.airijia.com/doc/20190703103337.png ':size=200')| DHT11 <br>适配 d1 mini  |  [![买买买](http://cdn.airijia.com/b6eca8da724952cc0251.gif ':size=150')](https://item.taobao.com/item.htm?id=45607921354) |
+| ![](http://pic.airijia.com/doc/20190703103347.png ':size=200')| DHT22 <br>适配 d1 mini  |  [![买买买](http://cdn.airijia.com/b6eca8da724952cc0251.gif ':size=150')](https://item.taobao.com/item.htm?id=551859580509) |
 
 
 ## 网页创建固件
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fxfhcv2hqbj30mv0dat9a.jpg)
-
+![](http://pic.airijia.com/doc/20190703103402.png)
 
 ## 文件模板创建
 

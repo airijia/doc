@@ -165,36 +165,36 @@ NodeMCU 放到尺子另一面，为了方便检查线路，将有连线的那一
 
 ?>  如果还没找到串口，需要安装 [驱动程序](diy/nodemcu/)
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fxgtwlzzh9j30o30bvjrp.jpg)
+![](http://pic.airijia.com/doc/20190703101509.png)
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fxgtxnl1agj30o60a20t4.jpg)
+![](http://pic.airijia.com/doc/20190703101527.png)
 
 
 浏览文件并添加
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fxgtyujlmyj30oj0atq37.jpg)
+![](http://pic.airijia.com/doc/20190703101542.png)
 
 添加了 D盘 Download 文件夹下的 666.bin
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fxgtzy4vl9j30o90ayzkk.jpg)
+![](http://pic.airijia.com/doc/20190703101557.png)
 
 
 
 点击刷写
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fxgu36iiwkj30o708xjro.jpg)
+![](http://pic.airijia.com/doc/20190703101615.png)
 
 
 控制台开始出现信息
 
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fxgu4jloa0j30oe0f475f.jpg)
+![](http://pic.airijia.com/doc/20190703101637.png)
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fxgu4zif2rj30nx0ic76b.jpg)
+![](http://pic.airijia.com/doc/20190703101705.png)
 
 刷写完成
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fxgu7vjt18j30o30irjtc.jpg)
+![](http://pic.airijia.com/doc/20190703101726.png)
 
 
 

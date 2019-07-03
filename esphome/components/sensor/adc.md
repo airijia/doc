@@ -3,8 +3,7 @@
 模转数传感器(Analog To Digital `adc`) 可以感知模拟引脚上的电压并转换为数字信号。`ESP8266` 只有 A0 (GPIO17) 是模拟引脚，`ESP32` 的
 GPIO32 ~ GPIO39 都可以用作模拟引脚
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fxenagq1nlj30mw03ewef.jpg)
-
+![](http://pic.airijia.com/doc/20190703103048.png)
 
 
 ```

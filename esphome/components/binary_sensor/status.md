@@ -3,7 +3,7 @@
 将节点到 MQTT Broker 的连接状态显示出来，工作机制是 [MQTT 遗愿和重生消息](esphome/components/mqtt#遗愿和重生消息) 
 
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fxdl6v0qraj30mw036mx4.jpg)
+![](http://pic.airijia.com/doc/20190703102754.png)
 
 ```
 # 配置示例

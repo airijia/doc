@@ -23,7 +23,7 @@
 
 接线图参考
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fxem4fwk5mj30vm0pr45b.jpg)
+![](http://pic.airijia.com/doc/20190703100609.png)
 
 
 
@@ -31,7 +31,7 @@
 
 ## 网页创建固件
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fxelvku9fhj30sk0fc74w.jpg)
+![](http://pic.airijia.com/doc/20190703100619.png)
 
 打开 [在线 ESPHome 固件编译](http://airijia.com/ctl/firmware/list) 使用
 
@@ -110,7 +110,7 @@ TEMT6000 是款很便宜的三极管类型的光敏传感器，其光照强度�
 
 连线， `VCC` - `3.3V`， `GND` - `GND`，`OUT` 或 `SIG` - `A0` 或任意模拟引脚
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fxemlvso56j30qi0ezdrk.jpg)
+![](http://pic.airijia.com/doc/20190703100629.png)
 
 测量 `OUT` 引脚的电压，并换算成 lx(勒克斯) 即可
 

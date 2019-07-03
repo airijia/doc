@@ -2,18 +2,17 @@
 
 HTU21D，SI7021 都使用这个组件，Sonoff S22/TH10/TH16 使用的高精度温湿度探头正是 SI7021
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fxfhj5ex5vj30mw05qjrj.jpg)
+![](http://pic.airijia.com/doc/20190703103420.png)
 
 **airi:8123 和 Hass 中的显示**
 
 
 <!-- ## 相关产品 -->
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fxfhiujmwhj31850og1ku.jpg)
+![](http://pic.airijia.com/doc/20190703103433.png)
 
 ## 网页创建固件
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fxfilkyt9qj30lr0dajrk.jpg)
-
+![](http://pic.airijia.com/doc/20190703103443.png)
 
 
 

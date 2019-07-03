@@ -3,7 +3,7 @@
 可以调整亮度，不可以调整色温的灯
 
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fxc56qquwuj30m40ms0ts.jpg)
+![](http://pic.airijia.com/doc/20190703102940.png)
 
 
 **airi:8123 和 Hass 中的显示**

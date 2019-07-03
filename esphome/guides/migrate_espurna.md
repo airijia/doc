@@ -11,8 +11,7 @@
 进入 **管理**  页面最底部的升级固件选项卡
 
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fxd6qhjy8qj30u20rltay.jpg)
-
+![](http://pic.airijia.com/doc/20190703104308.png)
 
 **选择文件**，选择下载的 bin 文件，然后点 **升级**
 

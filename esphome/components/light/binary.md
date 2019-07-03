@@ -4,7 +4,7 @@
 只有打开和关闭两个状态的灯
 
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fxc4cyq1x4j30lc0hy3z6.jpg)
+![](http://pic.airijia.com/doc/20190703102805.png)
 
 
 **airi:8123 和 Hass 中的显示**

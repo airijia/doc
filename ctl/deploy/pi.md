@@ -25,7 +25,7 @@ MAC 参考 [如何在Mac电脑上打开终端](https://zh.wikihow.com/%E5%9C%A8M
 到路由器的设备列表或者 DHCP 分配中查客户端的 IP 地址
 
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fx69qme01fj30tj06y74e.jpg)
+![](http://pic.airijia.com/doc/20190703092854.png)
 
 输入 ssh 用户名@IP
 
@@ -33,11 +33,11 @@ MAC 参考 [如何在Mac电脑上打开终端](https://zh.wikihow.com/%E5%9C%A8M
 ssh pi@192.168.1.127
 ```
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fx69mojmvlj30ss0e8dj1.jpg)
+![](http://pic.airijia.com/doc/20190703092911.png)
 
 yes
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fx6a9r16baj30qw0a40vk.jpg)
+![](http://pic.airijia.com/doc/20190703092920.png)
 
 
 默认的密码 `raspberry`
@@ -47,7 +47,7 @@ yes
 sudo sed -i 's|raspbian.raspberrypi.org/raspbian/|mirrors.aliyun.com/raspbian/raspbian/|g' /etc/apt/sources.list
 ```
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fx6an28bz9j314u064go9.jpg)
+![](http://pic.airijia.com/doc/20190703092934.png)
 
 
 ```shell
@@ -55,7 +55,7 @@ sudo apt-get update
 ```
 
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fx6ao3clwvj30nb0botci.jpg)
+![](http://pic.airijia.com/doc/20190703092945.png)
 
 ## 安装docker
 
@@ -63,7 +63,7 @@ sudo apt-get update
 sudo curl -sSL https://get.docker.com/ | sh
 ```
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fx6arrnd6fj30yi0tyk43.jpg)
+![](http://pic.airijia.com/doc/20190703092957.png)
 
 
 
@@ -74,7 +74,7 @@ sudo apt-get install docker-compose --no-install-recommends
 ```
 
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fx6astagmfj31160qmqhl.jpg)
+![](http://pic.airijia.com/doc/20190703093008.png)
 
 
 

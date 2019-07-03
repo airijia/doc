@@ -71,7 +71,7 @@ will_message:
 
 MQTT 本身就是为信号不稳定的网络设计的，所以难免一些客户端会无故断开与转发器的连接，遗愿消息是节点尚与转发器保持连接时，预保留的特定消息 LWT（Last Will & Testament），当节点断线时，由转发器代为发布
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fx3diou3x8j30k00ca3z1.jpg)
+![](http://pic.airijia.com/doc/20190703103011.png)
 
 **当模块断开连接时，在 airi:8123 和 hass 中的显示**
 

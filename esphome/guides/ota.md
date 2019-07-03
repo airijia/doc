@@ -17,11 +17,10 @@
 
 点击网刷
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fwzm9eq0sij30yn0cp74n.jpg)
+![](http://pic.airijia.com/doc/20190703104322.png)
 
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fwzmhg6vzhj30ia0eq3yr.jpg)
-
+![](http://pic.airijia.com/doc/20190703104331.png)
 
 !> 这里的主机名，端口和密码，都是想要刷入的目标设备当前的设定值
 
@@ -48,8 +47,7 @@
 
 
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fxgt5vwe8rj311u0z2ahj.jpg)
-
+![](http://pic.airijia.com/doc/20190703104344.png)
 
 
 使用 [esptool](diy/esptool)
@@ -65,21 +63,19 @@
 
 
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fwzm0k3baej30ns0kf0vo.jpg)
+![](http://pic.airijia.com/doc/20190703104353.png)
 
 
 ctl 上点击 OTA 刷入，并正确执行后，调试端会输出类似的信息
 
 如图所示
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fwzm58hv5zj30mk0n2wil.jpg)
-
+![](http://pic.airijia.com/doc/20190703104403.png)
 
 
 OTA 刷入完成后，设备会自动重启
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fwzm6wsl3mj30s90pbdjn.jpg)
-
+![](http://pic.airijia.com/doc/20190703104414.png)
 
 
 
@@ -91,8 +87,7 @@ OTA 刷入完成后，设备会自动重启
 
 Q 提示 Host XXX Not Found
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fwzlwi5ydxj30m705g0sq.jpg)
-
+![](http://pic.airijia.com/doc/20190703104423.png)
 
 A hostname 错误，改用 IP 试试；如果用 IP 也不行，检查模块连线状态
 
@@ -100,7 +95,7 @@ A hostname 错误，改用 IP 试试；如果用 IP 也不行，检查模块连�
 
 Q 提示 No response from the ESP
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fwzmjd2ophj30n4046t8q.jpg)
+![](http://pic.airijia.com/doc/20190703104432.png)
 
 A 两种可能
  - 目标地址运行的是其他设备，并不是支持 OTA 网刷的设备
@@ -119,8 +114,7 @@ Q Error Uploading
 A 
 
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fx8ubbp357j30cx032mx0.jpg)
-
+![](http://pic.airijia.com/doc/20190703104444.png)
 
 
 Q No handlers could be found for logger "__main__"

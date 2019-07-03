@@ -5,7 +5,7 @@
 
 
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fxc2mw62ekj30cx0dz74l.jpg)
+![](http://pic.airijia.com/doc/20190703102817.png)
 
 **airi:8123 和 Hass 中的显示**
 
@@ -19,7 +19,7 @@
 
 ## 网页创建固件
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fxc42k68i4j30pt0emjs3.jpg)
+![](http://pic.airijia.com/doc/20190703102826.png)
 
 
 

@@ -5,8 +5,7 @@ SPI是串行外设接口(Serial Peripheral Interface)的缩写。是 Motorola �
 
 基本信号线为3根传输线，即SI、SO、SCK。传输的速率由时钟信号SCK决定，SI为数据输入、SO为数据输出。采用SPI总线的系统如图所示，它包含了一个主片和多个从片，主片通过发出片选信号-CS来控制对哪个从片进行通信，当某个从片的-CS信号有效时，能通过SI接收指令、数据，并通过SO发回数据。而未被选中的从片的SO端处于高阻状态。
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fxd7mhmqyoj30cm05d0si.jpg)
-
+![](http://pic.airijia.com/doc/20190703103816.png)
 
 - **CLK**: 时钟信号，决定总线传输速率，所有从片共享这条线，又名 `SCK`
 - **CS**: 片选信号，单个从片独享，又名 `SS`

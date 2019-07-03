@@ -26,12 +26,12 @@ power_supply:
 
 即普通台式电脑使用的电源
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fxdc9ex5jjj318i0s37wh.jpg)
+![](http://pic.airijia.com/doc/20190703103024.png)
 
 
 通常引脚定义，ESP 连接 3 根线， 紫色供电，黑色接地，绿色开关
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fxdccefrzqj30qt0q7ti5.jpg)
+![](http://pic.airijia.com/doc/20190703103034.png)
 
 
 ATX 电源通常拉低时为开启，需要翻转引脚

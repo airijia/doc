@@ -2,14 +2,14 @@
 
 典型的比如 DS18B20 温度传感器，一般用于防水型探头
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fxfh9lvzfgj30mw03kaa0.jpg)
+![](http://pic.airijia.com/doc/20190703103140.png)
 
 **airi:8123 和 Hass 中的显示**
 
 
 ## 相关产品
 
-| ![](https://ws1.sinaimg.cn/large/007fN5Xegy1fxfjorduhnj30k60k6qdh.jpg ':size=200')| DS18B20 适配 d1 mini <br> [说明书](https://datasheets.maximintegrated.com/en/ds/DS18B20.pdf) |  [![买买买](http://cdn.airijia.com/b6eca8da724952cc0251.gif ':size=150')](https://item.taobao.com/item.htm?id=45528063969) |
+| ![](http://pic.airijia.com/doc/20190703103201.png ':size=200')| DS18B20 适配 d1 mini <br> [说明书](https://datasheets.maximintegrated.com/en/ds/DS18B20.pdf) |  [![买买买](http://cdn.airijia.com/b6eca8da724952cc0251.gif ':size=150')](https://item.taobao.com/item.htm?id=45528063969) |
 |:-:|:-:|:-:|
 
 
@@ -18,8 +18,7 @@
 ## 网页创建固件
 
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fxfhdqizhuj30pk0ftmxo.jpg)
-
+![](http://pic.airijia.com/doc/20190703103150.png)
 
 
 
@@ -73,8 +72,7 @@ dallas:
 
 会看到类似这样的的日志
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fxfiudiv1wj30uk0fa797.jpg)
-
+![](http://pic.airijia.com/doc/20190703103214.png)
 
 然后，重新配置一次固件 
 

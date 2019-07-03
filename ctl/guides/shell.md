@@ -7,7 +7,7 @@
 
 假设设备的 IP 是 **192.168.1.127**，浏览器打开 `192.168.1.127:19000`
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fwsd6rvy5dj30s20f2dg6.jpg)
+![](http://pic.airijia.com/doc/20190703093922.png)
 
 用户名 `admin`，密码 `airijia.com`
 
