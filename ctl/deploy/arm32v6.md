@@ -7,15 +7,20 @@ arm32v6，包括树莓派等
 
 假设设备的 IP 是 **192.168.1.127**，浏览器打开 `192.168.1.127:19000`
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fwsd6rvy5dj30s20f2dg6.jpg)
+![](http://pic.airijia.com/doc/20190703090545.png)
+
+
 
 用户名 `admin`，密码 `airijia.com`
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fwsd7goncrj31f80o9gnc.jpg)
+![](http://pic.airijia.com/doc/20190703090602.png)
+
+
 
 选择 Local
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fwsd82ksfnj31f00isjt8.jpg)
+![](http://pic.airijia.com/doc/20190703090616.png)
+
 
 ## 部署准备
 
@@ -25,13 +30,17 @@ arm32v6，包括树莓派等
 
 Container中，除了 **portainer** 相关，其他全部先停止再删除
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fx6cf9lzk8j30w90hiq4u.jpg)
+![](http://pic.airijia.com/doc/20190703090629.png)
 
 Images 和 Volumes 中的项目，除了 **portainer** 相关，其他全部删除
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fx6cherg30j311t0mktaz.jpg)
+![](http://pic.airijia.com/doc/20190703090646.png)
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fx6cil66exj30ps0j30u7.jpg)
+
+
+![](http://pic.airijia.com/doc/20190703090701.png)
+
+
 
 ## 全新安装
 
@@ -39,9 +48,12 @@ Images 和 Volumes 中的项目，除了 **portainer** 相关，其他全部删�
 
 打开 Stack
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fwsd8vw1vej30n30mc3zr.jpg)
+![](http://pic.airijia.com/doc/20190703090716.png)
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fx6co324jjj30pq0mwq4s.jpg)
+
+
+![](http://pic.airijia.com/doc/20190703090735.png)
+
 
 
 复制以下脚本内容，yaml 格式，注意空格
@@ -98,17 +110,17 @@ volumes:
 
 
 确认格式无误后，开始部署
+![](http://pic.airijia.com/doc/20190703090749.png)
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fwsdnms7mvj30t50hedh1.jpg)
 
 
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fwsdtuz5tdj30x40dut9u.jpg)
+![](http://pic.airijia.com/doc/20190703090759.png)
+
 
 
 用时大概 20 分钟， 因为要下载部署合计 3 个容器，可以先去泡杯咖啡
 
-
-![](https://ws1.sinaimg.cn/large/007fN5Xegy1fx6ikyrtvnj311h0pggnb.jpg)
+![](http://pic.airijia.com/doc/20190703090810.png)
 
 如图显示即安装完成
 
@@ -128,7 +140,8 @@ volumes:
 
 如图找到配置文件 **hass_data** 对应的的目录，本案例中是 `/var/lib/docker/volumes/hass_data/_data`
 
-![](http://pic.airijia.com/doc/20181214141956.png)
+![](http://pic.airijia.com/doc/20190703090821.png)
+
 
 
 
