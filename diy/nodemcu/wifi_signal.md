@@ -270,7 +270,7 @@ display:
     update_interval: 1s
     lambda: >-
       int s;
-      s = (整数)id(wifi_signal).raw_state;
+      s = (int)id(wifi_signal).raw_state;
       if( s > 0 ){
         it.printf(64, 40, id(font_48), TextAlign::CENTER, "%s", "...");
       }else{
