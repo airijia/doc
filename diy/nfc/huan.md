@@ -3,13 +3,11 @@
 使用 PN532 复制加密门禁卡到小米手环 NFC 版，教程以小米手环 4 代为例，方法 3 代和 4 代通用
 
 
-[小米手环 NFC 版 模拟门禁卡](//player.bilibili.com/player.html?aid=50735241&cid=88826411&page=1 ':include :type=iframe width="720" height="530"')
-
 
 
 ## 软件准备
 
-- [驱动及软件下载](http://pic.airijia.com/download/NFC.zip)
+- [驱动及软件下载](http://pic.airijia.com/download/nfc.zip)
 
 
 ## 硬件准备
@@ -36,11 +34,21 @@
 
 
 
+
+
+
 **以下需自备**
 
 - 小米手环NFC版(3代4代都可以)
 - 带 USB 接口电脑，操作系统 **WIN 7** 及以上
 
+## 视频步骤
+
+
+[小米手环 NFC 版 模拟门禁卡](//player.bilibili.com/player.html?aid=50735241&cid=88826411&page=1 ':include :type=iframe width="720" height="530"')
+
+
+文字步骤如下 ⬇
 
 
 ## 组装硬件
