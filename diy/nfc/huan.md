@@ -18,22 +18,10 @@
 - UID/CUID 空白卡
 
 
-
-
-
-
 ## 相关产品
 
-| ![](http://pic.airijia.com/doc/20181122164201.png ':size=200')| NFC模拟套件 |  [![买买买](http://cdn.airijia.com/b6eca8da724952cc0251.gif ':size=150')](https://item.taobao.com/item.htm?id=600708656610) |  
+| ![nfc-11-1.jpg](http://pic.airijia.com/image/nfc-11-1.jpg ':size=200')| NFC模拟套件 |  [![买买买](http://cdn.airijia.com/b6eca8da724952cc0251.gif ':size=150')](https://item.taobao.com/item.htm?id=600708656610) |  
 |:-:|:-:|:-:|
-
-
-
-
-
-
-
-
 
 
 
