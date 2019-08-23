@@ -11,9 +11,8 @@
 
 ## 相关产品
 
-| ![](http://pic.airijia.com/doc/20190301094146.png ':size=200')| 爱睿家智能中枢 |  [![买买买](http://cdn.airijia.com/b6eca8da724952cc0251.gif ':size=150')](https://item.taobao.com/item.htm?id=551916269657) |  
+| ![20190823122829.png](http://pic.airijia.com/image/20190823122829.png ':size=200')| 爱睿家智能中枢 |  [![买买买](http://cdn.airijia.com/b6eca8da724952cc0251.gif ':size=150')](https://item.taobao.com/item.htm?id=551916269657) |  
 |:-:|:-:|:-:|
-
 
 
 
