@@ -229,8 +229,11 @@ ID 卡的通信频率不同，不能模拟
 
 安卓手机下载安装 [MCT( Mifare Classic Tool )](http://pic.airijia.com/download/MifareClassicTool.apk)
 
+工具 - 显示标签信息
 
+![20190907185956.png](http://pic.airijia.com/image/20190907185956.png)
 
+如图，显示的 `SAK: 08` 即为 M1 卡，可以模拟
 
 ### 使用 M1T 判断IC卡类型
 
