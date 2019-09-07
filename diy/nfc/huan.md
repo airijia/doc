@@ -5,7 +5,7 @@
 
 以小米手环 4 代为例，方法 3 代和 4 代通用
 
-[小米手环 NFC 版 模拟门禁卡](//player.bilibili.com/player.html?aid=66466058&cid=66388629&page=1 ':include :type=iframe width="720" height="530"')
+[小米手环 NFC 版 模拟门禁卡](//player.bilibili.com/player.html?aid=66466058&cid=115271141&page=1 ':include :type=iframe width="720" height="530"')
 
 ## 相关产品
 
@@ -209,6 +209,40 @@ ID 卡的通信频率不同，不能模拟
 
 
 ### M1 卡的数据结构
+
+
+
+## 如何判断卡是否能模拟?
+
+看卡的外形，类型 1 为 ID 卡，频率不同不可以模拟
+
+![IDIC.jpg](http://pic.airijia.com/image/IDIC.jpg)
+
+
+类型 2 为 IC 卡，常用的又分为三种
+
+- SAK08 Mifare CLassic 1k, 简称 M1 卡，可以模拟
+- SAK20 纯CPU卡, 无法模拟
+- SAK28 CPU模拟M1卡，部分可模拟
+
+### 使用 MCT 判断IC卡类型
+
+安卓手机下载安装 [MCT( Mifare Classic Tool )](http://pic.airijia.com/download/MifareClassicTool.apk)
+
+
+
+
+### 使用 M1T 判断IC卡类型
+
+
+
+### 使用安卓手机
+
+安装 装MCT
+
+
+# 非接触卡类型
+
 
 
 
