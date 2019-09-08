@@ -19,7 +19,7 @@
 
 - SAK08 Mifare CLassic 1k, 简称 M1 卡，可以模拟
 - SAK20 纯CPU卡, 无法模拟
-- SAK28 CPU模拟M1卡，部分可模拟
+- SAK28 CPU模拟M1卡，少部分可模拟
 
 安卓手机下载安装 [MCT - Mifare Classic Tool](http://pic.airijia.com/download/MifareClassicTool.apk)
 
