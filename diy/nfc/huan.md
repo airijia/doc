@@ -7,6 +7,41 @@
 
 [小米手环 NFC 版 模拟门禁卡](//player.bilibili.com/player.html?aid=66466058&cid=115271141&page=1 ':include :type=iframe width="720" height="530"')
 
+
+## 判断卡是否能模拟
+
+看卡的外形，类型 1 为 ID 卡，频率不同不可以模拟
+
+![IDIC.jpg](http://pic.airijia.com/image/IDIC.jpg)
+
+
+类型 2 为 IC 卡，常用的又分为三种
+
+- SAK08 Mifare CLassic 1k, 简称 M1 卡，可以模拟
+- SAK20 纯CPU卡, 无法模拟
+- SAK28 CPU模拟M1卡，部分可模拟
+
+安卓手机下载安装 [MCT - Mifare Classic Tool](http://pic.airijia.com/download/MifareClassicTool.apk)
+
+工具 - 显示标签信息
+
+![MCT1.png](http://pic.airijia.com/image/MCT1.png)
+
+![mct2.png](http://pic.airijia.com/image/mct2.png)
+
+
+将卡对准手机的NFC区域，一般在 **摄像头附近**，如果没对准，会显示 `这不是MIFARE Classic 标签！`
+
+![MCT4.png](http://pic.airijia.com/image/MCT4.png)
+
+
+如果对准后如图显示 `SAK:08`即为 M1 卡，可以模拟
+
+![MCT3.png](http://pic.airijia.com/image/MCT3.png)
+
+
+
+
 ## 相关产品
 
 | ![nfc-11-1.jpg](http://pic.airijia.com/image/nfc-11-1.jpg ':size=200')| NFC模拟套件 |  [![买买买](http://cdn.airijia.com/b6eca8da724952cc0251.gif ':size=150')](https://item.taobao.com/item.htm?id=600708656610) |  
@@ -212,39 +247,10 @@ ID 卡的通信频率不同，不能模拟
 
 
 
-## 判断卡是否能模拟
-
-看卡的外形，类型 1 为 ID 卡，频率不同不可以模拟
-
-![IDIC.jpg](http://pic.airijia.com/image/IDIC.jpg)
-
-
-类型 2 为 IC 卡，常用的又分为三种
-
-- SAK08 Mifare CLassic 1k, 简称 M1 卡，可以模拟
-- SAK20 纯CPU卡, 无法模拟
-- SAK28 CPU模拟M1卡，部分可模拟
-
-### 使用 MCT 判断IC卡类型
-
-安卓手机下载安装 [MCT( Mifare Classic Tool )](http://pic.airijia.com/download/MifareClassicTool.apk)
-
-工具 - 显示标签信息
-
-![20190907185956.png](http://pic.airijia.com/image/20190907185956.png)
-
-如图，显示的 `SAK: 08` 即为 M1 卡，可以模拟
-
-### 使用 M1T 判断IC卡类型
 
 
 
-### 使用安卓手机
 
-安装 装MCT
-
-
-# 非接触卡类型
 
 
 
