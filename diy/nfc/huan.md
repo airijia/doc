@@ -7,6 +7,16 @@
 
 [小米手环 NFC 版 模拟门禁卡](//player.bilibili.com/player.html?aid=66466058&cid=115271141&page=1 ':include :type=iframe width="720" height="530"')
 
+## 相关产品
+
+| ![nfc-11-1.jpg](http://pic.airijia.com/image/nfc-11-1.jpg ':size=200')| NFC模拟套件 |  [![买买买](http://cdn.airijia.com/b6eca8da724952cc0251.gif ':size=150')](https://item.taobao.com/item.htm?id=600708656610) |  
+|:-:|:-:|:-:|
+
+**以下需自备**
+
+- 小米手环NFC版(3代4代都可以)
+- 带 USB 接口电脑，操作系统 **WIN 7** 及以上
+
 
 ## 判断卡是否能模拟
 
@@ -15,11 +25,12 @@
 ![IDIC.jpg](http://pic.airijia.com/image/IDIC.jpg)
 
 
-类型 2 为 IC 卡，常用的又分为三种
+类型 2 为 IC 卡，常用的又分为 4 种
 
-- SAK08 Mifare CLassic 1k, 简称 M1 卡，可以模拟
-- SAK20 纯CPU卡, 无法模拟
-- SAK28 CPU模拟M1卡，少部分可模拟
+- SAK08 Mifare CLassic 1k, 简称 M1/S50 卡，可以模拟。市面上 90% 是这种卡
+- SAK18 S70K卡，无法模拟
+- SAK20 纯 CPU 卡, 无法模拟
+- SAK28 CPU 模拟 M1 卡，少部分可模拟
 
 安卓手机下载安装 [MCT - Mifare Classic Tool](http://pic.airijia.com/download/MifareClassicTool.apk)
 
@@ -42,15 +53,7 @@
 
 
 
-## 相关产品
 
-| ![nfc-11-1.jpg](http://pic.airijia.com/image/nfc-11-1.jpg ':size=200')| NFC模拟套件 |  [![买买买](http://cdn.airijia.com/b6eca8da724952cc0251.gif ':size=150')](https://item.taobao.com/item.htm?id=600708656610) |  
-|:-:|:-:|:-:|
-
-**以下需自备**
-
-- 小米手环NFC版(3代4代都可以)
-- 带 USB 接口电脑，操作系统 **WIN 7** 及以上
 
 
 ## 硬件准备
